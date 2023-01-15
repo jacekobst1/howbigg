@@ -6,5 +6,5 @@ export default function Head() {
       <meta name="description" content="Compare size of screens" />
       <link rel="icon" href="/favicon.ico" />
     </>
-  )
+  );
 }
