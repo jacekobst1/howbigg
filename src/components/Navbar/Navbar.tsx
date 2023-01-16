@@ -15,10 +15,10 @@ export default function Navbar() {
                 <a href="/compare/screen">Screen</a>
               </li>
               <li className="md:px-4 md:py-2 hover:text-primary-400">
-                <a href="">Phone</a>
+                <a href="src/components/Navbar">Phone</a>
               </li>
               <li className="md:px-4 md:py-2 hover:text-primary-400">
-                <a href="">Watch</a>
+                <a href="src/components/Navbar">Watch</a>
               </li>
             </ul>
           </div>
