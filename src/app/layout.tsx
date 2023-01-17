@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../styles/globals.css";
 import React from "react";
 import Header from "@/components/layout/Header";
 
@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="myTheme">
       <head />
-      <body>
+      <body data-theme="mytheme">
         <Header />
         <main className="layout">{children}</main>
       </body>
