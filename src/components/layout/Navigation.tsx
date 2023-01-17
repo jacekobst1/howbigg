@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { usePathname } from "next/navigation";
+import clsxm from "@/lib/clsxm";
 
 const links = [
   { href: "/compare/screen", label: "Screen" },
@@ -17,9 +18,10 @@ export default function Navigation() {
           <li key={`${href}${label}`} className="pr-4 py-2">
             <a
               href={href}
-              className={`hover:text-primary-400 ${
+              className={clsxm(
+                "hover:text-primary-400",
                 pathname == href ? "text-primary-500" : ""
-              }`}
+              )}
             >
               {label}
             </a>
