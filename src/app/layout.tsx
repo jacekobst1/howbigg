@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="myTheme">
       <head />
-      <body data-theme="mytheme">
+      <body data-theme="mytheme" className="bg-neutral">
         <Header />
         <main className="layout">{children}</main>
       </body>

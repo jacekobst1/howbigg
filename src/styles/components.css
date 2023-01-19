@@ -1,0 +1,24 @@
+@tailwind components;
+
+@layer components {
+    .input {
+        @apply focus:outline-0 focus:ring-2 focus:ring-primary-400;
+    }
+
+    .select {
+        @apply focus:outline-0 focus:ring-2 focus:ring-primary-400;
+    }
+
+    .input-group > *,
+    .input-group > .input,
+    .input-group > .select {
+        @apply shadow-none;
+    }
+
+    .input-group {
+        @apply rounded-lg focus-within:ring-2 focus-within:ring-primary-400;
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+        transition-duration: 200ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
