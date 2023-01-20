@@ -1,3 +1,5 @@
+"use client";
+
 import clsxm from "@/lib/clsxm";
 import Label from "@/components/form/labels/Label";
 import React from "react";
@@ -18,6 +20,7 @@ const Input = ({
   size = "md",
 }: InputProps) => {
   const sizeClass = `input-${size}`;
+  const classNames = clsxm(sizeClass, "input shadow w-full");
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
     onChange?.(e.target.value);
 
@@ -26,7 +29,7 @@ const Input = ({
       defaultValue={defaultValue}
       onChange={onChangeHandler}
       type={type}
-      className={clsxm("input shadow w-full", sizeClass)}
+      className={classNames}
     />
   );
 
