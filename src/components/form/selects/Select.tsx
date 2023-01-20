@@ -1,6 +1,8 @@
-import clsxm from "@/lib/clsxm";
+"use client";
+
 import React from "react";
 import Label from "@/components/form/labels/Label";
+import clsxm from "@/lib/clsxm";
 
 interface SelectProps {
   defaultValue?: string;
@@ -23,7 +25,7 @@ const Select = ({
   options,
   size = "md",
 }: SelectProps) => {
-  const sizeClass = "select-" + size;
+  const sizeClass = `select-${size}`;
   const onChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) =>
     onChange?.(e.target.value);
 
