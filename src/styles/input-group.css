@@ -1,0 +1,22 @@
+.input-group-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    line-height: 1.625;
+}
+
+.input-group-sm {
+    font-size: 0.875rem;
+    line-height: 2rem;
+}
+
+.input-group-md {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    line-height: 2;
+}
+
+.input-group-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    line-height: 2;
+}

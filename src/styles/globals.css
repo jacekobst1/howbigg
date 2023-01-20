@@ -1,4 +1,7 @@
 @import "components.css";
+@import "input.css";
+@import "select.css";
+@import "input-group.css";
 
 @tailwind base;
 @tailwind utilities;
