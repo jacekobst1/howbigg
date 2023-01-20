@@ -20,7 +20,7 @@ const Input = ({
   size = "md",
 }: InputProps) => {
   const sizeClass = `input-${size}`;
-  const classNames = clsxm(sizeClass, "input shadow w-full");
+  const classNames = clsxm(sizeClass, "input shadow w-full input-sm");
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
     onChange?.(e.target.value);
 
