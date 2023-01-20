@@ -24,7 +24,7 @@ const Select = ({
   size = "md",
 }: SelectProps) => {
   const sizeClass = `select-${size}`;
-  const classNames = clsxm("select shadow w-full mt-1 select-sm", sizeClass);
+  const classNames = clsxm("select shadow w-full mt-1", sizeClass);
   const onChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) =>
     onChange?.(e.target.value);
 
