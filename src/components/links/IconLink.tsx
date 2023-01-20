@@ -91,4 +91,5 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
   }
 );
 
+IconLink.displayName = "IconLink";
 export default IconLink;
