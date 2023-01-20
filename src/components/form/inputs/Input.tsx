@@ -1,6 +1,6 @@
-import clsxm from "@/lib/clsxm";
 import Label from "@/components/form/labels/Label";
 import React from "react";
+import clsxm from "@/lib/clsxm";
 
 interface InputProps {
   defaultValue?: string | number;
@@ -18,7 +18,6 @@ const Input = ({
   size = "md",
 }: InputProps) => {
   const sizeClass = `input-${size}`;
-  const classNames = clsxm("input shadow w-full", sizeClass);
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
     onChange?.(e.target.value);
 
@@ -27,7 +26,7 @@ const Input = ({
       defaultValue={defaultValue}
       onChange={onChangeHandler}
       type={type}
-      className={classNames}
+      className={clsxm("input shadow w-full", sizeClass)}
     />
   );
 

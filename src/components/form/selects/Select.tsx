@@ -23,8 +23,7 @@ const Select = ({
   options,
   size = "md",
 }: SelectProps) => {
-  const sizeClass = `select-${size}`;
-  const classNames = clsxm("select shadow w-full mt-1", sizeClass);
+  const sizeClass = "select-" + size;
   const onChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) =>
     onChange?.(e.target.value);
 
@@ -32,7 +31,7 @@ const Select = ({
     <select
       defaultValue={defaultValue}
       onChange={onChangeHandler}
-      className={classNames}
+      className={clsxm("select shadow w-full mt-1", sizeClass)}
     >
       {options.map(({ value, label }) => (
         <option key={value} value={value}>
