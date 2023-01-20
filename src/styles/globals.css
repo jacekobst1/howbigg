@@ -2,6 +2,7 @@
 @import "input.css";
 @import "select.css";
 @import "input-group.css";
+@import "toggle.css";
 
 @tailwind base;
 @tailwind utilities;
