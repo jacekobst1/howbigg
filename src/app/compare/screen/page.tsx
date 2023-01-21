@@ -1,9 +1,9 @@
-import Display from "@/app/compare/screen/components/display/Display";
+import DisplaySetup from "@/app/compare/screen/components/DisplaySetup/DisplaySetup";
 
 export default function Screen() {
   return (
     <div>
-      <Display name="Display 1" />
+      <DisplaySetup />
     </div>
   );
 }

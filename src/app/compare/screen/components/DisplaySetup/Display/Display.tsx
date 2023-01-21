@@ -4,48 +4,41 @@ import Select from "@/components/form/selects/Select";
 import Input from "@/components/form/inputs/Input";
 import InputGroup from "@/components/form/inputs/InputGroup";
 import Toggle from "@/components/form/inputs/Toggle";
-import { useState } from "react";
-import AspectRatio, { aspectRatios } from "./AspectRatio";
+import { aspectRatios } from "../AspectRatio";
+import DisplayData from "@/app/compare/screen/components/DisplaySetup/DisplayData";
+import React from "react";
 
 interface DisplayProps {
-  name: string;
+  displayData: DisplayData;
+  setDisplayData: (display: DisplayData) => void;
 }
 
-interface DisplayData {
-  aspectRatio: AspectRatio;
-  size: number;
-  unit: "in" | "cm";
-}
-
-export default function Display({ name }: DisplayProps) {
-  const [displayData, setDisplayData] = useState<DisplayData>({
-    aspectRatio: aspectRatios[0],
-    size: 0,
-    unit: "in",
-  });
-
+export default function Display({ displayData, setDisplayData }: DisplayProps) {
   const setAspectRatio = (aspectRatio: string) => {
     const selectedAspectRatio = aspectRatios.find(
       (ar) => ar.value === aspectRatio
     );
 
     if (selectedAspectRatio) {
-      setDisplayData((prev) => ({ ...prev, aspectRatio: selectedAspectRatio }));
+      setDisplayData({
+        ...displayData,
+        aspectRatio: selectedAspectRatio,
+      });
     }
   };
 
   const setSize = (size: string) =>
-    setDisplayData((prev) => ({ ...prev, size: parseFloat(size) }));
+    setDisplayData({ ...displayData, size: parseFloat(size) });
 
   const setUnit = (checked: boolean) => {
     const unit = checked ? "cm" : "in";
-    setDisplayData((prev) => ({ ...prev, unit: unit }));
+    setDisplayData({ ...displayData, unit: unit });
   };
 
   return (
     <div className="flex">
       <div className="w-36">
-        <p className="text-slate-600">{name}</p>
+        <p className="text-slate-600">{displayData.name}</p>
         <div className="divider divider-vertical" />
         <div className="form-control">
           <Select
