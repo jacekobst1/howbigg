@@ -4,41 +4,41 @@ import Select from "@/components/form/selects/Select";
 import Input from "@/components/form/inputs/Input";
 import InputGroup from "@/components/form/inputs/InputGroup";
 import Toggle from "@/components/form/inputs/Toggle";
-import { aspectRatios } from "../AspectRatio";
-import DisplayData from "@/app/compare/screen/components/DisplaySetup/DisplayData";
+import { aspectRatios } from "./AspectRatio";
 import React from "react";
+import Display from "@/app/compare/screen/components/Setup/Display";
 
 interface DisplayProps {
-  displayData: DisplayData;
-  setDisplayData: (display: DisplayData) => void;
+  display: Display;
+  setDisplay: (display: Display) => void;
 }
 
-export default function Display({ displayData, setDisplayData }: DisplayProps) {
+export default function DisplayConf({ display, setDisplay }: DisplayProps) {
   const setAspectRatio = (aspectRatio: string) => {
     const selectedAspectRatio = aspectRatios.find(
       (ar) => ar.value === aspectRatio
     );
 
     if (selectedAspectRatio) {
-      setDisplayData({
-        ...displayData,
+      setDisplay({
+        ...display,
         aspectRatio: selectedAspectRatio,
       });
     }
   };
 
   const setSize = (size: string) =>
-    setDisplayData({ ...displayData, size: parseFloat(size) });
+    setDisplay({ ...display, size: parseFloat(size) });
 
   const setUnit = (checked: boolean) => {
     const unit = checked ? "cm" : "in";
-    setDisplayData({ ...displayData, unit: unit });
+    setDisplay({ ...display, unit: unit });
   };
 
   return (
     <div className="flex">
       <div className="w-36">
-        <p className="text-slate-600">{displayData.name}</p>
+        <p className="text-slate-600">{display.name}</p>
         <div className="divider divider-vertical" />
         <div className="form-control">
           <Select
@@ -52,17 +52,17 @@ export default function Display({ displayData, setDisplayData }: DisplayProps) {
         <div className="form-control mt-3">
           <InputGroup size="sm" label="Size">
             <Input
-              defaultValue={displayData.size}
+              defaultValue={display.size}
               onChange={setSize}
               type="number"
               size="sm"
             />
-            <span className="bg-primary-100 text-xs">{displayData.unit}</span>
+            <span className="bg-primary-100 text-xs">{display.unit}</span>
           </InputGroup>
         </div>
         <div className="form-control mt-3">
           <Toggle
-            checked={displayData.unit === "cm"}
+            checked={display.unit === "cm"}
             onChange={setUnit}
             label="Use centimeters"
             size="md"

@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import DisplayData, {
+import Display, {
   generateDisplays,
-} from "@/app/compare/screen/components/DisplaySetup/DisplayData";
-import Display from "@/app/compare/screen/components/DisplaySetup/Display/Display";
+} from "@/app/compare/screen/components/Setup/Display";
+import DisplayConf from "@/app/compare/screen/components/Setup/DisplayConf";
 
-export default function DisplaySetup() {
+export default function Setup() {
   const [displays, setDisplays] = useState(generateDisplays(2));
 
-  const setDisplay = (display: DisplayData) => {
+  const setDisplay = (display: Display) => {
     const newDisplays = displays.map((d) =>
       d.id === display.id ? display : d
     );
@@ -20,10 +20,10 @@ export default function DisplaySetup() {
     <div className="flex">
       {displays.map((display) => (
         <>
-          <Display
+          <DisplayConf
             key={display.id}
-            displayData={display}
-            setDisplayData={setDisplay}
+            display={display}
+            setDisplay={setDisplay}
           />
           {display.id !== displays[displays.length - 1].id && (
             <div className="divider divider-horizontal" />
