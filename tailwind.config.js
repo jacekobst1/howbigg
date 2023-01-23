@@ -7,7 +7,20 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  safelist: [],
+  safelist: [
+    {
+      pattern: /input-(xs|sm|md|lg)/,
+    },
+    {
+      pattern: /select-(xs|sm|md|lg)/,
+    },
+    {
+      pattern: /input-group-(xs|sm|md|lg)/,
+    },
+    {
+      pattern: /toggle-(xs|sm|md|lg)/,
+    },
+  ],
   theme: {
     extend: {
       fontFamily: {
