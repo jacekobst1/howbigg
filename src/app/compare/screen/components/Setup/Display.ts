@@ -6,6 +6,9 @@ interface Display {
   aspectRatio: AspectRatio;
   size: number;
   unit: "in" | "cm";
+  width: number;
+  height: number;
+  aspectRatioDecimal: number;
 }
 
 const initDisplay = (id: number): Display => ({
@@ -14,6 +17,9 @@ const initDisplay = (id: number): Display => ({
   aspectRatio: aspectRatios[0],
   size: 0,
   unit: "in",
+  width: 0,
+  height: 0,
+  aspectRatioDecimal: 0,
 });
 
 const generateDisplays = (numberOfDisplays: number) => {
