@@ -9,6 +9,7 @@ interface Display {
   width: number;
   height: number;
   aspectRatioDecimal: number;
+  zIndex: number;
 }
 
 export default Display;

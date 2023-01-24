@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
-import { generateDisplays } from "@/app/compare/display/utils/displayGenerator";
 import Display from "@/app/compare/display/types/Display";
 
-export default function Setup() {
-  const [displays, setDisplays] = useState(generateDisplays(2));
+interface SetupProps {
+  displays: Display[];
+  setDisplays: (displays: Display[]) => void;
+}
 
+export default function Setup({ displays, setDisplays }: SetupProps) {
   const setDisplay = (display: Display) => {
     const newDisplays = displays.map((d) =>
       d.id === display.id ? display : d

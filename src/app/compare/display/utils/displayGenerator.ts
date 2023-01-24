@@ -10,6 +10,7 @@ const initDisplay = (id: number): Display => ({
   width: 0,
   height: 0,
   aspectRatioDecimal: 0,
+  zIndex: 0,
 });
 
 const generateDisplays = (numberOfDisplays: number) => {

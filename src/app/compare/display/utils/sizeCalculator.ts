@@ -1,9 +1,11 @@
 import Display from "@/app/compare/display/types/Display";
 
+// TODO uprość kod tutaj
+// dodaj do typu Display width: {cm: percentage} i height: {cm: percentage}
 function setDimensionsOfDisplays(displays: Display[]) {
   fillWidthAndHeight(displays);
   changeDimensionsToPercentage(displays);
-  sortFromBiggestToSmallest(displays);
+  setZIndexFromBiggestToSmallest(displays);
 }
 
 function fillWidthAndHeight(displays: Display[]) {
@@ -39,8 +41,14 @@ function changeDimensionsToPercentage(displays: Display[]) {
   });
 }
 
-function sortFromBiggestToSmallest(displays: Display[]) {
-  displays.sort((a, b) => b.width * b.height - a.width * a.height);
+function setZIndexFromBiggestToSmallest(displays: Display[]) {
+  const sortedDisplays = [...displays].sort(
+    (a, b) => b.width * b.height - a.width * a.height
+  );
+
+  displays.forEach((display) => {
+    display.zIndex = sortedDisplays.indexOf(display);
+  });
 }
 
 export default setDimensionsOfDisplays;
