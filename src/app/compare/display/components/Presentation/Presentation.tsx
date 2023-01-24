@@ -1,8 +1,8 @@
 "use client";
 
-import { aspectRatios } from "@/app/compare/screen/components/Setup/AspectRatio";
-import Display from "@/app/compare/screen/components/Setup/Display";
-import setDimensionsOfDisplays from "@/app/compare/screen/utils/sizeCalculator";
+import { aspectRatios } from "@/app/compare/display/types/AspectRatio";
+import Display from "@/app/compare/display/types/Display";
+import setDimensionsOfDisplays from "@/app/compare/display/utils/sizeCalculator";
 
 export default function Presentation() {
   const displays: Display[] = [

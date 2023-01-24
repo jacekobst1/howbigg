@@ -1,15 +1,5 @@
-import AspectRatio, { aspectRatios } from "./AspectRatio";
-
-interface Display {
-  id: number;
-  name: string;
-  aspectRatio: AspectRatio;
-  size: number;
-  unit: "in" | "cm";
-  width: number;
-  height: number;
-  aspectRatioDecimal: number;
-}
+import { aspectRatios } from "@/app/compare/display/types/AspectRatio";
+import Display from "@/app/compare/display/types/Display";
 
 const initDisplay = (id: number): Display => ({
   id: id,
@@ -32,5 +22,4 @@ const generateDisplays = (numberOfDisplays: number) => {
   return displays;
 };
 
-export default Display;
 export { generateDisplays };

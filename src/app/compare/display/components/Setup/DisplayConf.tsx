@@ -4,9 +4,9 @@ import Select from "@/components/form/selects/Select";
 import Input from "@/components/form/inputs/Input";
 import InputGroup from "@/components/form/inputs/InputGroup";
 import Toggle from "@/components/form/inputs/Toggle";
-import { aspectRatios } from "./AspectRatio";
+import { aspectRatios } from "../../types/AspectRatio";
 import React from "react";
-import Display from "@/app/compare/screen/components/Setup/Display";
+import Display from "@/app/compare/display/types/Display";
 
 interface DisplayProps {
   display: Display;

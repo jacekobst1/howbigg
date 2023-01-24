@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Display, {
-  generateDisplays,
-} from "@/app/compare/screen/components/Setup/Display";
-import DisplayConf from "@/app/compare/screen/components/Setup/DisplayConf";
+import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
+import { generateDisplays } from "@/app/compare/display/utils/displayGenerator";
+import Display from "@/app/compare/display/types/Display";
 
 export default function Setup() {
   const [displays, setDisplays] = useState(generateDisplays(2));

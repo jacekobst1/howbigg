@@ -1,4 +1,4 @@
-import Display from "@/app/compare/screen/components/Setup/Display";
+import Display from "@/app/compare/display/types/Display";
 
 function setDimensionsOfDisplays(displays: Display[]) {
   fillWidthAndHeight(displays);
