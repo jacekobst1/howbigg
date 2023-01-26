@@ -59,11 +59,10 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
         <div className="form-control mt-3">
           <InputGroup size="sm" label="Size">
             <Input
-              value={round(display.diagonal.length, 2)}
+              value={round(display.diagonal.length, 2) || ""}
               mOnChange={setDiagonal}
               type="number"
               mSize="sm"
-              min={0}
             />
             <span className="bg-primary-100 text-xs">
               {display.diagonal.unit}
