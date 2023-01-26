@@ -7,6 +7,7 @@ import Toggle from "@/components/form/inputs/Toggle";
 import { aspectRatios } from "../../types/AspectRatio";
 import React from "react";
 import Display from "@/app/compare/display/types/Display";
+import { debounce } from "lodash";
 
 interface DisplayProps {
   display: Display;
@@ -27,8 +28,9 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
     }
   };
 
-  const setSize = (size: string) =>
+  const setSize = debounce((size: string) => {
     setDisplay({ ...display, size: parseFloat(size) });
+  }, 200);
 
   const setUnit = (checked: boolean) => {
     const unit = checked ? "cm" : "in";
