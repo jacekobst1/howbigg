@@ -5,11 +5,9 @@ import React from "react";
 import clsxm from "@/lib/clsxm";
 
 type InputProps = {
-  value?: string | number;
-  defaultValue?: string | number;
-  myOnChange?: (value: string) => void;
   type?: "text" | "number";
   label?: string;
+  mOnChange?: (value: string) => void;
   mSize?: "xs" | "sm" | "md" | "lg";
 } & React.ComponentPropsWithRef<"input">;
 
@@ -18,9 +16,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     {
       value,
       defaultValue,
-      myOnChange,
       label,
       type = "text",
+      mOnChange,
       mSize = "md",
       ...rest
     },
@@ -28,7 +26,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ) => {
     const sizeClass = `input-${mSize}`;
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
-      myOnChange?.(e.target.value);
+      mOnChange?.(e.target.value);
 
     const input = (
       <input

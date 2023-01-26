@@ -60,7 +60,7 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
           <InputGroup size="sm" label="Size">
             <Input
               value={round(display.diagonal.length, 2)}
-              myOnChange={setDiagonal}
+              mOnChange={setDiagonal}
               type="number"
               mSize="sm"
               min={0}
