@@ -4,43 +4,52 @@ import Label from "@/components/form/labels/Label";
 import React from "react";
 import clsxm from "@/lib/clsxm";
 
-interface InputProps {
+type InputProps = {
   value?: string | number;
   defaultValue?: string | number;
-  onChange?: (value: string) => void;
+  myOnChange?: (value: string) => void;
   type?: "text" | "number";
   label?: string;
-  size?: "xs" | "sm" | "md" | "lg";
-}
+  mSize?: "xs" | "sm" | "md" | "lg";
+} & React.ComponentPropsWithRef<"input">;
 
-const Input = ({
-  value,
-  defaultValue,
-  onChange,
-  label,
-  type = "text",
-  size = "md",
-}: InputProps) => {
-  const sizeClass = `input-${size}`;
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
-    onChange?.(e.target.value);
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  (
+    {
+      value,
+      defaultValue,
+      myOnChange,
+      label,
+      type = "text",
+      mSize = "md",
+      ...rest
+    },
+    ref
+  ) => {
+    const sizeClass = `input-${mSize}`;
+    const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
+      myOnChange?.(e.target.value);
 
-  const input = (
-    <input
-      value={value}
-      defaultValue={defaultValue}
-      onChange={onChangeHandler}
-      type={type}
-      className={clsxm("input shadow w-full", sizeClass)}
-    />
-  );
+    const input = (
+      <input
+        ref={ref}
+        value={value}
+        defaultValue={defaultValue}
+        onChange={onChangeHandler}
+        type={type}
+        className={clsxm("input shadow w-full", sizeClass)}
+        {...rest}
+      />
+    );
 
-  if (label) {
-    return <Label text={label}>{input}</Label>;
+    if (label) {
+      return <Label text={label}>{input}</Label>;
+    }
+
+    return input;
   }
+);
 
-  return input;
-};
-
+Input.displayName = "Input";
 export default Input;
 export type { InputProps };
