@@ -7,7 +7,7 @@ interface SetupProps {
 }
 
 export default function Presentation({ displays }: SetupProps) {
-  const colors = ["red", "green", "blue", "purple", "yellow"];
+  const colors = ["#413C69", "#F4B0C7", "#4A47A3", "#AD62AA"];
 
   return (
     <div className="w-11/12 mx-auto">
@@ -17,7 +17,7 @@ export default function Presentation({ displays }: SetupProps) {
             key={display.id}
             style={{
               position: "absolute",
-              opacity: 0.6,
+              opacity: 0.9,
               transition: "all 0.8s ease",
               width: `${display.width.percentage}%`,
               height: `${display.height.percentage}%`,
