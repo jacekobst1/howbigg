@@ -5,11 +5,20 @@ const initDisplay = (id: number): Display => ({
   id: id,
   name: `Display ${id}`,
   aspectRatio: aspectRatios[1],
-  size: 0,
-  unit: "in",
-  width: 0,
-  height: 0,
-  aspectRatioDecimal: 0,
+  diagonal: {
+    length: 0,
+    unit: "in",
+  },
+  width: {
+    in: 0,
+    cm: 0,
+    percentage: 0,
+  },
+  height: {
+    in: 0,
+    cm: 0,
+    percentage: 0,
+  },
   zIndex: 0,
 });
 

@@ -3,7 +3,8 @@
 import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
 import Display from "@/app/compare/display/types/Display";
 import Button from "@/components/buttons/Button";
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import setDimensionsOfDisplays from "@/app/compare/display/utils/sizeCalculator";
 
 interface SetupProps {
   displays: Display[];
@@ -21,6 +22,7 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
   };
 
   const compare = () => {
+    setDimensionsOfDisplays(localDisplays);
     setDisplays(localDisplays);
   };
 
@@ -28,16 +30,12 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
     <>
       <div className="flex">
         {localDisplays.map((localDisplay) => (
-          <>
-            <DisplayConf
-              key={localDisplay.id}
-              display={localDisplay}
-              setDisplay={setLocalDisplay}
-            />
+          <Fragment key={localDisplay.id}>
+            <DisplayConf display={localDisplay} setDisplay={setLocalDisplay} />
             {localDisplay.id !== localDisplays[localDisplays.length - 1].id && (
               <div className="divider divider-horizontal" />
             )}
-          </>
+          </Fragment>
         ))}
       </div>
       <Button className="mt-10" onClick={compare}>

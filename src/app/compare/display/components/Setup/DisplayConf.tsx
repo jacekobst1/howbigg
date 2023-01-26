@@ -7,7 +7,7 @@ import Toggle from "@/components/form/inputs/Toggle";
 import { aspectRatios } from "../../types/AspectRatio";
 import React from "react";
 import Display from "@/app/compare/display/types/Display";
-import { debounce } from "lodash";
+import { round } from "lodash";
 
 interface DisplayProps {
   display: Display;
@@ -28,13 +28,19 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
     }
   };
 
-  const setSize = debounce((size: string) => {
-    setDisplay({ ...display, size: parseFloat(size) });
-  }, 200);
+  const setDiagonal = (size: string) => {
+    display.diagonal.length = parseFloat(size) || 0;
+    setDisplay(display);
+  };
 
   const setUnit = (checked: boolean) => {
     const unit = checked ? "cm" : "in";
-    setDisplay({ ...display, unit: unit });
+    display.diagonal.unit = unit;
+    display.diagonal.length =
+      unit === "cm"
+        ? display.diagonal.length * 2.54
+        : display.diagonal.length / 2.54;
+    setDisplay(display);
   };
 
   return (
@@ -53,17 +59,19 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
         <div className="form-control mt-3">
           <InputGroup size="sm" label="Size">
             <Input
-              defaultValue={display.size}
-              onChange={setSize}
+              value={round(display.diagonal.length, 2)}
+              onChange={setDiagonal}
               type="number"
               size="sm"
             />
-            <span className="bg-primary-100 text-xs">{display.unit}</span>
+            <span className="bg-primary-100 text-xs">
+              {display.diagonal.unit}
+            </span>
           </InputGroup>
         </div>
         <div className="form-control mt-3">
           <Toggle
-            checked={display.unit === "cm"}
+            checked={display.diagonal.unit === "cm"}
             onChange={setUnit}
             label="Use centimeters"
             size="md"

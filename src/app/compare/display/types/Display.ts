@@ -4,12 +4,21 @@ interface Display {
   id: number;
   name: string;
   aspectRatio: AspectRatio;
-  size: number;
-  unit: "in" | "cm";
-  width: number;
-  height: number;
-  aspectRatioDecimal: number;
+  diagonal: Diagonal;
+  width: Size;
+  height: Size;
   zIndex: number;
+}
+
+interface Size {
+  in: number;
+  cm: number;
+  percentage: number;
+}
+
+interface Diagonal {
+  length: number;
+  unit: "in" | "cm";
 }
 
 export default Display;

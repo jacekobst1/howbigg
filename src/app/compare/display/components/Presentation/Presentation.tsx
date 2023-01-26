@@ -1,15 +1,12 @@
 "use client";
 
 import Display from "@/app/compare/display/types/Display";
-import setDimensionsOfDisplays from "@/app/compare/display/utils/sizeCalculator";
 
 interface SetupProps {
   displays: Display[];
 }
 
 export default function Presentation({ displays }: SetupProps) {
-  setDimensionsOfDisplays(displays);
-
   const colors = ["red", "green", "blue", "purple", "yellow"];
 
   return (
@@ -22,12 +19,14 @@ export default function Presentation({ displays }: SetupProps) {
               position: "absolute",
               opacity: 0.6,
               transition: "all 0.8s ease",
-              width: `${display.width}%`,
-              height: `${display.height}%`,
+              width: `${display.width.percentage}%`,
+              height: `${display.height.percentage}%`,
               backgroundColor: colors[display.id - 1],
               zIndex: display.zIndex,
               border:
-                display.height * display.width > 0 ? "3px solid black" : "",
+                display.height.percentage * display.width.percentage > 0
+                  ? "3px solid black"
+                  : "none",
             }}
           />
         ))}

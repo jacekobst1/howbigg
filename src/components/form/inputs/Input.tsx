@@ -5,6 +5,7 @@ import React from "react";
 import clsxm from "@/lib/clsxm";
 
 interface InputProps {
+  value?: string | number;
   defaultValue?: string | number;
   onChange?: (value: string) => void;
   type?: "text" | "number";
@@ -13,6 +14,7 @@ interface InputProps {
 }
 
 const Input = ({
+  value,
   defaultValue,
   onChange,
   label,
@@ -25,6 +27,7 @@ const Input = ({
 
   const input = (
     <input
+      value={value}
       defaultValue={defaultValue}
       onChange={onChangeHandler}
       type={type}
