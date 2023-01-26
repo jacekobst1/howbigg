@@ -14,6 +14,7 @@ function fillWidthAndHeight(displays: Display[]) {
       display.aspectRatio.decimalValue,
       display.size
     );
+
     display.width = width;
     display.height = height;
   });
@@ -31,20 +32,18 @@ function calculateSize(aspectRatio: number, diagonalSizeInch: number) {
 
 function changeDimensionsToPercentage(displays: Display[]) {
   const biggestDisplay = displays.reduce((prev, current) =>
-    prev.width * prev.height > current.width * current.height ? prev : current
+    prev.width > current.width ? prev : current
   );
-  const divider = Math.max(biggestDisplay.width, biggestDisplay.height);
+  const divider = Math.max(biggestDisplay.width);
 
   displays.forEach((display) => {
-    display.width = (display.width / divider) * 100;
-    display.height = (display.height / divider) * 100;
+    display.width = (display.width / divider) * 100 || 0;
+    display.height = (display.height / divider) * 100 || 0;
   });
 }
 
 function setZIndexFromBiggestToSmallest(displays: Display[]) {
-  const sortedDisplays = [...displays].sort(
-    (a, b) => b.width * b.height - a.width * a.height
-  );
+  const sortedDisplays = [...displays].sort((a, b) => b.width - a.width);
 
   displays.forEach((display) => {
     display.zIndex = sortedDisplays.indexOf(display);

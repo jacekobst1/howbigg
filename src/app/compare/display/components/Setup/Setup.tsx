@@ -2,6 +2,8 @@
 
 import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
 import Display from "@/app/compare/display/types/Display";
+import Button from "@/components/buttons/Button";
+import { useState } from "react";
 
 interface SetupProps {
   displays: Display[];
@@ -9,27 +11,38 @@ interface SetupProps {
 }
 
 export default function Setup({ displays, setDisplays }: SetupProps) {
-  const setDisplay = (display: Display) => {
-    const newDisplays = displays.map((d) =>
+  const [localDisplays, setLocalDisplays] = useState(displays);
+
+  const setLocalDisplay = (display: Display) => {
+    const newDisplays = localDisplays.map((d) =>
       d.id === display.id ? display : d
     );
-    setDisplays(newDisplays);
+    setLocalDisplays(newDisplays);
+  };
+
+  const compare = () => {
+    setDisplays(localDisplays);
   };
 
   return (
-    <div className="flex">
-      {displays.map((display) => (
-        <>
-          <DisplayConf
-            key={display.id}
-            display={display}
-            setDisplay={setDisplay}
-          />
-          {display.id !== displays[displays.length - 1].id && (
-            <div className="divider divider-horizontal" />
-          )}
-        </>
-      ))}
-    </div>
+    <>
+      <div className="flex">
+        {localDisplays.map((localDisplay) => (
+          <>
+            <DisplayConf
+              key={localDisplay.id}
+              display={localDisplay}
+              setDisplay={setLocalDisplay}
+            />
+            {localDisplay.id !== localDisplays[localDisplays.length - 1].id && (
+              <div className="divider divider-horizontal" />
+            )}
+          </>
+        ))}
+      </div>
+      <Button className="mt-10" onClick={compare}>
+        Compare
+      </Button>
+    </>
   );
 }

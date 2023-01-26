@@ -38,8 +38,7 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
   return (
     <div className="flex">
       <div className="w-36">
-        <p className="text-slate-600">{display.name}</p>
-        <div className="divider divider-vertical" />
+        <p className="text-slate-600 text-lg mb-3">{display.name}</p>
         <div className="form-control">
           <Select
             defaultValue="16x9"

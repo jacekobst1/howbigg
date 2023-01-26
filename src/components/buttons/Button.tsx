@@ -46,7 +46,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={clsxm(
           "inline-flex items-center rounded font-medium",
           "focus:outline-none focus-visible:ring focus-visible:ring-primary-500",
-          "shadow-sm",
+          "shadow",
           "transition-colors duration-75",
           //#region  //*=========== Size ===========
           [
