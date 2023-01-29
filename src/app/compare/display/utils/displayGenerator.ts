@@ -4,7 +4,11 @@ import Display from "@/app/compare/display/types/Display";
 const initDisplay = (id: number): Display => ({
   id: id,
   name: `Display ${id}`,
-  aspectRatio: aspectRatios[1],
+  aspectRatio: aspectRatios[2],
+  customAspectRatio: {
+    width: 0,
+    height: 0,
+  },
   diagonal: {
     length: 0,
     unit: "in",

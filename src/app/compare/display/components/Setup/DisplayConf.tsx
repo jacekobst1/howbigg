@@ -21,15 +21,23 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
     );
 
     if (selectedAspectRatio) {
-      setDisplay({
-        ...display,
-        aspectRatio: selectedAspectRatio,
-      });
+      display.aspectRatio = selectedAspectRatio;
+      setDisplay(display);
     }
   };
 
+  const setCustomAspectRatioWidth = (value: string) => {
+    display.customAspectRatio.width = Math.abs(parseFloat(value)) || 0;
+    setDisplay(display);
+  };
+
+  const setCustomAspectRatioHeight = (value: string) => {
+    display.customAspectRatio.height = Math.abs(parseFloat(value)) || 0;
+    setDisplay(display);
+  };
+
   const setDiagonal = (size: string) => {
-    display.diagonal.length = parseFloat(size) || 0;
+    display.diagonal.length = Math.abs(parseFloat(size)) || 0;
     setDisplay(display);
   };
 
@@ -56,9 +64,23 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
             mSize="sm"
           />
         </div>
-        <div className="form-control mt-3">
-          <Input type="number" mSize="sm" min={0} />
-        </div>
+        {display.aspectRatio.value === "custom" && (
+          <div className="form-control mt-2 flex flex-row">
+            <Input
+              value={display.customAspectRatio.width || ""}
+              mOnChange={setCustomAspectRatioWidth}
+              type="number"
+              mSize="sm"
+            />
+            <span className="mx-2">x</span>
+            <Input
+              value={display.customAspectRatio.height || ""}
+              mOnChange={setCustomAspectRatioHeight}
+              type="number"
+              mSize="sm"
+            />
+          </div>
+        )}
         <div className="form-control mt-3">
           <InputGroup size="sm" label="Size">
             <Input

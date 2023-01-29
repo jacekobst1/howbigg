@@ -1,12 +1,24 @@
 import Display from "@/app/compare/display/types/Display";
 
 function setDimensionsOfDisplays(displays: Display[]) {
-  fillWidthAndHeight(displays);
-  changeDimensionsToPercentage(displays);
+  setCustomAspectRatioValue(displays);
+  setWidthAndHeightStandard(displays);
+  setWidthAndHeightPercentage(displays);
   setZIndexFromBiggestToSmallest(displays);
 }
 
-function fillWidthAndHeight(displays: Display[]) {
+function setCustomAspectRatioValue(displays: Display[]) {
+  displays
+    .filter((display) => display.aspectRatio.value === "custom")
+    .forEach((display) => {
+      if (display.customAspectRatio.width && display.customAspectRatio.height) {
+        display.aspectRatio.decimalValue =
+          display.customAspectRatio.width / display.customAspectRatio.height;
+      }
+    });
+}
+
+function setWidthAndHeightStandard(displays: Display[]) {
   displays.forEach((display) => {
     const { widthCm, heightCm, widthIn, heightIn } = calculateSize(
       display.aspectRatio.decimalValue,
@@ -38,7 +50,7 @@ function calculateSize(
   return { widthCm, heightCm, widthIn, heightIn };
 }
 
-function changeDimensionsToPercentage(displays: Display[]) {
+function setWidthAndHeightPercentage(displays: Display[]) {
   const biggestDisplay = displays.reduce((prev, current) =>
     prev.width.cm > current.width.cm ? prev : current
   );
