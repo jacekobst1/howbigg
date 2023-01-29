@@ -20,6 +20,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       type = "text",
       mOnChange,
       mSize = "md",
+      className,
       ...rest
     },
     ref
@@ -35,7 +36,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         defaultValue={defaultValue}
         onChange={onChangeHandler}
         type={type}
-        className={clsxm("input shadow w-full", sizeClass)}
+        className={clsxm("input shadow w-full", sizeClass, className)}
         {...rest}
       />
     );
