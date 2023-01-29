@@ -38,7 +38,7 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
           </Fragment>
         ))}
       </div>
-      <Button className="mt-10" onClick={compare}>
+      <Button className="mt-6" onClick={compare}>
         Compare
       </Button>
     </>

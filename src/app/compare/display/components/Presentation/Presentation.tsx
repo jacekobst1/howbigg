@@ -7,6 +7,10 @@ interface SetupProps {
 }
 
 export default function Presentation({ displays }: SetupProps) {
+  /** TODO przenieś kolory do typu Display
+   * przypisuj w trakcie generowania
+   * i wyświetlaj na froncie w setupie
+   */
   const colors = ["#413C69", "#F4B0C7", "#4A47A3", "#AD62AA"];
 
   return (

@@ -4,51 +4,48 @@ import React from "react";
 import Label from "@/components/form/labels/Label";
 import clsxm from "@/lib/clsxm";
 
-interface SelectProps {
-  defaultValue?: string;
-  onChange?: (value: string) => void;
+type SelectProps = {
+  mOnChange?: (value: string) => void;
   label?: string;
   options: Option[];
-  size?: "xs" | "sm" | "md" | "lg";
-}
+  mSize?: "xs" | "sm" | "md" | "lg";
+} & React.ComponentPropsWithRef<"select">;
 
-interface Option {
+type Option = {
   label: string;
   value: string;
-}
-
-// TODO wystylizuj własny dropdown, zamiast domyślnego
-const Select = ({
-  defaultValue,
-  onChange,
-  label,
-  options,
-  size = "md",
-}: SelectProps) => {
-  const sizeClass = `select-${size}`;
-  const onChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) =>
-    onChange?.(e.target.value);
-
-  const select = (
-    <select
-      defaultValue={defaultValue}
-      onChange={onChangeHandler}
-      className={clsxm("select shadow w-full mt-1", sizeClass)}
-    >
-      {options.map(({ value, label }) => (
-        <option key={value} value={value}>
-          {label}
-        </option>
-      ))}
-    </select>
-  );
-
-  if (label) {
-    return <Label text={label}>{select}</Label>;
-  }
-
-  return select;
 };
 
+// TODO wystylizuj własny dropdown, zamiast domyślnego
+const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
+  ({ defaultValue, mOnChange, label, options, mSize = "md", ...rest }, ref) => {
+    const sizeClass = `select-${mSize}`;
+    const onChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) =>
+      mOnChange?.(e.target.value);
+
+    const select = (
+      <select
+        defaultValue={defaultValue}
+        onChange={onChangeHandler}
+        className={clsxm("select shadow w-full mt-1", sizeClass)}
+        {...rest}
+      >
+        {options.map(({ value, label }) => (
+          <option key={value} value={value}>
+            {label}
+          </option>
+        ))}
+      </select>
+    );
+
+    if (label) {
+      return <Label text={label}>{select}</Label>;
+    }
+
+    return select;
+  }
+);
+
+Select.displayName = "Select";
 export default Select;
 export type { SelectProps, Option };

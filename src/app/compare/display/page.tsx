@@ -11,7 +11,7 @@ export default function Screen() {
   return (
     <div className="mt-5">
       <Setup displays={displays} setDisplays={setDisplays} />
-      <div className="mt-10" />
+      <div className="mt-14" />
       <Presentation displays={displays} />
     </div>
   );

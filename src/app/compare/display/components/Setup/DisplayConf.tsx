@@ -50,11 +50,14 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
         <div className="form-control">
           <Select
             defaultValue="16x9"
-            onChange={setAspectRatio}
+            mOnChange={setAspectRatio}
             label="Aspect ratio"
             options={aspectRatios}
-            size="sm"
+            mSize="sm"
           />
+        </div>
+        <div className="form-control mt-3">
+          <Input type="number" mSize="sm" min={0} />
         </div>
         <div className="form-control mt-3">
           <InputGroup size="sm" label="Size">
