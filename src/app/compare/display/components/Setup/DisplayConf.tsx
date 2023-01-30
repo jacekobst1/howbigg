@@ -54,8 +54,15 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
   return (
     <div className="flex">
       <div className="w-36">
-        <p className="text-slate-600 text-lg mb-3">{display.name}</p>
-        <div className="form-control">
+        <div className="flex">
+          <div
+            className="w-fit h-full rounded-3xl px-0.5 py-3 mr-1"
+            style={{ backgroundColor: display.color }}
+          />
+          <p className="text-slate-600 font-semibold">{display.name}</p>
+        </div>
+
+        <div className="form-control mt-3">
           <Select
             defaultValue="16x9"
             mOnChange={setAspectRatio}

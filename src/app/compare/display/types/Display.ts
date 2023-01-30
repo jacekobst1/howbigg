@@ -9,6 +9,7 @@ interface Display {
   width: Size;
   height: Size;
   zIndex: number;
+  color: string;
 }
 
 interface CustomAspectRatio {

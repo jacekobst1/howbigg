@@ -24,13 +24,18 @@ const initDisplay = (id: number): Display => ({
     percentage: 0,
   },
   zIndex: 0,
+  color: "#000000",
 });
+
+const colors = ["#413C69", "#F4B0C7", "#4A47A3", "#AD62AA"];
 
 const generateDisplays = (numberOfDisplays: number) => {
   const displays: Display[] = [];
 
   for (let i = 1; i <= numberOfDisplays; i++) {
-    displays.push(initDisplay(i));
+    const display = initDisplay(i);
+    display.color = colors[i - 1];
+    displays.push(display);
   }
 
   return displays;
