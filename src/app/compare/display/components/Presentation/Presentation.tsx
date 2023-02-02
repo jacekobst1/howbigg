@@ -2,14 +2,21 @@
 
 import Display from "@/app/compare/display/types/Display";
 import { getWindowDimensions } from "@/hooks/useWindowDimensions";
+import { useEffect } from "react";
 
 interface SetupProps {
   displays: Display[];
 }
 
 export default function Presentation({ displays }: SetupProps) {
-  const windowDimensions = getWindowDimensions();
-  const borderSize = windowDimensions.width >= 768 ? 3 : 2;
+  let borderSize = 3;
+
+  useEffect(() => {
+    const windowDimensions = getWindowDimensions();
+    if (windowDimensions.width < 768) {
+      borderSize = 2;
+    }
+  }, []);
 
   return (
     <div className="w-11/12 mx-auto">
