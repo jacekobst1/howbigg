@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       className={clsxm(
-        "relative bottom-0 w-full",
+        "w-full",
         "bg-base-100 text-slate-500 drop-shadow",
         "py-4 mt-5"
       )}
