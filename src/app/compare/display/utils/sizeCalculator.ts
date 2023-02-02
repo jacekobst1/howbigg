@@ -54,7 +54,7 @@ function setWidthAndHeightPercentage(displays: Display[]) {
   const biggestDisplay = displays.reduce((prev, current) =>
     prev.width.cm > current.width.cm ? prev : current
   );
-  const divider = Math.max(biggestDisplay.width.cm);
+  const divider = Math.max(biggestDisplay.width.cm, biggestDisplay.height.cm);
 
   displays.forEach((display) => {
     display.width.percentage = (display.width.cm / divider) * 100 || 0;
@@ -63,7 +63,9 @@ function setWidthAndHeightPercentage(displays: Display[]) {
 }
 
 function setZIndexFromBiggestToSmallest(displays: Display[]) {
-  const sortedDisplays = [...displays].sort((a, b) => b.width.cm - a.width.cm);
+  const sortedDisplays = [...displays].sort(
+    (a, b) => b.width.cm * b.height.cm - a.width.cm * a.height.cm
+  );
 
   displays.forEach((display) => {
     display.zIndex = sortedDisplays.indexOf(display);

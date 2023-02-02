@@ -9,7 +9,7 @@ export default function Screen() {
   const [displays, setDisplays] = useState(generateDisplays(2));
 
   return (
-    <div className="mt-5">
+    <div>
       <Setup displays={displays} setDisplays={setDisplays} />
       <div className="mt-14" />
       <Presentation displays={displays} />
