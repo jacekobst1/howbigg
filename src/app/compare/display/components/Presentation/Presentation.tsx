@@ -20,7 +20,7 @@ export default function Presentation({ displays }: SetupProps) {
 
   return (
     <div className="w-11/12 mx-auto">
-      <div className="w-full relative" style={{ aspectRatio: "1/1" }}>
+      <div className="w-full relative aspect-square">
         {displays.map((display) => (
           <div
             key={display.id}
