@@ -2,19 +2,19 @@
 
 import Display from "@/app/compare/display/types/Display";
 import { getWindowDimensions } from "@/hooks/useWindowDimensions";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 interface SetupProps {
   displays: Display[];
 }
 
 export default function Presentation({ displays }: SetupProps) {
-  let borderSize = 3;
+  let borderSize = useRef(3);
 
   useEffect(() => {
     const windowDimensions = getWindowDimensions();
     if (windowDimensions.width < 768) {
-      borderSize = 2;
+      borderSize.current = 2;
     }
   }, []);
 
@@ -34,7 +34,7 @@ export default function Presentation({ displays }: SetupProps) {
               zIndex: display.zIndex,
               border:
                 display.height.percentage * display.width.percentage > 0
-                  ? `${borderSize}px solid black`
+                  ? `${borderSize.current}px solid black`
                   : "none",
             }}
           />
