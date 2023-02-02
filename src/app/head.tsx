@@ -4,7 +4,7 @@ export default function Head() {
       <title>How big is your...</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content="Compare size of screens" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/images/favicon/favicon.ico" />
     </>
   );
 }
