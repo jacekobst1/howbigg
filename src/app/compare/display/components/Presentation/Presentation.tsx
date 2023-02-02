@@ -9,7 +9,7 @@ interface SetupProps {
 }
 
 export default function Presentation({ displays }: SetupProps) {
-  let borderSize = useRef(3);
+  const borderSize = useRef(3);
 
   useEffect(() => {
     const windowDimensions = getWindowDimensions();
