@@ -11,9 +11,12 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="myTheme">
       <head />
-      <body data-theme="mytheme" className="bg-neutral">
+      <body
+        data-theme="mytheme"
+        className="flex flex-col min-h-screen bg-neutral"
+      >
         <Header />
-        <main className="layout">{children}</main>
+        <main className="layout h-fit">{children}</main>
         <Footer />
       </body>
     </html>
