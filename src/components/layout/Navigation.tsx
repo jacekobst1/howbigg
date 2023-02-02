@@ -4,9 +4,8 @@ import * as React from "react";
 import { usePathname } from "next/navigation";
 import clsxm from "@/lib/clsxm";
 
-const links = [
-  { href: "/compare/display", label: "Display" },
-  { href: "/compare/phone", label: "Phone" },
+const links: any[] = [
+  // { href: "/compare/display", label: "Display" }
 ];
 
 export default function Navigation() {

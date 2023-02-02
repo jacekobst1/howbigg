@@ -8,9 +8,9 @@ interface LabelProps {
 const Label = ({ children, text }: LabelProps) => {
   return (
     <label>
-      <span className="block text-sm font-medium select-none text-gray-700 px-1">
+      <p className="block text-xs md:text-sm font-medium select-none text-gray-700 px-1">
         {text}
-      </span>
+      </p>
       {children}
     </label>
   );
