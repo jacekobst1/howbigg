@@ -2,9 +2,10 @@ import React from "react";
 
 export default function Head() {
   const meta = {
-    title: "How big is your display",
-    siteName: "Howbigg",
-    description: "Compare size of displays",
+    title: "Compare different display sizes | Howbigg",
+    siteName: "Compare different display sizes | Howbigg",
+    description:
+      "Are you looking for a new monitor? Or perhaps a television set? Compare their sizes first to see which one will suit you better!",
     url: "https://howbigg.com",
     type: "website",
     robots: "follow, index",
