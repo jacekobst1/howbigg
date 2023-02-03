@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Head() {
   const meta = {
-    title: "Compare different display sizes | Howbigg",
-    siteName: "Compare different display sizes | Howbigg",
+    title: "Display size live comparison | Howbigg",
+    siteName: "Display size live comparison | Howbigg",
     description:
       "Are you looking for a new monitor? Or perhaps a television set? Compare their sizes first to see which one will suit you better!",
     url: "https://howbigg.com",
