@@ -74,14 +74,14 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
         {display.aspectRatio.value === "custom" && (
           <div className="form-control mt-2 flex flex-row">
             <Input
-              value={display.customAspectRatio.width || ""}
+              value={round(display.customAspectRatio.width) || ""}
               mOnChange={setCustomAspectRatioWidth}
               type="number"
               mSize="sm"
             />
             <span className="mx-2">x</span>
             <Input
-              value={display.customAspectRatio.height || ""}
+              value={round(display.customAspectRatio.height) || ""}
               mOnChange={setCustomAspectRatioHeight}
               type="number"
               mSize="sm"
