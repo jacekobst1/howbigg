@@ -11,7 +11,7 @@ export default function Footer() {
         "py-4 mt-5"
       )}
     >
-      <div className="footer footer-center layout items-center">
+      <div className="footer footer-center items-center">
         <p>Copyright © {currentYear} - All right reserved</p>
       </div>
     </footer>

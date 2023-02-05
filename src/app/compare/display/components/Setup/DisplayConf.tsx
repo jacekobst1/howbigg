@@ -7,7 +7,7 @@ import Toggle from "@/components/form/inputs/Toggle";
 import { aspectRatios } from "../../types/AspectRatio";
 import React from "react";
 import Display from "@/app/compare/display/types/Display";
-import { round } from "lodash";
+import { round } from "@/utils/math";
 
 interface DisplayProps {
   display: Display;
@@ -91,7 +91,7 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
         <div className="form-control mt-3">
           <InputGroup size="sm" label="Size">
             <Input
-              value={round(display.diagonal.length, 2) || ""}
+              value={round(display.diagonal.length) || ""}
               mOnChange={setDiagonal}
               type="number"
               mSize="sm"

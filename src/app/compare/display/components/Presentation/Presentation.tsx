@@ -4,11 +4,11 @@ import Display from "@/app/compare/display/types/Display";
 import { getWindowDimensions } from "@/hooks/useWindowDimensions";
 import { useEffect, useRef } from "react";
 
-interface SetupProps {
+interface PresentationProps {
   displays: Display[];
 }
 
-export default function Presentation({ displays }: SetupProps) {
+export default function Presentation({ displays }: PresentationProps) {
   const borderSize = useRef(3);
 
   useEffect(() => {
