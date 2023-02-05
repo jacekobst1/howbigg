@@ -8,7 +8,7 @@ export default function Footer() {
       className={clsxm(
         "w-full",
         "bg-base-100 text-slate-500 drop-shadow",
-        "py-4 mt-5"
+        "py-4 mt-10"
       )}
     >
       <div className="footer footer-center items-center">

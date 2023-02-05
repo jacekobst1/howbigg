@@ -24,10 +24,21 @@ const initDisplay = (id: number): Display => ({
     percentage: 0,
   },
   zIndex: 0,
-  color: "#000000",
+  color: {
+    background: "#000",
+    text: "#FFF",
+  },
 });
 
-const colors = ["#413C69", "#F4B0C7", "#4A47A3", "#AD62AA"];
+const dark = "#000";
+const light = "#FFF";
+
+const colors = [
+  { background: "#413C69", text: light },
+  { background: "#F4B0C7", text: dark },
+  { background: "#4A47A3", text: light },
+  { background: "#AD62AA", text: light },
+];
 
 const generateDisplays = (numberOfDisplays: number) => {
   const displays: Display[] = [];

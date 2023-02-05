@@ -9,7 +9,7 @@ interface Display {
   width: Size;
   height: Size;
   zIndex: number;
-  color: string;
+  color: Color;
 }
 
 interface CustomAspectRatio {
@@ -26,6 +26,11 @@ interface Size {
   in: number;
   cm: number;
   percentage: number;
+}
+
+interface Color {
+  background: string;
+  text: string;
 }
 
 export default Display;

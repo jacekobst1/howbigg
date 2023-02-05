@@ -19,7 +19,7 @@ export default function Presentation({ displays }: PresentationProps) {
   }, []);
 
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-full mx-auto">
       <div className="w-full relative aspect-square">
         {displays.map((display) => (
           <div
@@ -30,7 +30,7 @@ export default function Presentation({ displays }: PresentationProps) {
               transition: "all 0.8s ease",
               width: `${display.width.percentage}%`,
               height: `${display.height.percentage}%`,
-              backgroundColor: display.color,
+              backgroundColor: display.color.background,
               zIndex: display.zIndex,
               border:
                 display.height.percentage * display.width.percentage > 0

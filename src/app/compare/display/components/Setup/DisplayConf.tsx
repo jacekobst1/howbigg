@@ -57,7 +57,7 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
         <div className="flex">
           <div
             className="w-fit h-full rounded-3xl px-0.5 py-2.5 md:py-3 mr-1"
-            style={{ backgroundColor: display.color }}
+            style={{ backgroundColor: display.color.background }}
           />
           <p className="text-slate-600 font-semibold">{display.name}</p>
         </div>
