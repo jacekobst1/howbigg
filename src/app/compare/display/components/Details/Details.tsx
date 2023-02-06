@@ -1,28 +1,44 @@
 "use client";
 
 import Display from "@/app/compare/display/types/Display";
-import React from "react";
+import React, { ReactNode, useState } from "react";
+import Toggle from "@/components/form/inputs/Toggle";
 
 interface DetailsProps {
   displays: Display[];
 }
 
 export default function Details({ displays }: DetailsProps) {
+  const [unit, setUnit] = useState<"cm" | "in">("in");
+  const unitIsCm = unit === "cm";
+
+  function toggleUnit(checked: boolean) {
+    const unit = checked ? "cm" : "in";
+    setUnit(unit);
+  }
+
   return (
     <div className="overflow-x-auto">
-      <table className="table w-full">
+      <label>
+        <p className="flex items-center justify-end text-xs md:text-sm font-medium select-none text-gray-700 px-1">
+          <span className="mr-2">Use centimeters</span>
+          <Toggle size="md" checked={unitIsCm} onChange={toggleUnit} />
+        </p>
+      </label>
+
+      <table className="table w-full mt-2">
         <thead>
           <tr>
-            <th></th>
-            <th>Width</th>
-            <th>Height</th>
-            <th>Area</th>
+            <HeadTh />
+            <HeadTh>Width</HeadTh>
+            <HeadTh>Height</HeadTh>
+            <HeadTh>Area</HeadTh>
           </tr>
         </thead>
         <tbody>
           {displays.map((display) => (
-            <tr key={display.id} className="hover">
-              <th className="p-0">
+            <tr key={display.id} className="group">
+              <th className="p-0 group-hover:bg-primary-100">
                 <div className="flex items-center">
                   <div
                     className="w-fit h-full rounded-3xl px-0.5 py-7 mr-1"
@@ -31,9 +47,16 @@ export default function Details({ displays }: DetailsProps) {
                   {display.name}
                 </div>
               </th>
-              <td>{display.width.cm.toFixed(2)} cm</td>
-              <td>{display.height.cm.toFixed(2)} cm</td>
-              <td>{(display.width.cm * display.height.cm).toFixed(2)} cm3</td>
+              <BodyTd>
+                {display.width[unit].toFixed(2)} {unit}
+              </BodyTd>
+              <BodyTd>
+                {display.height[unit].toFixed(2)} {unit}
+              </BodyTd>
+              <BodyTd>
+                {(display.width[unit] * display.height[unit]).toFixed(2)} {unit}
+                <sup>2</sup>
+              </BodyTd>
             </tr>
           ))}
         </tbody>
@@ -41,3 +64,15 @@ export default function Details({ displays }: DetailsProps) {
     </div>
   );
 }
+
+interface ChildrenProp {
+  children?: ReactNode;
+}
+
+const HeadTh = ({ children }: ChildrenProp) => {
+  return <th className="bg-primary-500 text-base-100">{children}</th>;
+};
+
+const BodyTd = ({ children }: ChildrenProp) => {
+  return <td className="group-hover:bg-primary-100">{children}</td>;
+};
