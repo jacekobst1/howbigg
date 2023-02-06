@@ -18,50 +18,52 @@ export default function Details({ displays }: DetailsProps) {
   }
 
   return (
-    <div className="overflow-x-auto">
+    <>
       <label>
         <p className="flex items-center justify-end text-xs md:text-sm font-medium select-none text-gray-700 px-1">
           <span className="mr-2">Use centimeters</span>
           <Toggle size="md" checked={unitIsCm} onChange={toggleUnit} />
         </p>
       </label>
-
-      <table className="table w-full mt-2">
-        <thead>
-          <tr>
-            <HeadTh />
-            <HeadTh>Width</HeadTh>
-            <HeadTh>Height</HeadTh>
-            <HeadTh>Area</HeadTh>
-          </tr>
-        </thead>
-        <tbody>
-          {displays.map((display) => (
-            <tr key={display.id} className="group">
-              <th className="p-0 group-hover:bg-primary-100">
-                <div className="flex items-center">
-                  <div
-                    className="w-fit h-full rounded-3xl px-0.5 py-7 mr-1"
-                    style={{ backgroundColor: display.color.background }}
-                  />
-                  {display.name}
-                </div>
-              </th>
-              <BodyTd>
-                {display.width[unit].toFixed(2)} {unit}
-              </BodyTd>
-              <BodyTd>
-                {display.height[unit].toFixed(2)} {unit}
-              </BodyTd>
-              <BodyTd>
-                {(display.width[unit] * display.height[unit]).toFixed(2)} {unit}
-                <sup>2</sup>
-              </BodyTd>
+      <div className="overflow-x-auto">
+        <table className="table w-full mt-2">
+          <thead>
+            <tr>
+              <HeadTh>Name</HeadTh>
+              <HeadTh>Width</HeadTh>
+              <HeadTh>Height</HeadTh>
+              <HeadTh>Area</HeadTh>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {displays.map((display) => (
+              <tr key={display.id} className="group">
+                <th className="p-0 group-hover:bg-primary-100">
+                  <div className="flex items-center">
+                    <div
+                      className="w-fit h-full rounded-3xl px-0.5 py-7 mr-1"
+                      style={{ backgroundColor: display.color.background }}
+                    />
+                    {display.name}
+                  </div>
+                </th>
+                <BodyTd>
+                  {display.width[unit].toFixed(2)} {unit}
+                </BodyTd>
+                <BodyTd>
+                  {display.height[unit].toFixed(2)} {unit}
+                </BodyTd>
+                <BodyTd>
+                  {(display.width[unit] * display.height[unit]).toFixed(2)}{" "}
+                  {unit}
+                  <sup>2</sup>
+                </BodyTd>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 
