@@ -7,7 +7,7 @@ import Details from "@/app/compare/display/components/Details/Details";
 import useQueryState from "@/hooks/useQueryState";
 import React, { useEffect, useState } from "react";
 import Display from "@/app/compare/display/types/Display";
-import setDimensionsOfDisplays from "@/app/compare/display/utils/sizeCalculator";
+import setDisplaysDimensions from "@/app/compare/display/utils/sizeCalculator";
 import { decodeDisplays, encodeDisplays } from "@/app/compare/display/utils/urlEncoder";
 import { mergeDeep } from "@/utils/objects";
 
@@ -36,8 +36,8 @@ export default function DisplayPage() {
           mergeDeep(display, decodedDisplays[index]) as Display
       );
 
-      setDimensionsOfDisplays(mergedDisplays);
-      setDisplays(mergedDisplays);
+      const dimensionedDisplays = setDisplaysDimensions(mergedDisplays);
+      setDisplays(dimensionedDisplays);
     }
 
     setIsReady(true);

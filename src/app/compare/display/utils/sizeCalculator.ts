@@ -1,10 +1,15 @@
 import Display from "@/app/compare/display/types/Display";
+import { cloneDeep } from "@/utils/objects";
 
-function setDimensionsOfDisplays(displays: Display[]) {
-  setCustomAspectRatioValue(displays);
-  setWidthAndHeightStandard(displays);
-  setWidthAndHeightPercentage(displays);
-  setZIndexFromBiggestToSmallest(displays);
+function setDisplaysDimensions(displays: Display[]) {
+  let clonedDisplays = cloneDeep(displays);
+
+  setCustomAspectRatioValue(clonedDisplays);
+  setWidthAndHeightStandard(clonedDisplays);
+  setWidthAndHeightPercentage(clonedDisplays);
+  setZIndexFromBiggestToSmallest(clonedDisplays);
+
+  return clonedDisplays;
 }
 
 function setCustomAspectRatioValue(displays: Display[]) {
@@ -72,4 +77,4 @@ function setZIndexFromBiggestToSmallest(displays: Display[]) {
   });
 }
 
-export default setDimensionsOfDisplays;
+export default setDisplaysDimensions;

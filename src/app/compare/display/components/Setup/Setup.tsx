@@ -4,7 +4,7 @@ import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
 import Display from "@/app/compare/display/types/Display";
 import Button from "@/components/buttons/Button";
 import { Fragment, useState } from "react";
-import setDimensionsOfDisplays from "@/app/compare/display/utils/sizeCalculator";
+import setDisplaysDimensions from "@/app/compare/display/utils/sizeCalculator";
 import { quickToast } from "@/lib/toast";
 
 interface SetupProps {
@@ -23,8 +23,8 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
   }
 
   function compare() {
-    setDimensionsOfDisplays(localDisplays);
-    setDisplays(localDisplays);
+    const dimensionedDisplays = setDisplaysDimensions(localDisplays);
+    setDisplays(dimensionedDisplays);
   }
 
   function copyUrlToClipboard() {

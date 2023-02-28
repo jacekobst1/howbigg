@@ -19,4 +19,8 @@ function mergeDeep(...objects: any[]) {
   }, {});
 }
 
-export { mergeDeep };
+function cloneDeep(obj: any) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
+export { mergeDeep, cloneDeep };
