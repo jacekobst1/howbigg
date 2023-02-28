@@ -1,6 +1,7 @@
 @import "tailwind/components.css";
 @import "tailwind/base.css";
 @import "tailwind/utilities.css";
+@import 'react-toastify/dist/ReactToastify.min.css';
 
 :root {
   --tw-color-primary-50: 238 242 255;

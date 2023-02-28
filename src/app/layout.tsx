@@ -3,6 +3,7 @@ import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import AnalyticsWrapper from "@/components/AnalyticsWrapper";
+import ToastContainerWrapper from "@/components/ToastContainerWrapper";
 
 export default function RootLayout({
   children,
@@ -20,6 +21,7 @@ export default function RootLayout({
         <main className="layout grow">{children}</main>
         <Footer />
         <AnalyticsWrapper />
+        <ToastContainerWrapper />
       </body>
     </html>
   );

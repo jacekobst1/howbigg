@@ -59,5 +59,7 @@ const aspectRatios: AspectRatio[] = [
   },
 ];
 
+const defaultAspectRatio: AspectRatio = aspectRatios[2];
+
 export default AspectRatio;
-export { aspectRatios };
+export { aspectRatios, defaultAspectRatio };

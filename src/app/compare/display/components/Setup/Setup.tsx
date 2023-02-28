@@ -5,6 +5,7 @@ import Display from "@/app/compare/display/types/Display";
 import Button from "@/components/buttons/Button";
 import { Fragment, useState } from "react";
 import setDimensionsOfDisplays from "@/app/compare/display/utils/sizeCalculator";
+import { quickToast } from "@/lib/toast";
 
 interface SetupProps {
   displays: Display[];
@@ -14,17 +15,23 @@ interface SetupProps {
 export default function Setup({ displays, setDisplays }: SetupProps) {
   const [localDisplays, setLocalDisplays] = useState(displays);
 
-  const setLocalDisplay = (display: Display) => {
+  function setLocalDisplay(display: Display) {
     const newDisplays = localDisplays.map((d) =>
       d.id === display.id ? display : d
     );
     setLocalDisplays(newDisplays);
-  };
+  }
 
-  const compare = () => {
+  function compare() {
     setDimensionsOfDisplays(localDisplays);
     setDisplays(localDisplays);
-  };
+  }
+
+  function copyUrlToClipboard() {
+    navigator.clipboard
+      .writeText(location.href)
+      .then(() => quickToast("💾 Copied to clipboard"));
+  }
 
   return (
     <>
@@ -38,9 +45,12 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
           </Fragment>
         ))}
       </div>
-      <Button className="mt-6" onClick={compare}>
-        Compare
-      </Button>
+      <div className="mt-6">
+        <Button onClick={compare}>Compare</Button>
+        <Button className="ml-2" variant="outline" onClick={copyUrlToClipboard}>
+          Copy your comparison
+        </Button>
+      </div>
     </>
   );
 }

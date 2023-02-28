@@ -4,10 +4,10 @@ import Select from "@/components/form/selects/Select";
 import Input from "@/components/form/inputs/Input";
 import InputGroup from "@/components/form/inputs/InputGroup";
 import Toggle from "@/components/form/inputs/Toggle";
-import { aspectRatios } from "../../types/AspectRatio";
+import {aspectRatios} from "../../types/AspectRatio";
 import React from "react";
 import Display from "@/app/compare/display/types/Display";
-import { round } from "@/utils/math";
+import {round} from "@/utils/math";
 
 interface DisplayProps {
   display: Display;
@@ -64,7 +64,7 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
 
         <div className="form-control mt-3">
           <Select
-            defaultValue="16x9"
+            value={display.aspectRatio.value}
             mOnChange={setAspectRatio}
             label="Aspect ratio"
             options={aspectRatios}

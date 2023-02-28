@@ -12,6 +12,12 @@ interface Display {
   color: Color;
 }
 
+interface DisplayUrlState {
+  aspectRatio: AspectRatio;
+  customAspectRatio: CustomAspectRatio;
+  diagonal: Diagonal;
+}
+
 interface CustomAspectRatio {
   width: number;
   height: number;
@@ -34,3 +40,4 @@ interface Color {
 }
 
 export default Display;
+export type { DisplayUrlState };
