@@ -2,10 +2,15 @@ import Display, { DisplayUrlState } from "@/app/compare/display/types/Display";
 import { aspectRatios, defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
 
 function encodeDisplays(displays: Display[]): string[] {
-  return displays.map(
-    (display) =>
-      `${display.aspectRatio.value}_${display.customAspectRatio.width}_${display.customAspectRatio.height}_${display.diagonal.length}_${display.diagonal.unit}`
-  );
+  return displays.map((display) => {
+    const { aspectRatio, customAspectRatio, diagonal, isVertical } = display;
+    const { value } = aspectRatio;
+    const { width, height } = customAspectRatio;
+    const { length, unit } = diagonal;
+    const orientation = isVertical ? 1 : 0;
+
+    return `${value}_${width}_${height}_${length}_${unit}_${orientation}`;
+  });
 }
 
 function decodeDisplays(encodedDisplays: string[]) {
@@ -25,6 +30,7 @@ function decodeDisplays(encodedDisplays: string[]) {
         length: parseFloat(data[3]),
         unit: data[4] as "cm" | "in",
       },
+      isVertical: data[5] === "1",
     };
   });
 

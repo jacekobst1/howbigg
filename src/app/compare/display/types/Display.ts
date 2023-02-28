@@ -6,6 +6,7 @@ interface Display {
   aspectRatio: AspectRatio;
   customAspectRatio: CustomAspectRatio;
   diagonal: Diagonal;
+  isVertical: boolean;
   width: Size;
   height: Size;
   zIndex: number;
@@ -16,6 +17,7 @@ interface DisplayUrlState {
   aspectRatio: AspectRatio;
   customAspectRatio: CustomAspectRatio;
   diagonal: Diagonal;
+  isVertical: boolean;
 }
 
 interface CustomAspectRatio {

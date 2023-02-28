@@ -25,8 +25,12 @@ function setCustomAspectRatioValue(displays: Display[]) {
 
 function setWidthAndHeightStandard(displays: Display[]) {
   displays.forEach((display) => {
+    const aspectRatioDecimalValue = display.isVertical
+      ? 1 / display.aspectRatio.decimalValue
+      : display.aspectRatio.decimalValue;
+
     const { widthCm, heightCm, widthIn, heightIn } = calculateSize(
-      display.aspectRatio.decimalValue,
+      aspectRatioDecimalValue,
       display.diagonal.length,
       display.diagonal.unit === "in"
     );

@@ -13,6 +13,7 @@ const initDisplay = (id: number): Display => ({
     length: 0,
     unit: "in",
   },
+  isVertical: false,
   width: {
     in: 0,
     cm: 0,

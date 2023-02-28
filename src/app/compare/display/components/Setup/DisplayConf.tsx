@@ -4,10 +4,10 @@ import Select from "@/components/form/selects/Select";
 import Input from "@/components/form/inputs/Input";
 import InputGroup from "@/components/form/inputs/InputGroup";
 import Toggle from "@/components/form/inputs/Toggle";
-import {aspectRatios} from "../../types/AspectRatio";
+import { aspectRatios } from "../../types/AspectRatio";
 import React from "react";
 import Display from "@/app/compare/display/types/Display";
-import {round} from "@/utils/math";
+import { round } from "@/utils/math";
 
 interface DisplayProps {
   display: Display;
@@ -48,6 +48,11 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
       unit === "cm"
         ? display.diagonal.length * 2.54
         : display.diagonal.length / 2.54;
+    setDisplay(display);
+  };
+
+  const setIsVertical = (checked: boolean) => {
+    display.isVertical = checked;
     setDisplay(display);
   };
 
@@ -100,6 +105,14 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
               {display.diagonal.unit}
             </span>
           </InputGroup>
+        </div>
+        <div className="form-control mt-3">
+          <Toggle
+            checked={display.isVertical}
+            onChange={setIsVertical}
+            label="Vertical"
+            size="md"
+          />
         </div>
         <div className="form-control mt-3">
           <Toggle
