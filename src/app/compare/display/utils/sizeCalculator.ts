@@ -61,7 +61,10 @@ function calculateSize(
 
 function setWidthAndHeightPercentage(displays: Display[]) {
   const biggestDisplay = displays.reduce((prev, current) =>
-    prev.width.cm > current.width.cm ? prev : current
+    Math.max(current.width.cm, current.height.cm) >
+    Math.max(prev.width.cm, prev.height.cm)
+      ? current
+      : prev
   );
   const divider = Math.max(biggestDisplay.width.cm, biggestDisplay.height.cm);
 

@@ -6,6 +6,7 @@ import Button from "@/components/buttons/Button";
 import { Fragment, useState } from "react";
 import setDisplaysDimensions from "@/app/compare/display/utils/sizeCalculator";
 import { quickToast } from "@/lib/toast";
+import { cloneDeep } from "@/utils/objects";
 
 interface SetupProps {
   displays: Display[];
@@ -38,7 +39,10 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
       <div className="flex">
         {localDisplays.map((localDisplay) => (
           <Fragment key={localDisplay.id}>
-            <DisplayConf display={localDisplay} setDisplay={setLocalDisplay} />
+            <DisplayConf
+              display={cloneDeep(localDisplay)}
+              setDisplay={setLocalDisplay}
+            />
             {localDisplay.id !== localDisplays[localDisplays.length - 1].id && (
               <div className="divider divider-horizontal" />
             )}
