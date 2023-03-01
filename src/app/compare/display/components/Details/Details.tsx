@@ -17,9 +17,24 @@ export default function Details({ displays }: DetailsProps) {
     setUnit(unit);
   }
 
+  const tallestDisplayHeight = displays.reduce((prev, current) =>
+    current.height.cm > prev.height.cm ? current : prev
+  ).height.percentage;
+
+  const marginTop = `-${100 - tallestDisplayHeight}%`;
+  const paddingBottom =
+    tallestDisplayHeight > 70 ? 0 : `${70 - tallestDisplayHeight}%`;
+
   return (
-    <>
-      <label>
+    <div
+      style={{
+        marginTop: marginTop,
+        paddingBottom: paddingBottom,
+        transition: "margin 0.8s, padding 0.8s, opacity 0.8s linear",
+        opacity: tallestDisplayHeight > 0 ? 1 : 0,
+      }}
+    >
+      <label className="relative">
         <p className="flex items-center justify-end text-xs md:text-sm font-medium select-none text-gray-700 px-1">
           <span className="mr-2">Use centimeters</span>
           <Toggle size="md" checked={unitIsCm} onChange={toggleUnit} />
@@ -28,7 +43,7 @@ export default function Details({ displays }: DetailsProps) {
       <div className="overflow-x-auto">
         <table className="table w-full mt-2">
           <thead>
-            <tr>
+            <tr className="select-none">
               <HeadTh>Name</HeadTh>
               <HeadTh>Width</HeadTh>
               <HeadTh>Height</HeadTh>
@@ -38,7 +53,7 @@ export default function Details({ displays }: DetailsProps) {
           <tbody>
             {displays.map((display) => (
               <tr key={display.id} className="group">
-                <th className="p-0 group-hover:bg-primary-100">
+                <th className="p-0 group-hover:bg-primary-100 select-none">
                   <div className="flex items-center">
                     <div
                       className="w-fit h-full rounded-3xl px-0.5 py-7 mr-1"
@@ -63,7 +78,7 @@ export default function Details({ displays }: DetailsProps) {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -64,7 +64,9 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
             className="w-fit h-full rounded-3xl px-0.5 py-2.5 md:py-3 mr-1"
             style={{ backgroundColor: display.color.background }}
           />
-          <p className="text-slate-600 font-semibold">{display.name}</p>
+          <p className="text-slate-600 font-semibold select-none">
+            {display.name}
+          </p>
         </div>
 
         <div className="form-control mt-3">
