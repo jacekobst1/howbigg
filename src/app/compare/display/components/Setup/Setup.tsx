@@ -3,7 +3,7 @@
 import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
 import Display from "@/app/compare/display/types/Display";
 import Button from "@/components/buttons/Button";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import setDisplaysDimensions from "@/app/compare/display/utils/sizeCalculator";
 import { cloneDeep } from "@/utils/objects";
 import CopyComparisonButton from "@/app/compare/display/components/Setup/CopyComparisonButton";
@@ -12,9 +12,16 @@ import AddNewDisplayButton from "@/app/compare/display/components/Setup/AddNewDi
 interface SetupProps {
   displays: Display[];
   setDisplays: (displays: Display[]) => void;
+  createDisplay: () => void;
+  deleteDisplay: (id: number) => void;
 }
 
-export default function Setup({ displays, setDisplays }: SetupProps) {
+export default function Setup({
+  displays,
+  setDisplays,
+  createDisplay,
+  deleteDisplay,
+}: SetupProps) {
   const [localDisplays, setLocalDisplays] = useState(displays);
 
   function setLocalDisplay(display: Display) {
@@ -29,14 +36,19 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
     setDisplays(dimensionedDisplays);
   }
 
+  useEffect(() => {
+    setLocalDisplays(displays);
+  }, [displays]);
+
   return (
     <>
-      <div className="flex">
+      <div className="flex overflow-x-auto">
         {localDisplays.map((localDisplay) => (
           <Fragment key={localDisplay.id}>
             <DisplayConf
               display={cloneDeep(localDisplay)}
               setDisplay={setLocalDisplay}
+              deleteDisplay={deleteDisplay}
             />
             {localDisplay.id !== localDisplays[localDisplays.length - 1].id && (
               <div className="divider divider-horizontal" />
@@ -47,10 +59,7 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
       <div className="mt-6">
         <Button onClick={compare}>Compare</Button>
         <CopyComparisonButton />
-        <AddNewDisplayButton
-          displays={localDisplays}
-          setDisplays={setLocalDisplays}
-        />
+        <AddNewDisplayButton createDisplay={createDisplay} />
       </div>
     </>
   );

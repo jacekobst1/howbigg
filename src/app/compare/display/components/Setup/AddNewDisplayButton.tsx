@@ -4,21 +4,14 @@ import Display from "@/app/compare/display/types/Display";
 import { generateDisplayByExistingOnes } from "@/app/compare/display/utils/displayGenerator";
 
 interface AddNewDisplayButtonProps {
-  displays: Display[];
-  setDisplays: (displays: Display[]) => void;
+  createDisplay: () => void;
 }
 
 export default function AddNewDisplayButton({
-  displays,
-  setDisplays,
+  createDisplay,
 }: AddNewDisplayButtonProps) {
-  function addNewDisplay() {
-    const newDisplay = generateDisplayByExistingOnes(displays);
-    setDisplays([...displays, newDisplay]);
-  }
-
   return (
-    <Button onClick={addNewDisplay} className="ml-2" variant="outline">
+    <Button onClick={createDisplay} className="ml-2" variant="outline">
       <BsDisplayFill className="mr-2" />
       Add
     </Button>

@@ -2,7 +2,10 @@
 
 import Setup from "@/app/compare/display/components/Setup/Setup";
 import Presentation from "@/app/compare/display/components/Presentation/Presentation";
-import { generateDisplays } from "@/app/compare/display/utils/displayGenerator";
+import {
+  generateDisplayByExistingOnes,
+  generateDisplays,
+} from "@/app/compare/display/utils/displayGenerator";
 import Details from "@/app/compare/display/components/Details/Details";
 import useQueryState from "@/hooks/useQueryState";
 import React, { useEffect, useState } from "react";
@@ -52,9 +55,25 @@ export default function DisplayPage() {
     setQueryState(encodeDisplays(displays));
   }
 
+  function createDisplay() {
+    const newDisplay = generateDisplayByExistingOnes(displays);
+    setData([...displays, newDisplay]);
+  }
+
+  function deleteDisplay(id: number) {
+    const newDisplays = displays.filter((d) => d.id !== id);
+    const dimensionedDisplays = setDisplaysDimensions(newDisplays);
+    setData(dimensionedDisplays);
+  }
+
   return isReady ? (
     <div>
-      <Setup displays={displays} setDisplays={setData} />
+      <Setup
+        displays={displays}
+        setDisplays={setData}
+        createDisplay={createDisplay}
+        deleteDisplay={deleteDisplay}
+      />
       <div className="mt-14" />
       <Presentation displays={displays} />
       <div className="mt-14" />
