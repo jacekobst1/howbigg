@@ -3,10 +3,11 @@
 import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
 import Display from "@/app/compare/display/types/Display";
 import Button from "@/components/buttons/Button";
-import { Fragment, useState } from "react";
+import React, { Fragment, useState } from "react";
 import setDisplaysDimensions from "@/app/compare/display/utils/sizeCalculator";
-import { quickToast } from "@/lib/toast";
 import { cloneDeep } from "@/utils/objects";
+import CopyComparisonButton from "@/app/compare/display/components/Setup/CopyComparisonButton";
+import AddNewDisplayButton from "@/app/compare/display/components/Setup/AddNewDisplayButton";
 
 interface SetupProps {
   displays: Display[];
@@ -28,12 +29,6 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
     setDisplays(dimensionedDisplays);
   }
 
-  function copyUrlToClipboard() {
-    navigator.clipboard
-      .writeText(location.href)
-      .then(() => quickToast("💾 Copied to clipboard"));
-  }
-
   return (
     <>
       <div className="flex">
@@ -51,9 +46,11 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
       </div>
       <div className="mt-6">
         <Button onClick={compare}>Compare</Button>
-        <Button className="ml-2" variant="outline" onClick={copyUrlToClipboard}>
-          Copy your comparison
-        </Button>
+        <CopyComparisonButton />
+        <AddNewDisplayButton
+          displays={localDisplays}
+          setDisplays={setLocalDisplays}
+        />
       </div>
     </>
   );

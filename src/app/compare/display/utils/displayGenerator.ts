@@ -1,6 +1,33 @@
 import { aspectRatios } from "@/app/compare/display/types/AspectRatio";
 import Display from "@/app/compare/display/types/Display";
 
+function generateDisplays(numberOfDisplays: number) {
+  const displays: Display[] = [];
+
+  for (let i = 1; i <= numberOfDisplays; i++) {
+    const display = initDisplay(i);
+    display.color = colors[i - 1];
+    displays.push(display);
+  }
+
+  return displays;
+}
+
+function generateDisplayByExistingOnes(existingDisplays: Display[]) {
+  const nonUsedColors = colors.filter(
+    (color) =>
+      !existingDisplays.some(
+        (display) => display.color.background === color.background
+      )
+  );
+  const maxId = Math.max(...existingDisplays.map((display) => display.id));
+
+  const newDisplay = initDisplay(maxId + 1);
+  newDisplay.color = nonUsedColors[0];
+
+  return newDisplay;
+}
+
 const initDisplay = (id: number): Display => ({
   id: id,
   name: `Display ${id}`,
@@ -41,16 +68,4 @@ const colors = [
   { background: "#AD62AA", text: light },
 ];
 
-const generateDisplays = (numberOfDisplays: number) => {
-  const displays: Display[] = [];
-
-  for (let i = 1; i <= numberOfDisplays; i++) {
-    const display = initDisplay(i);
-    display.color = colors[i - 1];
-    displays.push(display);
-  }
-
-  return displays;
-};
-
-export { generateDisplays };
+export { generateDisplays, generateDisplayByExistingOnes };

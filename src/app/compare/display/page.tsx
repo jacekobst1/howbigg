@@ -8,7 +8,10 @@ import useQueryState from "@/hooks/useQueryState";
 import React, { useEffect, useState } from "react";
 import Display from "@/app/compare/display/types/Display";
 import setDisplaysDimensions from "@/app/compare/display/utils/sizeCalculator";
-import { decodeDisplays, encodeDisplays } from "@/app/compare/display/utils/urlEncoder";
+import {
+  decodeDisplays,
+  encodeDisplays,
+} from "@/app/compare/display/utils/urlEncoder";
 import { mergeDeep } from "@/utils/objects";
 
 interface DisplayOnlyRequired {
@@ -20,26 +23,27 @@ interface DisplayOnlyRequired {
 }
 
 export default function DisplayPage() {
-  const defaultDisplays = generateDisplays(2);
-  const [displays, setDisplays] = useState(defaultDisplays);
+  const [displays, setDisplays] = useState(generateDisplays(2));
   const [queryState, setQueryState, isQueryStateReady] =
-    useQueryState("displays");
+    useQueryState<string[]>("displays");
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     if (!isQueryStateReady) return;
 
-    if (queryState && Array.isArray(queryState)) {
-      const decodedDisplays = decodeDisplays(queryState);
-      const mergedDisplays = displays.map(
-        (display, index) =>
-          mergeDeep(display, decodedDisplays[index]) as Display
-      );
-
-      const dimensionedDisplays = setDisplaysDimensions(mergedDisplays);
-      setDisplays(dimensionedDisplays);
+    if (!queryState || !Array.isArray(queryState)) {
+      setIsReady(true);
+      return;
     }
 
+    const defaultDisplays = generateDisplays(queryState.length);
+    const decodedDisplays = decodeDisplays(queryState);
+    const mergedDisplays = defaultDisplays.map(
+      (display, index) => mergeDeep(display, decodedDisplays[index]) as Display
+    );
+    const dimensionedDisplays = setDisplaysDimensions(mergedDisplays);
+
+    setDisplays(dimensionedDisplays);
     setIsReady(true);
   }, [isQueryStateReady]);
 
