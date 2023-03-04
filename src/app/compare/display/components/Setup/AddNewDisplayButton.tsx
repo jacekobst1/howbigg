@@ -5,13 +5,20 @@ import { generateDisplayByExistingOnes } from "@/app/compare/display/utils/displ
 
 interface AddNewDisplayButtonProps {
   createDisplay: () => void;
+  displaysLength: number;
 }
 
 export default function AddNewDisplayButton({
   createDisplay,
+  displaysLength,
 }: AddNewDisplayButtonProps) {
   return (
-    <Button onClick={createDisplay} className="ml-2" variant="outline">
+    <Button
+      onClick={createDisplay}
+      className="ml-2"
+      variant="outline"
+      disabled={displaysLength === 6}
+    >
       <BsDisplayFill className="mr-2" />
       Add
     </Button>

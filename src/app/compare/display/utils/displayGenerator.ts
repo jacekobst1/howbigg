@@ -66,6 +66,8 @@ const colors = [
   { background: "#F4B0C7", text: dark },
   { background: "#4A47A3", text: light },
   { background: "#AD62AA", text: light },
+  { background: "#AD62AB", text: light },
+  { background: "#AD62AC", text: light },
 ];
 
 export { generateDisplays, generateDisplayByExistingOnes };

@@ -59,7 +59,10 @@ export default function Setup({
       <div className="mt-6">
         <Button onClick={compare}>Compare</Button>
         <CopyComparisonButton />
-        <AddNewDisplayButton createDisplay={createDisplay} />
+        <AddNewDisplayButton
+          createDisplay={createDisplay}
+          displaysLength={displays.length}
+        />
       </div>
     </>
   );

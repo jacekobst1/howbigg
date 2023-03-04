@@ -56,8 +56,10 @@ export default function DisplayPage() {
   }
 
   function createDisplay() {
-    const newDisplay = generateDisplayByExistingOnes(displays);
-    setData([...displays, newDisplay]);
+    if (displays.length < 6) {
+      const newDisplay = generateDisplayByExistingOnes(displays);
+      setData([...displays, newDisplay]);
+    }
   }
 
   function deleteDisplay(id: number) {
