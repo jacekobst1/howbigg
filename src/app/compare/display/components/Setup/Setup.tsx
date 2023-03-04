@@ -42,7 +42,7 @@ export default function Setup({
 
   return (
     <>
-      <div className="flex overflow-x-auto">
+      <div className="flex overflow-x-auto px-1">
         {localDisplays.map((localDisplay) => (
           <Fragment key={localDisplay.id}>
             <DisplayConf
