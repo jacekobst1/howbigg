@@ -56,7 +56,7 @@ export default function Details({ displays }: DetailsProps) {
                 <th className="p-0 group-hover:bg-primary-100 select-none">
                   <div className="flex items-center">
                     <div
-                      className="w-fit h-full rounded-3xl px-0.5 py-7 mr-1"
+                      className="w-fit h-full rounded-3xl px-1 py-7 mr-1"
                       style={{ backgroundColor: display.color.background }}
                     />
                     {display.name}

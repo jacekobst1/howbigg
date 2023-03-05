@@ -8,13 +8,21 @@ import { aspectRatios } from "../../types/AspectRatio";
 import React from "react";
 import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
+import Button from "@/components/buttons/Button";
+import { TiDelete } from "@react-icons/all-files/ti/TiDelete";
+import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 
 interface DisplayProps {
   display: Display;
   setDisplay: (display: Display) => void;
+  deleteDisplay: (id: number) => void;
 }
 
-export default function DisplayConf({ display, setDisplay }: DisplayProps) {
+export default function DisplayConf({
+  display,
+  setDisplay,
+  deleteDisplay,
+}: DisplayProps) {
   const setAspectRatio = (aspectRatio: string) => {
     const selectedAspectRatio = aspectRatios.find(
       (ar) => ar.value === aspectRatio
@@ -60,13 +68,26 @@ export default function DisplayConf({ display, setDisplay }: DisplayProps) {
     <div className="flex">
       <div className="w-36">
         <div className="flex">
-          <div
-            className="w-fit h-full rounded-3xl px-0.5 py-2.5 md:py-3 mr-1"
-            style={{ backgroundColor: display.color.background }}
-          />
-          <p className="text-slate-600 font-semibold select-none">
+          <p
+            className="flex-1 rounded text-center font-semibold select-none px-2"
+            style={{
+              backgroundColor: display.color.background,
+              color: display.color.text,
+            }}
+          >
             {display.name}
           </p>
+          {display.id > 2 && (
+            <div className="flex ml-2">
+              <Button
+                onClick={() => deleteDisplay(display.id)}
+                size="sm"
+                variant="outline"
+              >
+                <AiOutlineClose />
+              </Button>
+            </div>
+          )}
         </div>
 
         <div className="form-control mt-3">

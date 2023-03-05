@@ -3,17 +3,25 @@
 import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
 import Display from "@/app/compare/display/types/Display";
 import Button from "@/components/buttons/Button";
-import { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import setDisplaysDimensions from "@/app/compare/display/utils/sizeCalculator";
-import { quickToast } from "@/lib/toast";
 import { cloneDeep } from "@/utils/objects";
+import CopyComparisonButton from "@/app/compare/display/components/Setup/CopyComparisonButton";
+import AddNewDisplayButton from "@/app/compare/display/components/Setup/AddNewDisplayButton";
 
 interface SetupProps {
   displays: Display[];
   setDisplays: (displays: Display[]) => void;
+  createDisplay: () => void;
+  deleteDisplay: (id: number) => void;
 }
 
-export default function Setup({ displays, setDisplays }: SetupProps) {
+export default function Setup({
+  displays,
+  setDisplays,
+  createDisplay,
+  deleteDisplay,
+}: SetupProps) {
   const [localDisplays, setLocalDisplays] = useState(displays);
 
   function setLocalDisplay(display: Display) {
@@ -28,20 +36,19 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
     setDisplays(dimensionedDisplays);
   }
 
-  function copyUrlToClipboard() {
-    navigator.clipboard
-      .writeText(location.href)
-      .then(() => quickToast("💾 Copied to clipboard"));
-  }
+  useEffect(() => {
+    setLocalDisplays(displays);
+  }, [displays]);
 
   return (
     <>
-      <div className="flex">
+      <div className="flex overflow-x-auto px-1">
         {localDisplays.map((localDisplay) => (
           <Fragment key={localDisplay.id}>
             <DisplayConf
               display={cloneDeep(localDisplay)}
               setDisplay={setLocalDisplay}
+              deleteDisplay={deleteDisplay}
             />
             {localDisplay.id !== localDisplays[localDisplays.length - 1].id && (
               <div className="divider divider-horizontal" />
@@ -51,9 +58,11 @@ export default function Setup({ displays, setDisplays }: SetupProps) {
       </div>
       <div className="mt-6">
         <Button onClick={compare}>Compare</Button>
-        <Button className="ml-2" variant="outline" onClick={copyUrlToClipboard}>
-          Copy your comparison
-        </Button>
+        <CopyComparisonButton />
+        <AddNewDisplayButton
+          createDisplay={createDisplay}
+          displaysLength={displays.length}
+        />
       </div>
     </>
   );
