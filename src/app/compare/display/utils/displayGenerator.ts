@@ -64,10 +64,10 @@ const light = "#FFF";
 const colors = [
   { background: "#413C69", text: light },
   { background: "#F4B0C7", text: dark },
-  { background: "#4A47A3", text: light },
-  { background: "#AD62AA", text: light },
-  { background: "#AD62AB", text: light },
-  { background: "#AD62AC", text: light },
+  { background: "#7E7F9A", text: light },
+  { background: "#adb1ff", text: dark },
+  { background: "#608983", text: light },
+  { background: "#F3DE8A", text: dark },
 ];
 
 export { generateDisplays, generateDisplayByExistingOnes };
