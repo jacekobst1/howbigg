@@ -68,15 +68,17 @@ export default function DisplayConf({
     <div className="flex">
       <div className="w-36">
         <div className="flex">
-          <div
-            className="w-fit h-full rounded-3xl px-0.5 py-2.5 md:py-3"
-            style={{ backgroundColor: display.color.background }}
-          />
-          <p className="text-slate-600 font-semibold select-none ml-1">
+          <p
+            className="flex-1 rounded text-center font-semibold select-none px-2"
+            style={{
+              backgroundColor: display.color.background,
+              color: display.color.text,
+            }}
+          >
             {display.name}
           </p>
           {display.id > 2 && (
-            <div className="flex grow justify-end">
+            <div className="flex ml-2">
               <Button
                 onClick={() => deleteDisplay(display.id)}
                 size="sm"
