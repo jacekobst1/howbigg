@@ -48,6 +48,13 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           ))}
       </optgroup>
     ));
+    const optionsWithoutOptGroup = options
+      .filter((o) => !o.optGroup)
+      .map((o) => (
+        <option key={o.value} value={o.value}>
+          {o.label}
+        </option>
+      ));
     const onChangeHandler = (e: React.ChangeEvent<HTMLSelectElement>) =>
       mOnChange?.(e.target.value);
 
@@ -60,6 +67,7 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         {...rest}
       >
         {optGroupsWithOptions}
+        {optionsWithoutOptGroup}
       </select>
     );
 
