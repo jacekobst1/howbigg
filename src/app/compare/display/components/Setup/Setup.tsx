@@ -7,7 +7,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { cloneDeep } from "@/utils/objects";
 import CopyComparisonButton from "@/app/compare/display/components/Setup/CopyComparisonButton";
 import AddNewDisplayButton from "@/app/compare/display/components/Setup/AddNewDisplayButton";
-import { getCalculatedDisplays } from "@/app/compare/display/utils/displayCalculatorFacade";
+import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsFacade";
 
 interface SetupProps {
   displays: Display[];
@@ -32,7 +32,7 @@ export default function Setup({
   }
 
   function compare() {
-    const calculatedDisplays = getCalculatedDisplays(localDisplays);
+    const calculatedDisplays = getDetailedDisplays(localDisplays);
     setDisplays(calculatedDisplays);
   }
 
