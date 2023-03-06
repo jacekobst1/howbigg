@@ -1,5 +1,12 @@
-import { aspectRatios } from "@/app/compare/display/types/AspectRatio";
+import {
+  aspectRatios,
+  defaultAspectRatio,
+} from "@/app/compare/display/types/AspectRatio";
 import Display from "@/app/compare/display/types/Display";
+import {
+  defaultResolution,
+  resolutions,
+} from "@/app/compare/display/types/Resolution";
 
 function generateDisplays(numberOfDisplays: number) {
   const displays: Display[] = [];
@@ -31,7 +38,7 @@ function generateDisplayByExistingOnes(existingDisplays: Display[]) {
 const initDisplay = (id: number): Display => ({
   id: id,
   name: `Display ${id}`,
-  aspectRatio: aspectRatios[2],
+  aspectRatio: defaultAspectRatio,
   customAspectRatio: {
     width: 0,
     height: 0,
@@ -40,6 +47,7 @@ const initDisplay = (id: number): Display => ({
     length: 0,
     unit: "in",
   },
+  resolution: defaultResolution,
   isVertical: false,
   width: {
     in: 0,

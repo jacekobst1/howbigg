@@ -1,4 +1,5 @@
 import AspectRatio from "./AspectRatio";
+import Resolution from "@/app/compare/display/types/Resolution";
 
 interface Display {
   id: number;
@@ -6,6 +7,7 @@ interface Display {
   aspectRatio: AspectRatio;
   customAspectRatio: CustomAspectRatio;
   diagonal: Diagonal;
+  resolution: Resolution;
   isVertical: boolean;
   width: Size;
   height: Size;
@@ -17,6 +19,7 @@ interface DisplayUrlState {
   aspectRatio: AspectRatio;
   customAspectRatio: CustomAspectRatio;
   diagonal: Diagonal;
+  resolution: Resolution;
   isVertical: boolean;
 }
 
