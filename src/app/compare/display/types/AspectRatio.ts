@@ -35,7 +35,7 @@ const aspectRatios: AspectRatio[] = [
   {
     label: "21 x 9",
     value: "21x9",
-    decimalValue: 21 / 9,
+    decimalValue: 64 / 27,
     optGroup: "Ultra wide",
   },
   {
