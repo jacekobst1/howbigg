@@ -59,6 +59,7 @@ const initDisplay = (id: number): Display => ({
     cm: 0,
     percentage: 0,
   },
+  ppi: null,
   zIndex: 0,
   color: {
     background: "#000",

@@ -4,10 +4,10 @@ import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
 import Display from "@/app/compare/display/types/Display";
 import Button from "@/components/buttons/Button";
 import React, { Fragment, useEffect, useState } from "react";
-import setDisplaysDimensions from "@/app/compare/display/utils/sizeCalculator";
 import { cloneDeep } from "@/utils/objects";
 import CopyComparisonButton from "@/app/compare/display/components/Setup/CopyComparisonButton";
 import AddNewDisplayButton from "@/app/compare/display/components/Setup/AddNewDisplayButton";
+import { getCalculatedDisplays } from "@/app/compare/display/utils/displayCalculatorFacade";
 
 interface SetupProps {
   displays: Display[];
@@ -32,8 +32,8 @@ export default function Setup({
   }
 
   function compare() {
-    const dimensionedDisplays = setDisplaysDimensions(localDisplays);
-    setDisplays(dimensionedDisplays);
+    const calculatedDisplays = getCalculatedDisplays(localDisplays);
+    setDisplays(calculatedDisplays);
   }
 
   useEffect(() => {

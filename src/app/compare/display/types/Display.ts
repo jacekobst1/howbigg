@@ -11,6 +11,7 @@ interface Display {
   isVertical: boolean;
   width: Size;
   height: Size;
+  ppi: number | null;
   zIndex: number;
   color: Color;
 }

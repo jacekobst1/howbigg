@@ -48,6 +48,7 @@ export default function Details({ displays }: DetailsProps) {
               <HeadTh>Width</HeadTh>
               <HeadTh>Height</HeadTh>
               <HeadTh>Area</HeadTh>
+              <HeadTh>PPI</HeadTh>
             </tr>
           </thead>
           <tbody>
@@ -73,6 +74,7 @@ export default function Details({ displays }: DetailsProps) {
                   {unit}
                   <sup>2</sup>
                 </BodyTd>
+                <BodyTd>{display.ppi || "-"}</BodyTd>
               </tr>
             ))}
           </tbody>

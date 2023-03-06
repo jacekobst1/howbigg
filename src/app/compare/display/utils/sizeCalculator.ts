@@ -2,14 +2,10 @@ import Display from "@/app/compare/display/types/Display";
 import { cloneDeep } from "@/utils/objects";
 
 function setDisplaysDimensions(displays: Display[]) {
-  let clonedDisplays = cloneDeep(displays);
-
-  setCustomAspectRatioValue(clonedDisplays);
-  setWidthAndHeightStandard(clonedDisplays);
-  setWidthAndHeightPercentage(clonedDisplays);
-  setZIndexFromBiggestToSmallest(clonedDisplays);
-
-  return clonedDisplays;
+  setCustomAspectRatioValue(displays);
+  setWidthAndHeightStandard(displays);
+  setWidthAndHeightPercentage(displays);
+  setZIndexFromBiggestToSmallest(displays);
 }
 
 function setCustomAspectRatioValue(displays: Display[]) {
