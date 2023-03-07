@@ -59,7 +59,15 @@ const initDisplay = (id: number): Display => ({
     cm: 0,
     percentage: 0,
   },
-  ppi: null,
+  ppi: 0,
+  optimalViewDistance: {
+    ft: 0,
+    m: 0,
+  },
+  minViewDistance: {
+    ft: 0,
+    m: 0,
+  },
   zIndex: 0,
   color: {
     background: "#000",

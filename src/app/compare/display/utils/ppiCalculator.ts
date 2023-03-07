@@ -7,7 +7,7 @@ export function setPPI(displays: Display[]) {
     const resWidth = resHeight * display.aspectRatio.decimalValue;
 
     if (display.diagonal.length === 0) {
-      display.ppi = null;
+      display.ppi = 0;
       return;
     }
 
@@ -15,6 +15,6 @@ export function setPPI(displays: Display[]) {
       Math.sqrt(Math.pow(resWidth, 2) + Math.pow(resHeight, 2)) /
       display.diagonal.length;
 
-    display.ppi = round(ppi, 1) || null;
+    display.ppi = round(ppi, 1) || 0;
   });
 }

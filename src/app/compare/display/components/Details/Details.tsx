@@ -3,6 +3,8 @@
 import Display from "@/app/compare/display/types/Display";
 import React, { ReactNode, useState } from "react";
 import Toggle from "@/components/form/inputs/Toggle";
+import { cmToMeter, inchToFeet } from "@/utils/metrics";
+import { defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
 
 interface DetailsProps {
   displays: Display[];
@@ -49,6 +51,8 @@ export default function Details({ displays }: DetailsProps) {
               <HeadTh>Height</HeadTh>
               <HeadTh>Area</HeadTh>
               <HeadTh>PPI</HeadTh>
+              <HeadTh>Optimal view distance</HeadTh>
+              <HeadTh>Minimal view distance</HeadTh>
             </tr>
           </thead>
           <tbody>
@@ -75,6 +79,20 @@ export default function Details({ displays }: DetailsProps) {
                   <sup>2</sup>
                 </BodyTd>
                 <BodyTd>{display.ppi || "-"}</BodyTd>
+                <BodyTd>
+                  {display.optimalViewDistance.ft !== 0
+                    ? unit === "in"
+                      ? `${display.optimalViewDistance.ft} ft`
+                      : `${display.optimalViewDistance.m} m`
+                    : "-"}
+                </BodyTd>
+                <BodyTd>
+                  {display.minViewDistance.ft !== 0
+                    ? unit === "in"
+                      ? `${display.minViewDistance.ft} ft`
+                      : `${display.minViewDistance.m} m`
+                    : "-"}
+                </BodyTd>
               </tr>
             ))}
           </tbody>

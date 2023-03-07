@@ -11,7 +11,9 @@ interface Display {
   isVertical: boolean;
   width: Size;
   height: Size;
-  ppi: number | null;
+  ppi: number;
+  optimalViewDistance: ViewDistance;
+  minViewDistance: ViewDistance;
   zIndex: number;
   color: Color;
 }
@@ -38,6 +40,11 @@ interface Size {
   in: number;
   cm: number;
   percentage: number;
+}
+
+interface ViewDistance {
+  ft: number;
+  m: number;
 }
 
 interface Color {
