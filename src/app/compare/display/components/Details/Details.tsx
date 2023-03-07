@@ -3,7 +3,7 @@
 import Display from "@/app/compare/display/types/Display";
 import React, { ReactNode, useState } from "react";
 import Toggle from "@/components/form/inputs/Toggle";
-import { cmToMeter, inchToFeet } from "@/utils/metrics";
+import { cmToM, inToFt } from "@/utils/metrics";
 import { defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
 
 interface DetailsProps {

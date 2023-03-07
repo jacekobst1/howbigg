@@ -1,7 +1,7 @@
 import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
 import { defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
-import { inchToCm, inchToFeet, inchToMeter } from "@/utils/metrics";
+import { inToCm, inToFt, inToM } from "@/utils/metrics";
 
 export function setViewDistance(displays: Display[]) {
   displays.forEach((display) => {
@@ -32,8 +32,8 @@ function calculateOptimalViewDistance(displayWidthIn: number) {
   const optimalDistance = round((0.5 * displayWidthIn) / tanValue);
 
   return {
-    ft: inchToFeet(optimalDistance),
-    m: inchToMeter(optimalDistance),
+    ft: inToFt(optimalDistance),
+    m: inToM(optimalDistance),
   };
 }
 
@@ -47,8 +47,8 @@ function calculateMinViewDistance(
   const minDistance = round(displayWidthInt / (2 * tanValue));
 
   return {
-    ft: inchToFeet(minDistance),
-    m: inchToMeter(minDistance),
+    ft: inToFt(minDistance),
+    m: inToM(minDistance),
   };
 }
 
