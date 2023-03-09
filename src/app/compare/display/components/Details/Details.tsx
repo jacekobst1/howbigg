@@ -3,8 +3,7 @@
 import Display from "@/app/compare/display/types/Display";
 import React, { ReactNode, useState } from "react";
 import Toggle from "@/components/form/inputs/Toggle";
-import { cmToM, inToFt } from "@/utils/metrics";
-import { defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
+import InfoTooltip from "@/components/InfoTooltip";
 
 interface DetailsProps {
   displays: Display[];
@@ -43,22 +42,32 @@ export default function Details({ displays }: DetailsProps) {
         </p>
       </label>
       <div className="overflow-x-auto">
-        <table className="table w-full mt-2">
+        <table className="table w-full mt-4">
           <thead>
             <tr className="select-none">
               <HeadTh>Name</HeadTh>
               <HeadTh>Width</HeadTh>
               <HeadTh>Height</HeadTh>
               <HeadTh>Area</HeadTh>
-              <HeadTh>PPI</HeadTh>
-              <HeadTh>Optimal view distance</HeadTh>
-              <HeadTh>Minimal view distance</HeadTh>
+              <HeadTh>
+                <InfoTooltip text="Pixels Per Inch">PPI</InfoTooltip>
+              </HeadTh>
+              <HeadTh>
+                <InfoTooltip text="Distance at which the display will fill 28 to 40 degrees of your field of view. Calculated only for 16x9 displays when resolution is selected.">
+                  Optimal distance
+                </InfoTooltip>
+              </HeadTh>
+              <HeadTh>
+                <InfoTooltip text="Distance below which the image quality will drop. Calculated only for 16x9 displays when resolution is selected.">
+                  Minimal distance
+                </InfoTooltip>
+              </HeadTh>
             </tr>
           </thead>
           <tbody>
             {displays.map((display) => (
               <tr key={display.id} className="group">
-                <th className="p-0 group-hover:bg-primary-100 select-none">
+                <th className="p-0 group-hover:bg-primary-100 select-none pr-2">
                   <div className="flex items-center">
                     <div
                       className="w-fit h-full rounded-3xl px-1 py-7 mr-1"
