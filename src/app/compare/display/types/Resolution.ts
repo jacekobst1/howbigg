@@ -1,5 +1,3 @@
-import AspectRatio from "@/app/compare/display/types/AspectRatio";
-
 interface Resolution {
   label: string;
   value: string;
@@ -66,11 +64,6 @@ const resolutions: Resolution[] = [
     label: "8K",
     value: "8K",
     height: 4320,
-  },
-  {
-    label: "custom",
-    value: "custom",
-    height: 0,
   },
 ];
 
