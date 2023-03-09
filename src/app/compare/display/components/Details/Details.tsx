@@ -50,7 +50,9 @@ export default function Details({ displays }: DetailsProps) {
               <HeadTh>Height</HeadTh>
               <HeadTh>Area</HeadTh>
               <HeadTh>
-                <InfoTooltip text="Pixels Per Inch">PPI</InfoTooltip>
+                <InfoTooltip text="Pixels Per Inch. Calculated only when resolution in selected.">
+                  PPI
+                </InfoTooltip>
               </HeadTh>
               <HeadTh>
                 <InfoTooltip text="Distance at which the display will fill 28 to 40 degrees of your field of view. In lower resolutions you should consider the minimal distance. Calculated only for 16x9 displays, when resolution is selected.">

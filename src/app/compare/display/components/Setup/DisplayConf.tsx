@@ -9,7 +9,6 @@ import React from "react";
 import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
 import Button from "@/components/buttons/Button";
-import { TiDelete } from "@react-icons/all-files/ti/TiDelete";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { resolutions } from "@/app/compare/display/types/Resolution";
 
