@@ -12,7 +12,8 @@ interface Display {
   width: Size;
   height: Size;
   ppi: number;
-  optimalViewDistance: ViewDistance;
+  minOptimalViewDistance: ViewDistance;
+  maxOptimalViewDistance: ViewDistance;
   minViewDistance: ViewDistance;
   zIndex: number;
   color: Color;

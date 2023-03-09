@@ -1,7 +1,10 @@
 import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
 import { defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
-import { inToCm, inToFt, inToM } from "@/utils/metrics";
+import { inToFt, inToM } from "@/utils/metrics";
+
+const minThxViewAngle = 28;
+const maxThxViewAngle = 40;
 
 export function setViewDistance(displays: Display[]) {
   displays.forEach((display) => {
@@ -16,24 +19,32 @@ export function setViewDistance(displays: Display[]) {
     const resHeight = display.resolution.height;
     const resWidth = resHeight * display.aspectRatio.decimalValue;
 
-    const optimalDistance = calculateOptimalViewDistance(display.width.in);
-    const minDistance = calculateMinViewDistance(display.width.in, resWidth);
-
-    display.minViewDistance = minDistance;
-    display.optimalViewDistance =
-      minDistance.ft > optimalDistance.ft ? minDistance : optimalDistance;
+    display.minViewDistance = calculateMinViewDistance(
+      display.width.in,
+      resWidth
+    );
+    display.minOptimalViewDistance = calculateOptimalViewDistance(
+      display.width.in,
+      minThxViewAngle
+    );
+    display.maxOptimalViewDistance = calculateOptimalViewDistance(
+      display.width.in,
+      maxThxViewAngle
+    );
   });
 }
 
-function calculateOptimalViewDistance(displayWidthIn: number) {
-  const optimalViewAngle = 30;
-  const tanValue = calculateTangensOfViewAngle(optimalViewAngle);
-
-  const optimalDistance = round((0.5 * displayWidthIn) / tanValue);
+function calculateOptimalViewDistance(
+  displayWidthIn: number,
+  viewAngle: number
+) {
+  const distance = round(
+    (0.5 * displayWidthIn) / calculateTangensOfViewAngle(viewAngle)
+  );
 
   return {
-    ft: inToFt(optimalDistance),
-    m: inToM(optimalDistance),
+    ft: inToFt(distance),
+    m: inToM(distance),
   };
 }
 
@@ -44,11 +55,11 @@ function calculateMinViewDistance(
   const minimalViewAngle = resolutionWidthIn / 60;
   const tanValue = calculateTangensOfViewAngle(minimalViewAngle);
 
-  const minDistance = round(displayWidthInt / (2 * tanValue));
+  const distance = round(displayWidthInt / (2 * tanValue));
 
   return {
-    ft: inToFt(minDistance),
-    m: inToM(minDistance),
+    ft: inToFt(distance),
+    m: inToM(distance),
   };
 }
 
@@ -60,7 +71,11 @@ function calculateTangensOfViewAngle(viewAngle: number): number {
 }
 
 function setViewDistancesTo0(display: Display) {
-  display.optimalViewDistance = {
+  display.minOptimalViewDistance = {
+    ft: 0,
+    m: 0,
+  };
+  display.maxOptimalViewDistance = {
     ft: 0,
     m: 0,
   };

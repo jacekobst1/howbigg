@@ -15,6 +15,6 @@ export function setPPI(displays: Display[]) {
       Math.sqrt(Math.pow(resWidth, 2) + Math.pow(resHeight, 2)) /
       display.diagonal.length;
 
-    display.ppi = round(ppi, 1) || 0;
+    display.ppi = round(ppi, 2) || 0;
   });
 }

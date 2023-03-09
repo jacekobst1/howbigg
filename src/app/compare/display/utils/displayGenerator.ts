@@ -1,12 +1,6 @@
-import {
-  aspectRatios,
-  defaultAspectRatio,
-} from "@/app/compare/display/types/AspectRatio";
+import { defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
 import Display from "@/app/compare/display/types/Display";
-import {
-  defaultResolution,
-  resolutions,
-} from "@/app/compare/display/types/Resolution";
+import { defaultResolution } from "@/app/compare/display/types/Resolution";
 
 function generateDisplays(numberOfDisplays: number) {
   const displays: Display[] = [];
@@ -60,7 +54,11 @@ const initDisplay = (id: number): Display => ({
     percentage: 0,
   },
   ppi: 0,
-  optimalViewDistance: {
+  minOptimalViewDistance: {
+    ft: 0,
+    m: 0,
+  },
+  maxOptimalViewDistance: {
     ft: 0,
     m: 0,
   },

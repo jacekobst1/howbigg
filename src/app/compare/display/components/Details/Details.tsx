@@ -53,12 +53,12 @@ export default function Details({ displays }: DetailsProps) {
                 <InfoTooltip text="Pixels Per Inch">PPI</InfoTooltip>
               </HeadTh>
               <HeadTh>
-                <InfoTooltip text="Distance at which the display will fill 28 to 40 degrees of your field of view. Calculated only for 16x9 displays when resolution is selected.">
+                <InfoTooltip text="Distance at which the display will fill 28 to 40 degrees of your field of view. In lower resolutions you should consider the minimal distance. Calculated only for 16x9 displays, when resolution is selected.">
                   Optimal distance
                 </InfoTooltip>
               </HeadTh>
               <HeadTh>
-                <InfoTooltip text="Distance below which the image quality will drop. Calculated only for 16x9 displays when resolution is selected.">
+                <InfoTooltip text="The distance below which image quality decreases, as your eyes begin to see individual pixels. Calculated only for 16x9 displays, when resolution is selected.">
                   Minimal distance
                 </InfoTooltip>
               </HeadTh>
@@ -89,10 +89,10 @@ export default function Details({ displays }: DetailsProps) {
                 </BodyTd>
                 <BodyTd>{display.ppi || "-"}</BodyTd>
                 <BodyTd>
-                  {display.optimalViewDistance.ft !== 0
+                  {display.minOptimalViewDistance.ft !== 0
                     ? unit === "in"
-                      ? `${display.optimalViewDistance.ft} ft`
-                      : `${display.optimalViewDistance.m} m`
+                      ? `${display.minOptimalViewDistance.ft} - ${display.maxOptimalViewDistance.ft} ft`
+                      : `${display.minOptimalViewDistance.m} - ${display.maxOptimalViewDistance.m} m`
                     : "-"}
                 </BodyTd>
                 <BodyTd>
