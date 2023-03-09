@@ -10,12 +10,12 @@ import Details from "@/app/compare/display/components/Details/Details";
 import useQueryState from "@/hooks/useQueryState";
 import React, { useEffect, useState } from "react";
 import Display from "@/app/compare/display/types/Display";
-import setDisplaysDimensions from "@/app/compare/display/utils/sizeCalculator";
 import {
   decodeDisplays,
   encodeDisplays,
 } from "@/app/compare/display/utils/urlEncoder";
 import { mergeDeep } from "@/utils/objects";
+import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsFacade";
 
 interface DisplayOnlyRequired {
   arv: string;
@@ -44,9 +44,9 @@ export default function DisplayPage() {
     const mergedDisplays = defaultDisplays.map(
       (display, index) => mergeDeep(display, decodedDisplays[index]) as Display
     );
-    const dimensionedDisplays = setDisplaysDimensions(mergedDisplays);
+    const calculatedDisplays = getDetailedDisplays(mergedDisplays);
 
-    setDisplays(dimensionedDisplays);
+    setDisplays(calculatedDisplays);
     setIsReady(true);
   }, [isQueryStateReady]);
 
@@ -64,8 +64,8 @@ export default function DisplayPage() {
 
   function deleteDisplay(id: number) {
     const newDisplays = displays.filter((d) => d.id !== id);
-    const dimensionedDisplays = setDisplaysDimensions(newDisplays);
-    setData(dimensionedDisplays);
+    const calculatedDisplays = getDetailedDisplays(newDisplays);
+    setData(calculatedDisplays);
   }
 
   return isReady ? (

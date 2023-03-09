@@ -1,4 +1,5 @@
 import AspectRatio from "./AspectRatio";
+import Resolution from "@/app/compare/display/types/Resolution";
 
 interface Display {
   id: number;
@@ -6,9 +7,14 @@ interface Display {
   aspectRatio: AspectRatio;
   customAspectRatio: CustomAspectRatio;
   diagonal: Diagonal;
+  resolution: Resolution;
   isVertical: boolean;
   width: Size;
   height: Size;
+  ppi: number;
+  minOptimalViewDistance: ViewDistance;
+  maxOptimalViewDistance: ViewDistance;
+  minViewDistance: ViewDistance;
   zIndex: number;
   color: Color;
 }
@@ -17,6 +23,7 @@ interface DisplayUrlState {
   aspectRatio: AspectRatio;
   customAspectRatio: CustomAspectRatio;
   diagonal: Diagonal;
+  resolution: Resolution;
   isVertical: boolean;
 }
 
@@ -34,6 +41,11 @@ interface Size {
   in: number;
   cm: number;
   percentage: number;
+}
+
+interface ViewDistance {
+  ft: number;
+  m: number;
 }
 
 interface Color {

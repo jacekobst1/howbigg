@@ -9,8 +9,8 @@ import React from "react";
 import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
 import Button from "@/components/buttons/Button";
-import { TiDelete } from "@react-icons/all-files/ti/TiDelete";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
+import { resolutions } from "@/app/compare/display/types/Resolution";
 
 interface DisplayProps {
   display: Display;
@@ -47,6 +47,17 @@ export default function DisplayConf({
   const setDiagonal = (size: string) => {
     display.diagonal.length = Math.abs(parseFloat(size)) || 0;
     setDisplay(display);
+  };
+
+  const setResolution = (resolution: string) => {
+    const selectedResolution = resolutions.find(
+      (ar) => ar.value === resolution
+    );
+
+    if (selectedResolution) {
+      display.resolution = selectedResolution;
+      setDisplay(display);
+    }
   };
 
   const setUnit = (checked: boolean) => {
@@ -94,7 +105,7 @@ export default function DisplayConf({
           <Select
             value={display.aspectRatio.value}
             mOnChange={setAspectRatio}
-            label="Aspect ratio"
+            label="Aspect ratio *"
             options={aspectRatios}
             mSize="sm"
           />
@@ -117,7 +128,7 @@ export default function DisplayConf({
           </div>
         )}
         <div className="form-control mt-3">
-          <InputGroup size="sm" label="Size">
+          <InputGroup size="sm" label="Size *">
             <Input
               value={round(display.diagonal.length) || ""}
               mOnChange={setDiagonal}
@@ -128,6 +139,15 @@ export default function DisplayConf({
               {display.diagonal.unit}
             </span>
           </InputGroup>
+        </div>
+        <div className="form-control mt-3">
+          <Select
+            value={display.resolution?.value}
+            mOnChange={setResolution}
+            label="Resolution"
+            options={resolutions}
+            mSize="sm"
+          />
         </div>
         <div className="form-control mt-3">
           <Toggle

@@ -1,15 +1,12 @@
 import Display from "@/app/compare/display/types/Display";
 import { cloneDeep } from "@/utils/objects";
+import { cmToIn, inToCm } from "@/utils/metrics";
 
 function setDisplaysDimensions(displays: Display[]) {
-  let clonedDisplays = cloneDeep(displays);
-
-  setCustomAspectRatioValue(clonedDisplays);
-  setWidthAndHeightStandard(clonedDisplays);
-  setWidthAndHeightPercentage(clonedDisplays);
-  setZIndexFromBiggestToSmallest(clonedDisplays);
-
-  return clonedDisplays;
+  setCustomAspectRatioValue(displays);
+  setWidthAndHeightStandard(displays);
+  setWidthAndHeightPercentage(displays);
+  setZIndexFromBiggestToSmallest(displays);
 }
 
 function setCustomAspectRatioValue(displays: Display[]) {
@@ -47,14 +44,14 @@ function calculateSize(
   diagonalSize: number,
   isInches: boolean = true
 ) {
-  const diagonalSizeCm = isInches ? diagonalSize * 2.54 : diagonalSize;
+  const diagonalSizeCm = isInches ? inToCm(diagonalSize) : diagonalSize;
   const heightCm = Math.sqrt(
     (diagonalSizeCm * diagonalSizeCm) / (1 + aspectRatio * aspectRatio)
   );
   const widthCm = heightCm * aspectRatio;
 
-  const widthIn = widthCm / 2.54;
-  const heightIn = heightCm / 2.54;
+  const widthIn = cmToIn(widthCm);
+  const heightIn = cmToIn(heightCm / 2.54);
 
   return { widthCm, heightCm, widthIn, heightIn };
 }

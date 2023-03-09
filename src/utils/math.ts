@@ -1,5 +1,5 @@
-function round(num: number) {
-  return Math.round(num * 100 + Number.EPSILON) / 100;
+function round(num: number, precision: number = 2) {
+  return Math.round(num * Math.pow(10, precision)) / Math.pow(10, precision);
 }
 
 export { round };
