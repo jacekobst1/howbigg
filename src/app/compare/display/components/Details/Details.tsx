@@ -55,12 +55,12 @@ export default function Details({ displays }: DetailsProps) {
                 </InfoTooltip>
               </HeadTh>
               <HeadTh>
-                <InfoTooltip text="Distance at which the display will fill 28 to 40 degrees of your field of view. In lower resolutions you should consider the minimal distance. Calculated only for 16x9 displays, when resolution is selected.">
+                <InfoTooltip text="Distance at which the display will fill 28 to 40 degrees of your field of view. In lower resolutions you should consider the minimal distance. Calculated only for 16x9 TV screens, when resolution is selected.">
                   Optimal distance
                 </InfoTooltip>
               </HeadTh>
               <HeadTh>
-                <InfoTooltip text="The distance below which image quality decreases, as your eyes begin to see individual pixels. Calculated only for 16x9 displays, when resolution is selected.">
+                <InfoTooltip text="The distance below which image quality decreases, as your eyes begin to see individual pixels. Calculated only for 16x9 TV screens, when resolution is selected.">
                   Minimal distance
                 </InfoTooltip>
               </HeadTh>

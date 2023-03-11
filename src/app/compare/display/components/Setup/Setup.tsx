@@ -2,8 +2,7 @@
 
 import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
 import Display from "@/app/compare/display/types/Display";
-import Button from "@/components/buttons/Button";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import { cloneDeep } from "@/utils/objects";
 import CopyComparisonButton from "@/app/compare/display/components/Setup/CopyComparisonButton";
 import AddNewDisplayButton from "@/app/compare/display/components/Setup/AddNewDisplayButton";
@@ -22,42 +21,31 @@ export default function Setup({
   createDisplay,
   deleteDisplay,
 }: SetupProps) {
-  const [localDisplays, setLocalDisplays] = useState(displays);
-
-  function setLocalDisplay(display: Display) {
-    const newDisplays = localDisplays.map((d) =>
+  function setDisplay(display: Display) {
+    const newDisplays = displays.map((d) =>
       d.id === display.id ? display : d
     );
-    setLocalDisplays(newDisplays);
-  }
-
-  function compare() {
-    const calculatedDisplays = getDetailedDisplays(localDisplays);
+    const calculatedDisplays = getDetailedDisplays(newDisplays);
     setDisplays(calculatedDisplays);
   }
-
-  useEffect(() => {
-    setLocalDisplays(displays);
-  }, [displays]);
 
   return (
     <>
       <div className="flex overflow-x-auto px-1">
-        {localDisplays.map((localDisplay) => (
-          <Fragment key={localDisplay.id}>
+        {displays.map((display) => (
+          <Fragment key={display.id}>
             <DisplayConf
-              display={cloneDeep(localDisplay)}
-              setDisplay={setLocalDisplay}
+              display={cloneDeep(display)}
+              setDisplay={setDisplay}
               deleteDisplay={deleteDisplay}
             />
-            {localDisplay.id !== localDisplays[localDisplays.length - 1].id && (
+            {display.id !== displays[displays.length - 1].id && (
               <div className="divider divider-horizontal" />
             )}
           </Fragment>
         ))}
       </div>
       <div className="mt-6">
-        <Button onClick={compare}>Compare</Button>
         <CopyComparisonButton />
         <AddNewDisplayButton
           createDisplay={createDisplay}

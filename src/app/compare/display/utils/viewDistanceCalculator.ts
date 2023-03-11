@@ -1,7 +1,7 @@
 import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
 import { defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
-import { inToFt, inToM } from "@/utils/metrics";
+import { inToFt, inToM } from "@/utils/units";
 
 const minThxViewAngle = 28;
 const maxThxViewAngle = 40;

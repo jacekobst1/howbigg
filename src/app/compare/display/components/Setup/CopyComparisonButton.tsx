@@ -6,7 +6,7 @@ export default function CopyComparisonButton() {
   function copyUrlToClipboard() {
     navigator.clipboard
       .writeText(location.href)
-      .then(() => quickToast("💾 Copied to clipboard"));
+      .then(() => quickToast("💾 Link copied to clipboard"));
   }
 
   return (

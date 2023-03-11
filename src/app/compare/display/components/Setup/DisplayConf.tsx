@@ -11,6 +11,7 @@ import { round } from "@/utils/math";
 import Button from "@/components/buttons/Button";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { resolutions } from "@/app/compare/display/types/Resolution";
+import { debounce } from "lodash";
 
 interface DisplayProps {
   display: Display;
@@ -44,14 +45,14 @@ export default function DisplayConf({
     setDisplay(display);
   };
 
-  const setDiagonal = (size: string) => {
+  const setDiagonal = debounce((size: string) => {
     display.diagonal.length = Math.abs(parseFloat(size)) || 0;
     setDisplay(display);
-  };
+  }, 500);
 
   const setResolution = (resolution: string) => {
     const selectedResolution = resolutions.find(
-      (ar) => ar.value === resolution
+      (ar: { value: string }) => ar.value === resolution
     );
 
     if (selectedResolution) {
@@ -130,10 +131,11 @@ export default function DisplayConf({
         <div className="form-control mt-3">
           <InputGroup size="sm" label="Size *">
             <Input
-              value={round(display.diagonal.length) || ""}
+              defaultValue={round(display.diagonal.length) || ""}
               mOnChange={setDiagonal}
               type="number"
               mSize="sm"
+              step="0.1"
             />
             <span className="bg-primary-100 text-xs">
               {display.diagonal.unit}
