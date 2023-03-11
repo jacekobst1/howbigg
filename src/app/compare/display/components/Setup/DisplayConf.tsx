@@ -3,7 +3,6 @@
 import Select from "@/components/form/selects/Select";
 import Input from "@/components/form/inputs/Input";
 import InputGroup from "@/components/form/inputs/InputGroup";
-import Toggle from "@/components/form/inputs/Toggle";
 import { aspectRatios } from "../../types/AspectRatio";
 import React from "react";
 import Display from "@/app/compare/display/types/Display";
@@ -12,6 +11,10 @@ import Button from "@/components/buttons/Button";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { resolutions } from "@/app/compare/display/types/Resolution";
 import { debounce } from "lodash";
+import Toggle from "@/components/form/checkboxes/Toggle";
+import Swap from "@/components/form/checkboxes/Swap";
+import { MdCropLandscape } from "@react-icons/all-files/md/MdCropLandscape";
+import { MdCropPortrait } from "@react-icons/all-files/md/MdCropPortrait";
 
 interface DisplayProps {
   display: Display;
@@ -61,6 +64,11 @@ export default function DisplayConf({
     }
   };
 
+  const setIsVertical = (checked: boolean) => {
+    display.isVertical = checked;
+    setDisplay(display);
+  };
+
   const setUnit = (checked: boolean) => {
     const unit = checked ? "cm" : "in";
     display.diagonal.unit = unit;
@@ -68,11 +76,6 @@ export default function DisplayConf({
       unit === "cm"
         ? display.diagonal.length * 2.54
         : display.diagonal.length / 2.54;
-    setDisplay(display);
-  };
-
-  const setIsVertical = (checked: boolean) => {
-    display.isVertical = checked;
     setDisplay(display);
   };
 
@@ -142,7 +145,7 @@ export default function DisplayConf({
             </span>
           </InputGroup>
         </div>
-        <div className="form-control mt-3">
+        <div className="form-control flex-row mt-3">
           <Select
             value={display.resolution?.value}
             mOnChange={setResolution}
@@ -150,14 +153,15 @@ export default function DisplayConf({
             options={resolutions}
             mSize="sm"
           />
-        </div>
-        <div className="form-control mt-3">
-          <Toggle
-            checked={display.isVertical}
-            onChange={setIsVertical}
-            label="Vertical"
-            size="md"
-          />
+          <div className="flex-1 flex items-end justify-end">
+            <Swap
+              checked={display.isVertical}
+              onChange={setIsVertical}
+              offChildren={<MdCropLandscape />}
+              onChildren={<MdCropPortrait />}
+              style={{ marginBottom: "-4px" }}
+            />
+          </div>
         </div>
         <div className="form-control mt-3">
           <Toggle

@@ -2,7 +2,7 @@
 
 import Display from "@/app/compare/display/types/Display";
 import React, { ReactNode, useState } from "react";
-import Toggle from "@/components/form/inputs/Toggle";
+import Toggle from "@/components/form/checkboxes/Toggle";
 import InfoTooltip from "@/components/InfoTooltip";
 
 interface DetailsProps {
