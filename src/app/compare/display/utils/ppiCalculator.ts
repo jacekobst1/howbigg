@@ -3,8 +3,7 @@ import { round } from "@/utils/math";
 
 export function setPPI(displays: Display[]) {
   displays.forEach((display) => {
-    const resHeight = display.resolution.height;
-    const resWidth = resHeight * display.aspectRatio.decimalValue;
+    const { height: resHeight, width: resWidth } = display.resolution;
 
     if (display.diagonal.length === 0) {
       display.ppi = 0;
