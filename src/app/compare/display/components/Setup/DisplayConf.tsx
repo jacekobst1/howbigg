@@ -3,14 +3,18 @@
 import Select from "@/components/form/selects/Select";
 import Input from "@/components/form/inputs/Input";
 import InputGroup from "@/components/form/inputs/InputGroup";
-import Toggle from "@/components/form/inputs/Toggle";
 import { aspectRatios } from "../../types/AspectRatio";
-import React from "react";
+import React, { useRef } from "react";
 import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
 import Button from "@/components/buttons/Button";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { resolutions } from "@/app/compare/display/types/Resolution";
+import { debounce } from "lodash";
+import Toggle from "@/components/form/checkboxes/Toggle";
+import Swap from "@/components/form/checkboxes/Swap";
+import { MdCropLandscape } from "@react-icons/all-files/md/MdCropLandscape";
+import { MdCropPortrait } from "@react-icons/all-files/md/MdCropPortrait";
 
 interface DisplayProps {
   display: Display;
@@ -23,6 +27,8 @@ export default function DisplayConf({
   setDisplay,
   deleteDisplay,
 }: DisplayProps) {
+  const diagonalRef = useRef<HTMLInputElement>(null);
+
   const setAspectRatio = (aspectRatio: string) => {
     const selectedAspectRatio = aspectRatios.find(
       (ar) => ar.value === aspectRatio
@@ -44,20 +50,25 @@ export default function DisplayConf({
     setDisplay(display);
   };
 
-  const setDiagonal = (size: string) => {
+  const setDiagonal = debounce((size: string) => {
     display.diagonal.length = Math.abs(parseFloat(size)) || 0;
     setDisplay(display);
-  };
+  }, 500);
 
   const setResolution = (resolution: string) => {
     const selectedResolution = resolutions.find(
-      (ar) => ar.value === resolution
+      (ar: { value: string }) => ar.value === resolution
     );
 
     if (selectedResolution) {
       display.resolution = selectedResolution;
       setDisplay(display);
     }
+  };
+
+  const setIsVertical = (checked: boolean) => {
+    display.isVertical = checked;
+    setDisplay(display);
   };
 
   const setUnit = (checked: boolean) => {
@@ -68,11 +79,10 @@ export default function DisplayConf({
         ? display.diagonal.length * 2.54
         : display.diagonal.length / 2.54;
     setDisplay(display);
-  };
 
-  const setIsVertical = (checked: boolean) => {
-    display.isVertical = checked;
-    setDisplay(display);
+    if (diagonalRef.current) {
+      diagonalRef.current.value = String(round(display.diagonal.length) || "");
+    }
   };
 
   return (
@@ -130,17 +140,19 @@ export default function DisplayConf({
         <div className="form-control mt-3">
           <InputGroup size="sm" label="Size *">
             <Input
-              value={round(display.diagonal.length) || ""}
+              ref={diagonalRef}
+              defaultValue={round(display.diagonal.length) || ""}
               mOnChange={setDiagonal}
               type="number"
               mSize="sm"
+              step="0.1"
             />
             <span className="bg-primary-100 text-xs">
               {display.diagonal.unit}
             </span>
           </InputGroup>
         </div>
-        <div className="form-control mt-3">
+        <div className="form-control flex-row mt-3">
           <Select
             value={display.resolution?.value}
             mOnChange={setResolution}
@@ -148,14 +160,16 @@ export default function DisplayConf({
             options={resolutions}
             mSize="sm"
           />
-        </div>
-        <div className="form-control mt-3">
-          <Toggle
-            checked={display.isVertical}
-            onChange={setIsVertical}
-            label="Vertical"
-            size="md"
-          />
+          <div className="flex-1 flex items-end justify-end">
+            <Swap
+              label="Mode"
+              checked={display.isVertical}
+              onChange={setIsVertical}
+              offChildren={<MdCropLandscape />}
+              onChildren={<MdCropPortrait />}
+              style={{ marginBottom: "-4px" }}
+            />
+          </div>
         </div>
         <div className="form-control mt-3">
           <Toggle

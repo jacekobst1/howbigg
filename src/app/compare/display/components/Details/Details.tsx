@@ -2,7 +2,7 @@
 
 import Display from "@/app/compare/display/types/Display";
 import React, { ReactNode, useState } from "react";
-import Toggle from "@/components/form/inputs/Toggle";
+import Toggle from "@/components/form/checkboxes/Toggle";
 import InfoTooltip from "@/components/InfoTooltip";
 
 interface DetailsProps {
@@ -49,18 +49,19 @@ export default function Details({ displays }: DetailsProps) {
               <HeadTh>Width</HeadTh>
               <HeadTh>Height</HeadTh>
               <HeadTh>Area</HeadTh>
+              {/*<HeadTh>Resolution</HeadTh>*/}
               <HeadTh>
                 <InfoTooltip text="Pixels Per Inch. Calculated only when resolution in selected.">
                   PPI
                 </InfoTooltip>
               </HeadTh>
               <HeadTh>
-                <InfoTooltip text="Distance at which the display will fill 28 to 40 degrees of your field of view. In lower resolutions you should consider the minimal distance. Calculated only for 16x9 displays, when resolution is selected.">
+                <InfoTooltip text="Distance at which the display will fill 28 to 40 degrees of your field of view. In lower resolutions you should consider the minimal distance. Calculated only for 16x9 TV screens, when resolution is selected.">
                   Optimal distance
                 </InfoTooltip>
               </HeadTh>
               <HeadTh>
-                <InfoTooltip text="The distance below which image quality decreases, as your eyes begin to see individual pixels. Calculated only for 16x9 displays, when resolution is selected.">
+                <InfoTooltip text="The distance below which image quality decreases, as your eyes begin to see individual pixels. Calculated only for 16x9 TV screens, when resolution is selected.">
                   Minimal distance
                 </InfoTooltip>
               </HeadTh>
@@ -89,6 +90,7 @@ export default function Details({ displays }: DetailsProps) {
                   {unit}
                   <sup>2</sup>
                 </BodyTd>
+                {/*<BodyTd>{`${display.resolution.width} x ${display.resolution.height}`}</BodyTd>*/}
                 <BodyTd>{display.ppi || "-"}</BodyTd>
                 <BodyTd>
                   {display.minOptimalViewDistance.ft !== 0

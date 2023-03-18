@@ -1,6 +1,5 @@
 import Display from "@/app/compare/display/types/Display";
-import { cloneDeep } from "@/utils/objects";
-import { cmToIn, inToCm } from "@/utils/metrics";
+import { cmToIn, inToCm } from "@/utils/units";
 
 function setDisplaysDimensions(displays: Display[]) {
   setCustomAspectRatioValue(displays);
