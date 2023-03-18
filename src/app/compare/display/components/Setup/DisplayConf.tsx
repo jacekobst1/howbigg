@@ -4,7 +4,7 @@ import Select from "@/components/form/selects/Select";
 import Input from "@/components/form/inputs/Input";
 import InputGroup from "@/components/form/inputs/InputGroup";
 import { aspectRatios } from "../../types/AspectRatio";
-import React from "react";
+import React, { useRef } from "react";
 import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
 import Button from "@/components/buttons/Button";
@@ -27,6 +27,8 @@ export default function DisplayConf({
   setDisplay,
   deleteDisplay,
 }: DisplayProps) {
+  const diagonalRef = useRef<HTMLInputElement>(null);
+
   const setAspectRatio = (aspectRatio: string) => {
     const selectedAspectRatio = aspectRatios.find(
       (ar) => ar.value === aspectRatio
@@ -77,6 +79,10 @@ export default function DisplayConf({
         ? display.diagonal.length * 2.54
         : display.diagonal.length / 2.54;
     setDisplay(display);
+
+    if (diagonalRef.current) {
+      diagonalRef.current.value = String(round(display.diagonal.length) || "");
+    }
   };
 
   return (
@@ -134,6 +140,7 @@ export default function DisplayConf({
         <div className="form-control mt-3">
           <InputGroup size="sm" label="Size *">
             <Input
+              ref={diagonalRef}
               defaultValue={round(display.diagonal.length) || ""}
               mOnChange={setDiagonal}
               type="number"
