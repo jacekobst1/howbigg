@@ -162,6 +162,7 @@ export default function DisplayConf({
           />
           <div className="flex-1 flex items-end justify-end">
             <Swap
+              label="Mode"
               checked={display.isVertical}
               onChange={setIsVertical}
               offChildren={<MdCropLandscape />}
