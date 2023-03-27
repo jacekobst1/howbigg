@@ -50,7 +50,7 @@ function calculateSize(
   const widthCm = heightCm * aspectRatio;
 
   const widthIn = cmToIn(widthCm);
-  const heightIn = cmToIn(heightCm / 2.54);
+  const heightIn = cmToIn(heightCm);
 
   return { widthCm, heightCm, widthIn, heightIn };
 }
