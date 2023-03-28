@@ -14,6 +14,20 @@ function generateDisplays(numberOfDisplays: number) {
   return displays;
 }
 
+function generateDisplaysWithoutPossibleResolutions(numberOfDisplays: number) {
+  let displays = generateDisplays(numberOfDisplays);
+
+  displays = displays.map((display) => ({
+    ...display,
+    aspectRatio: {
+      ...display.aspectRatio,
+      possibleResolutions: [],
+    },
+  }));
+
+  return displays;
+}
+
 function generateDisplayByExistingOnes(existingDisplays: Display[]) {
   const nonUsedColors = colors.filter(
     (color) =>
@@ -85,4 +99,8 @@ const colors = [
   { background: "#F3DE8A", text: dark },
 ];
 
-export { generateDisplays, generateDisplayByExistingOnes };
+export {
+  generateDisplays,
+  generateDisplayByExistingOnes,
+  generateDisplaysWithoutPossibleResolutions,
+};

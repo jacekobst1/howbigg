@@ -5,6 +5,7 @@ import Presentation from "@/app/compare/display/components/Presentation/Presenta
 import {
   generateDisplayByExistingOnes,
   generateDisplays,
+  generateDisplaysWithoutPossibleResolutions,
 } from "@/app/compare/display/utils/displayGenerator";
 import Details from "@/app/compare/display/components/Details/Details";
 import useQueryState from "@/hooks/useQueryState";
@@ -39,7 +40,9 @@ export default function DisplayPage() {
       return;
     }
 
-    const defaultDisplays = generateDisplays(queryState.length);
+    const defaultDisplays = generateDisplaysWithoutPossibleResolutions(
+      queryState.length
+    );
     const decodedDisplays = decodeDisplays(queryState);
     const mergedDisplays = defaultDisplays.map(
       (display, index) => mergeDeep(display, decodedDisplays[index]) as Display

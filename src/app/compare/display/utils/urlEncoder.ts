@@ -3,10 +3,7 @@ import {
   aspectRatios,
   defaultAspectRatio,
 } from "@/app/compare/display/types/AspectRatio";
-import {
-  defaultResolution,
-  resolutions,
-} from "@/app/compare/display/types/Resolution";
+import { defaultResolution } from "@/app/compare/display/types/Resolution";
 
 function encodeDisplays(displays: Display[]): string[] {
   return displays.map((display) => {
@@ -28,9 +25,16 @@ function decodeDisplays(encodedDisplays: string[]) {
   encodedDisplays.forEach((encodedDisplay, index) => {
     const data = encodedDisplay.split("_");
 
+    const aspectRatio =
+      aspectRatios.find((ar) => ar.value === data[0]) || defaultAspectRatio;
+
+    const resolution =
+      aspectRatio.possibleResolutions.find(
+        (res: { value: string }) => res.value === data[5]
+      ) || defaultResolution;
+
     decodedDisplays[index] = {
-      aspectRatio:
-        aspectRatios.find((ar) => ar.value === data[0]) || defaultAspectRatio,
+      aspectRatio,
       customAspectRatio: {
         width: parseFloat(data[1]),
         height: parseFloat(data[2]),
@@ -39,8 +43,7 @@ function decodeDisplays(encodedDisplays: string[]) {
         length: parseFloat(data[3]),
         unit: data[4] as "cm" | "in",
       },
-      resolution:
-        resolutions.find((res) => res.value === data[5]) || defaultResolution,
+      resolution,
       isVertical: data[6] === "1",
     };
   });

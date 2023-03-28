@@ -9,12 +9,12 @@ import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
 import Button from "@/components/buttons/Button";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
-import { resolutions } from "@/app/compare/display/types/Resolution";
 import { debounce } from "lodash";
 import Toggle from "@/components/form/checkboxes/Toggle";
 import Swap from "@/components/form/checkboxes/Swap";
 import { MdCropLandscape } from "@react-icons/all-files/md/MdCropLandscape";
 import { MdCropPortrait } from "@react-icons/all-files/md/MdCropPortrait";
+import { defaultResolution } from "@/app/compare/display/types/Resolution";
 
 interface DisplayProps {
   display: Display;
@@ -36,6 +36,7 @@ export default function DisplayConf({
 
     if (selectedAspectRatio) {
       display.aspectRatio = selectedAspectRatio;
+      display.resolution = defaultResolution;
       setDisplay(display);
     }
   };
@@ -56,7 +57,7 @@ export default function DisplayConf({
   }, 500);
 
   const setResolution = (resolution: string) => {
-    const selectedResolution = resolutions.find(
+    const selectedResolution = display.aspectRatio.possibleResolutions.find(
       (ar: { value: string }) => ar.value === resolution
     );
 
@@ -157,7 +158,7 @@ export default function DisplayConf({
             value={display.resolution?.value}
             mOnChange={setResolution}
             label="Resolution"
-            options={resolutions}
+            options={display.aspectRatio.possibleResolutions}
             mSize="sm"
           />
           <div className="flex-1 flex items-end justify-end">
