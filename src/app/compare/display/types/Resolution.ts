@@ -22,7 +22,7 @@ const resolutions: Resolution[] = [
     label: "HD",
     value: "HD",
     width: 0,
-    height: 768,
+    height: 720,
   },
   {
     label: "HD+",
@@ -37,8 +37,8 @@ const resolutions: Resolution[] = [
     height: 1080,
   },
   {
-    label: "FHD+",
-    value: "FHDp",
+    label: "WUXGA",
+    value: "WUXGA",
     width: 0,
     height: 1200,
   },
