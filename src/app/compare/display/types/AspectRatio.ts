@@ -236,6 +236,7 @@ const aspectRatios: AspectRatio[] = [
     decimalValue: 16 / 18,
     optGroup: "Other",
     possibleResolutions: [
+      defaultResolution,
       {
         width: 2560,
         height: 2880,
@@ -247,6 +248,7 @@ const aspectRatios: AspectRatio[] = [
     value: "custom",
     decimalValue: 0,
     optGroup: "Other",
+    possibleResolutions: [defaultResolution],
   },
 ];
 

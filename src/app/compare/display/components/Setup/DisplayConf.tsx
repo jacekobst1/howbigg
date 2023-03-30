@@ -15,6 +15,7 @@ import Swap from "@/components/form/checkboxes/Swap";
 import { MdCropLandscape } from "@react-icons/all-files/md/MdCropLandscape";
 import { MdCropPortrait } from "@react-icons/all-files/md/MdCropPortrait";
 import { defaultResolution } from "@/app/compare/display/types/Resolution";
+import Label from "@/components/form/labels/Label";
 
 interface DisplayProps {
   display: Display;
@@ -29,10 +30,8 @@ export default function DisplayConf({
 }: DisplayProps) {
   const diagonalRef = useRef<HTMLInputElement>(null);
 
-  const setAspectRatio = (aspectRatio: string) => {
-    const selectedAspectRatio = aspectRatios.find(
-      (ar) => ar.value === aspectRatio
-    );
+  const setAspectRatio = (value: string) => {
+    const selectedAspectRatio = aspectRatios.find((ar) => ar.value === value);
 
     if (selectedAspectRatio) {
       display.aspectRatio = selectedAspectRatio;
@@ -51,20 +50,30 @@ export default function DisplayConf({
     setDisplay(display);
   };
 
-  const setDiagonal = debounce((size: string) => {
-    display.diagonal.length = Math.abs(parseFloat(size)) || 0;
+  const setDiagonal = debounce((value: string) => {
+    display.diagonal.length = Math.abs(parseFloat(value)) || 0;
     setDisplay(display);
   }, 500);
 
-  const setResolution = (resolution: string) => {
+  const setResolution = (value: string) => {
     const selectedResolution = display.aspectRatio.possibleResolutions.find(
-      (ar: { value: string }) => ar.value === resolution
+      (ar: { value: string }) => ar.value === value
     );
 
     if (selectedResolution) {
       display.resolution = selectedResolution;
       setDisplay(display);
     }
+  };
+
+  const setCustomResolutionWidth = (value: string) => {
+    display.resolution.width = Math.abs(parseFloat(value)) || 0;
+    setDisplay(display);
+  };
+
+  const setCustomResolutionHeight = (value: string) => {
+    display.resolution.height = Math.abs(parseFloat(value)) || 0;
+    setDisplay(display);
   };
 
   const setIsVertical = (checked: boolean) => {
@@ -128,6 +137,7 @@ export default function DisplayConf({
               mOnChange={setCustomAspectRatioWidth}
               type="number"
               mSize="sm"
+              className="no-spin"
             />
             <span className="mx-2">x</span>
             <Input
@@ -135,6 +145,7 @@ export default function DisplayConf({
               mOnChange={setCustomAspectRatioHeight}
               type="number"
               mSize="sm"
+              className="no-spin"
             />
           </div>
         )}
@@ -153,24 +164,45 @@ export default function DisplayConf({
             </span>
           </InputGroup>
         </div>
-        <div className="form-control flex-row mt-3">
-          <Select
-            value={display.resolution?.value}
-            mOnChange={setResolution}
-            label="Resolution"
-            options={display.aspectRatio.possibleResolutions}
-            mSize="sm"
+        <div className="form-control mt-3">
+          <Label text="Resolution">
+            {display.aspectRatio.value !== "custom" ? (
+              <Select
+                value={display.resolution?.value}
+                mOnChange={setResolution}
+                options={display.aspectRatio.possibleResolutions}
+                mSize="sm"
+              />
+            ) : (
+              <div className="flex flex-row mt-1">
+                <Input
+                  value={round(display.resolution.width) || ""}
+                  mOnChange={setCustomResolutionWidth}
+                  type="number"
+                  mSize="sm"
+                  className="no-spin"
+                />
+                <span className="mx-2">x</span>
+                <Input
+                  value={round(display.resolution.height) || ""}
+                  mOnChange={setCustomResolutionHeight}
+                  type="number"
+                  mSize="sm"
+                  className="no-spin"
+                />
+              </div>
+            )}
+          </Label>
+        </div>
+        <div className="form-control mt-3">
+          <Swap
+            label="Mode"
+            checked={display.isVertical}
+            onChange={setIsVertical}
+            offChildren={<MdCropLandscape />}
+            onChildren={<MdCropPortrait />}
+            style={{ marginBottom: "-4px" }}
           />
-          <div className="flex-1 flex items-end justify-end">
-            <Swap
-              label="Mode"
-              checked={display.isVertical}
-              onChange={setIsVertical}
-              offChildren={<MdCropLandscape />}
-              onChildren={<MdCropPortrait />}
-              style={{ marginBottom: "-4px" }}
-            />
-          </div>
         </div>
         <div className="form-control mt-3">
           <Toggle
