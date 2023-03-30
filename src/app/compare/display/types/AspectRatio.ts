@@ -163,6 +163,48 @@ const aspectRatios: AspectRatio[] = [
         value: "600x480",
         label: "600 x 480",
       },
+      {
+        width: 675,
+        height: 540,
+        value: "675x540",
+        label: "675 x 540",
+      },
+      {
+        width: 720,
+        height: 576,
+        value: "720x576",
+        label: "720 x 576",
+      },
+      {
+        width: 750,
+        height: 600,
+        value: "750x600",
+        label: "750 x 600",
+      },
+      {
+        width: 960,
+        height: 768,
+        value: "960x768",
+        label: "960 x 768",
+      },
+      {
+        width: 1280,
+        height: 1024,
+        value: "1280x1024",
+        label: "1280 x 1024 (SXGA)",
+      },
+      {
+        width: 1500,
+        height: 1200,
+        value: "1500x1200",
+        label: "1500 x 1200",
+      },
+      {
+        width: 2560,
+        height: 2048,
+        value: "2560x2048",
+        label: "2560 x 2048 (QSXGA)",
+      },
     ],
   },
 
