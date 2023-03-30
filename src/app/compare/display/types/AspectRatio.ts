@@ -452,6 +452,30 @@ const aspectRatios: AspectRatio[] = [
         value: "2560x1080",
         label: "2560 x 1080",
       },
+      {
+        width: 3440,
+        height: 1440,
+        value: "3440x1440",
+        label: "3440 x 1440",
+      },
+      {
+        width: 3840,
+        height: 1600,
+        value: "3840x1600",
+        label: "3840 x 1600",
+      },
+      {
+        width: 5120,
+        height: 2160,
+        value: "5120x2160",
+        label: "5120 x 2160",
+      },
+      {
+        width: 10240,
+        height: 4320,
+        value: "10240x4320",
+        label: "10240 x 4320 | 10K",
+      },
     ],
   },
   {
