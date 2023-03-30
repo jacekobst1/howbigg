@@ -137,7 +137,7 @@ export default function DisplayConf({
               mOnChange={setCustomAspectRatioWidth}
               type="number"
               mSize="sm"
-              className="no-spin"
+              noSpin
             />
             <span className="mx-2">x</span>
             <Input
@@ -145,7 +145,7 @@ export default function DisplayConf({
               mOnChange={setCustomAspectRatioHeight}
               type="number"
               mSize="sm"
-              className="no-spin"
+              noSpin
             />
           </div>
         )}
@@ -180,7 +180,7 @@ export default function DisplayConf({
                   mOnChange={setCustomResolutionWidth}
                   type="number"
                   mSize="sm"
-                  className="no-spin"
+                  noSpin
                 />
                 <span className="mx-2">x</span>
                 <Input
@@ -188,7 +188,7 @@ export default function DisplayConf({
                   mOnChange={setCustomResolutionHeight}
                   type="number"
                   mSize="sm"
-                  className="no-spin"
+                  noSpin
                 />
               </div>
             )}
