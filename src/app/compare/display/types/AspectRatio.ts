@@ -1,10 +1,12 @@
-import { defaultResolution } from "@/app/compare/display/types/Resolution";
+import Resolution, {
+  defaultResolution,
+} from "@/app/compare/display/types/Resolution";
 
 interface AspectRatio {
   label: string;
   value: string;
   optGroup?: string;
-  possibleResolutions?: any;
+  possibleResolutions: Resolution[];
 }
 
 const aspectRatios: AspectRatio[] = [
@@ -522,4 +524,5 @@ const aspectRatios: AspectRatio[] = [
 const defaultAspectRatio: AspectRatio = aspectRatios[2];
 
 export default AspectRatio;
+export type { Resolution };
 export { aspectRatios, defaultAspectRatio };
