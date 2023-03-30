@@ -2,28 +2,16 @@ import Display from "@/app/compare/display/types/Display";
 import { cmToIn, inToCm } from "@/utils/units";
 
 function setDisplaysDimensions(displays: Display[]) {
-  setCustomAspectRatioValue(displays);
   setWidthAndHeightStandard(displays);
   setWidthAndHeightPercentage(displays);
   setZIndexFromBiggestToSmallest(displays);
 }
 
-function setCustomAspectRatioValue(displays: Display[]) {
-  displays
-    .filter((display) => display.aspectRatio.value === "custom")
-    .forEach((display) => {
-      if (display.customAspectRatio.width && display.customAspectRatio.height) {
-        display.aspectRatio.decimalValue =
-          display.customAspectRatio.width / display.customAspectRatio.height;
-      }
-    });
-}
-
 function setWidthAndHeightStandard(displays: Display[]) {
   displays.forEach((display) => {
     const aspectRatioDecimalValue = display.isVertical
-      ? 1 / display.aspectRatio.decimalValue
-      : display.aspectRatio.decimalValue;
+      ? 1 / tmpTodoGetAspectRatioDecimalValue(display)
+      : tmpTodoGetAspectRatioDecimalValue(display);
 
     const { widthCm, heightCm, widthIn, heightIn } = calculateSize(
       aspectRatioDecimalValue,
@@ -36,6 +24,22 @@ function setWidthAndHeightStandard(displays: Display[]) {
     display.height.cm = heightCm;
     display.height.in = heightIn;
   });
+}
+
+/**
+ * TODO it should be encapsulated in Display object
+ */
+function tmpTodoGetAspectRatioDecimalValue(display: Display): number {
+  if (display.resolution.width && display.resolution.height) {
+    return display.resolution.width / display.resolution.height;
+  }
+
+  if (display.aspectRatio.value === "custom") {
+    return display.customAspectRatio.width / display.customAspectRatio.height;
+  }
+
+  const [x, y] = display.aspectRatio.value.split("x");
+  return parseInt(x) / parseInt(y);
 }
 
 function calculateSize(
