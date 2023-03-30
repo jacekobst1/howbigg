@@ -516,6 +516,8 @@ const aspectRatios: AspectRatio[] = [
       {
         width: 2560,
         height: 2880,
+        value: "2560x2880",
+        label: "2560 x 2880",
       },
     ],
   },
