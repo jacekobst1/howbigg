@@ -295,7 +295,7 @@ const aspectRatios: AspectRatio[] = [
         width: 2560,
         height: 1440,
         value: "2560x1440",
-        label: "2560 x 1440 | | W)QH",
+        label: "2560 x 1440 | | (W)QHD",
       },
       {
         width: 2880,
