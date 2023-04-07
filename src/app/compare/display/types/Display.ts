@@ -1,26 +1,7 @@
 import AspectRatio from "./AspectRatio";
 import Resolution from "@/app/compare/display/types/Resolution";
 
-interface Display {
-  id: number;
-  name: string;
-  aspectRatio: AspectRatio;
-  customAspectRatio: CustomAspectRatio;
-  diagonal: Diagonal;
-  resolution: Resolution;
-  isVertical: boolean;
-  width: Size;
-  height: Size;
-  ppi: number;
-  minOptimalViewDistance: ViewDistance;
-  maxOptimalViewDistance: ViewDistance;
-  minViewDistance: ViewDistance;
-  zIndex: number;
-  color: Color;
-  getAspectRatioDecimalValue(): number;
-}
-
-class DisplayClass implements Display {
+class Display {
   constructor(
     public id: number,
     public name: string,
@@ -90,4 +71,3 @@ interface Color {
 
 export default Display;
 export type { DisplayUrlState };
-export { DisplayClass };

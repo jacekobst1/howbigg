@@ -1,7 +1,6 @@
 import { defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
-import Display, { DisplayClass } from "@/app/compare/display/types/Display";
+import Display from "@/app/compare/display/types/Display";
 import { defaultResolution } from "@/app/compare/display/types/Resolution";
-import { mapWithPrototype } from "@/utils/objects";
 
 function generateDisplays(numberOfDisplays: number) {
   const displays: Display[] = [];
@@ -18,13 +17,12 @@ function generateDisplays(numberOfDisplays: number) {
 function generateDisplaysWithoutPossibleResolutions(numberOfDisplays: number) {
   let displays = generateDisplays(numberOfDisplays);
 
-  displays = mapWithPrototype(displays, (display) => ({
-    ...display,
-    aspectRatio: {
+  displays.forEach((display) => {
+    display.aspectRatio = {
       ...display.aspectRatio,
       possibleResolutions: [],
-    },
-  }));
+    };
+  });
 
   return displays;
 }
@@ -45,7 +43,7 @@ function generateDisplayByExistingOnes(existingDisplays: Display[]) {
 }
 
 function initDisplay(id: number) {
-  return new DisplayClass(
+  return new Display(
     id,
     "Display 1",
     defaultAspectRatio,
