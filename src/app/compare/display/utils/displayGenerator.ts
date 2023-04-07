@@ -45,7 +45,7 @@ function generateDisplayByExistingOnes(existingDisplays: Display[]) {
 function initDisplay(id: number) {
   return new Display(
     id,
-    "Display 1",
+    `Display ${id}`,
     defaultAspectRatio,
     { width: 0, height: 0 },
     { length: 0, unit: "in" },
