@@ -2,28 +2,16 @@ import Display from "@/app/compare/display/types/Display";
 import { cmToIn, inToCm } from "@/utils/units";
 
 function setDisplaysDimensions(displays: Display[]) {
-  setCustomAspectRatioValue(displays);
   setWidthAndHeightStandard(displays);
   setWidthAndHeightPercentage(displays);
   setZIndexFromBiggestToSmallest(displays);
 }
 
-function setCustomAspectRatioValue(displays: Display[]) {
-  displays
-    .filter((display) => display.aspectRatio.value === "custom")
-    .forEach((display) => {
-      if (display.customAspectRatio.width && display.customAspectRatio.height) {
-        display.aspectRatio.decimalValue =
-          display.customAspectRatio.width / display.customAspectRatio.height;
-      }
-    });
-}
-
 function setWidthAndHeightStandard(displays: Display[]) {
   displays.forEach((display) => {
     const aspectRatioDecimalValue = display.isVertical
-      ? 1 / display.aspectRatio.decimalValue
-      : display.aspectRatio.decimalValue;
+      ? 1 / display.getAspectRatioDecimalValue()
+      : display.getAspectRatioDecimalValue();
 
     const { widthCm, heightCm, widthIn, heightIn } = calculateSize(
       aspectRatioDecimalValue,

@@ -1,11 +1,10 @@
 import Display, { DisplayUrlState } from "@/app/compare/display/types/Display";
-import {
+import AspectRatio, {
   aspectRatios,
   defaultAspectRatio,
 } from "@/app/compare/display/types/AspectRatio";
-import {
+import Resolution, {
   defaultResolution,
-  resolutions,
 } from "@/app/compare/display/types/Resolution";
 
 function encodeDisplays(displays: Display[]): string[] {
@@ -15,10 +14,10 @@ function encodeDisplays(displays: Display[]): string[] {
     const { value: aspectValue } = aspectRatio;
     const { width, height } = customAspectRatio;
     const { length, unit } = diagonal;
-    const { value: resValue } = resolution;
+    const { width: resWidth, height: resHeight } = resolution;
     const orientation = isVertical ? 1 : 0;
 
-    return `${aspectValue}_${width}_${height}_${length}_${unit}_${resValue}_${orientation}`;
+    return `${aspectValue}_${width}_${height}_${length}_${unit}_${resWidth}x${resHeight}_${orientation}`;
   });
 }
 
@@ -28,9 +27,16 @@ function decodeDisplays(encodedDisplays: string[]) {
   encodedDisplays.forEach((encodedDisplay, index) => {
     const data = encodedDisplay.split("_");
 
+    const aspectRatio =
+      aspectRatios.find((ar) => ar.value === data[0]) || defaultAspectRatio;
+
+    const resolution =
+      aspectRatio.value !== "custom"
+        ? getResolution(data, aspectRatio)
+        : getCustomResolution(data);
+
     decodedDisplays[index] = {
-      aspectRatio:
-        aspectRatios.find((ar) => ar.value === data[0]) || defaultAspectRatio,
+      aspectRatio,
       customAspectRatio: {
         width: parseFloat(data[1]),
         height: parseFloat(data[2]),
@@ -39,13 +45,30 @@ function decodeDisplays(encodedDisplays: string[]) {
         length: parseFloat(data[3]),
         unit: data[4] as "cm" | "in",
       },
-      resolution:
-        resolutions.find((res) => res.value === data[5]) || defaultResolution,
+      resolution,
       isVertical: data[6] === "1",
     };
   });
 
   return decodedDisplays;
+}
+
+function getResolution(data: string[], aspectRatio: AspectRatio): Resolution {
+  return (
+    aspectRatio.possibleResolutions.find(
+      (res: { value: string }) => res.value === data[5]
+    ) || defaultResolution
+  );
+}
+
+function getCustomResolution(data: string[]): Resolution {
+  const [width, height] = data[5].split("x");
+
+  return {
+    ...defaultResolution,
+    width: parseFloat(width),
+    height: parseFloat(height),
+  };
 }
 
 export { encodeDisplays, decodeDisplays };

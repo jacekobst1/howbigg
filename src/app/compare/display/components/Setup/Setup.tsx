@@ -3,10 +3,10 @@
 import DisplayConf from "@/app/compare/display/components/Setup/DisplayConf";
 import Display from "@/app/compare/display/types/Display";
 import React, { Fragment } from "react";
-import { cloneDeep } from "@/utils/objects";
 import CopyComparisonButton from "@/app/compare/display/components/Setup/CopyComparisonButton";
 import AddNewDisplayButton from "@/app/compare/display/components/Setup/AddNewDisplayButton";
 import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsFacade";
+import { cloneDeep } from "lodash";
 
 interface SetupProps {
   displays: Display[];

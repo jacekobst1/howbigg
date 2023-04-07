@@ -49,7 +49,7 @@ export default function Details({ displays }: DetailsProps) {
               <HeadTh>Width</HeadTh>
               <HeadTh>Height</HeadTh>
               <HeadTh>Area</HeadTh>
-              {/*<HeadTh>Resolution</HeadTh>*/}
+              <HeadTh>Resolution</HeadTh>
               <HeadTh>
                 <InfoTooltip text="Pixels Per Inch. Calculated only when resolution in selected.">
                   PPI
@@ -90,7 +90,11 @@ export default function Details({ displays }: DetailsProps) {
                   {unit}
                   <sup>2</sup>
                 </BodyTd>
-                {/*<BodyTd>{`${display.resolution.width} x ${display.resolution.height}`}</BodyTd>*/}
+                <BodyTd>
+                  {display.resolution.width > 0
+                    ? `${display.resolution.width} x ${display.resolution.height}`
+                    : "-"}
+                </BodyTd>
                 <BodyTd>{display.ppi || "-"}</BodyTd>
                 <BodyTd>
                   {display.minOptimalViewDistance.ft !== 0

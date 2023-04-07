@@ -5,6 +5,7 @@ import Presentation from "@/app/compare/display/components/Presentation/Presenta
 import {
   generateDisplayByExistingOnes,
   generateDisplays,
+  generateDisplaysWithoutPossibleResolutions,
 } from "@/app/compare/display/utils/displayGenerator";
 import Details from "@/app/compare/display/components/Details/Details";
 import useQueryState from "@/hooks/useQueryState";
@@ -14,16 +15,8 @@ import {
   decodeDisplays,
   encodeDisplays,
 } from "@/app/compare/display/utils/urlEncoder";
-import { mergeDeep } from "@/utils/objects";
+import { mapWithPrototype, mergeDeep } from "@/utils/objects";
 import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsFacade";
-
-interface DisplayOnlyRequired {
-  arv: string;
-  carw: number;
-  carh: number;
-  dl: number;
-  du: string;
-}
 
 export default function DisplayPage() {
   const [displays, setDisplays] = useState(generateDisplays(2));
@@ -39,9 +32,12 @@ export default function DisplayPage() {
       return;
     }
 
-    const defaultDisplays = generateDisplays(queryState.length);
+    const defaultDisplays = generateDisplaysWithoutPossibleResolutions(
+      queryState.length
+    );
     const decodedDisplays = decodeDisplays(queryState);
-    const mergedDisplays = defaultDisplays.map(
+    const mergedDisplays = mapWithPrototype(
+      defaultDisplays,
       (display, index) => mergeDeep(display, decodedDisplays[index]) as Display
     );
     const calculatedDisplays = getDetailedDisplays(mergedDisplays);

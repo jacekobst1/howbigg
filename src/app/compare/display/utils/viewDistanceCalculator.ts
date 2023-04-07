@@ -16,12 +16,9 @@ export function setViewDistance(displays: Display[]) {
       return;
     }
 
-    const resHeight = display.resolution.height;
-    const resWidth = resHeight * display.aspectRatio.decimalValue;
-
     display.minViewDistance = calculateMinViewDistance(
       display.width.in,
-      resWidth
+      display.resolution.width
     );
     display.minOptimalViewDistance = calculateOptimalViewDistance(
       display.width.in,

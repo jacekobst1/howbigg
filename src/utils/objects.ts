@@ -19,8 +19,19 @@ function mergeDeep(...objects: any[]) {
   }, {});
 }
 
-function cloneDeep(obj: any) {
-  return JSON.parse(JSON.stringify(obj));
+function mapWithPrototype<T, U>(
+  array: T[],
+  callback: (value: T, index: number, array: T[]) => U
+): U[] {
+  const result: U[] = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const item = callback(array[i], i, array);
+    Object.setPrototypeOf(item, Object.getPrototypeOf(array[i]));
+    result.push(item);
+  }
+
+  return result;
 }
 
-export { mergeDeep, cloneDeep };
+export { mergeDeep, mapWithPrototype };

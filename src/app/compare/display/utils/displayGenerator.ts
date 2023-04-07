@@ -14,6 +14,19 @@ function generateDisplays(numberOfDisplays: number) {
   return displays;
 }
 
+function generateDisplaysWithoutPossibleResolutions(numberOfDisplays: number) {
+  let displays = generateDisplays(numberOfDisplays);
+
+  displays.forEach((display) => {
+    display.aspectRatio = {
+      ...display.aspectRatio,
+      possibleResolutions: [],
+    };
+  });
+
+  return displays;
+}
+
 function generateDisplayByExistingOnes(existingDisplays: Display[]) {
   const nonUsedColors = colors.filter(
     (color) =>
@@ -29,49 +42,25 @@ function generateDisplayByExistingOnes(existingDisplays: Display[]) {
   return newDisplay;
 }
 
-const initDisplay = (id: number): Display => ({
-  id: id,
-  name: `Display ${id}`,
-  aspectRatio: defaultAspectRatio,
-  customAspectRatio: {
-    width: 0,
-    height: 0,
-  },
-  diagonal: {
-    length: 0,
-    unit: "in",
-  },
-  resolution: defaultResolution,
-  isVertical: false,
-  width: {
-    in: 0,
-    cm: 0,
-    percentage: 0,
-  },
-  height: {
-    in: 0,
-    cm: 0,
-    percentage: 0,
-  },
-  ppi: 0,
-  minOptimalViewDistance: {
-    ft: 0,
-    m: 0,
-  },
-  maxOptimalViewDistance: {
-    ft: 0,
-    m: 0,
-  },
-  minViewDistance: {
-    ft: 0,
-    m: 0,
-  },
-  zIndex: 0,
-  color: {
-    background: "#000",
-    text: "#FFF",
-  },
-});
+function initDisplay(id: number) {
+  return new Display(
+    id,
+    "Display 1",
+    defaultAspectRatio,
+    { width: 0, height: 0 },
+    { length: 0, unit: "in" },
+    defaultResolution,
+    false,
+    { in: 0, cm: 0, percentage: 0 },
+    { in: 0, cm: 0, percentage: 0 },
+    0,
+    { ft: 0, m: 0 },
+    { ft: 0, m: 0 },
+    { ft: 0, m: 0 },
+    0,
+    { background: dark, text: light }
+  );
+}
 
 const dark = "#000";
 const light = "#FFF";
@@ -85,4 +74,8 @@ const colors = [
   { background: "#F3DE8A", text: dark },
 ];
 
-export { generateDisplays, generateDisplayByExistingOnes };
+export {
+  generateDisplays,
+  generateDisplayByExistingOnes,
+  generateDisplaysWithoutPossibleResolutions,
+};

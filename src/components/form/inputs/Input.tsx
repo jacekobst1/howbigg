@@ -9,17 +9,19 @@ type InputProps = {
   label?: string;
   mOnChange?: (value: string) => void;
   mSize?: "xs" | "sm" | "md" | "lg";
+  noSpin?: boolean;
 } & React.ComponentPropsWithRef<"input">;
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
     {
-      value,
-      defaultValue,
-      label,
       type = "text",
+      label,
       mOnChange,
       mSize = "md",
+      noSpin = false,
+      value,
+      defaultValue,
       className,
       ...rest
     },
@@ -36,7 +38,12 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         defaultValue={defaultValue}
         onChange={onChangeHandler}
         type={type}
-        className={clsxm("input w-full", sizeClass, className)}
+        className={clsxm(
+          "input w-full",
+          sizeClass,
+          noSpin && "no-spin",
+          className
+        )}
         {...rest}
       />
     );
