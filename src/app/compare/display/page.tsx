@@ -18,14 +18,6 @@ import {
 import { mergeDeep } from "@/utils/objects";
 import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsFacade";
 
-interface DisplayOnlyRequired {
-  arv: string;
-  carw: number;
-  carh: number;
-  dl: number;
-  du: string;
-}
-
 export default function DisplayPage() {
   const [displays, setDisplays] = useState(generateDisplays(2));
   const [queryState, setQueryState, isQueryStateReady] =
