@@ -17,6 +17,41 @@ interface Display {
   minViewDistance: ViewDistance;
   zIndex: number;
   color: Color;
+  getAspectRatioDecimalValue(): number;
+}
+
+class DisplayClass implements Display {
+  constructor(
+    public id: number,
+    public name: string,
+    public aspectRatio: AspectRatio,
+    public customAspectRatio: CustomAspectRatio,
+    public diagonal: Diagonal,
+    public resolution: Resolution,
+    public isVertical: boolean,
+    public width: Size,
+    public height: Size,
+    public ppi: number,
+    public minOptimalViewDistance: ViewDistance,
+    public maxOptimalViewDistance: ViewDistance,
+    public minViewDistance: ViewDistance,
+    public zIndex: number,
+    public color: Color
+  ) {}
+
+  public getAspectRatioDecimalValue(): number {
+    if (this.resolution.width && this.resolution.height) {
+      return this.resolution.width / this.resolution.height;
+    }
+
+    if (this.aspectRatio.value === "custom") {
+      return this.customAspectRatio.width / this.customAspectRatio.height;
+    }
+
+    const [x, y] = this.aspectRatio.value.split("x");
+
+    return parseInt(x) / parseInt(y);
+  }
 }
 
 interface DisplayUrlState {
@@ -55,3 +90,4 @@ interface Color {
 
 export default Display;
 export type { DisplayUrlState };
+export { DisplayClass };

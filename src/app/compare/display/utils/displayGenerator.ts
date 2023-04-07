@@ -1,6 +1,7 @@
 import { defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
-import Display from "@/app/compare/display/types/Display";
+import Display, { DisplayClass } from "@/app/compare/display/types/Display";
 import { defaultResolution } from "@/app/compare/display/types/Resolution";
+import { mapWithPrototype } from "@/utils/objects";
 
 function generateDisplays(numberOfDisplays: number) {
   const displays: Display[] = [];
@@ -17,7 +18,7 @@ function generateDisplays(numberOfDisplays: number) {
 function generateDisplaysWithoutPossibleResolutions(numberOfDisplays: number) {
   let displays = generateDisplays(numberOfDisplays);
 
-  displays = displays.map((display) => ({
+  displays = mapWithPrototype(displays, (display) => ({
     ...display,
     aspectRatio: {
       ...display.aspectRatio,
@@ -43,49 +44,25 @@ function generateDisplayByExistingOnes(existingDisplays: Display[]) {
   return newDisplay;
 }
 
-const initDisplay = (id: number): Display => ({
-  id: id,
-  name: `Display ${id}`,
-  aspectRatio: defaultAspectRatio,
-  customAspectRatio: {
-    width: 0,
-    height: 0,
-  },
-  diagonal: {
-    length: 0,
-    unit: "in",
-  },
-  resolution: defaultResolution,
-  isVertical: false,
-  width: {
-    in: 0,
-    cm: 0,
-    percentage: 0,
-  },
-  height: {
-    in: 0,
-    cm: 0,
-    percentage: 0,
-  },
-  ppi: 0,
-  minOptimalViewDistance: {
-    ft: 0,
-    m: 0,
-  },
-  maxOptimalViewDistance: {
-    ft: 0,
-    m: 0,
-  },
-  minViewDistance: {
-    ft: 0,
-    m: 0,
-  },
-  zIndex: 0,
-  color: {
-    background: "#000",
-    text: "#FFF",
-  },
-});
+function initDisplay(id: number) {
+  return new DisplayClass(
+    id,
+    "Display 1",
+    defaultAspectRatio,
+    { width: 0, height: 0 },
+    { length: 0, unit: "in" },
+    defaultResolution,
+    false,
+    { in: 0, cm: 0, percentage: 0 },
+    { in: 0, cm: 0, percentage: 0 },
+    0,
+    { ft: 0, m: 0 },
+    { ft: 0, m: 0 },
+    { ft: 0, m: 0 },
+    0,
+    { background: dark, text: light }
+  );
+}
 
 const dark = "#000";
 const light = "#FFF";

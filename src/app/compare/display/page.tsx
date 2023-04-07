@@ -15,7 +15,7 @@ import {
   decodeDisplays,
   encodeDisplays,
 } from "@/app/compare/display/utils/urlEncoder";
-import { mergeDeep } from "@/utils/objects";
+import { mapWithPrototype, mergeDeep } from "@/utils/objects";
 import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsFacade";
 
 export default function DisplayPage() {
@@ -36,7 +36,8 @@ export default function DisplayPage() {
       queryState.length
     );
     const decodedDisplays = decodeDisplays(queryState);
-    const mergedDisplays = defaultDisplays.map(
+    const mergedDisplays = mapWithPrototype(
+      defaultDisplays,
       (display, index) => mergeDeep(display, decodedDisplays[index]) as Display
     );
     const calculatedDisplays = getDetailedDisplays(mergedDisplays);
