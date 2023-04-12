@@ -20,7 +20,7 @@ export default function Navigation() {
               href={href}
               className={clsxm(
                 "hover:text-primary-400",
-                pathname == href ? "text-primary-500" : ""
+                pathname?.includes(href) ? "text-primary-500" : ""
               )}
             >
               {label}
