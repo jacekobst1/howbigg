@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 export default function useQueryState<T>(
   name: string,
@@ -7,10 +7,8 @@ export default function useQueryState<T>(
 ) {
   const [isReady, setIsReady] = useState(false);
   const [queryState, setQueryState] = useState<T | null>(defaultValue);
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const param = searchParams.get(name);
+  const param = searchParams?.get(name);
 
   useEffect(() => {
     if (param) {
@@ -28,6 +26,7 @@ export default function useQueryState<T>(
   }, []);
 
   function setQuery(value: T) {
+    if (!searchParams) return;
     setQueryState(value);
     const params = new URLSearchParams(searchParams);
     params.set(name, JSON.stringify(value));
