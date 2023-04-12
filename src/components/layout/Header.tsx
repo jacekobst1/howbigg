@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Navigation from "@/components/layout/Navigation";
 
 export default function Header() {
   return (
@@ -11,9 +12,9 @@ export default function Header() {
             width={32}
             height={32}
           />
-          <p className="ml-2 font-bold">How big is your...</p>
+          <p className="ml-2 font-bold">Howbigg</p>
         </a>
-        {/*<Navigation />*/}
+        <Navigation />
       </div>
     </header>
   );

@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import clsxm from "@/lib/clsxm";
 
 const links: any[] = [
-  // { href: "/compare/display", label: "Display" }
+  { href: "/compare/display", label: "Display comparison" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default function Navigation() {
