@@ -1,7 +1,5 @@
-import fs from "fs";
 import Markdown from "markdown-to-jsx";
-import matter from "gray-matter";
-import getPosts from "@/app/blog/utils/postGetter";
+import { getPostBySlug, getPosts } from "@/app/blog/utils/postGetter";
 
 interface PostProps {
   params: {
@@ -9,22 +7,16 @@ interface PostProps {
   };
 }
 
-const getPostContent = (slug: string) => {
-  const file = `posts/${slug}.md`;
-  const content = fs.readFileSync(file, "utf8");
-
-  return matter(content);
-};
-
 export const generateStaticParams = async () => {
   const posts = getPosts();
+
   return posts.map((post) => ({
     slug: post.slug,
   }));
 };
 
 export default function PostPage({ params: { slug } }: PostProps) {
-  const post = getPostContent(slug);
+  const post = getPostBySlug(slug);
   return (
     <div>
       <div className="my-12 text-center">

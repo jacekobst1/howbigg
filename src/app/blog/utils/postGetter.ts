@@ -1,8 +1,9 @@
 import fs from "fs";
 import matter from "gray-matter";
 import { PostData } from "@/app/blog/types/PostData";
+import { notFound } from "next/navigation";
 
-const getPosts = (): PostData[] => {
+function getPosts(): PostData[] {
   const files = fs.readdirSync("posts/");
 
   return files
@@ -19,6 +20,19 @@ const getPosts = (): PostData[] => {
       };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
-};
+}
 
-export default getPosts;
+function getPostBySlug(slug: string) {
+  const file = `posts/${slug}.md`;
+  let content;
+
+  try {
+    content = fs.readFileSync(file, "utf8");
+  } catch (e) {
+    notFound();
+  }
+
+  return matter(content);
+}
+
+export { getPosts, getPostBySlug };

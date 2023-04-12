@@ -1,4 +1,4 @@
-import getPosts from "./utils/postGetter";
+import { getPosts } from "./utils/postGetter";
 import PostPreview from "./components/PostPreview";
 
 export default function BlogPage() {
