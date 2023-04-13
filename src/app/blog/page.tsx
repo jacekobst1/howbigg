@@ -1,4 +1,4 @@
-import { getPosts } from "./utils/postGetter";
+import { getAllPostsMetadata } from "./utils/postGetter";
 import PostPreview from "./components/PostPreview";
 import { Metadata } from "next";
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const posts = getPosts();
+  const posts = getAllPostsMetadata();
   const postPreviews = posts.map((post) => (
     <PostPreview key={post.slug} {...post} />
   ));

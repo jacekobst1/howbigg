@@ -1,7 +1,7 @@
-import { PostData } from "@/app/blog/types/PostData";
+import { PostMetadata } from "@/app/blog/types/Post";
 import PrimaryLink from "@/components/links/PrimaryLink";
 
-const PostPreview = (props: PostData) => {
+const PostPreview = (props: PostMetadata) => {
   return (
     <div
       className="border border-slate-300 p-4 rounded-md shadow-sm

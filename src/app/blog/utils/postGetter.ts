@@ -1,38 +1,46 @@
 import fs from "fs";
 import matter from "gray-matter";
-import { PostData } from "@/app/blog/types/PostData";
+import { Post, PostMetadata } from "@/app/blog/types/Post";
 import { notFound } from "next/navigation";
 
-function getPosts(): PostData[] {
+function getAllPostsMetadata(): PostMetadata[] {
   const files = fs.readdirSync("posts/");
 
   return files
     .filter((file) => file.endsWith(".md"))
-    .map((fileName) => {
-      const fileContents = fs.readFileSync(`posts/${fileName}`, "utf8");
-      const matterResult = matter(fileContents);
+    .map((filename) => {
+      const fileContent = fs.readFileSync(`posts/${filename}`, "utf8");
+      const matterResult = matter(fileContent);
 
       return {
         date: matterResult.data.date,
         title: matterResult.data.title,
         subtitle: matterResult.data.subtitle,
-        slug: fileName.replace(".md", ""),
+        slug: filename.replace(".md", ""),
       };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-function getPostBySlug(slug: string) {
-  const file = `posts/${slug}.md`;
-  let content;
+function getPostBySlug(slug: string): Post {
+  const filename = `posts/${slug}.md`;
+  let fileContent;
 
   try {
-    content = fs.readFileSync(file, "utf8");
+    fileContent = fs.readFileSync(filename, "utf8");
   } catch (e) {
     notFound();
   }
 
-  return matter(content);
+  const matterResult = matter(fileContent);
+
+  return {
+    content: matterResult.content,
+    date: matterResult.data.date,
+    title: matterResult.data.title,
+    subtitle: matterResult.data.subtitle,
+    slug: slug,
+  };
 }
 
-export { getPosts, getPostBySlug };
+export { getAllPostsMetadata, getPostBySlug };

@@ -1,6 +1,10 @@
 import Markdown from "markdown-to-jsx";
-import { getPostBySlug, getPosts } from "@/app/blog/utils/postGetter";
+import {
+  getAllPostsMetadata,
+  getPostBySlug,
+} from "@/app/blog/utils/postGetter";
 import ArrowLink from "@/components/links/ArrowLink";
+import { Article, WithContext } from "schema-dts";
 
 interface PostProps {
   params: {
@@ -8,28 +12,81 @@ interface PostProps {
   };
 }
 
-export const generateStaticParams = async () => {
-  const posts = getPosts();
+export async function generateMetadata({ params: { slug } }: PostProps) {
+  const post = getPostBySlug(slug);
 
-  return posts.map((post) => ({
-    slug: post.slug,
+  return {
+    title: post.title,
+    description: post.subtitle,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.subtitle,
+      url: `/blog/${slug}`,
+    },
+    twitter: {
+      title: post.title,
+      description: post.subtitle,
+    },
+  };
+}
+
+export const generateStaticParams = async () => {
+  const postsMetadata = getAllPostsMetadata();
+
+  return postsMetadata.map((metadata) => ({
+    slug: metadata.slug,
   }));
 };
 
 export default function PostPage({ params: { slug } }: PostProps) {
   const post = getPostBySlug(slug);
+
+  const jsonLd: WithContext<Article> = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://howbigg.com/blog/${slug}`,
+    },
+    headline: post.title,
+    description: post.subtitle,
+    image: "",
+    author: {
+      "@type": "Person",
+      name: "Jacek Obst",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Howbigg",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://howbigg.com/images/logo.png",
+      },
+    },
+    datePublished: post.date,
+  };
+
   return (
-    <div>
-      <ArrowLink href="/blog" direction="left">
-        Back to blog
-      </ArrowLink>
-      <div className="my-12 text-center">
-        <h1 className="text-slate-600 ">{post.data.title}</h1>
-        <p className="text-slate-400 mt-2">{post.data.date}</p>
+    <>
+      <div>
+        <ArrowLink href="/blog" direction="left">
+          Back to blog
+        </ArrowLink>
+        <div className="my-12 text-center">
+          <h1 className="text-slate-600 ">{post.title}</h1>
+          <p className="text-slate-400 mt-2">{post.date}</p>
+        </div>
+        <article className="prose mx-auto">
+          <Markdown>{post.content}</Markdown>
+        </article>
       </div>
-      <article className="prose mx-auto">
-        <Markdown>{post.content}</Markdown>
-      </article>
-    </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </>
   );
 }
