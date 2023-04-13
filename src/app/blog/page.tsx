@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     title: "Blog",
     url: "/blog",
   },
+  twitter: {
+    title: "Blog",
+  },
 };
 
 export default function BlogPage() {

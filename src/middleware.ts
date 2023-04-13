@@ -2,9 +2,9 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
 export function middleware(request: NextRequest) {
-  return NextResponse.redirect(new URL("/compare/display", request.url));
+  return NextResponse.redirect(new URL("/", request.url));
 }
 
 export const config = {
-  matcher: "/",
+  matcher: "/compare/display",
 };

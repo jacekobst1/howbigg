@@ -6,15 +6,15 @@ import AnalyticsWrapper from "@/components/AnalyticsWrapper";
 import ToastContainerWrapper from "@/components/ToastContainerWrapper";
 import { Metadata } from "next";
 
-const title = "Howbigg";
+const title = {
+  default: "Howbigg",
+  template: "%s | Howbigg",
+};
 const description =
   "Are you looking for a new monitor? Or perhaps a television set? Compare their sizes first to see which one will suit you better!";
 
 export const metadata: Metadata = {
-  title: {
-    default: title,
-    template: "%s | Howbigg",
-  },
+  title: title,
   description: description,
   metadataBase: new URL("https://howbigg.com"),
   alternates: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: title,
     description: description,
     url: "/",
-    siteName: title,
+    siteName: title.default,
     locale: "en-US",
     type: "website",
     // TODO: add images

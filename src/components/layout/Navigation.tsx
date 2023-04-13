@@ -5,12 +5,23 @@ import { usePathname } from "next/navigation";
 import clsxm from "@/lib/clsxm";
 
 const links: any[] = [
-  { href: "/compare/display", label: "Display comparison" },
+  { href: "/", label: "Display comparison" },
   { href: "/blog", label: "Blog" },
 ];
 
 export default function Navigation() {
   const pathname = usePathname();
+
+  function pathNameMatches(href: string) {
+    if (pathname === "/" && href === "/") {
+      return true;
+    }
+
+    if (href !== "/" && pathname?.includes(href)) {
+      return true;
+    }
+  }
+
   return (
     <nav className="text-gray-500 order-3 w-full md:w-auto md:order-2">
       <ul className="flex font-semibold">
@@ -20,7 +31,7 @@ export default function Navigation() {
               href={href}
               className={clsxm(
                 "hover:text-primary-400",
-                pathname?.includes(href) ? "text-primary-500" : ""
+                pathNameMatches(href) ? "text-primary-500" : ""
               )}
             >
               {label}
