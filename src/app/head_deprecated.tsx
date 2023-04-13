@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Head() {
+export default function Head_deprecated() {
   const meta = {
     title: "Display size live comparison | Howbigg",
     siteName: "Display size live comparison | Howbigg",

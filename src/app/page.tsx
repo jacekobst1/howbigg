@@ -1,5 +1,5 @@
-import DisplayPage from "@/app/compare/display/page";
+import CompareDisplayPage from "@/app/compare/display/page";
 
 export default function Home() {
-  return <DisplayPage />;
+  return <CompareDisplayPage />;
 }

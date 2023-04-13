@@ -1,5 +1,17 @@
 import { getPosts } from "./utils/postGetter";
 import PostPreview from "./components/PostPreview";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog",
+    url: "/blog",
+  },
+};
 
 export default function BlogPage() {
   const posts = getPosts();
