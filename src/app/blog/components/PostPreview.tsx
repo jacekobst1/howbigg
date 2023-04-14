@@ -10,7 +10,9 @@ const PostPreview = (props: PostMetadata) => {
       <p className="text-sm text-slate-400">{props.date}</p>
 
       <PrimaryLink href={`/blog/${props.slug}`}>
-        <h2 className=" text-violet-600 hover:underline mb-4">{props.title}</h2>
+        <h2 className=" text-primary-600 hover:underline mb-4">
+          {props.title}
+        </h2>
       </PrimaryLink>
       <p className="text-slate-700">{props.subtitle}</p>
     </div>
