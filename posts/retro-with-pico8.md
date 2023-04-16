@@ -10,7 +10,7 @@ It turned out to be a pretty fun experience, and something I'd recommend as a we
 
 In this post, I'll be discussing why you should try your hand at retro-game development, and explain some of the technical limitations you'll be facing.
 
-## Why you should build a retro game
+## 1. Why you should build a retro game
 
 For new programmers especially, a retro game project is:
 
@@ -24,7 +24,7 @@ But at the same time, you won't have to worry about learning a hundred different
 
 Essentially, you get to focus purely on the technical and creative problems of the game itself.
 
-## What is PICO-8?
+## 2. What is PICO-8?
 
 From the [PICO-8](https://www.lexaloffle.com/pico-8.php) official website:
 
@@ -42,7 +42,7 @@ I'd say the learning curve from zero to [Pong](https://en.wikipedia.org/wiki/Pon
 
 The best way to get started is to follow the [official manual](https://www.lexaloffle.com/pico-8.php?page=manual), or [watch a video](https://www.youtube.com/watch?v=K5RXMuH54iw).
 
-## PICO-8's technical specs
+## 3. PICO-8's technical specs
 
 You only have a palette of `16` colours, your canvas is `128` pixels wide and your whole program needs to fit within `65536` characters. There's almost no framework library to learn — aside from a handful of helper functions that would probably fit on a [napkin if written out](https://www.lexaloffle.com/bbs/files/16585/PICO-8_Cheat-Sheet_0-9-2.png).
 
@@ -55,7 +55,7 @@ Comparing it to actual retro console specs, it's somewhere between a [NES](https
 | **Colors**         | 16        | 128       | 52        |
 | **Cartridge Size** | 32 kB     | 4 kB      | 128 kB    |
 
-## Code examples
+## 4. Code examples
 
 Here's a couple of snippets of PICO-8 code to give you an idea of what development looks like.
 
@@ -112,7 +112,7 @@ end
 
 ![images/pico-8-movement](/images/pico-8-movement.gif)
 
-## Ideas to get started
+## 5. Ideas to get started
 
 So, if you like the sound of creating your own retro-game from scratch — either to pad your CV with an extra project, or just to learn and have fun, head over to [PICO-8](https://www.lexaloffle.com/pico-8.php) to get started! I recommend first just following the [manual](https://www.lexaloffle.com/pico-8.php?page=manual).
 

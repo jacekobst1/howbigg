@@ -1,0 +1,27 @@
+/*h2 {*/
+/*  position: relative;*/
+/*}*/
+
+/*h2::before {*/
+/*  content: '';*/
+/*  width: 20px;*/
+/*  height: 2px;*/
+/*  bottom: 0;*/
+/*  left: -6px;*/
+/*  background: var(--color-primary-500);*/
+/*  position: absolute;*/
+/*}*/
+
+/*h2::after {*/
+/*  content: '';*/
+/*  width: 2px;*/
+/*  height: 20px;*/
+/*  bottom: 0;*/
+/*  left: -6px;*/
+/*  background: var(--color-primary-500);*/
+/*  position: absolute;*/
+/*}*/
+
+h2::first-letter {
+    color: var(--color-primary-500);
+}

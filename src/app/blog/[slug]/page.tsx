@@ -1,3 +1,4 @@
+import "./style.css";
 import Markdown from "markdown-to-jsx";
 import {
   getAllPostsMetadata,
@@ -76,12 +77,14 @@ export default function PostPage({ params: { slug } }: PostProps) {
           Back to blog
         </ArrowLink>
         <div className="my-12 text-center">
-          <h1 className="text-slate-600 ">{post.title}</h1>
+          <h1 className="text-primary-500 ">{post.title}</h1>
           <p className="text-slate-400 mt-2">{post.date}</p>
         </div>
-        <article className="prose mx-auto">
-          <Markdown>{post.content}</Markdown>
-        </article>
+        <div className="bg-base-100 mx-auto py-10 rounded-lg md:w-3/4 px-5 md:px-20">
+          <article className="prose mx-auto">
+            <Markdown>{post.content}</Markdown>
+          </article>
+        </div>
       </div>
       <script
         type="application/ld+json"
