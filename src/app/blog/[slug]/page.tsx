@@ -76,7 +76,7 @@ export default function PostPage({ params: { slug } }: PostProps) {
         <ArrowLink href="/blog" direction="left">
           Back to blog
         </ArrowLink>
-        <div className="my-12 text-center">
+        <div className="my-12 text-center md:w-3/4 mx-auto">
           <h1 className="text-primary-500 ">{post.title}</h1>
           <p className="text-slate-400 mt-2">{post.date}</p>
         </div>
