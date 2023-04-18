@@ -1,5 +1,4 @@
 import "./style.css";
-import Markdown from "markdown-to-jsx";
 import {
   getAllPostsMetadata,
   getPostBySlug,
@@ -7,6 +6,10 @@ import {
 import ArrowLink from "@/components/links/ArrowLink";
 import { Article, WithContext } from "schema-dts";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+import rehypeHighlight from "rehype-highlight";
 
 interface PostProps {
   params: {
@@ -89,12 +92,8 @@ export default function PostPage({ params: { slug } }: PostProps) {
                   <Link
                     href={{
                       pathname: `/blog/${post.slug}`,
-                      hash: heading.toLowerCase().replace(/\s+/g, "-"),
+                      hash: generateAnchorId(heading),
                     }}
-                    as={`/blog/${post.slug}#${heading
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`}
-                    scroll={false}
                   >
                     {heading}
                   </Link>
@@ -103,7 +102,25 @@ export default function PostPage({ params: { slug } }: PostProps) {
             </ul>
           </nav>
           <article className="prose mx-auto">
-            <Markdown>{post.content}</Markdown>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw, rehypeHighlight]}
+              components={{
+                h2: (props) => (
+                  <h2 id={generateAnchorId(props.children[0] as string)}>
+                    {props.children}
+                  </h2>
+                ),
+                mark: ({ children, ...props }) => (
+                  <mark className="highlighted" {...props}>
+                    {children}
+                  </mark>
+                ),
+              }}
+            >
+              {post.content}
+            </ReactMarkdown>
+            )
           </article>
         </div>
       </div>
@@ -113,4 +130,13 @@ export default function PostPage({ params: { slug } }: PostProps) {
       />
     </>
   );
+}
+
+function generateAnchorId(str: string) {
+  return str
+    .toLowerCase()
+    .replace(/^\s+|\s+$/g, "")
+    .replace(/[^a-z0-9 -]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
 }

@@ -1,12 +1,12 @@
 ---
 date: "2023-04-17"
-title: "Ultrawide or dual monitors: What is the best option for you? [Quick guide]"
+title: "Ultrawide or dual monitors: What is the best setup for you? [Quick guide]"
 subtitle:  This important decision will affect how comfortable and productive you are. Our easy-to-understand guide will teach you all about ultrawide and dual monitors. This will help you make the best choice for your needs and likes.
 ---
-<div className="md-border">
-<div className="md-border-title">Quick answer</div>
-- Chose the ultrawide monitor, if you are working with video or audio editing, graphic design, programming, or if you want to use it for entertainment - watching movies or playing games on PC.
+<div class="md-border">
+<div class="md-border-title">Quick answer</div>
 
+- Chose the ultrawide monitor, if you are working with video or audio editing, graphic design, programming, or if you want to use it for entertainment - watching movies or playing games on PC.
 - Chose the dual monitor setup, if you are working with spreadsheets, news, or market data, or if you want to use it for multitasking.
 </div>
 
@@ -58,7 +58,7 @@ For gaming, choosing between ultrawide and dual monitors is also important. Each
 
 Ultrawide monitors make gaming more fun because the wide view makes you feel more connected to the game world. Many new games work well with the 21:9 aspect ratio and give you a smooth, movie-like experience. But some older games or games that don't support ultrawide screens might have black bars on the sides or a stretched image.
 
-It's important to remember that ==none of the gaming consoles works well with ultrawide screens== and will just stretch the image to fit the screen. This applies to both older and newer consoles, such as PS5 and Xbox Series X . It’s because they were created to connect to a TV, and TVs have an aspect ratio of 16:9
+It's important to remember that <mark>none of the gaming consoles works well with ultrawide screens</mark> and will just stretch the image to fit the screen. This applies to both older and newer consoles, such as PS5 and Xbox Series X . It’s because they were created to connect to a TV, and TVs have an aspect ratio of 16:9
 
 Dual monitors are good for gamers who want to do more than one thing at a time or share their gameplay online. For example, you can play a game on one screen while talking to friends, managing your online stream, or browsing the internet on the other screen. But playing a game across both screens might not be the best because the edge in the middle can be annoying and take away from the fun.
 
@@ -71,9 +71,7 @@ Curved screens are designed to mimic the natural curvature of the human eye, red
 
 Flat screens, on the other hand, provide a more uniform viewing experience, with no image distortion due to the screen's curvature. This can be crucial for professionals who require color accuracy and consistency across the entire screen, such as graphic designers and photographers. Flat screens are also more versatile when it comes to screen sharing and collaboration, as they offer a more accurate representation of the image from various viewing angles. In addition, flat screens are generally easier to adjust in a dual monitor setup, providing more flexibility for customized ergonomic configurations.
 
-<a name="6.-to-sum-it-up">
 ## 6. To sum it up
-</a>
 In the end, choosing between ultrawide and dual monitors depends on personal needs and how you plan to use your screen. Ultrawide monitors give you a big, fun experience, which is great for creative people and gamers who want a big screen. Dual monitors let you customize and adjust your screens more, which is good for people who do more than one thing at a time or need a special setup.
 
 Think about the good and bad things about each option, along with your needs and likes, to make the best choice for your workspace or gaming area. Whether you pick an ultrawide or dual monitor setup, both choices can help you be more productive, have more fun gaming, and enjoy your screen time more.
