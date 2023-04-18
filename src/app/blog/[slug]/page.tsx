@@ -6,6 +6,7 @@ import {
 } from "@/app/blog/utils/postGetter";
 import ArrowLink from "@/components/links/ArrowLink";
 import { Article, WithContext } from "schema-dts";
+import Link from "next/link";
 
 interface PostProps {
   params: {
@@ -81,6 +82,26 @@ export default function PostPage({ params: { slug } }: PostProps) {
           <p className="text-slate-400 mt-2">{post.date}</p>
         </div>
         <div className="bg-base-100 mx-auto py-10 rounded-lg md:w-3/4 px-5 md:px-20">
+          <nav>
+            <ul>
+              {post.headings.map((heading) => (
+                <li key={heading}>
+                  <Link
+                    href={{
+                      pathname: `/blog/${post.slug}`,
+                      hash: heading.toLowerCase().replace(/\s+/g, "-"),
+                    }}
+                    as={`/blog/${post.slug}#${heading
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
+                    scroll={false}
+                  >
+                    {heading}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
           <article className="prose mx-auto">
             <Markdown>{post.content}</Markdown>
           </article>

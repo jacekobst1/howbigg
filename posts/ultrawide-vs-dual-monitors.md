@@ -3,13 +3,11 @@ date: "2023-04-17"
 title: "Ultrawide or dual monitors: What is the best option for you? [Quick guide]"
 subtitle:  This important decision will affect how comfortable and productive you are. Our easy-to-understand guide will teach you all about ultrawide and dual monitors. This will help you make the best choice for your needs and likes.
 ---
-<div class="md-border">
-<div class="md-border-title">Quick answer</div>
-- Chose the ultrawide monitor, if you are working with video or audio editing, graphic design, programming, 
-or if you want to use it for entertainment - watching movies or playing games on PC.
+<div className="md-border">
+<div className="md-border-title">Quick answer</div>
+- Chose the ultrawide monitor, if you are working with video or audio editing, graphic design, programming, or if you want to use it for entertainment - watching movies or playing games on PC.
 
-- Chose the dual monitor setup, if you are working with spreadsheets, news, or market data,
-or if you want to use it for multitasking.
+- Chose the dual monitor setup, if you are working with spreadsheets, news, or market data, or if you want to use it for multitasking.
 </div>
 
 When chosing between ultrawide and dual monitors setup you need to consider a few important things.
@@ -19,15 +17,12 @@ This article covers all the essential aspects you should take into account, prov
 When we talk about ultrawide monitors, we are referring to displays with aspect ratios beyond the conventional widescreen 16:9 format. 
 Ultrawide monitors come in two primary aspect ratios: 21:9 and 32:9. 
 
-The **21:9** aspect ratio, also known as cinematic, offers a significant increase in horizontal screen space
-compared to the standard 16:9 ratio - you get **31.25% of extra horizontal screen space**.
-This extra real estate can enhance productivity, gaming,
-and media consumption experiences by providing a more immersive visual environment.
+The **21:9** aspect ratio, also known as cinematic, offers a significant increase in horizontal screen space compared to the standard 16:9 ratio - you get **31.25% of extra horizontal screen space**.
+This extra real estate can enhance productivity, gaming, and media consumption experiences by providing a more immersive visual environment.
 
-Taking it a step further, the **32:9** aspect ratio, sometimes referred to as "super ultrawide",
-almost **doubles the screen width of a standard 16:9 monitor**. 
-This behemoth of a display offers an unrivaled field of view, making it the ultimate choice for multitaskers 
-and gaming enthusiasts alike.
+Taking it a step further, the **32:9** aspect ratio, sometimes referred to as "super ultrawide", almost **doubles the screen width of a standard 16:9 monitor**. 
+This behemoth of a display offers an unrivaled field of view, making it the ultimate choice for multitaskers  and gaming enthusiasts alike.
+
 ## 2. Good and bad things about ultrawide monitors
 Every coin has two sides, and ultrawide monitors are no exception. Here are some of the good and bad things about them.
 
@@ -76,7 +71,9 @@ Curved screens are designed to mimic the natural curvature of the human eye, red
 
 Flat screens, on the other hand, provide a more uniform viewing experience, with no image distortion due to the screen's curvature. This can be crucial for professionals who require color accuracy and consistency across the entire screen, such as graphic designers and photographers. Flat screens are also more versatile when it comes to screen sharing and collaboration, as they offer a more accurate representation of the image from various viewing angles. In addition, flat screens are generally easier to adjust in a dual monitor setup, providing more flexibility for customized ergonomic configurations.
 
+<a name="6.-to-sum-it-up">
 ## 6. To sum it up
+</a>
 In the end, choosing between ultrawide and dual monitors depends on personal needs and how you plan to use your screen. Ultrawide monitors give you a big, fun experience, which is great for creative people and gamers who want a big screen. Dual monitors let you customize and adjust your screens more, which is good for people who do more than one thing at a time or need a special setup.
 
 Think about the good and bad things about each option, along with your needs and likes, to make the best choice for your workspace or gaming area. Whether you pick an ultrawide or dual monitor setup, both choices can help you be more productive, have more fun gaming, and enjoy your screen time more.

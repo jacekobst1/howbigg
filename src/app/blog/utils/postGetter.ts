@@ -34,12 +34,19 @@ function getPostBySlug(slug: string): Post {
 
   const matterResult = matter(fileContent);
 
+  const content = matterResult.content;
+  const headings = content
+    .split("\n")
+    .filter((line) => /^##\s/.test(line))
+    .map((line) => line.replace(/^##\s/, "").trim());
+
   return {
     content: matterResult.content,
     date: matterResult.data.date,
     title: matterResult.data.title,
     subtitle: matterResult.data.subtitle,
-    slug: slug,
+    slug,
+    headings,
   };
 }
 

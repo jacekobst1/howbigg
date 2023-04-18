@@ -1,5 +1,6 @@
 export interface Post extends PostMetadata {
   content: string;
+  headings: string[];
 }
 
 export interface PostMetadata {
