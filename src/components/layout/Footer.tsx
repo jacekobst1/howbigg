@@ -1,4 +1,5 @@
 import clsxm from "@/lib/clsxm";
+import config from "@/config";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +13,9 @@ export default function Footer() {
       )}
     >
       <div className="footer footer-center items-center select-none">
-        <p>© {currentYear} howbigg.com - All rights reserved</p>
+        <p>
+          © {currentYear} {config.shortUrl} - All rights reserved
+        </p>
       </div>
     </footer>
   );

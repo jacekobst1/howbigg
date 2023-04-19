@@ -1,5 +1,7 @@
 import { Article, WithContext } from "schema-dts";
 import { Post } from "@/app/blog/types/Post";
+import { blog } from "@/router/routes";
+import config from "@/config";
 
 interface JsonLdScriptProps {
   post: Post;
@@ -11,7 +13,7 @@ export default function jsonLdScript({ post }: JsonLdScriptProps) {
     "@type": "Article",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://howbigg.com/blog/${post.slug}`,
+      "@id": `${config.fullUrl}/${blog}/${post.slug}`,
     },
     headline: post.title,
     description: post.subtitle,
@@ -25,7 +27,7 @@ export default function jsonLdScript({ post }: JsonLdScriptProps) {
       name: "Howbigg",
       logo: {
         "@type": "ImageObject",
-        url: "https://howbigg.com/images/logo.png",
+        url: `${config.fullUrl}/images/logo.png`,
       },
     },
     datePublished: post.createdAt,

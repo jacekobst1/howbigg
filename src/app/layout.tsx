@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import AnalyticsWrapper from "@/components/AnalyticsWrapper";
 import ToastContainerWrapper from "@/components/ToastContainerWrapper";
 import { Metadata } from "next";
+import config from "@/config";
 
 const title = {
   default: "Howbigg",
@@ -16,7 +17,7 @@ const description =
 export const metadata: Metadata = {
   title: title,
   description: description,
-  metadataBase: new URL("https://howbigg.com"),
+  metadataBase: new URL(config.fullUrl),
   alternates: {
     canonical: "/",
   },
