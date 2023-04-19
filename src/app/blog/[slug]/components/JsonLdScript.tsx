@@ -1,7 +1,11 @@
 import { Article, WithContext } from "schema-dts";
 import { Post } from "@/app/blog/types/Post";
 
-function generateJsonLd(post: Post) {
+interface JsonLdScriptProps {
+  post: Post;
+}
+
+export default function jsonLdScript({ post }: JsonLdScriptProps) {
   const jsonLd: WithContext<Article> = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -27,7 +31,10 @@ function generateJsonLd(post: Post) {
     datePublished: post.createdAt,
   };
 
-  return jsonLd;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
 }
-
-export { generateJsonLd };
