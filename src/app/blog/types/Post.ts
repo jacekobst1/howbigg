@@ -4,7 +4,7 @@ export interface Post extends PostMetadata {
 }
 
 export interface PostMetadata {
-  date: string;
+  createdAt: string;
   title: string;
   subtitle: string;
   slug: string;

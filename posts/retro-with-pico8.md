@@ -1,5 +1,5 @@
 ---
-date: "2023-04-12"
+createdAt: "2023-04-12"
 title: "Create retro games with PICO-8"
 subtitle: "8-bit games are a great way to learn and expand your portfolio."
 ---

@@ -3,11 +3,7 @@
 import * as React from "react";
 import { usePathname } from "next/navigation";
 import clsxm from "@/lib/clsxm";
-
-const links: any[] = [
-  { href: "/", label: "Display comparison" },
-  { href: "/blog", label: "Blog" },
-];
+import routes from "@/router/routes";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -25,7 +21,7 @@ export default function Navigation() {
   return (
     <nav className="text-gray-500 order-3 w-full md:w-auto md:order-2">
       <ul className="flex font-semibold">
-        {links.map(({ href, label }) => (
+        {routes.map(({ href, label }) => (
           <li key={`${href}${label}`} className="pr-4 py-2">
             <a
               href={href}

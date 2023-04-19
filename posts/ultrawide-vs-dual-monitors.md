@@ -1,5 +1,5 @@
 ---
-date: "2023-04-17"
+createdAt: "2023-04-17"
 title: "Ultrawide or dual monitors: What is the best setup for you? [Quick guide]"
 subtitle:  This important decision will affect how comfortable and productive you are. Our easy-to-understand guide will teach you all about ultrawide and dual monitors. This will help you make the best choice for your needs and likes.
 ---

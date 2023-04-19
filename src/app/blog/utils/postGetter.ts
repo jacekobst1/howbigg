@@ -13,13 +13,13 @@ function getAllPostsMetadata(): PostMetadata[] {
       const matterResult = matter(fileContent);
 
       return {
-        date: matterResult.data.date,
+        createdAt: matterResult.data.createdAt,
         title: matterResult.data.title,
         subtitle: matterResult.data.subtitle,
         slug: filename.replace(".md", ""),
       };
     })
-    .sort((a, b) => (a.date < b.date ? 1 : -1));
+    .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
 
 function getPostBySlug(slug: string): Post {
@@ -42,7 +42,7 @@ function getPostBySlug(slug: string): Post {
 
   return {
     content: matterResult.content,
-    date: matterResult.data.date,
+    createdAt: matterResult.data.createdAt,
     title: matterResult.data.title,
     subtitle: matterResult.data.subtitle,
     slug,
