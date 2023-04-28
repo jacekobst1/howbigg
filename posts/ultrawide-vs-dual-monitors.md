@@ -1,7 +1,8 @@
 ---
 createdAt: "2023-04-17"
 title: "Ultrawide or dual monitors: What is the best setup for you? [Quick guide]"
-subtitle:  This important decision will affect how comfortable and productive you are. Our easy-to-understand guide will teach you all about ultrawide and dual monitors. This will help you make the best choice for your needs and likes.
+subtitle: "This important decision will affect how comfortable and productive you are. Our easy-to-understand guide will teach you all about ultrawide and dual monitors. This will help you make the best choice for your needs and likes."
+keyword: "Ultrawide vs dual monitors"
 ---
 <div class="md-border">
 <div class="md-border-title">Quick answer</div>
@@ -14,6 +15,7 @@ When chosing between ultrawide and dual monitors setup you need to consider a fe
 This article covers all the essential aspects you should take into account, providing you with comprehensive guidance for selecting your next display.
 
 ## 1. How wide is ultrawide?
+![Ultrawide monitor and the hand holding the tape measure in front of it](/images/posts/ultrawide-vs-dual-monitors/my_ultrawide_and_measure_tape.jpg)
 When we talk about ultrawide monitors, we are referring to displays with aspect ratios beyond the conventional widescreen 16:9 format. 
 Ultrawide monitors come in two primary aspect ratios: 21:9 and 32:9. 
 
@@ -24,6 +26,7 @@ Taking it a step further, the **32:9** aspect ratio, sometimes referred to as "s
 This behemoth of a display offers an unrivaled field of view, making it the ultimate choice for multitaskers  and gaming enthusiasts alike.
 
 ## 2. Good and bad things about ultrawide monitors
+![Clean desk setup with ultrawide monitor](/images/posts/ultrawide-vs-dual-monitors/luke_peters_ultrawide_setup.jpg)
 Every coin has two sides, and ultrawide monitors are no exception. Here are some of the good and bad things about them.
 
 ### Good things:
@@ -39,6 +42,7 @@ Every coin has two sides, and ultrawide monitors are no exception. Here are some
 - **Less flexibility**: Most ultrawide monitors don't have as many adjustment options as a dual monitor setup, which might be a problem if you need a special setup.
 
 ## 3. Why pixel density matters
+![Close view of screen, showing pixels](/images/posts/ultrawide-vs-dual-monitors/pixels.jpg)
 Pixel density is the number of pixels in an inch on your screen. It affects how clear and sharp your screen looks.
 A higher pixel density makes the image look better and less pixelated.
 
@@ -66,6 +70,7 @@ Dual monitors let you customize and adjust your screens more.
 The choice between the two depends on what you like and how you plan to use your screen.
 
 ### Ultrawide vs Dual Monitors: For work
+![The interior of the office, with employees staring at monitors](/images/posts/ultrawide-vs-dual-monitors/work_environment.jpg)
 For work, whether you should choose ultrawide or dual monitors depends on what you do for a living and the software you use.
 
 Ultrawide monitors are **great for people who need a big, continuous workspace**, like video editors, graphic designers, and programmers.
@@ -78,6 +83,7 @@ Also, **dual monitors let you adjust and move your screens more**, which can be 
 This can also be useful when sharing a screen during a video conference - we can share the first screen and its contents for the participants in the call, but still have the second for our own use.
 
 ### Ultrawide vs Dual Monitors: For gaming
+![Teenagers sitting in front of notebooks doing e-sport](/images/posts/ultrawide-vs-dual-monitors/gaming.jpg)
 For gaming, choosing between ultrawide and dual monitors is also important.
 Each setup has its own gaming experience and has some good and bad points.
 
@@ -102,6 +108,7 @@ When deciding between ultrawide and dual monitors for gaming, think about the ga
 It is also possible to use two monitors, one of which is wide and the other ultrawide - for some, this might be **the choice that makes the most sense**.
 
 ## 5. Curved screens vs. flat screens
+![Cozy desk setup with dual monitors](/images/posts/ultrawide-vs-dual-monitors/cozy_dual_monitor_setup.jpg)
 <div class="md-border">
 <div class="md-border-title">Quick tip</div>
 
