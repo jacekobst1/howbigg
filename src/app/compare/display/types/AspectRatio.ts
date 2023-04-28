@@ -220,10 +220,10 @@ const aspectRatios: AspectRatio[] = [
         label: "256 x 144",
       },
       {
-        width: 432,
+        width: 426,
         height: 240,
-        value: "432x240",
-        label: "432 x 240 | FWQVGA",
+        value: "426x240",
+        label: "426 x 240",
       },
       {
         width: 640,
