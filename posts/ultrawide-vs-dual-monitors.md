@@ -28,50 +28,110 @@ Every coin has two sides, and ultrawide monitors are no exception. Here are some
 
 ### Good things:
 
-- Big workspace: Ultrawide monitors give you a big space to work or play on one screen.
-- Less mess: With only one monitor, you have fewer cables and less clutter on your desk.
-- Cool look: Ultrawide monitors look modern and can make your desk or gaming area more stylish.
+- **Big workspace**: Ultrawide monitors give you a big space to work or play on one screen.
+- **Less mess**: With only one monitor, you have fewer cables and less clutter on your desk.
+- **Cool look**: Ultrawide monitors look modern and can make your desk or gaming area more stylish.
 
 ### Bad things:
 
-- Some things might not work: Some programs and games might not work well with the wider aspect ratio, causing black bars or a stretched image.
-- Price: Ultrawide monitors can cost more than two smaller monitors with the same total screen space.
-- Less flexibility: Most ultrawide monitors don't have as many adjustment options as a dual monitor setup, which might be a problem if you need a special setup.
+- **Some things might not work**: Some programs and games might not work well with the wider aspect ratio, causing black bars or a stretched image.
+- **Price**: Ultrawide monitors can cost more than two smaller monitors with the same total screen space.
+- **Less flexibility**: Most ultrawide monitors don't have as many adjustment options as a dual monitor setup, which might be a problem if you need a special setup.
 
 ## 3. Why pixel density matters
-Pixel density is the number of pixels in an inch on your screen. It affects how clear and sharp your screen looks. A higher pixel density makes the image look better and less pixelated. When comparing ultrawide and dual monitor setups, think about the resolution and size of each screen.
+Pixel density is the number of pixels in an inch on your screen. It affects how clear and sharp your screen looks.
+A higher pixel density makes the image look better and less pixelated.
 
-Ultrawide monitors usually have resolutions like 2560x1080 (for 29" and 34" models), 3440x1440 (for 34" and 38" models) and 5120x1440 (for 49" models). To keep a high pixel density, choose a monitor with a higher resolution. Dual monitor setups can get a higher pixel density by using smaller screens with high resolutions, like two 27" monitors with a 2560x1440 resolution.
+When choosing the monitor, no matter if it's ultrawide or dual setup, remember to get it with proper resolution - it should be matched to the screen size.
+If it's too low, the image will look pixelated.
+If it's too high, the image will be too small to see, and you'll have to scale it up via computer settings, which can make it look a bit blurry.
+
+Here's the **list of optimal resolutions** for different screen sizes:
+| Type                   | Size  | Optimal resolutions            |
+|------------------------|-------|--------------------------------|
+| Wide (16x9)            | 23-25 | 1920×1080, 2560×1440           |
+| Wide (16x9)            | 27    | 2560x1440, 3840x2160           |
+| Wide (16x9)            | 32-43 | 3840×2160                      |
+| Ultrawide (21x9)       | 25-29 | 2560×1080                      |
+| Ultrawide (21x9)       | 34    | 3440×1440, 5120×2160           |
+| Ultrawide (21x9)       | 38    | 3840×1600                      |
+| Ultrawide (21x9)       | 40    | 5120×2160                      |
+| Super ultrawide (32x9) | 44-49 | 5120×1440                      |
+| Super ultrawide (32x9) | 57    | 7680×2160                      |
 
 ## 4. Using ultrawide and dual monitors every day
-For daily use, both ultrawide and dual monitors have their benefits. Ultrawide monitors give you a big, clean workspace on one screen. Dual monitors let you customize and adjust your screens more. The choice between the two depends on what you like and how you plan to use your screen.
+For daily use, both ultrawide and dual monitors have their benefits.
+Ultrawide monitors give you a big, clean workspace on one screen.
+Dual monitors let you customize and adjust your screens more.
+The choice between the two depends on what you like and how you plan to use your screen.
 
 ### Ultrawide vs Dual Monitors: For work
 For work, whether you should choose ultrawide or dual monitors depends on what you do for a living and the software you use.
 
-Ultrawide monitors are great for people who need a big, continuous workspace, like video editors, graphic designers, and programmers. The extra screen space lets you see more content in those programs: i.e. the long video timeline or the lengthy lines of code.
+Ultrawide monitors are **great for people who need a big, continuous workspace**, like video editors, graphic designers, and programmers.
+The extra screen space lets you see more content in those programs: i.e. the long video timeline or the lengthy lines of code.
 
-Dual monitors are better for people who often switch between applications or work on different projects at the same time. For example, someone who works with money might like having one monitor for spreadsheets and another for news or market data. Also, dual monitors let you adjust and move your screens more, which can be helpful for people who need a special setup. tTis can also be useful when sharing a screen during a video conference - we can share the first screen and its contents for the participants in the call, but still have the second for our own use.
+Dual monitors **are better for people who often switch between applications** or work on different projects at the same time.
+For example, someone who works with money might like having one monitor for spreadsheets and another for news or market data
+
+Also, **dual monitors let you adjust and move your screens more**, which can be helpful for people who need a special setup. 
+This can also be useful when sharing a screen during a video conference - we can share the first screen and its contents for the participants in the call, but still have the second for our own use.
 
 ### Ultrawide vs Dual Monitors: For gaming
-For gaming, choosing between ultrawide and dual monitors is also important. Each setup has its own gaming experience and has some good and bad points.
+For gaming, choosing between ultrawide and dual monitors is also important.
+Each setup has its own gaming experience and has some good and bad points.
 
-Ultrawide monitors make gaming more fun because the wide view makes you feel more connected to the game world. Many new games work well with the 21:9 aspect ratio and give you a smooth, movie-like experience. But some older games or games that don't support ultrawide screens might have black bars on the sides or a stretched image.
+Ultrawide monitors make gaming more fun because the **wide view makes you feel more connected to the game world**.
+Many new games work well with the 21:9 aspect ratio and give you a smooth, movie-like experience.
+But some older games or games that don't support ultrawide screens might have black bars on the sides or a stretched image.
 
-It's important to remember that <mark>none of the gaming consoles works well with ultrawide screens</mark> and will just stretch the image to fit the screen. This applies to both older and newer consoles, such as PS5 and Xbox Series X . It’s because they were created to connect to a TV, and TVs have an aspect ratio of 16:9
+It's important to remember that **none of the gaming consoles works well with ultrawide screens** and will just stretch the image to fit the screen.
+This applies to both older and newer consoles, such as PS5 and Xbox Series X .
+It’s because they were created to connect to a TV, and TVs have an aspect ratio of 16:9.
 
-Dual monitors are good for gamers who want to do more than one thing at a time or share their gameplay online. For example, you can play a game on one screen while talking to friends, managing your online stream, or browsing the internet on the other screen. But playing a game across both screens might not be the best because the edge in the middle can be annoying and take away from the fun.
+Dual monitors are good for gamers who want to **do more than one thing at a time** or share their gameplay online.
+For example, you can play a game on one screen while talking to friends, managing your online stream, or browsing the internet on the other screen.
 
-When deciding between ultrawide and dual monitors for gaming, think about the games you play, whether you use a computer or console for gaming, and if you need a second screen for multitasking or sharing your gameplay online. It is also possible to use two monitors, one of which is standard and the other ultrawide - for some, this might be the choice that makes the most sense.
+You might think about using both monitors to display the game, but it's not worth it, best because the edge in the middle can be annoying and take away from the fun.
+Imagine an FPS shooter with a crosshair in the middle of the screen 😵
+
+However, if two is not enough, it is quite popular choice for using **triple monitors when playing racing games or flight simulators**.
+This way you can have a wider view of the road or sky, which is far more realistic and immersive.
+
+When deciding between ultrawide and dual monitors for gaming, think about the games you play, whether you use a computer or console for gaming, and if you need a second screen for multitasking or sharing your gameplay online.
+It is also possible to use two monitors, one of which is wide and the other ultrawide - for some, this might be **the choice that makes the most sense**.
 
 ## 5. Curved screens vs. flat screens
-Both ultrawide and dual monitors come in curved and flat screen styles. When choosing between curved and flat screens, it's essential to consider the benefits and drawbacks of each style and how they align with your intended use.
+<div class="md-border">
+<div class="md-border-title">Quick tip</div>
 
-Curved screens are designed to mimic the natural curvature of the human eye, reducing the need for your eyes to adjust to the screen's edges. This can lead to less eye strain and improved visual comfort during long periods of use. Furthermore, curved screens can enhance the perception of depth and immersion, as the screen edges appear to wrap around your field of view. This can be especially beneficial for ultrawide monitors, which already offer a wide view. However, curved screens might cause slight image distortion, making them less suitable for color-critical work or precise graphic design tasks.
+- When using one wide monitor - chose the flat one.
+- When using one ultrawide monitor - chose the curved one.
+- When using two wide monitors - consider if the curved ones will be practical for you. If not - chose the flat ones.
+</div>
 
-Flat screens, on the other hand, provide a more uniform viewing experience, with no image distortion due to the screen's curvature. This can be crucial for professionals who require color accuracy and consistency across the entire screen, such as graphic designers and photographers. Flat screens are also more versatile when it comes to screen sharing and collaboration, as they offer a more accurate representation of the image from various viewing angles. In addition, flat screens are generally easier to adjust in a dual monitor setup, providing more flexibility for customized ergonomic configurations.
+Curved screens are designed to mimic the natural curvature of the human eye, reducing the need for your eyes to adjust to the screen's edges.
+This can lead to **less eye strain** and **improved visual comfort** during long periods of use.
+
+Furthermore, curved screens can **enhance the perception of depth and immersion**, as the screen edges appear to wrap around your field of view.
+This can be especially beneficial for ultrawide monitors, which already offer a wide view.
+
+However, curved screens might **cause slight image distortion**, making them less suitable for color-critical work or precise graphic design tasks.
+
+Flat screens, on the other hand, provide a **more uniform viewing experience**, with no image distortion due to the screen's curvature.
+This can be **crucial for professionals** who require color accuracy and consistency across the entire screen, such as graphic designers and photographers.
+
+Flat screens are also **more versatile when it comes to screen sharing** and collaboration, as they offer a more accurate representation of the image from various viewing angles. 
+In addition, flat screens are generally **easier to adjust in a dual monitor setup**, providing more flexibility for customized ergonomic configurations.
 
 ## 6. To sum it up
-In the end, choosing between ultrawide and dual monitors depends on personal needs and how you plan to use your screen. Ultrawide monitors give you a big, fun experience, which is great for creative people and gamers who want a big screen. Dual monitors let you customize and adjust your screens more, which is good for people who do more than one thing at a time or need a special setup.
+In the end, choosing between ultrawide and dual monitors depends on personal needs and how you plan to use your screen.
 
-Think about the good and bad things about each option, along with your needs and likes, to make the best choice for your workspace or gaming area. Whether you pick an ultrawide or dual monitor setup, both choices can help you be more productive, have more fun gaming, and enjoy your screen time more.
+Ultrawide monitors give you a **big, fun experience**, which is great for **creative people and gamers** who want a big screen.
+
+Dual monitors let you customize and adjust your screens more, which is good for **people who do more than one thing at a time** or need a special setup.
+
+Think about the good and bad things about each option, along with your needs and likes, to make the best choice for your workspace or gaming area.
+No matter what you choose, remember to **pick the right resolution!**
+
+Both choices will help you be more productive, have more fun gaming, and enjoy your screen time more 👾
