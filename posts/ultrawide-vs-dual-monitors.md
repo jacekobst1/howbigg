@@ -12,19 +12,19 @@ keyword: "Ultrawide vs dual monitors"
 </div>
 
 When chosing between ultrawide and dual monitors setup you need to consider a few important things.
-This article covers all the essential aspects you should take into account, providing you with comprehensive guidance for selecting your next display.
+This article tells you everything you need to know to help you choose your next screen.
 
 ## 1. How wide is ultrawide?
 ![Comparison of 32:9, 21:9 and 16:9 images](/images/posts/ultrawide-vs-dual-monitors/aspect_ratio_comparison.jpg)
 _Josh Sorenson | Pexels_
 
-When we talk about ultrawide monitors, we are referring to displays with aspect ratios beyond the conventional widescreen 16:9 format. 
-Ultrawide monitors come in two primary aspect ratios: 21:9 and 32:9. 
+When we talk about ultrawide monitors, we are referring to screens that are wider than the usual wide 16:9 format.
+Ultrawide monitors are mainly in two sizes: 21:9 and 32:9. 
 
 The **21:9** aspect ratio, also known as cinematic, offers a significant increase in horizontal screen space compared to the standard 16:9 ratio - you get **31.25% of extra horizontal screen space**.
-This extra real estate can enhance productivity, gaming, and media consumption experiences by providing a more immersive visual environment.
+This extra space can make work, gaming, and watching movies better by just giving you a bigger view.
 
-Taking it a step further, the **32:9** aspect ratio, sometimes referred to as "super ultrawide", almost **doubles the screen width of a standard 16:9 monitor**. 
+Taking it a step further, the **32:9** aspect ratio, also called "super ultrawide", is almost **twice as wide as a 16:9 screen**.
 This behemoth of a display offers an unrivaled field of view, making it the ultimate choice for multitaskers  and gaming enthusiasts alike.
 
 **You can see and test the difference between various aspect ratios [here](https://howbigg.com?displays=%5B%2216x9_0_0_27_in_2560x1440_0%22%2C%2221x9_0_0_34_in_3440x1440_0%22%2C%2232x9_0_0_49_in_5120x1440_0%22%5D).**
@@ -51,7 +51,7 @@ Every coin has two sides, and ultrawide monitors are no exception. Here are some
 ![Close view of screen, showing pixels](/images/posts/ultrawide-vs-dual-monitors/pixels.jpg)
 _Amal S | Unsplash_
 
-Pixel density is the number of pixels in an inch on your screen. It affects how clear and sharp your screen looks.
+Pixel density means how many pixels are in an inch of your screen. It affects how clear and sharp your screen looks.
 A higher pixel density makes the image look better and less pixelated.
 
 When choosing the monitor, no matter if it's ultrawide or dual setup, remember to get it with proper resolution - it should be matched to the screen size.
@@ -143,7 +143,7 @@ _Howbigg_
 Curved screens are designed to mimic the natural curvature of the human eye, reducing the need for your eyes to adjust to the screen's edges.
 This can lead to **less eye strain** and **improved visual comfort** during long periods of use.
 
-Furthermore, curved screens can **enhance the perception of depth and immersion**, as the screen edges appear to wrap around your field of view.
+Curved screens make **things look more realistic** because the screen edges seem to wrap around what you see.
 This can be especially beneficial for ultrawide monitors, which already offer a wide view.
 
 However, curved screens might **cause slight image distortion**, making them less suitable for color-critical work or precise graphic design tasks.
