@@ -25,11 +25,6 @@ export default function MyReactMarkdown({ post }: MyReactMarkdownProps) {
             {children}
           </mark>
         ),
-        em: ({ children, ...props }) => (
-          <div className="image-caption-wrapper">
-            <em {...props}>{children}</em>
-          </div>
-        ),
       }}
     >
       {post.content}

@@ -16,7 +16,7 @@ This article covers all the essential aspects you should take into account, prov
 
 ## 1. How wide is ultrawide?
 ![Ultrawide monitor and the hand holding the tape measure in front of it](/images/posts/ultrawide-vs-dual-monitors/my_ultrawide_and_measure_tape.jpg)
-*Own source*
+_Own source_
 
 When we talk about ultrawide monitors, we are referring to displays with aspect ratios beyond the conventional widescreen 16:9 format. 
 Ultrawide monitors come in two primary aspect ratios: 21:9 and 32:9. 
@@ -29,7 +29,7 @@ This behemoth of a display offers an unrivaled field of view, making it the ulti
 
 ## 2. Good and bad things about ultrawide monitors
 ![Clean desk setup with ultrawide monitor](/images/posts/ultrawide-vs-dual-monitors/luke_peters_ultrawide_setup.jpg)
-*Luke Peters | Unsplash*
+_Luke Peters | Unsplash_
 
 Every coin has two sides, and ultrawide monitors are no exception. Here are some of the good and bad things about them.
 
@@ -47,7 +47,7 @@ Every coin has two sides, and ultrawide monitors are no exception. Here are some
 
 ## 3. Why pixel density matters
 ![Close view of screen, showing pixels](/images/posts/ultrawide-vs-dual-monitors/pixels.jpg)
-*Amal S | Unsplash*
+_Amal S | Unsplash_
 
 Pixel density is the number of pixels in an inch on your screen. It affects how clear and sharp your screen looks.
 A higher pixel density makes the image look better and less pixelated.
@@ -77,7 +77,7 @@ The choice between the two depends on what you like and how you plan to use your
 
 ### Ultrawide vs Dual Monitors: For work
 ![The interior of the office, with employees staring at monitors](/images/posts/ultrawide-vs-dual-monitors/work_environment.jpg)
-*Sigmund | Unsplash*
+_Sigmund | Unsplash_
 
 For work, whether you should choose ultrawide or dual monitors depends on what you do for a living and the software you use.
 
@@ -92,7 +92,7 @@ This can also be useful when sharing a screen during a video conference - we can
 
 ### Ultrawide vs Dual Monitors: For gaming
 ![Teenagers sitting in front of notebooks doing e-sport](/images/posts/ultrawide-vs-dual-monitors/gaming.jpg)
-*Fredrick Tendong | Unsplash*
+_Fredrick Tendong | Unsplash_
 
 For gaming, choosing between ultrawide and dual monitors is also important.
 Each setup has its own gaming experience and has some good and bad points.
@@ -119,7 +119,7 @@ It is also possible to use two monitors, one of which is wide and the other ultr
 
 ## 5. Curved screens vs. flat screens
 ![Cozy desk setup with dual monitors](/images/posts/ultrawide-vs-dual-monitors/cozy_dual_monitor_setup.jpg)
-*Amr Taha | Unsplash*
+_Amr Taha | Unsplash_
 
 <div class="md-border">
 <div class="md-border-title">Quick tip</div>
