@@ -40,8 +40,10 @@ img {
     border-radius: 5px;
 }
 
-a {
+article a {
     color: var(--color-primary-500) !important;
+    text-decoration: none !important;
+    line-height: normal !important;
 }
 
 /*h2 {*/

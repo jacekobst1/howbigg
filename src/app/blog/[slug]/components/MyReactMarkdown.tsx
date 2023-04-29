@@ -4,6 +4,7 @@ import rehypeHighlight from "rehype-highlight";
 import { generateIdFromText } from "@/app/blog/[slug]/utils/anchorGenerator";
 import ReactMarkdown from "react-markdown";
 import { Post } from "@/app/blog/types/Post";
+import UnderlineLink from "@/components/links/UnderlineLink";
 
 interface MyReactMarkdownProps {
   post: Post;
@@ -24,6 +25,9 @@ export default function MyReactMarkdown({ post }: MyReactMarkdownProps) {
           <mark className="highlighted" {...props}>
             {children}
           </mark>
+        ),
+        a: ({ children, ...props }) => (
+          <UnderlineLink href={props.href ?? ""}>{children}</UnderlineLink>
         ),
       }}
     >
