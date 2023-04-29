@@ -15,8 +15,8 @@ When chosing between ultrawide and dual monitors setup you need to consider a fe
 This article covers all the essential aspects you should take into account, providing you with comprehensive guidance for selecting your next display.
 
 ## 1. How wide is ultrawide?
-![Ultrawide monitor and the hand holding the tape measure in front of it](/images/posts/ultrawide-vs-dual-monitors/my_ultrawide_and_measure_tape.jpg)
-_Own source_
+![Comparison of 32:9, 21:9 and 16:9 images](/images/posts/ultrawide-vs-dual-monitors/aspect_ratio_comparison.jpg)
+_Josh Sorenson | Pexels_
 
 When we talk about ultrawide monitors, we are referring to displays with aspect ratios beyond the conventional widescreen 16:9 format. 
 Ultrawide monitors come in two primary aspect ratios: 21:9 and 32:9. 
