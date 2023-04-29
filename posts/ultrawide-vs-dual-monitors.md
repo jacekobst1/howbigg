@@ -125,8 +125,8 @@ When deciding between ultrawide and dual monitors for gaming, think about the ga
 It is also possible to use two monitors, one of which is wide and the other ultrawide - for some, this might be **the choice that makes the most sense**.
 
 ## 5. Curved screens vs. flat screens
-![Cozy desk setup with dual monitors](/images/posts/ultrawide-vs-dual-monitors/cozy_dual_monitor_setup.jpg)
-_Amr Taha | Unsplash_
+![Curved and flat monitors seen from above](/images/posts/ultrawide-vs-dual-monitors/curved_vs_flat.jpg)
+_Howbigg_
 
 <div class="md-border">
 <div class="md-border-title">Quick tip</div>
