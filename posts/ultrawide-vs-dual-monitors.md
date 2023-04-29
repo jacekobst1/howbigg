@@ -97,9 +97,16 @@ _Fredrick Tendong | Unsplash_
 For gaming, choosing between ultrawide and dual monitors is also important.
 Each setup has its own gaming experience and has some good and bad points.
 
-Ultrawide monitors make gaming more fun because the **wide view makes you feel more connected to the game world**.
-Many new games work well with the 21:9 aspect ratio and give you a smooth, movie-like experience.
-But some older games or games that don't support ultrawide screens might have black bars on the sides or a stretched image.
+Ultrawide monitors make gaming more fun because the wide view makes you **feel more connected to the game world**.
+Many new games work well with the wider aspect ratios and give you a smooth, movie-like experience.
+
+But some older games that don't support ultrawide screens might have black bars on the sides or a stretched image.
+There are also some competitive games (like StarCraft II or Valorant), that could support ultrawide resolutions, but you're not allowed to use them, because it would give you an unfair advantage over other players with narrower screens.
+You are then forced to play with black bars on the sides.
+
+Here's a **list of all games that supports ultrawide** resolutions: [wsgf.org](http://www.wsgf.org/mgl/uws)
+
+
 
 It's important to remember that **none of the gaming consoles works well with ultrawide screens** and will just stretch the image to fit the screen.
 This applies to both older and newer consoles, such as PS5 and Xbox Series X .

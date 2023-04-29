@@ -40,6 +40,10 @@ img {
     border-radius: 5px;
 }
 
+a {
+    color: var(--color-primary-500) !important;
+}
+
 /*h2 {*/
 /*  position: relative;*/
 /*}*/
