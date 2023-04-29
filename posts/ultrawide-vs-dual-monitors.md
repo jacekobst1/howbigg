@@ -27,6 +27,8 @@ This extra real estate can enhance productivity, gaming, and media consumption e
 Taking it a step further, the **32:9** aspect ratio, sometimes referred to as "super ultrawide", almost **doubles the screen width of a standard 16:9 monitor**. 
 This behemoth of a display offers an unrivaled field of view, making it the ultimate choice for multitaskers  and gaming enthusiasts alike.
 
+**You can see and test the difference between various aspect ratios [here](https://howbigg.com?displays=%5B%2216x9_0_0_27_in_2560x1440_0%22%2C%2221x9_0_0_34_in_3440x1440_0%22%2C%2232x9_0_0_49_in_5120x1440_0%22%5D).**
+
 ## 2. Good and bad things about ultrawide monitors
 ![Clean desk setup with ultrawide monitor](/images/posts/ultrawide-vs-dual-monitors/luke_peters_ultrawide_setup.jpg)
 _Luke Peters | Unsplash_
@@ -68,6 +70,8 @@ Here's the **list of optimal resolutions** for different screen sizes:
 | Ultrawide (21x9)       | 40    | 5120×2160                      |
 | Super ultrawide (32x9) | 44-49 | 5120×1440                      |
 | Super ultrawide (32x9) | 57    | 7680×2160                      |
+
+**You can also check available resolutions for every aspect ratio, compare pixel density, and play around [in our free tool](https://howbigg.com).**
 
 ## 4. Using ultrawide and dual monitors every day
 For daily use, both ultrawide and dual monitors have their benefits.
