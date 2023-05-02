@@ -16,7 +16,7 @@ This article tells you everything you need to know to help you choose your next 
 
 ## 1. How wide is ultrawide?
 ![Comparison of 32:9, 21:9 and 16:9 images](/images/posts/ultrawide-vs-dual-monitors/aspect_ratio_comparison.jpg)
-_Josh Sorenson | Pexels_
+_Josh Sorenson | Pexels and Howbigg_
 
 When we talk about ultrawide monitors, we refer to screens wider than the usual wide 16:9 format.
 Ultrawide monitors are mainly in two sizes: 21:9 and 32:9.
