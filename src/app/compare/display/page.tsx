@@ -18,7 +18,7 @@ import {
 import { mapWithPrototype, mergeDeep } from "@/utils/objects";
 import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsFacade";
 
-export default function DisplayPage() {
+export default function CompareDisplayPage() {
   const [displays, setDisplays] = useState(generateDisplays(2));
   const [queryState, setQueryState, isQueryStateReady] =
     useQueryState<string[]>("displays");
