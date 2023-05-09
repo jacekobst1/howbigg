@@ -71,7 +71,7 @@ Here's the **list of optimal resolutions** for different screen sizes:
 | Super ultrawide (32x9) | 44-49 | 5120×1440                      |
 | Super ultrawide (32x9) | 57    | 7680×2160                      |
 
-**You can also check available resolutions for every aspect ratio, compare pixel density, and play around [in our free tool](https://howbigg.com).**
+**You can also check available resolutions for every aspect ratio, compare pixel density, and play around [with this free tool](https://howbigg.com).**
 
 ## 4. Using ultrawide and dual monitors every day
 For daily use, both ultrawide and dual monitors have their benefits.
