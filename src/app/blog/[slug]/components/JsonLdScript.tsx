@@ -18,6 +18,10 @@ export default function jsonLdScript({ post }: JsonLdScriptProps) {
     headline: post.title,
     description: post.subtitle,
     image: "",
+    creator: {
+      "@type": "Person",
+      name: "Jacek Obst",
+    },
     author: {
       "@type": "Person",
       name: "Jacek Obst",

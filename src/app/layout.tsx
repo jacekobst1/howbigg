@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  creator: "Jacek Obst",
+  authors: [{ name: "Jacek Obst" }],
+  publisher: "Howbigg",
   robots: {
     index: true,
     follow: true,
