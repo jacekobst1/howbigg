@@ -13,7 +13,7 @@ export default function jsonLdScript({ post }: JsonLdScriptProps) {
     "@type": "Article",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${config.fullUrl}/${blog}/${post.slug}`,
+      "@id": `${config.fullUrl}${blog.href}/${post.slug}`,
     },
     headline: post.title,
     description: post.subtitle,
