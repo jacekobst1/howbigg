@@ -95,7 +95,7 @@ Also, **dual monitors let you adjust and move your screens more**, which can be 
 This configuration can also be helpful when sharing a screen during a video conference - we can share the first screen and its contents with the participants in the call but still have the second for our own use.
 
 ### Ultrawide vs. Dual Monitors: For gaming
-![Teenagers sitting in front of notebooks doing e-sport](/images/posts/ultrawide-vs-dual-monitors/gaming.jpg)
+![Teenagers sitting in front of laptops doing e-sport](/images/posts/ultrawide-vs-dual-monitors/gaming.jpg)
 _Fredrick Tendong | Unsplash_
 
 For gaming, choosing between ultrawide and dual monitors is also very important.
