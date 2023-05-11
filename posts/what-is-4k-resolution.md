@@ -1,7 +1,7 @@
 ---
 createdAt: "2023-05-09"
-title: "What is 4K resolution? What does 4K mean? Everything you should know about 4K and UHD."
-subtitle: "4K is an screen resolution of 3840x2160 pixels. I can be also called UHD or 4K UHD. It's the most popular TV resolution today with impressive image quality."
+title: "What is 4K resolution? What does 4k mean?"
+subtitle: "4K is a screen resolution of 3840x2160 pixels. I can be also called UHD or 4K UHD. It's the most popular TV resolution today with impressive image quality."
 readingTime: "3min 30sec"
 ---
 ## 1. What is 4K Resolution?
