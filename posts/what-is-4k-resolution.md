@@ -78,7 +78,7 @@ It's called 4K because it is approximately 4,000 pixels wide.
 It has a resolution of **3840 x 2160** pixels, exactly double the horizontal and vertical resolution of Full HD (1920 x 1080 pixels).
 It's sometimes also called 2160p or 4K UHD.
 
-4K DCI has an aspect ratio of 256:135 (approximately 1.9:1), while UHD follows a 16:9 aspect ratio.
+4K DCI has an aspect ratio of approximately 1.9:1, while UHD approximately 1.78:1 (16:9) aspect ratio.
 This means that **4K DCI is slightly wider and less tall than UHD**, giving it a more cinematic appearance.
 
 While both 4K and UHD refer to high-resolution formats, the key difference lies in the specific resolutions they represent.
