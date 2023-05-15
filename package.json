@@ -19,6 +19,7 @@
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
     "gray-matter": "^4.0.3",
+    "image-size": "^1.0.2",
     "lodash": "^4.17.21",
     "next": "^13",
     "query-string": "^8.1.0",
