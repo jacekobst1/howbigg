@@ -43,6 +43,8 @@ export default function MyReactMarkdown({
                 alt={alt as string}
                 width={width}
                 height={height}
+                placeholder={"blur"}
+                blurDataURL={"/images/image-placeholder.png"}
               />
             );
           } else {
