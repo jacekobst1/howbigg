@@ -4,6 +4,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog",
+  description:
+    "Read the most useful articles about TVs, monitors, 4k resolution, 8k resolution, curved screens, QLEDs, OLEDs, and many more!",
   alternates: {
     canonical: "/blog",
   },
