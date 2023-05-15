@@ -15,10 +15,10 @@ export default function TableOfContents({
       <nav>
         <ul>
           {headings.map((heading) => (
-            <li key={heading} className="font-bold">
+            <li key={heading} className="font-semibold my-2">
               <UnstyledLink
                 href={`/blog/${slug}#${generateIdFromText(heading)}`}
-                className="hover:text-primary-500"
+                className="hover:text-primary-500 md:text-lg"
               >
                 {heading}
               </UnstyledLink>
