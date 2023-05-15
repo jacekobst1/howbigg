@@ -12,8 +12,8 @@ const nextConfig = {
       },
       {
         source: "/:path*",
-        has: [{ type: "host", value: "www.howbigg.com" }],
-        destination: "https://howbigg.com/:path*",
+        has: [{ type: "host", value: "www" }],
+        destination: "/:path*",
         permanent: true,
       },
     ];
