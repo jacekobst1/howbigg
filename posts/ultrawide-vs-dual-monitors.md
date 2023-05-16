@@ -15,7 +15,7 @@ When choosing between an ultrawide and dual monitors setup, you should consider 
 This article tells you everything you need to know to help you choose your next screen.
 
 ## 1. How wide is ultrawide?
-![Comparison of 32:9, 21:9 and 16:9 images](/images/posts/ultrawide-vs-dual-monitors/aspect_ratio_comparison.jpg)
+![Comparison of 32:9, 21:9 and 16:9 images](/images/posts/ultrawide-vs-dual-monitors/ultrawidewide_aspect_ratios_comparison.jpg)
 _Josh Sorenson | Pexels and Howbigg_
 
 When we talk about ultrawide monitors, we refer to screens wider than the usual wide 16:9 format.
@@ -30,7 +30,7 @@ This behemoth of a display offers an unrivaled field of view, making it the ulti
 **You can see and test the difference between various aspect ratios [here](https://howbigg.com?displays=%5B%2216x9_0_0_27_in_2560x1440_0%22%2C%2221x9_0_0_34_in_3440x1440_0%22%2C%2232x9_0_0_49_in_5120x1440_0%22%5D).**
 
 ## 2. Good and bad things about ultrawide monitors
-![Clean desk setup with ultrawide monitor](/images/posts/ultrawide-vs-dual-monitors/luke_peters_ultrawide_setup.jpg)
+![Clean desk setup with ultrawide monitor](/images/posts/ultrawide-vs-dual-monitors/pretty_desk_setup.jpg)
 _Luke Peters | Unsplash_
 
 Every coin has two sides, and ultrawide monitors are no exception. Here are some of the good and bad things about them.
@@ -80,7 +80,7 @@ Dual monitors let you customize and adjust your screens more.
 The choice between the two depends on what you like and how you plan to use your screen.
 
 ### Ultrawide vs. Dual Monitors: For work
-![The interior of the office, with employees staring at monitors](/images/posts/ultrawide-vs-dual-monitors/work_environment.jpg)
+![The interior of the office, with employees staring at monitors](/images/posts/ultrawide-vs-dual-monitors/office_with_people_working.jpg)
 _Sigmund | Unsplash_
 
 Choosing ultrawide or dual monitors for work depends on what you do for a living and the software you use.
@@ -95,7 +95,7 @@ Also, **dual monitors let you adjust and move your screens more**, which can be 
 This configuration can also be helpful when sharing a screen during a video conference - we can share the first screen and its contents with the participants in the call but still have the second for our own use.
 
 ### Ultrawide vs. Dual Monitors: For gaming
-![Teenagers sitting in front of laptops doing e-sport](/images/posts/ultrawide-vs-dual-monitors/gaming.jpg)
+![Teenagers sitting in front of laptops doing e-sport](/images/posts/ultrawide-vs-dual-monitors/teenagers_doing_e_sport.jpg)
 _Fredrick Tendong | Unsplash_
 
 For gaming, choosing between ultrawide and dual monitors is also very important.
@@ -129,7 +129,7 @@ When deciding between ultrawide and dual monitors for gaming, think about the ga
 It is also possible to use two monitors - one wide and the other ultrawide - for some it might be **the choice that makes the most sense**.
 
 ## 5. Curved screens vs. flat screens
-![Curved and flat monitors seen from above](/images/posts/ultrawide-vs-dual-monitors/curved_vs_flat.jpg)
+![Curved and flat monitors seen from above](/images/posts/ultrawide-vs-dual-monitors/curved_vs_flat_comparison.jpg)
 _Howbigg_
 
 <div class="md-border">

@@ -11,7 +11,7 @@ It can be labelled as _4K_, _UHD_ or _4K UHD_.
 It's the most popular TV resolution today, not without reason - it features **impressive image quality**, allowing you to watch the image from closer than ever before!
 
 ### Why is it called 4K?
-![Comparison of 4K, 1080p and 720p resolution size](/images/posts/what-is-4k-resolution/4K_vs_1080p_vs_720p.png)
+![Comparison of 4K, 1080p and 720p resolution size](/images/posts/what-is-4k-resolution/4k_1080p_720p_comparison.png)
 _FORREST CAVALE | Unsplash and Howbigg_
 
 Tke "K" stands for "kilo" - a thousand.
@@ -36,7 +36,7 @@ This can be particularly beneficial for content like nature documentaries or spo
 Seeing every blade of grass or individual player on the field can **enhance the viewing experience**.
 
 ## 2. How Close Do I Need to Sit to a 4K Screen?
-![Chart showing how close you should sit to see the difference between various resolutions](/images/posts/what-is-4k-resolution/optimal_distance.png)
+![Chart showing how close you should sit to see the difference between various resolutions](/images/posts/what-is-4k-resolution/optimal_distance_chart.png)
 _Howbigg_
 
 The ideal viewing distance of a 4K Ultra HD TV is about **1 to 1.5 times the diagonal width** of the screen.
@@ -51,7 +51,7 @@ You can **check the minimal and optimal viewing distances** for your TV more pre
 [with this free calculator](https://howbigg.com/?displays=%5B%2216x9_0_0_50_in_3840x2160_0%22%2C%2216x9_0_0_65_in_3840x2160_0%22%5D).
 
 ## 3. How Much 4K Content is Available? Is Netflix In 4K?
-![Dark room with Netflix logo on TV](/images/posts/what-is-4k-resolution/netflix.jpg)
+![Dark room with Netflix logo on TV](/images/posts/what-is-4k-resolution/netflix_logo_on_tv.jpg)
 _Thibault Penin | Unsplash_
 
 There are already **hundreds of 4K series and movies** on streaming services like Netflix, Amazon Prime Video, Apple TV+, Disney+, HBO Max, Paramount, Hulu, and Peacock.
@@ -67,7 +67,7 @@ It's worth mentioning that YouTube is increasingly becoming a source for high-qu
 Moreover, newer Blu-ray releases frequently include 4K options, and some broadcast television channels are beginning to provide 4K programming.
 
 ## 4. 4K vs. UHD: What's the Difference?
-![Comparison of 4K and UHD resolution size](/images/posts/what-is-4k-resolution/4K_vs_UHD.png)
+![Comparison of 4K and UHD resolution size](/images/posts/what-is-4k-resolution/4K_vs_UHD_comparison.png)
 _Alex Plesovskich | Unsplash and Howbigg_
 
 **4K resolution, also known as 4K DCI**, is a standard for cinema projection established by the Digital Cinema Initiatives (DCI).
@@ -86,7 +86,7 @@ UHD is slightly lower in resolution than true 4K.
 These two terms are often **used interchangeably in consumer electronics**, as the difference in resolution is minimal and not easily noticeable to the human eye.
 
 ## 5. What's Next for 4K Resolution?
-![Cozy room with TV turned off](/images/posts/what-is-4k-resolution/chill.jpg)
+![Cozy room with TV turned off](/images/posts/what-is-4k-resolution/cozy_room_with_tv.jpg)
 _Grant | Unsplash_
 Even though 4K screens are still pretty new, there are already talks about even better screens with higher resolutions.
 These **8K UHD** screens have a resolution of **7680 x 4320** pixels and are starting to show up in fancy TVs and computer monitors.
