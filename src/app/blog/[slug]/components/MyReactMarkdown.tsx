@@ -5,7 +5,7 @@ import { generateIdFromText } from "@/app/blog/[slug]/utils/anchorGenerator";
 import ReactMarkdown from "react-markdown";
 import { Post } from "@/app/blog/types/Post";
 import UnderlineLink from "@/components/links/UnderlineLink";
-import Image from "next/image";
+import MyImage from "@/app/blog/[slug]/components/MyImage";
 
 interface MyReactMarkdownProps {
   post: Post;
@@ -34,23 +34,13 @@ export default function MyReactMarkdown({
         a: ({ children, ...props }) => (
           <UnderlineLink href={props.href ?? ""}>{children}</UnderlineLink>
         ),
-        img: ({ src, alt, ...props }) => {
-          if (imageSizes[src as string]) {
-            const { width, height } = imageSizes[src as string];
-            return (
-              <Image
-                src={src as string}
-                alt={alt as string}
-                width={745}
-                height={height / (width / 745)}
-                placeholder={"blur"}
-                blurDataURL={"/images/image-placeholder.png"}
-              />
-            );
-          } else {
-            return <img src={src} alt={alt} />;
-          }
-        },
+        img: ({ src, alt, ...props }) => (
+          <MyImage
+            src={src as string}
+            alt={alt as string}
+            imageSizes={imageSizes}
+          />
+        ),
       }}
     >
       {post.content}
