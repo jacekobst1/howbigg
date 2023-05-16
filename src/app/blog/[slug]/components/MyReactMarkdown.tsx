@@ -41,8 +41,8 @@ export default function MyReactMarkdown({
               <Image
                 src={src as string}
                 alt={alt as string}
-                width={width}
-                height={height}
+                width={745}
+                height={height / (width / 745)}
                 placeholder={"blur"}
                 blurDataURL={"/images/image-placeholder.png"}
               />
