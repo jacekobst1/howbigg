@@ -25,12 +25,6 @@ export default function BlogPage() {
   ));
 
   return (
-    <>
-      <h1 className="text-primary-500 text-center">Blog</h1>
-      <div className="divider"></div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
-        {postPreviews}
-      </div>
-    </>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div>
   );
 }
