@@ -5,6 +5,7 @@ export interface Post extends PostMetadata {
 
 export interface PostMetadata {
   createdAt: string;
+  updatedAt: string | null;
   title: string;
   subtitle: string;
   slug: string;

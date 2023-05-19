@@ -35,6 +35,7 @@ export default function jsonLdScript({ post }: JsonLdScriptProps) {
       },
     },
     datePublished: post.createdAt,
+    dateModified: post.updatedAt || post.createdAt,
   };
 
   return (
