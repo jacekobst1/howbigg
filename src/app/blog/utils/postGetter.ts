@@ -14,9 +14,11 @@ function getAllPostsMetadata(): PostMetadata[] {
 
       return {
         createdAt: matterResult.data.createdAt,
+        updatedAt: matterResult.data.updatedAt,
         title: matterResult.data.title,
         subtitle: matterResult.data.subtitle,
         slug: filename.replace(".md", ""),
+        mainImages: matterResult.data.mainImages,
       };
     })
     .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
@@ -43,8 +45,10 @@ function getPostBySlug(slug: string): Post {
   return {
     content: matterResult.content,
     createdAt: matterResult.data.createdAt,
+    updatedAt: matterResult.data.updatedAt,
     title: matterResult.data.title,
     subtitle: matterResult.data.subtitle,
+    mainImages: matterResult.data.mainImages,
     slug,
     headings,
   };
