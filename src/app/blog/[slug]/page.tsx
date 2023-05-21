@@ -5,13 +5,13 @@ import {
 } from "@/app/blog/utils/postGetter";
 import ArrowLink from "@/components/links/ArrowLink";
 import TableOfContents from "@/app/blog/[slug]/components/TableOfContents";
-import MyReactMarkdown from "@/app/blog/[slug]/components/MyReactMarkdown";
 import PostTitle from "@/app/blog/[slug]/components/PostTitle";
 import JsonLdScript from "@/app/blog/[slug]/components/JsonLdScript";
 import { Post } from "@/app/blog/types/Post";
 import sizeOf from "image-size";
 import { join } from "path";
 import { ImageSizes } from "@/app/blog/types/ImageSizes";
+import PostContent from "@/app/blog/[slug]/components/PostContent";
 
 interface PostProps {
   params: {
@@ -85,12 +85,7 @@ export default async function PostPage({ params: { slug } }: PostProps) {
 
         <PostTitle post={post} />
         <TableOfContents slug={post.slug} headings={post.headings} />
-
-        <div className="bg-base-100 mx-auto py-10 rounded-lg md:w-3/4 px-5 md:px-10 mt-5">
-          <article className="prose mx-auto max-w-full">
-            <MyReactMarkdown post={post} imageSizes={imageSizes} />
-          </article>
-        </div>
+        <PostContent post={post} imageSizes={imageSizes} />
       </div>
 
       <JsonLdScript post={post} />
