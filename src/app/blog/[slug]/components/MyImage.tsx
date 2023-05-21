@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { ImageSizes } from "@/app/blog/types/ImageSizes";
 
 interface MyImageProps {
   src: string;
   alt: string;
-  imageSizes: Record<string, { width: number; height: number }>;
+  imageSizes: ImageSizes;
 }
 
 function shimmer(w: number, h: number) {

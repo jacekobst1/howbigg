@@ -11,6 +11,7 @@ import JsonLdScript from "@/app/blog/[slug]/components/JsonLdScript";
 import { Post } from "@/app/blog/types/Post";
 import sizeOf from "image-size";
 import { join } from "path";
+import { ImageSizes } from "@/app/blog/types/ImageSizes";
 
 interface PostProps {
   params: {
@@ -48,7 +49,7 @@ export const generateStaticParams = async () => {
 };
 
 async function getImageSizes(post: Post) {
-  const imageSizes: Record<string, { width: number; height: number }> = {};
+  const imageSizes: ImageSizes = {};
 
   const iterator = post.content.matchAll(/!\[.*]\((.*)\)/g);
   let match: IteratorResult<RegExpMatchArray, any>;
