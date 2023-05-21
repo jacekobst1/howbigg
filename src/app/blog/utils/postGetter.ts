@@ -19,6 +19,7 @@ function getAllPostsMetadata(): PostMetadata[] {
         subtitle: matterResult.data.subtitle,
         slug: filename.replace(".md", ""),
         mainImages: matterResult.data.mainImages,
+        readingTime: matterResult.data.readingTime,
       };
     })
     .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
@@ -49,6 +50,7 @@ function getPostBySlug(slug: string): Post {
     title: matterResult.data.title,
     subtitle: matterResult.data.subtitle,
     mainImages: matterResult.data.mainImages,
+    readingTime: matterResult.data.readingTime,
     slug,
     headings,
   };

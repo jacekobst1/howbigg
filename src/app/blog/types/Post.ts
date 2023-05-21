@@ -10,4 +10,5 @@ export interface PostMetadata {
   subtitle: string;
   slug: string;
   mainImages: string[];
+  readingTime: number;
 }
