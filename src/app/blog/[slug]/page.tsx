@@ -5,7 +5,7 @@ import {
 } from "@/app/blog/utils/postGetter";
 import ArrowLink from "@/components/links/ArrowLink";
 import TableOfContents from "@/app/blog/[slug]/components/TableOfContents";
-import PostTitle from "@/app/blog/[slug]/components/PostTitle";
+import PostHeader from "@/app/blog/[slug]/components/PostHeader";
 import JsonLdScript from "@/app/blog/[slug]/components/JsonLdScript";
 import { Post } from "@/app/blog/types/Post";
 import sizeOf from "image-size";
@@ -83,9 +83,11 @@ export default async function PostPage({ params: { slug } }: PostProps) {
           Back to blog
         </ArrowLink>
 
-        <PostTitle post={post} />
-        <TableOfContents slug={post.slug} headings={post.headings} />
-        <PostContent post={post} imageSizes={imageSizes} />
+        <div className="mx-auto md:w-3/4 mt-5 md:mt-0">
+          <PostHeader post={post} />
+          <TableOfContents slug={post.slug} headings={post.headings} />
+          <PostContent post={post} imageSizes={imageSizes} />
+        </div>
       </div>
 
       <JsonLdScript post={post} />

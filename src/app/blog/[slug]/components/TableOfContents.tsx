@@ -11,12 +11,12 @@ export default function TableOfContents({
   headings,
 }: TableOfContentsProps) {
   return (
-    <div className="bg-base-100 mx-auto py-5 rounded-lg md:w-3/4 px-5 md:px-10">
+    <div className="bg-base-100 py-5 rounded-lg px-5 md:px-10 mt-5">
       <h3 className="text-lg mb-2">Table of contents</h3>
       <nav>
         <ul>
           {headings.map((heading) => (
-            <li key={heading} className="py-1">
+            <li key={heading} className="py-0.5">
               <UnstyledLink
                 href={`/blog/${slug}#${generateIdFromText(heading)}`}
                 className="hover:text-primary-500 text-sm md:text-base"
