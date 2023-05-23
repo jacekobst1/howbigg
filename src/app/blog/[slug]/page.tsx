@@ -5,12 +5,13 @@ import {
 } from "@/app/blog/utils/postGetter";
 import ArrowLink from "@/components/links/ArrowLink";
 import TableOfContents from "@/app/blog/[slug]/components/TableOfContents";
-import MyReactMarkdown from "@/app/blog/[slug]/components/MyReactMarkdown";
-import PostTitle from "@/app/blog/[slug]/components/PostTitle";
 import JsonLdScript from "@/app/blog/[slug]/components/JsonLdScript";
 import { Post } from "@/app/blog/types/Post";
 import sizeOf from "image-size";
 import { join } from "path";
+import { ImageSizes } from "@/app/blog/types/ImageSizes";
+import PostContent from "@/app/blog/[slug]/components/PostContent";
+import PostHeader from "@/app/blog/[slug]/components/PostHeader";
 
 interface PostProps {
   params: {
@@ -48,7 +49,7 @@ export const generateStaticParams = async () => {
 };
 
 async function getImageSizes(post: Post) {
-  const imageSizes: Record<string, { width: number; height: number }> = {};
+  const imageSizes: ImageSizes = {};
 
   const iterator = post.content.matchAll(/!\[.*]\((.*)\)/g);
   let match: IteratorResult<RegExpMatchArray, any>;
@@ -82,13 +83,10 @@ export default async function PostPage({ params: { slug } }: PostProps) {
           Back to blog
         </ArrowLink>
 
-        <PostTitle post={post} />
-        <TableOfContents slug={post.slug} headings={post.headings} />
-
-        <div className="bg-base-100 mx-auto py-10 rounded-lg md:w-3/4 px-5 md:px-10 mt-5">
-          <article className="prose mx-auto max-w-full">
-            <MyReactMarkdown post={post} imageSizes={imageSizes} />
-          </article>
+        <div className="mx-auto md:w-3/4 mt-5 md:mt-0">
+          <PostHeader post={post} />
+          <TableOfContents slug={post.slug} headings={post.headings} />
+          <PostContent post={post} imageSizes={imageSizes} />
         </div>
       </div>
 

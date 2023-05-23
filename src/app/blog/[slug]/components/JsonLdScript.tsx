@@ -14,7 +14,7 @@ export default function jsonLdScript({ post }: JsonLdScriptProps) {
     mainEntityOfPage: `${config.fullUrl}${blog.href}/${post.slug}`,
     headline: post.title,
     description: post.subtitle,
-    image: post.mainImages,
+    image: post.image.sources,
     creator: {
       "@type": "Person",
       name: "Jacek Obst",

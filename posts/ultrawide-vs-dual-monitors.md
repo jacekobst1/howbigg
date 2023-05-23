@@ -2,12 +2,16 @@
 createdAt: "2023-05-02"
 title: "Ultrawide or dual monitors: Choosing the best setup"
 subtitle: "Learn all about ultrawide and dual monitors from our easy-to-understand guide. It will help you make the best choice for your needs and preferences."
-readingTime: "6min 30sec"
-mainImages: [
-    "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_16x9.jpg",
-    "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_4x3.jpg",
-    "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_1x1.jpg",
-]
+readingTime: 6
+image: {
+    alt: "Man holding super ultrawide monitor",
+    author: "Alexandru Acea | Unsplash",
+    sources: [
+      "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_16x9.jpg",
+      "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_4x3.jpg",
+      "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_1x1.jpg",
+    ]   
+}
 ---
 <div class="md-border">
 <div class="md-border-title">Quick answer</div>

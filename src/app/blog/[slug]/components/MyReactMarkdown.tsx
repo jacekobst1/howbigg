@@ -6,10 +6,11 @@ import ReactMarkdown from "react-markdown";
 import { Post } from "@/app/blog/types/Post";
 import UnderlineLink from "@/components/links/UnderlineLink";
 import MyImage from "@/app/blog/[slug]/components/MyImage";
+import { ImageSizes } from "@/app/blog/types/ImageSizes";
 
 interface MyReactMarkdownProps {
   post: Post;
-  imageSizes: Record<string, { width: number; height: number }>;
+  imageSizes: ImageSizes;
 }
 
 export default function MyReactMarkdown({
