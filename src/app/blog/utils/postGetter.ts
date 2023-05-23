@@ -18,7 +18,7 @@ function getAllPostsMetadata(): PostMetadata[] {
         title: matterResult.data.title,
         subtitle: matterResult.data.subtitle,
         slug: filename.replace(".md", ""),
-        mainImages: matterResult.data.mainImages,
+        image: matterResult.data.image,
         readingTime: matterResult.data.readingTime,
       };
     })
@@ -44,12 +44,13 @@ function getPostBySlug(slug: string): Post {
     .map((line) => line.replace(/^##\s/, "").trim());
 
   return {
+    // TODO ulepsz
     content: matterResult.content,
     createdAt: matterResult.data.createdAt,
     updatedAt: matterResult.data.updatedAt,
     title: matterResult.data.title,
     subtitle: matterResult.data.subtitle,
-    mainImages: matterResult.data.mainImages,
+    image: matterResult.data.image,
     readingTime: matterResult.data.readingTime,
     slug,
     headings,

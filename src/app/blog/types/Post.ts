@@ -9,6 +9,10 @@ export interface PostMetadata {
   title: string;
   subtitle: string;
   slug: string;
-  mainImages: string[];
+  image: {
+    alt: string;
+    author: string;
+    sources: string[];
+  };
   readingTime: number;
 }

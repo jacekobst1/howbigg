@@ -10,14 +10,19 @@ export default function PostHeader({ post }: PostTitleProps) {
   return (
     <>
       <h1 className="text-4xl md:text-6xl mt-5 mb-8">{post.title}</h1>
-      <Image
-        src={post.mainImages[0]}
-        alt="TODO"
-        width={820}
-        height={420}
-        className="header-image"
-      />
-      <div className="flex mt-5">
+      <figure>
+        <Image
+          src={post.image.sources[0]}
+          alt={post.image.alt}
+          width={820}
+          height={420}
+          className="header-image"
+        />
+        <figcaption className="header-image-caption">
+          {post.image.author}
+        </figcaption>
+      </figure>
+      <div className="flex mt-3">
         <div>
           <p className="text-xs italic text-slate-500 mb-0.5">Written by</p>
           <p className="text-sm font-bold">Jacek Obst</p>
