@@ -18,22 +18,27 @@ export default function PostHeader({ post }: PostTitleProps) {
         className="header-image"
       />
       <div className="flex mt-5">
-        <div className="mr-8">
+        <div>
           <p className="text-xs italic text-slate-500 mb-0.5">Written by</p>
           <p className="text-sm font-bold">Jacek Obst</p>
         </div>
-        <div>
-          <p className="text-xs italic text-slate-500 mb-0.5">Published on</p>
+        <div className="ml-8">
+          <p className="text-xs italic text-slate-500 mb-0.5">
+            {post.updatedAt ? "Updated at" : "Published on"}
+          </p>
           <p className="text-sm font-bold">
-            {new Date(post.createdAt).toLocaleDateString("en-us", {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            })}
+            {new Date(post.updatedAt || post.createdAt).toLocaleDateString(
+              "en-us",
+              {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              }
+            )}
           </p>
         </div>
         <div className="grow" />
-        <div className="flex text-sm items-center font-bold">
+        <div className="flex text-sm items-center font-semibold">
           <AiOutlineClockCircle className="mr-2" />
           <span>{post.readingTime} min read</span>
         </div>
