@@ -1,3 +1,4 @@
+import "./PostHeader.css";
 import { Post } from "@/app/blog/types/Post";
 import Image from "next/image";
 import { AiOutlineClockCircle } from "@react-icons/all-files/ai/AiOutlineClockCircle";
@@ -14,7 +15,7 @@ export default function PostHeader({ post }: PostTitleProps) {
         alt="TODO"
         width={820}
         height={420}
-        className="rounded-none rounded-tl-3xl"
+        className="header-image"
       />
       <div className="flex mt-5">
         <div className="mr-8">
