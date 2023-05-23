@@ -72,9 +72,9 @@ export default function CompareDisplayPage() {
         createDisplay={createDisplay}
         deleteDisplay={deleteDisplay}
       />
-      <div className="mt-14" />
+      <div className="divider my-6" />
       <Presentation displays={displays} />
-      <div className="mt-14" />
+      <div className="mt-12" />
       <Details displays={displays} />
     </div>
   ) : (
