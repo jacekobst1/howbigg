@@ -13,13 +13,8 @@ function getAllPostsMetadata(): PostMetadata[] {
       const matterResult = matter(fileContent);
 
       return {
-        createdAt: matterResult.data.createdAt,
-        updatedAt: matterResult.data.updatedAt,
-        title: matterResult.data.title,
-        subtitle: matterResult.data.subtitle,
+        ...getCommonData(matterResult),
         slug: filename.replace(".md", ""),
-        image: matterResult.data.image,
-        readingTime: matterResult.data.readingTime,
       };
     })
     .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
@@ -44,16 +39,21 @@ function getPostBySlug(slug: string): Post {
     .map((line) => line.replace(/^##\s/, "").trim());
 
   return {
-    // TODO ulepsz
+    ...getCommonData(matterResult),
     content: matterResult.content,
+    slug,
+    headings,
+  };
+}
+
+function getCommonData(matterResult: matter.GrayMatterFile<string>) {
+  return {
     createdAt: matterResult.data.createdAt,
     updatedAt: matterResult.data.updatedAt,
     title: matterResult.data.title,
     subtitle: matterResult.data.subtitle,
-    image: matterResult.data.image,
     readingTime: matterResult.data.readingTime,
-    slug,
-    headings,
+    image: matterResult.data.image,
   };
 }
 
