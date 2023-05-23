@@ -3,7 +3,7 @@ import Navigation from "@/components/layout/Navigation";
 
 export default function Header() {
   return (
-    <header className="top-0 z-50 bg-white mb-5 shadow">
+    <header className="top-0 z-50 mb-5 pt-3 md:pt-0">
       <div className="h-16 mx-4 flex items-center justify-between flex-wrap md:flex-nowrap">
         <a href="/" className="text-primary-500 font-bold flex items-center">
           <Image

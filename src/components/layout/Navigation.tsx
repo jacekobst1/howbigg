@@ -19,7 +19,7 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="text-gray-500 order-3 w-full md:w-auto md:order-2">
+    <nav className="text-gray-500 order-3 w-full md:w-auto md:order-2 mt-1 md:pt-0">
       <ul className="flex font-semibold">
         {routes.map(({ href, label }) => (
           <li key={`${href}${label}`} className="pr-4 py-2">
