@@ -35,13 +35,21 @@ export default function MyReactMarkdown({
         a: ({ children, ...props }) => (
           <UnderlineLink href={props.href ?? ""}>{children}</UnderlineLink>
         ),
-        img: ({ src, alt, ...props }) => (
-          <MyImage
-            src={src as string}
-            alt={alt as string}
-            imageSizes={imageSizes}
-          />
-        ),
+        img: ({ src, alt, ...props }) => {
+          const width = imageSizes[src as string].width;
+          const height = imageSizes[src as string].height;
+          const staticWidth = 745;
+          const staticHeight = height / (width / 745);
+
+          return (
+            <MyImage
+              src={src as string}
+              alt={alt as string}
+              width={staticWidth}
+              height={staticHeight}
+            />
+          );
+        },
       }}
     >
       {post.content}

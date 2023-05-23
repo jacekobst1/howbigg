@@ -1,7 +1,7 @@
 import "./PostHeader.css";
 import { Post } from "@/app/blog/types/Post";
-import Image from "next/image";
 import { AiOutlineClockCircle } from "@react-icons/all-files/ai/AiOutlineClockCircle";
+import MyImage from "@/app/blog/[slug]/components/MyImage";
 
 interface PostTitleProps {
   post: Post;
@@ -11,11 +11,11 @@ export default function PostHeader({ post }: PostTitleProps) {
     <>
       <h1 className="text-4xl md:text-6xl mt-5 mb-8">{post.title}</h1>
       <figure>
-        <Image
+        <MyImage
           src={post.image.sources[0]}
           alt={post.image.alt}
           width={820}
-          height={420}
+          height={462}
           className="header-image"
         />
         <figcaption className="header-image-caption">

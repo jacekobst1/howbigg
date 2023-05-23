@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { ImageSizes } from "@/app/blog/types/ImageSizes";
 
 interface MyImageProps {
   src: string;
   alt: string;
-  imageSizes: ImageSizes;
+  width: number;
+  height: number;
+  className?: string;
 }
 
 function shimmer(w: number, h: number) {
@@ -30,27 +31,20 @@ function toBase64(str: string) {
     : window.btoa(str);
 }
 
-const MyImage = ({ src, alt, imageSizes }: MyImageProps) => {
-  if (imageSizes[src as string]) {
-    const { width, height } = imageSizes[src as string];
-    const staticWidth = 745;
-    const staticHeight = height / (width / 745);
-
-    return (
-      <Image
-        src={src as string}
-        alt={alt as string}
-        width={staticWidth}
-        height={staticHeight}
-        placeholder={"blur"}
-        blurDataURL={`data:image/svg+xml;base64,${toBase64(
-          shimmer(staticWidth, staticHeight)
-        )}`}
-      />
-    );
-  } else {
-    return <img src={src} alt={alt} />;
-  }
+const MyImage = ({ src, alt, width, height, className = "" }: MyImageProps) => {
+  return (
+    <Image
+      src={src as string}
+      alt={alt as string}
+      width={width}
+      height={height}
+      placeholder={"blur"}
+      blurDataURL={`data:image/svg+xml;base64,${toBase64(
+        shimmer(width, height)
+      )}`}
+      className={className}
+    />
+  );
 };
 
 export default MyImage;
