@@ -11,7 +11,7 @@ export default function TableOfContents({
   headings,
 }: TableOfContentsProps) {
   return (
-    <div className="bg-base-100 py-5 rounded-lg px-5 md:px-10 mt-5">
+    <div className="bg-base-100 py-5 rounded-lg px-5 md:px-10 mt-7">
       <h3 className="text-lg mb-2">Table of contents</h3>
       <nav>
         <ul>
