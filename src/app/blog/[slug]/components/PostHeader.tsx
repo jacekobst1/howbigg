@@ -25,7 +25,7 @@ export default function PostHeader({ post }: PostTitleProps) {
         <div>
           <p className="text-xs italic text-slate-500 mb-0.5">Published on</p>
           <p className="text-sm font-bold">
-            {new Date().toLocaleDateString("en-us", {
+            {new Date(post.createdAt).toLocaleDateString("en-us", {
               year: "numeric",
               month: "short",
               day: "numeric",
