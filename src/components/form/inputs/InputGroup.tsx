@@ -12,11 +12,7 @@ const InputGroup = ({ children, label, size = "md" }: InputGroupProps) => {
   const sizeClass = `input-group-${size}`;
 
   const inputGroup = (
-    <div
-      className={clsxm("input-group w-full border border-slate-300", sizeClass)}
-    >
-      {children}
-    </div>
+    <div className={clsxm("input-group w-full", sizeClass)}>{children}</div>
   );
 
   if (label) {
