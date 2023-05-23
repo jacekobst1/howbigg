@@ -30,7 +30,7 @@ export default function Setup({
   }
 
   return (
-    <>
+    <div>
       <div className="flex overflow-x-auto px-1">
         {displays.map((display) => (
           <Fragment key={display.id}>
@@ -52,6 +52,6 @@ export default function Setup({
           displaysLength={displays.length}
         />
       </div>
-    </>
+    </div>
   );
 }

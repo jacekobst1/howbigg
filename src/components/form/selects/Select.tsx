@@ -63,7 +63,11 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         ref={ref}
         defaultValue={defaultValue}
         onChange={onChangeHandler}
-        className={clsxm("select w-full mt-1", sizeClass, className)}
+        className={clsxm(
+          "select w-full mt-1 border border-slate-300",
+          sizeClass,
+          className
+        )}
         {...rest}
       >
         {optGroupsWithOptions}
