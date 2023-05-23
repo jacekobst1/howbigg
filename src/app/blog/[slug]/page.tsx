@@ -5,13 +5,13 @@ import {
 } from "@/app/blog/utils/postGetter";
 import ArrowLink from "@/components/links/ArrowLink";
 import TableOfContents from "@/app/blog/[slug]/components/TableOfContents";
-import PostHeader from "@/app/blog/[slug]/components/PostHeader";
 import JsonLdScript from "@/app/blog/[slug]/components/JsonLdScript";
 import { Post } from "@/app/blog/types/Post";
 import sizeOf from "image-size";
 import { join } from "path";
 import { ImageSizes } from "@/app/blog/types/ImageSizes";
 import PostContent from "@/app/blog/[slug]/components/PostContent";
+import PostHeader from "@/app/blog/[slug]/components/PostHeader";
 
 interface PostProps {
   params: {
