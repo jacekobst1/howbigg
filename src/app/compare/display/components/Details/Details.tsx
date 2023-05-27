@@ -70,7 +70,7 @@ export default function Details({ displays }: DetailsProps) {
           <tbody>
             {displays.map((display) => (
               <tr key={display.id} className="group">
-                <th className="p-0 bg-slate-100 group-hover:bg-slate-200 select-none pr-2">
+                <th className="p-0 bg-gray-100 group-hover:bg-gray-200 select-none pr-2">
                   <div className="flex items-center">
                     <div
                       className="w-fit h-full rounded-3xl px-1 py-7 mr-1"
@@ -124,9 +124,9 @@ interface ChildrenProp {
 }
 
 const HeadTh = ({ children }: ChildrenProp) => {
-  return <th className="bg-primary-500 text-base-100">{children}</th>;
+  return <th className="bg-black text-base-100">{children}</th>;
 };
 
 const BodyTd = ({ children }: ChildrenProp) => {
-  return <td className="bg-slate-100 group-hover:bg-slate-200">{children}</td>;
+  return <td className="bg-gray-100 group-hover:bg-gray-200">{children}</td>;
 };

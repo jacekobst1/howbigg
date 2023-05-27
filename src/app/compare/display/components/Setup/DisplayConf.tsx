@@ -113,7 +113,7 @@ export default function DisplayConf({
               <Button
                 onClick={() => deleteDisplay(display.id)}
                 size="sm"
-                variant="outline"
+                variant="light"
               >
                 <AiOutlineClose />
               </Button>
