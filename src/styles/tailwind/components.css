@@ -2,11 +2,16 @@
 
 @layer components {
     .input {
-        @apply focus:outline-0 focus:ring-2 focus:ring-primary-400;
+        @apply outline outline-2 outline-black focus:outline-primary-400;
+        outline-offset: 0 !important;
     }
 
     .select {
-        @apply focus:outline-0 focus:ring-2 focus:ring-primary-400;
+        @apply outline outline-2 outline-black focus:outline-primary-400;
+    }
+
+    .input-group {
+        @apply outline outline-2 outline-black focus-within:outline-primary-400 rounded-lg;
     }
 
     .input-group > *,
@@ -15,10 +20,7 @@
         @apply shadow-none;
     }
 
-    .input-group {
-        @apply rounded-lg focus-within:ring-2 focus-within:ring-primary-400;
-        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-        transition-duration: 200ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    .input-group > :last-child {
+        border-radius: 0 0.25rem 0.25rem 0;
     }
 }

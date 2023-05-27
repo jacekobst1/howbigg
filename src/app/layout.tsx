@@ -88,10 +88,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="myTheme">
-      <body
-        data-theme="mytheme"
-        className="flex flex-col min-h-screen bg-neutral"
-      >
+      <body data-theme="mytheme" className="flex flex-col min-h-screen">
         <Header />
         <main className="layout grow">{children}</main>
         <Footer />

@@ -1,7 +1,5 @@
 import { BsDisplayFill } from "@react-icons/all-files/bs/BsDisplayFill";
 import Button from "@/components/buttons/Button";
-import Display from "@/app/compare/display/types/Display";
-import { generateDisplayByExistingOnes } from "@/app/compare/display/utils/displayGenerator";
 
 interface AddNewDisplayButtonProps {
   createDisplay: () => void;
@@ -16,7 +14,7 @@ export default function AddNewDisplayButton({
     <Button
       onClick={createDisplay}
       className="ml-2"
-      variant="outline"
+      variant="light"
       disabled={displaysLength === 6}
     >
       <BsDisplayFill className="mr-2" />

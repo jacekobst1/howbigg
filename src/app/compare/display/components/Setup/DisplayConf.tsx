@@ -113,7 +113,7 @@ export default function DisplayConf({
               <Button
                 onClick={() => deleteDisplay(display.id)}
                 size="sm"
-                variant="outline"
+                variant="light"
               >
                 <AiOutlineClose />
               </Button>
@@ -159,7 +159,7 @@ export default function DisplayConf({
               mSize="sm"
               step="0.1"
             />
-            <span className="bg-primary-100 text-xs">
+            <span className="bg-slate-200 text-xs">
               {display.diagonal.unit}
             </span>
           </InputGroup>

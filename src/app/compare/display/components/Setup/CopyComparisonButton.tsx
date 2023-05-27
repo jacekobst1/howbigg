@@ -10,7 +10,7 @@ export default function CopyComparisonButton() {
   }
 
   return (
-    <Button onClick={copyUrlToClipboard} className="ml-2" variant="outline">
+    <Button onClick={copyUrlToClipboard} className="ml-2" variant="light">
       <FaShare className="mr-2" />
       Share
     </Button>

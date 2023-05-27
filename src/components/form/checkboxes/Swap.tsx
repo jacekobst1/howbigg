@@ -25,7 +25,7 @@ const Swap = ({
     <label className="swap swap-rotate" style={style}>
       <input type="checkbox" checked={checked} onChange={handleOnChange} />
       {React.cloneElement(offChildren, {
-        className: `swap-off w-10 h-10 text-primary-500 ${offChildren.props.className}`,
+        className: `swap-off w-10 h-10 text-black ${offChildren.props.className}`,
       })}
       {React.cloneElement(onChildren, {
         className: `swap-on w-10 h-10 text-primary-500 ${onChildren.props.className}`,
