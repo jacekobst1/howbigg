@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 function quickToast(message: string) {
   toast(message, {
     position: "top-center",
-    autoClose: 1000,
+    autoClose: 1500,
     hideProgressBar: true,
     closeOnClick: true,
     pauseOnHover: true,
