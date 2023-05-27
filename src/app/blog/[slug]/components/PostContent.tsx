@@ -9,7 +9,7 @@ interface PostContentProps {
 
 export default function PostContent({ post, imageSizes }: PostContentProps) {
   return (
-    <article className="prose mx-auto max-w-full py-10 mt-5 md:px-10">
+    <article className="prose mx-auto max-w-full">
       <MyReactMarkdown post={post} imageSizes={imageSizes} />
     </article>
   );

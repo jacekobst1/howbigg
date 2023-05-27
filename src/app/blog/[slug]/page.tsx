@@ -85,8 +85,12 @@ export default async function PostPage({ params: { slug } }: PostProps) {
 
         <div className="mx-auto md:w-3/4 mt-5 md:mt-0">
           <PostHeader post={post} />
-          <TableOfContents slug={post.slug} headings={post.headings} />
-          <PostContent post={post} imageSizes={imageSizes} />
+          <div className="lg:px-10">
+            <div className="divider" />
+            <TableOfContents slug={post.slug} headings={post.headings} />
+            <div className="divider" />
+            <PostContent post={post} imageSizes={imageSizes} />
+          </div>
         </div>
       </div>
 
