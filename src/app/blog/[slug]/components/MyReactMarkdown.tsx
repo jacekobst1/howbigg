@@ -22,11 +22,24 @@ export default function MyReactMarkdown({
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeRaw, rehypeHighlight]}
       components={{
-        h2: (props) => (
-          <h2 id={generateIdFromText(props.children[0] as string)}>
-            {props.children}
-          </h2>
-        ),
+        h2: (props) => {
+          const text = props.children[0] as string;
+          const isFaq = text === "FAQ";
+
+          return (
+            <>
+              {isFaq && <div className="divider mt-12" />}
+              <h2
+                id={generateIdFromText(text)}
+                style={{
+                  color: isFaq ? "var(--color-primary-500)" : "",
+                }}
+              >
+                {props.children}
+              </h2>
+            </>
+          );
+        },
         mark: ({ children, ...props }) => (
           <mark className="highlighted" {...props}>
             {children}
