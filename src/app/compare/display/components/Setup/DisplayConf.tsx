@@ -10,12 +10,9 @@ import { round } from "@/utils/math";
 import Button from "@/components/buttons/Button";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { debounce } from "lodash";
-import Toggle from "@/components/form/checkboxes/Toggle";
-import Swap from "@/components/form/checkboxes/Swap";
-import { MdCropLandscape } from "@react-icons/all-files/md/MdCropLandscape";
-import { MdCropPortrait } from "@react-icons/all-files/md/MdCropPortrait";
 import { defaultResolution } from "@/app/compare/display/types/Resolution";
 import Label from "@/components/form/labels/Label";
+import Switch from "@/components/form/checkboxes/Switch";
 
 interface DisplayProps {
   display: Display;
@@ -195,21 +192,21 @@ export default function DisplayConf({
           </Label>
         </div>
         <div className="form-control mt-3">
-          <Swap
-            label="Mode"
+          <Switch
             checked={display.isVertical}
-            onChange={setIsVertical}
-            offChildren={<MdCropLandscape />}
-            onChildren={<MdCropPortrait />}
-            style={{ marginBottom: "-4px" }}
+            opt1="Horizontal"
+            opt2="Vertical"
+            onClick={setIsVertical}
+            label="Orientation"
           />
         </div>
         <div className="form-control mt-3">
-          <Toggle
+          <Switch
             checked={display.diagonal.unit === "cm"}
-            onChange={setUnit}
-            label="Use centimeters"
-            size="md"
+            opt1="cm"
+            opt2="in"
+            onClick={setUnit}
+            label="Unit"
           />
         </div>
       </div>
