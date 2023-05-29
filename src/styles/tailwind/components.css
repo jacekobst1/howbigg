@@ -2,16 +2,16 @@
 
 @layer components {
     .input {
-        @apply outline outline-2 outline-black focus:outline-primary-400;
+        @apply outline outline-1 outline-gray-300 focus:outline-primary-400;
         outline-offset: 0 !important;
     }
 
     .select {
-        @apply outline outline-2 outline-black focus:outline-primary-400;
+        @apply outline outline-1 outline-gray-300 focus:outline-primary-400;
     }
 
     .input-group {
-        @apply outline outline-2 outline-black focus-within:outline-primary-400 rounded-lg;
+        @apply outline outline-1 outline-gray-300 focus-within:outline-2 focus-within:outline-primary-400 rounded-lg;
     }
 
     .input-group > *,
