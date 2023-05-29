@@ -9,7 +9,7 @@ interface PostTitleProps {
 export default function PostHeader({ post }: PostTitleProps) {
   return (
     <>
-      <h1 className="text-4xl md:text-6xl mt-5 mb-8">{post.title}</h1>
+      <h1 className="text-3xl md:text-6xl mt-5 mb-4 md:mb-8">{post.title}</h1>
       <figure>
         <MyImage
           src={post.image.sources[0]}
