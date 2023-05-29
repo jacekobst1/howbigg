@@ -1,6 +1,6 @@
 ---
 createdAt: "2023-05-02"
-title: "Ultrawide or dual monitors: Choosing the best setup"
+title: "Ultrawide vs. dual monitors: What's best for you?"
 subtitle: "Learn all about ultrawide and dual monitors from our easy-to-understand guide. It will help you make the best choice for your needs and preferences."
 readingTime: 6
 image: {
