@@ -45,7 +45,7 @@ export default function Setup({
           </Fragment>
         ))}
       </div>
-      <div className="mt-6">
+      <div className="mt-12">
         <CopyComparisonButton />
         <AddNewDisplayButton
           createDisplay={createDisplay}
