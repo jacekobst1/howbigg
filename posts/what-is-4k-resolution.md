@@ -1,5 +1,6 @@
 ---
 createdAt: "2023-05-09"
+updatedAt: "2023-05-30"
 title: "What is 4K resolution? What does 4k mean?"
 subtitle: "4K is a screen resolution of 3840x2160 pixels. I can be also called UHD or 4K UHD. It's the most popular TV resolution today with impressive image quality."
 readingTime: 3
@@ -109,3 +110,34 @@ To sum up, 4K resolution **significantly improves detail and sharpness** compare
 Even though there are still some hurdles with getting enough 4K content and getting people to use it, 4K screens will **undoubtedly be more and more popular** in the **next few years**.
 
 If you are looking for a new 📺 in 2023, there should be no other option than 4K.
+
+## FAQ
+### Is 2160p a 4K?
+Yes, **2160p is commonly referred to as "4K"**.
+The term "4K" is often used as a shorthand for a resolution of 3840 x 2160 pixels, which is approximately four times the resolution of Full HD (1080p).
+The "2160p" resolution signifies that the image or video contains 2160 horizontal lines of pixels.
+This resolution is widely adopted in the industry for high-definition content and is commonly associated with the term "4K."
+
+### Is 4K always better than 1080p?
+In terms of resolution, 4K has a higher pixel count than 1080p, which can result in sharper details.
+However, the benefits of 4K are **more noticeable on larger screens** or when viewed from a closer distance.
+The quality of the content and other factors also impact the viewing experience.
+So, in general, 4K can offer a **better visual experience**.
+
+### Can the human eye see 4K?
+Yes, the **human eye can see the difference** between 4K and 1080p resolutions.
+Factors like screen size, viewing distance, and individual visual acuity play a role in determining how noticeable the difference is.
+On larger screens and when viewed up close, the higher pixel density of 4K can result in sharper details.
+However, the difference may be less discernible on smaller screens or when viewed from a distance.
+The quality of the content and whether it is native 4K or upscaled from a lower resolution also affect the visual experience.
+
+### Does PS5 support 4K?
+Yes, the PlayStation 5 supports 4K resolution.
+It is capable of rendering and outputting games and content in 4K resolution, which provides a higher level of detail and visual fidelity compared to lower resolutions like 1080p.
+The PS5 is **designed to take advantage of 4K displays** and televisions to deliver a more immersive gaming experience with enhanced graphics and resolution.
+However, it's important to note that **not all games or content may be available in 4K**, as it also depends on the specific game developers and the capabilities of individual titles.
+
+### Is there anything higher than 4K resolution?
+Certainly! Resolutions higher than 4K, such as 8K, do exist.
+8K resolution provides an even higher level of detail and clarity compared to 4K, but it's worth noting that the availability of **native 8K content is currently limited**.
+Additionally, the hardware requirements for displaying and processing 8K content can be demanding.
