@@ -28,7 +28,7 @@ export default function MyReactMarkdown({
 
           return (
             <>
-              {isFaq && <div className="divider mt-12" />}
+              {isFaq && <div className="divider" />}
               <h2
                 id={generateIdFromText(text)}
                 style={{
