@@ -27,7 +27,7 @@ export default function Switch({
     "bg-white shadow flex items-center justify-center w-1/2 rounded-lg h-[1.64rem] transition-all duration-150 ease-linear top-[4px] absolute";
 
   const mySwitch = (
-    <div className="relative w-full rounded-lg border border-gray-300 h-9 bg-base-100 text-xs cursor-pointer">
+    <div className="switch-wrapper relative w-full h-9 bg-base-100 text-xs rounded-lg cursor-pointer">
       <div className="relative w-full h-full flex items-center">
         <button
           onClick={handleOnClick}
