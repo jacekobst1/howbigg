@@ -2,6 +2,7 @@ import "./PostHeader.css";
 import { Post } from "@/app/blog/types/Post";
 import { AiOutlineClockCircle } from "@react-icons/all-files/ai/AiOutlineClockCircle";
 import MyImage from "@/app/blog/[slug]/components/MyImage";
+import { formatPrettyTextDate } from "@/utils/date";
 
 interface PostTitleProps {
   post: Post;
@@ -32,14 +33,7 @@ export default function PostHeader({ post }: PostTitleProps) {
             {post.updatedAt ? "Updated at" : "Published on"}
           </p>
           <p className="text-sm font-bold">
-            {new Date(post.updatedAt || post.createdAt).toLocaleDateString(
-              "en-us",
-              {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              }
-            )}
+            {formatPrettyTextDate(post.updatedAt || post.createdAt)}
           </p>
         </div>
         <div className="grow" />
