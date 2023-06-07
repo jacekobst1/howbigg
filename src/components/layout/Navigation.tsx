@@ -26,7 +26,7 @@ export default function Navigation() {
             <a
               href={href}
               className={clsxm(
-                "hover:text-primary-400",
+                "hover:underline",
                 pathNameMatches(href) ? "text-primary-500" : ""
               )}
             >
