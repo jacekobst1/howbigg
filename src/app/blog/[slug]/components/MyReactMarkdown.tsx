@@ -34,6 +34,7 @@ export default function MyReactMarkdown({
                 style={{
                   color: isFaq ? "var(--color-primary-500)" : "",
                 }}
+                className="article__h2"
               >
                 {props.children}
               </h2>
@@ -41,12 +42,14 @@ export default function MyReactMarkdown({
           );
         },
         mark: ({ children, ...props }) => (
-          <mark className="highlighted" {...props}>
+          <mark className="article__mark" {...props}>
             {children}
           </mark>
         ),
         a: ({ children, ...props }) => (
-          <UnderlineLink href={props.href ?? ""}>{children}</UnderlineLink>
+          <UnderlineLink href={props.href ?? ""} className="article__a">
+            {children}
+          </UnderlineLink>
         ),
         img: ({ src, alt, ...props }) => {
           const width = imageSizes[src as string].width;
@@ -60,6 +63,7 @@ export default function MyReactMarkdown({
               alt={alt as string}
               width={staticWidth}
               height={staticHeight}
+              className="article__img"
             />
           );
         },

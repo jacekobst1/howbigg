@@ -1,8 +1,8 @@
-h2::first-letter {
+.article__h2::first-letter {
     color: var(--color-primary-500);
 }
 
-mark {
+.article__mark {
     background-color: var(--color-primary-100);
     padding: 0 3px 3px 3px;
 }
@@ -28,7 +28,7 @@ mark {
     width: fit-content;
 }
 
-img+em {
+.article__img+em {
     display: flex;
     justify-content: end;
     margin-top: -30px;
@@ -36,11 +36,11 @@ img+em {
     color: gray;
 }
 
-img {
+.article__img {
     border-radius: 5px;
 }
 
-article a {
+.article__a {
     color: var(--color-primary-500) !important;
     text-decoration: none !important;
     line-height: normal !important;
