@@ -44,7 +44,9 @@ _Geoffrey Moffett | Unsplash_
 Dolby Atmos is a revolutionary audio technology that has transformed the way we experience sound in movies, TV shows, and music.
 
 ### Dolby Atmos: A New Audio Format for Movie Theaters
-Dolby Atmos was **first introduced in 2012** as a new audio format for movie theaters. It was designed to create a more immersive experience for the audience by allowing sound engineers to place and move sounds in a three-dimensional space. This meant that viewers could hear sounds coming from above, below, and all around them, making them feel like they were part of the action.
+Dolby Atmos was **first introduced in 2012** as a new audio format for movie theaters.
+The first film using this technology was **_Brave_**.
+Since then, many other films have been released in Dolby Atmos including _Gravity_, _Interstellar_, and _Mad Max: Fury Road_.
 
 ### Adapting Dolby Atmos for Home Theater Systems
 In 2014, Dolby Atmos was adapted for home theater systems. This made it possible for consumers to experience the technology in their own homes. With Dolby Atmos-enabled speakers or soundbars, viewers could enjoy the same immersive audio experience they would get in a movie theater.
@@ -69,7 +71,7 @@ Streaming services like **Netflix** and **Amazon Prime Video** have started to s
 
 ### Gaming Systems
 <div class="md-border">
-Xbox fans can triumph there, becase <b>Xbox Series X/S</b> are the first consoles supporting gaming in Dolby Atmos and Dolby Vision.
+Xbox fans can triumph there, becase <b>Xbox Series X/S</b> are the <a href="https://www.dolby.com/experience/xbox/">first consoles supporting gaming in Dolby Atmos and Dolby Vision.</a>
 
 Unfortunately <b>Playstation 5</b> will never support Dolby Atmos, because Sony has its own 3D audio technology called Tempest 3D AudioTech.
 </div>
