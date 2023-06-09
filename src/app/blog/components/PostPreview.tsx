@@ -1,21 +1,34 @@
 import { PostMetadata } from "@/app/blog/types/Post";
-import PrimaryLink from "@/components/links/PrimaryLink";
+import Link from "next/link";
+import { formatPrettyTextDate } from "@/utils/date";
+import MyImage from "@/app/blog/[slug]/components/MyImage";
 
-const PostPreview = (props: PostMetadata) => {
+const PostPreview = (post: PostMetadata) => {
   return (
-    <div
-      className="border border-slate-300 p-4 rounded-md shadow-sm
-    bg-white"
+    <Link
+      href={`/blog/${post.slug}`}
+      className="post-preview shadow bg-white flex h-[130px] lg:h-[200px] rounded"
     >
-      <p className="text-sm text-slate-400">{props.createdAt}</p>
-
-      <PrimaryLink href={`/blog/${props.slug}`}>
-        <h2 className=" text-primary-600 hover:underline mb-4">
-          {props.title}
-        </h2>
-      </PrimaryLink>
-      <p className="text-slate-700">{props.subtitle}</p>
-    </div>
+      <MyImage
+        src={post.image.sources[2]}
+        alt={post.image.alt}
+        width={200}
+        height={200}
+        className="post-preview__image h-[130px] lg:h-[200px] my-auto rounded-l"
+      />
+      <div className="flex flex-col py-2 lg:py-3 px-5">
+        <h2 className="post-preview__title text-sm lg:text-lg">{post.title}</h2>
+        <p className="post-preview__subtitle text-xs lg:text-sm text-gray-500 mt-0.5 lg:mt-2">
+          {post.subtitle}
+        </p>
+        <div className="grow" />
+        <div className="text-xs">
+          <span>{formatPrettyTextDate(post.createdAt)}</span>
+          <span className="mx-1">&#x2022;</span>
+          <span>{post.readingTime} min read</span>
+        </div>
+      </div>
+    </Link>
   );
 };
 
