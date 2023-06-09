@@ -79,7 +79,7 @@ Unfortunately <b>Playstation 5</b> will never support Dolby Atmos, because Sony 
 Xbox Gamers can now enjoy their favorite games with spatial audio that allows them to hear sounds coming from all directions, giving them an advantage over their opponents.
 
 ### Music Streaming Services
-Dolby Atmos music is an emerging trend in the music industry. It allows artists to create a more immersive listening experience by adding height channels to their tracks. Currently, Tidal and Amazon Music HD offer a selection of songs in this format.
+Dolby Atmos music is an emerging trend in the music industry. It allows artists to create a more immersive listening experience by adding height channels to their tracks. Currently, [Tidal](**https://tidal.com/partners/dolbyatmos**) and [Amazon Music HD](**https://www.dolby.com/experience/amazon-music/**) offer a selection of songs in this format.
 
 ## 4. Necessary Equipment for Dolby Atmos: Specially Designed Speakers for Zooming and Swooping Sound
 ![Black and white photo of speakers](/images/posts/what-is-dolby-atmos/black_and_white_speakers.jpg)
