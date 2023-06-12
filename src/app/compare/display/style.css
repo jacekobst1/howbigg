@@ -15,7 +15,7 @@
     display: none;
 }
 
-@media (min-width: 1268px) {
+@media (min-width: 1280px) {
     .compare-layout__container {
         flex-direction: row;
     }
