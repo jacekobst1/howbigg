@@ -25,7 +25,9 @@ export default function BlogPage() {
     <PostPreview key={post.slug} {...post} />
   ));
 
-  return <div className="layout-md grid grid-cols-1 lg:grid-cols-2 gap-6">
-    {postPreviews}
-  </div>;
+  return (
+    <div className="layout-md grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {postPreviews}
+    </div>
+  );
 }

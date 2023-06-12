@@ -1,0 +1,35 @@
+.compare-layout__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.compare-layout__section {
+    width: 100%;
+}
+
+.compare-layout__center-section {
+    padding: 0 0 4rem 0;
+}
+
+.compare-layout__left-section {
+    display: none;
+}
+
+@media (min-width: 1268px) {
+    .compare-layout__container {
+        flex-direction: row;
+    }
+
+    .compare-layout__center-section {
+        width: 60%;
+        padding: 0 2rem;
+    }
+
+    .compare-layout__left-section, .compare-layout__right-section {
+        width: 20%;
+    }
+
+    .compare-layout__left-section {
+        display: block;
+    }
+}
