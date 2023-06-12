@@ -7,13 +7,13 @@ export default function BlogColumnPostPreview(post: PostMetadata) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="shadow bg-white max-w-[320px] rounded flex flex-col mx-auto"
+      className="shadow bg-white max-w-[300px] rounded flex flex-col"
     >
       <MyImage
         src={post.image.sources[0]}
         alt={post.image.alt}
-        width={320}
-        height={180}
+        width={300}
+        height={168.75}
         className="rounded-l"
       />
       <div className="flex flex-col h-full mt-2 px-2 mb-2 lg:mb-0">
