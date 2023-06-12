@@ -14,7 +14,7 @@ const PostPreview = (post: PostMetadata) => {
         alt={post.image.alt}
         width={200}
         height={200}
-        className="post-preview__image h-[130px] lg:h-[200px] my-auto rounded-l"
+        className="h-[130px] lg:h-[200px] my-auto rounded-l"
       />
       <div className="flex flex-col py-2 lg:py-3 px-5">
         <h2 className="post-preview__title text-sm lg:text-lg">{post.title}</h2>
