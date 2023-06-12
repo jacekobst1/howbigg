@@ -8,8 +8,11 @@ export default function BlogColumn() {
   ));
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-1 gap-4">
-      {postPreviews}
-    </div>
+    <>
+      <h2 className="text-2xl">Latest articles</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-1 gap-4 mt-4">
+        {postPreviews}
+      </div>
+    </>
   );
 }
