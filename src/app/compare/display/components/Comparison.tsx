@@ -72,7 +72,7 @@ export default function Comparison() {
         createDisplay={createDisplay}
         deleteDisplay={deleteDisplay}
       />
-      <div className="divider my-6" />
+      <div className="mt-12" />
       <Presentation displays={displays} />
       <div className="mt-12" />
       <Details displays={displays} />
