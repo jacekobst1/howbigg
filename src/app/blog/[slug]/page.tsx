@@ -78,7 +78,7 @@ export default async function PostPage({ params: { slug } }: PostProps) {
 
   return (
     <>
-      <div>
+      <div className="layout-md">
         <ArrowLink href="/blog" direction="left">
           Back to blog
         </ArrowLink>

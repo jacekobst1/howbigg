@@ -26,6 +26,8 @@ export default function BlogPage() {
   ));
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">{postPreviews}</div>
+    <div className="layout-md grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {postPreviews}
+    </div>
   );
 }
