@@ -12,6 +12,7 @@ import { join } from "path";
 import { ImageSizes } from "@/app/blog/types/ImageSizes";
 import PostContent from "@/app/blog/[slug]/components/PostContent";
 import PostHeader from "@/app/blog/[slug]/components/PostHeader";
+import BlogColumn from "@/components/shared/BlogColumn";
 
 interface PostProps {
   params: {
@@ -78,20 +79,28 @@ export default async function PostPage({ params: { slug } }: PostProps) {
 
   return (
     <>
-      <div className="layout-md">
-        <ArrowLink href="/blog" direction="left">
-          Back to blog
-        </ArrowLink>
+      <ArrowLink href="/blog" direction="left">
+        Back to blog
+      </ArrowLink>
 
-        <div className="mx-auto md:w-3/4 mt-5 md:mt-0">
-          <PostHeader post={post} />
-          <div className="lg:px-10">
-            <div className="divider" />
-            <TableOfContents slug={post.slug} headings={post.headings} />
-            <div className="divider" />
-            <PostContent post={post} imageSizes={imageSizes} />
+      <div className="layout__container layout-xl">
+        <section className="layout__left-section" />
+
+        <section className="layout__center-section">
+          <div className="mx-auto md:w-3/4 mt-5 md:mt-0">
+            <PostHeader post={post} />
+            <div className="lg:px-10">
+              <div className="divider" />
+              <TableOfContents slug={post.slug} headings={post.headings} />
+              <div className="divider" />
+              <PostContent post={post} imageSizes={imageSizes} />
+            </div>
           </div>
-        </div>
+        </section>
+
+        <section className="layout__right-section">
+          <BlogColumn />
+        </section>
       </div>
 
       <JsonLdScript post={post} />
