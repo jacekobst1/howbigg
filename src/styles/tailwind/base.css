@@ -48,24 +48,6 @@
     }
     /* #endregion  /**======== Typography =========== */
 
-    .layout-md {
-        max-width: 1100px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .layout-lg {
-        max-width: 1450px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .layout-xl {
-        max-width: 1900px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .bg-dark a.custom-link {
         @apply border-gray-200 hover:border-gray-200/0;
     }
