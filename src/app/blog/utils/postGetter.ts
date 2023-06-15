@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import { Post, PostMetadata } from "@/app/blog/types/Post";
 import { notFound } from "next/navigation";
 
-function getAllPostsMetadata(): PostMetadata[] {
+function getAllPostsMetadata(limit?: number): PostMetadata[] {
   const files = fs.readdirSync("posts/");
 
   return files
@@ -17,7 +17,8 @@ function getAllPostsMetadata(): PostMetadata[] {
         slug: filename.replace(".md", ""),
       };
     })
-    .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+    .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
+    .splice(0, limit || files.length);
 }
 
 function getPostBySlug(slug: string): Post {

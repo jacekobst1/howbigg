@@ -3,7 +3,8 @@
 @import "tailwind/utilities.css";
 @import 'react-toastify/dist/ReactToastify.min.css';
 @import "rc-tooltip/assets/bootstrap.css";
-@import "custom.css";
+@import "custom/custom.css";
+@import "custom/layout.css";
 
 :root {
   --tw-color-primary-50: 238 242 255;
