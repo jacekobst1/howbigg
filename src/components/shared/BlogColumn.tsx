@@ -1,8 +1,12 @@
 import { getAllPostsMetadata } from "@/app/blog/utils/postGetter";
 import BlogColumnPostPreview from "@/components/shared/BlogColumnPostPreview";
 
-export default function BlogColumn() {
-  const posts = getAllPostsMetadata();
+interface BlogColumnProps {
+  limit?: number;
+}
+
+export default function BlogColumn({ limit }: BlogColumnProps) {
+  const posts = getAllPostsMetadata(limit);
   const postPreviews = posts.map((post) => (
     <BlogColumnPostPreview key={post.slug} {...post} />
   ));

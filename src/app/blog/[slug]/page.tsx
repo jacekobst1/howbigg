@@ -99,7 +99,7 @@ export default async function PostPage({ params: { slug } }: PostProps) {
         </section>
 
         <section className="layout__right-section">
-          <BlogColumn />
+          <BlogColumn limit={10} />
         </section>
       </div>
 

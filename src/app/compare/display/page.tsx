@@ -10,7 +10,7 @@ export default function CompareDisplayPage() {
         <Comparison />
       </section>
       <section className="layout__right-section">
-        <BlogColumn />
+        <BlogColumn limit={6} />
       </section>
     </div>
   );
