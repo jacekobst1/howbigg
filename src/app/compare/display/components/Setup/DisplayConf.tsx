@@ -203,8 +203,8 @@ export default function DisplayConf({
         <div className="form-control mt-3">
           <Switch
             checked={display.diagonal.unit === "cm"}
-            opt1="cm"
-            opt2="in"
+            opt1="in"
+            opt2="cm"
             onClick={setUnit}
             label="Unit"
           />
