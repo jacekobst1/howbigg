@@ -35,6 +35,12 @@ const aspectRatios: AspectRatio[] = [
         label: "320 x 240 | QVGA",
       },
       {
+        width: 384,
+        height: 288,
+        value: "384x288",
+        label: "384 x 288 | CIF",
+      },
+      {
         width: 480,
         height: 360,
         value: "480x360",
@@ -45,6 +51,12 @@ const aspectRatios: AspectRatio[] = [
         height: 480,
         value: "640x480",
         label: "640 x 480 | VGA",
+      },
+      {
+        width: 720,
+        height: 540,
+        value: "720x540",
+        label: "720 x 540",
       },
       {
         width: 768,
@@ -86,7 +98,13 @@ const aspectRatios: AspectRatio[] = [
         width: 1280,
         height: 960,
         value: "1280x960",
-        label: "1280 x 960 | SXGA-",
+        label: "1280 x 960 | QuadVGA/SXGA-",
+      },
+      {
+        width: 1366,
+        height: 1024,
+        value: "1366x1024",
+        label: "1366 x 1024",
       },
       {
         width: 1400,
@@ -99,6 +117,12 @@ const aspectRatios: AspectRatio[] = [
         height: 1080,
         value: "1440x1080",
         label: "1440 x 1080",
+      },
+      {
+        width: 1536,
+        height: 1152,
+        value: "1536x1152",
+        label: "1536 x 1152",
       },
       {
         width: 1600,
@@ -141,6 +165,12 @@ const aspectRatios: AspectRatio[] = [
         height: 2400,
         value: "3200x2400",
         label: "3200 x 2400 | QUXGA",
+      },
+      {
+        width: 3840,
+        height: 2880,
+        value: "3840x2880",
+        label: "3840 x 2880",
       },
       {
         width: 4096,
@@ -220,10 +250,10 @@ const aspectRatios: AspectRatio[] = [
         label: "256 x 144",
       },
       {
-        width: 426,
-        height: 240,
-        value: "426x240",
-        label: "426 x 240",
+        width: 512,
+        height: 288,
+        value: "512x288",
+        label: "512 x 288",
       },
       {
         width: 640,
@@ -248,12 +278,6 @@ const aspectRatios: AspectRatio[] = [
         height: 576,
         value: "1024x576",
         label: "1024 x 576 | WSVGA",
-      },
-      {
-        width: 1136,
-        height: 640,
-        value: "1136x640",
-        label: "1136 x 640",
       },
       {
         width: 1280,
@@ -336,16 +360,40 @@ const aspectRatios: AspectRatio[] = [
     possibleResolutions: [
       defaultResolution,
       {
+        width: 256,
+        height: 160,
+        value: "256x160",
+        label: "256 x 160",
+      },
+      {
+        width: 320,
+        height: 200,
+        value: "320x200",
+        label: "320 x 200",
+      },
+      {
         width: 384,
         height: 240,
         value: "384x240",
-        label: "384 x 240 | WQVGA",
+        label: "384 x 240",
+      },
+      {
+        width: 640,
+        height: 400,
+        value: "640x400",
+        label: "640 x 400",
       },
       {
         width: 768,
         height: 480,
         value: "768x480",
         label: "768 x 480 | WVGA",
+      },
+      {
+        width: 960,
+        height: 600,
+        value: "960x600",
+        label: "960 x 600",
       },
       {
         width: 1024,
@@ -384,6 +432,12 @@ const aspectRatios: AspectRatio[] = [
         label: "1680 x 1050 | WSXGA+",
       },
       {
+        width: 1728,
+        height: 1080,
+        value: "1728x1080",
+        label: "1728 x 1080",
+      },
+      {
         width: 1920,
         height: 1200,
         value: "1920x1200",
@@ -420,6 +474,12 @@ const aspectRatios: AspectRatio[] = [
         label: "3072 x 1920",
       },
       {
+        width: 3456,
+        height: 2160,
+        value: "3456x2160",
+        label: "3456 x 2160 | 3.5K",
+      },
+      {
         width: 3840,
         height: 2400,
         value: "3840x2400",
@@ -431,6 +491,12 @@ const aspectRatios: AspectRatio[] = [
         value: "4096x2560",
         label: "4096 x 2560",
       },
+      {
+        width: 4608,
+        height: 2880,
+        value: "4608x2880",
+        label: "4608 x 2880",
+      },
     ],
   },
 
@@ -440,6 +506,12 @@ const aspectRatios: AspectRatio[] = [
     optGroup: "Ultra wide",
     possibleResolutions: [
       defaultResolution,
+      {
+        width: 1680,
+        height: 720,
+        value: "1680x720",
+        label: "1680 x 720",
+      },
       {
         width: 2560,
         height: 1080,
