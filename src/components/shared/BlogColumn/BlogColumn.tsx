@@ -1,5 +1,5 @@
 import { getAllPostsMetadata } from "@/app/blog/utils/postGetter";
-import BlogColumnPostPreview from "@/components/shared/BlogColumnPostPreview";
+import BlogColumnPostPreview from "@/components/shared/BlogColumn/BlogColumnPostPreview";
 
 interface BlogColumnProps {
   limit?: number;

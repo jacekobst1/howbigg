@@ -1,3 +1,4 @@
+/*TODO move all to tailwind*/
 .post-preview {
     overflow: hidden;
 }
@@ -12,6 +13,7 @@
 
 .post-preview:hover .post-preview__title {
     text-decoration-line: underline;
+    text-decoration-thickness: 2px;
 }
 
 @media only screen and (min-width: 768px) {
