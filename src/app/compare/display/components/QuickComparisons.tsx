@@ -36,6 +36,10 @@ export default function QuickComparisons() {
     display.isVertical = isVertical;
   };
 
+  const setName = (display: Display, name: string) => {
+    display.name = name;
+  };
+
   function generateHref(comparison: QuickComparison) {
     const displays = generateDisplays(2);
 
@@ -54,6 +58,13 @@ export default function QuickComparisons() {
     }
     if (comparison.display2.isVertical) {
       setIsVertical(displays[1], true);
+    }
+
+    if (comparison.display1.name) {
+      setName(displays[0], comparison.display1.name);
+    }
+    if (comparison.display2.name) {
+      setName(displays[1], comparison.display2.name);
     }
 
     return (

@@ -4,15 +4,16 @@ import Select from "@/components/form/selects/Select";
 import Input from "@/components/form/inputs/Input";
 import InputGroup from "@/components/form/inputs/InputGroup";
 import { aspectRatios } from "../../types/AspectRatio";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
 import Button from "@/components/buttons/Button";
-import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { debounce } from "lodash";
 import { defaultResolution } from "@/app/compare/display/types/Resolution";
 import Label from "@/components/form/labels/Label";
 import Switch from "@/components/form/checkboxes/Switch";
+import { MdEdit } from "@react-icons/all-files/md/MdEdit";
+import { FaCheck } from "@react-icons/all-files/fa/FaCheck";
 
 interface DisplayProps {
   display: Display;
@@ -26,6 +27,11 @@ export default function DisplayConf({
   deleteDisplay,
 }: DisplayProps) {
   const diagonalRef = useRef<HTMLInputElement>(null);
+  const [nameEditMode, setNameEditMode] = useState(false);
+
+  const toggleNameEditMode = () => {
+    setNameEditMode(!nameEditMode);
+  };
 
   const setAspectRatio = (value: string) => {
     const selectedAspectRatio = aspectRatios.find((ar) => ar.value === value);
@@ -35,6 +41,11 @@ export default function DisplayConf({
       display.resolution = defaultResolution;
       setDisplay(display);
     }
+  };
+
+  const setDisplayName = (value: string) => {
+    display.name = value;
+    setDisplay(display);
   };
 
   const setCustomAspectRatioWidth = (value: string) => {
@@ -95,27 +106,48 @@ export default function DisplayConf({
   return (
     <div className="flex">
       <div className="w-36">
-        <div className="flex">
-          <p
-            className="flex-1 rounded text-center font-semibold select-none px-2"
+        <div className="flex pt-2">
+          <div
+            className="flex justify-between items-stretch flex-1 rounded font-semibold select-none pl-2"
             style={{
               backgroundColor: display.color.background,
               color: display.color.text,
+              outline: nameEditMode
+                ? "2px solid var(--color-primary-500)"
+                : "none",
             }}
           >
-            {display.name}
-          </p>
-          {display.id > 2 && (
-            <div className="flex ml-2">
-              <Button
-                onClick={() => deleteDisplay(display.id)}
-                size="sm"
-                variant="light"
-              >
-                <AiOutlineClose />
-              </Button>
-            </div>
-          )}
+            {nameEditMode ? (
+              <Input
+                defaultValue={display.name}
+                mOnChange={setDisplayName}
+                mSize="sm"
+                className="rounded-none outline-none focus:outline-none p-0 h-[28px]"
+                style={{ backgroundColor: display.color.background }}
+              />
+            ) : (
+              <span className="flex items-center text-sm">{display.name}</span>
+            )}
+
+            <Button
+              variant="ghost"
+              className="text-base-100 hover:text-black rounded-none"
+              onClick={() => toggleNameEditMode()}
+            >
+              {nameEditMode ? <FaCheck /> : <MdEdit />}
+            </Button>
+          </div>
+          {/*{display.id > 2 && (*/}
+          {/*  <div className="flex ml-2">*/}
+          {/*    <Button*/}
+          {/*      onClick={() => deleteDisplay(display.id)}*/}
+          {/*      size="sm"*/}
+          {/*      variant="light"*/}
+          {/*    >*/}
+          {/*      <AiOutlineClose />*/}
+          {/*    </Button>*/}
+          {/*  </div>*/}
+          {/*)}*/}
         </div>
 
         <div className="form-control mt-3">

@@ -41,6 +41,7 @@ interface DisplayUrlState {
   diagonal: Diagonal;
   resolution: Resolution;
   isVertical: boolean;
+  name: string;
 }
 
 interface CustomAspectRatio {

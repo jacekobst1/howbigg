@@ -16,8 +16,7 @@ function encodeDisplays(displays: Display[]): string[] {
     const { length, unit } = diagonal;
     const { width: resWidth, height: resHeight } = resolution;
     const orientation = isVertical ? 1 : 0;
-
-    return `${aspectValue}_${width}_${height}_${length}_${unit}_${resWidth}x${resHeight}_${orientation}`;
+    return `${aspectValue}_${width}_${height}_${length}_${unit}_${resWidth}x${resHeight}_${orientation}_${display.name}`;
   });
 }
 
@@ -47,6 +46,7 @@ function decodeDisplays(encodedDisplays: string[]) {
       },
       resolution,
       isVertical: data[6] === "1",
+      name: data[7],
     };
   });
 
