@@ -594,7 +594,8 @@ const aspectRatios: AspectRatio[] = [
 ];
 
 const defaultAspectRatio: AspectRatio = aspectRatios[2];
+const customAspectRatio: AspectRatio = aspectRatios[aspectRatios.length - 1];
 
 export default AspectRatio;
 export type { Resolution };
-export { aspectRatios, defaultAspectRatio };
+export { aspectRatios, defaultAspectRatio, customAspectRatio };

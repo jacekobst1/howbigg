@@ -12,7 +12,7 @@ import { join } from "path";
 import { ImageSizes } from "@/app/blog/types/ImageSizes";
 import PostContent from "@/app/blog/[slug]/components/PostContent";
 import PostHeader from "@/app/blog/[slug]/components/PostHeader";
-import BlogColumn from "@/components/shared/BlogColumn";
+import BlogColumn from "@/components/shared/BlogColumn/BlogColumn";
 
 interface PostProps {
   params: {

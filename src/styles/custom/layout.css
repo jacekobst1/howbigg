@@ -47,6 +47,7 @@
         padding: 0 1rem;
         border-bottom: none;
         border-right: 2px solid var(--color-divider);
+        border-left: 2px solid var(--color-divider);
     }
 
     .layout__left-section {
