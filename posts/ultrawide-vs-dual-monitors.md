@@ -37,7 +37,7 @@ This extra space can improve work, gaming, and watching movies by giving you a b
 Taking it a step further, the **32:9** aspect ratio, also called "super ultrawide", is almost **twice as wide as a 16:9 screen**.
 This behemoth of a display offers an unrivaled field of view, making it the ultimate choice for multitaskers and gaming enthusiasts alike.
 
-**You can see and test the difference between various aspect ratios [here](https://howbigg.com?displays=%5B%2216x9_0_0_27_in_2560x1440_0%22%2C%2221x9_0_0_34_in_3440x1440_0%22%2C%2232x9_0_0_49_in_5120x1440_0%22%5D).**
+**You can see and test the difference between various aspect ratios [here](https://howbigg.com?displays=%5B"Wide_16x9_0_0_27_in_2560x1440_0"%2C"Ultrawide_21x9_0_0_34_in_3440x1440_0"%2C"Super+Ultrawide_32x9_0_0_49_in_5120x1440_0"%5D).**
 
 ## 2. Good and bad things about ultrawide monitors
 ![Clean desk setup with ultrawide monitor](/images/posts/ultrawide-vs-dual-monitors/pretty_desk_setup.jpg)
