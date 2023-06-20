@@ -7,12 +7,12 @@ import { aspectRatios } from "../../types/AspectRatio";
 import React, { useRef } from "react";
 import Display from "@/app/compare/display/types/Display";
 import { round } from "@/utils/math";
-import Button from "@/components/buttons/Button";
-import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { debounce } from "lodash";
 import { defaultResolution } from "@/app/compare/display/types/Resolution";
 import Label from "@/components/form/labels/Label";
 import Switch from "@/components/form/checkboxes/Switch";
+import Button from "@/components/buttons/Button";
+import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 
 interface DisplayProps {
   display: Display;
@@ -35,6 +35,11 @@ export default function DisplayConf({
       display.resolution = defaultResolution;
       setDisplay(display);
     }
+  };
+
+  const setDisplayName = (value: string) => {
+    display.name = value;
+    setDisplay(display);
   };
 
   const setCustomAspectRatioWidth = (value: string) => {
@@ -95,16 +100,22 @@ export default function DisplayConf({
   return (
     <div className="flex">
       <div className="w-36">
-        <div className="flex">
-          <p
-            className="flex-1 rounded text-center font-semibold select-none px-2"
+        <div className="flex pt-2">
+          <div
+            className="flex justify-between items-stretch flex-1 rounded font-semibold select-none px-2 focus:outline focus:outline-1 focus:outline-primary-400"
             style={{
               backgroundColor: display.color.background,
               color: display.color.text,
             }}
           >
-            {display.name}
-          </p>
+            <Input
+              defaultValue={display.name}
+              mOnChange={setDisplayName}
+              mSize="sm"
+              className="rounded-none outline-none focus:outline-none p-0 h-[28px]"
+              style={{ backgroundColor: display.color.background }}
+            />
+          </div>
           {display.id > 2 && (
             <div className="flex ml-2">
               <Button

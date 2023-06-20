@@ -16,8 +16,7 @@ function encodeDisplays(displays: Display[]): string[] {
     const { length, unit } = diagonal;
     const { width: resWidth, height: resHeight } = resolution;
     const orientation = isVertical ? 1 : 0;
-
-    return `${aspectValue}_${width}_${height}_${length}_${unit}_${resWidth}x${resHeight}_${orientation}`;
+    return `${display.name}_${aspectValue}_${width}_${height}_${length}_${unit}_${resWidth}x${resHeight}_${orientation}`;
   });
 }
 
@@ -28,7 +27,7 @@ function decodeDisplays(encodedDisplays: string[]) {
     const data = encodedDisplay.split("_");
 
     const aspectRatio =
-      aspectRatios.find((ar) => ar.value === data[0]) || defaultAspectRatio;
+      aspectRatios.find((ar) => ar.value === data[1]) || defaultAspectRatio;
 
     const resolution =
       aspectRatio.value !== "custom"
@@ -36,17 +35,18 @@ function decodeDisplays(encodedDisplays: string[]) {
         : getCustomResolution(data);
 
     decodedDisplays[index] = {
+      name: data[0],
       aspectRatio,
       customAspectRatio: {
-        width: parseFloat(data[1]),
-        height: parseFloat(data[2]),
+        width: parseFloat(data[2]),
+        height: parseFloat(data[3]),
       },
       diagonal: {
-        length: parseFloat(data[3]),
-        unit: data[4] as "cm" | "in",
+        length: parseFloat(data[4]),
+        unit: data[5] as "cm" | "in",
       },
       resolution,
-      isVertical: data[6] === "1",
+      isVertical: data[7] === "1",
     };
   });
 
@@ -56,13 +56,13 @@ function decodeDisplays(encodedDisplays: string[]) {
 function getResolution(data: string[], aspectRatio: AspectRatio): Resolution {
   return (
     aspectRatio.possibleResolutions.find(
-      (res: { value: string }) => res.value === data[5]
+      (res: { value: string }) => res.value === data[6]
     ) || defaultResolution
   );
 }
 
 function getCustomResolution(data: string[]): Resolution {
-  const [width, height] = data[5].split("x");
+  const [width, height] = data[6].split("x");
 
   return {
     ...defaultResolution,
