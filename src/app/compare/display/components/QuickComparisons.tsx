@@ -1,9 +1,5 @@
-"use client";
-
-import useQueryState from "@/hooks/useQueryState";
 import { encodeDisplays } from "@/app/compare/display/utils/urlEncoder";
 import { generateDisplays } from "@/app/compare/display/utils/displayGenerator";
-import Button from "@/components/buttons/Button";
 import {
   aspectRatios,
   customAspectRatio,
@@ -16,11 +12,9 @@ import {
   tvComparisons,
 } from "@/app/compare/display/types/QuickComparison";
 import Display from "@/app/compare/display/types/Display";
+import config from "@/config";
 
 export default function QuickComparisons() {
-  const [queryState, setQueryState, isQueryStateReady] =
-    useQueryState<string[]>("displays");
-
   const setDiagonalLength = (display: Display, diagonal: number) => {
     display.diagonal.length = diagonal;
   };
@@ -42,7 +36,7 @@ export default function QuickComparisons() {
     display.isVertical = isVertical;
   };
 
-  function clickBtn(comparison: QuickComparison) {
+  function generateHref(comparison: QuickComparison) {
     const displays = generateDisplays(2);
 
     setDiagonalLength(displays[0], comparison.display1.diagonal);
@@ -62,8 +56,25 @@ export default function QuickComparisons() {
       setIsVertical(displays[1], true);
     }
 
-    setQueryState(encodeDisplays(displays));
-    window.location.reload();
+    return (
+      config.fullUrl +
+      "?displays=" +
+      encodeURIComponent(JSON.stringify(encodeDisplays(displays)))
+    );
+  }
+
+  function boldFirstLetters(
+    text: string | number | undefined,
+    length: number = 1
+  ) {
+    return (
+      <>
+        <span className=" font-semibold">
+          {text && text.toString().slice(0, length)}
+        </span>
+        {text && text.toString().slice(length)}
+      </>
+    );
   }
 
   return (
@@ -71,17 +82,17 @@ export default function QuickComparisons() {
       <h2 className="text-2xl mb-4">Quick comparisons</h2>
 
       <h3 className="text-lg mb-1">TVs:</h3>
-      <ul>
+      <ul className="text-sm">
         {tvComparisons.map((comparison, key) => (
-          <li key={key}>
-            <Button
-              onClick={() => clickBtn(comparison)}
-              variant="simple-underline"
+          <li key={key} className="mb-2 2xl:mb-1">
+            <a
+              href={generateHref(comparison)}
+              className="hover:underline decoration-2"
             >
-              {comparison.display1.diagonal} inch vs{" "}
-              {comparison.display2.diagonal} inch{" "}
+              {boldFirstLetters(comparison.display1.diagonal, 2)} inch vs{" "}
+              {boldFirstLetters(comparison.display2.diagonal, 2)} inch{" "}
               <span className="invisible">TV</span>
-            </Button>
+            </a>
           </li>
         ))}
       </ul>
@@ -89,19 +100,18 @@ export default function QuickComparisons() {
       <div className="divider my-4" />
 
       <h3 className="text-lg mt-4 mb-1">Monitors:</h3>
-      <ul>
+      <ul className="text-sm">
         {monitorComparisons.map((comparison, key) => (
-          <li key={key}>
-            <Button
-              onClick={() => clickBtn(comparison)}
-              variant="simple-underline"
+          <li key={key} className="mb-2 2xl:mb-1">
+            <a
+              href={generateHref(comparison)}
+              className="hover:underline decoration-2"
             >
-              {comparison.display1.diagonal} inch{" "}
+              {boldFirstLetters(comparison.display1.diagonal, 2)} inch{" "}
               {comparison.display1.aspectRatio} vs{" "}
-              {comparison.display2.diagonal} inch{" "}
+              {boldFirstLetters(comparison.display2.diagonal, 2)} inch{" "}
               {comparison.display2.aspectRatio}{" "}
-              <span className="invisible">monitor</span>
-            </Button>
+            </a>
           </li>
         ))}
       </ul>
@@ -109,15 +119,15 @@ export default function QuickComparisons() {
       <div className="divider my-4" />
 
       <h3 className="text-lg mt-4 mb-1">Smartphones:</h3>
-      <ul>
+      <ul className="text-sm">
         {smartphonesComparisons.map((comparison, key) => (
-          <li key={key}>
-            <Button
-              onClick={() => clickBtn(comparison)}
-              variant="simple-underline"
+          <li key={key} className="mb-2 2xl:mb-1">
+            <a
+              href={generateHref(comparison)}
+              className="hover:underline decoration-2"
             >
-              {comparison.display1.name} vs {comparison.display2.name}
-            </Button>
+              {comparison.display1.name} <b>vs</b> {comparison.display2.name}
+            </a>
           </li>
         ))}
       </ul>
