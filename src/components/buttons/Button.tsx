@@ -4,7 +4,15 @@ import { ImSpinner2 } from "@react-icons/all-files/im/ImSpinner2";
 
 import clsxm from "@/lib/clsxm";
 
-const ButtonVariant = ["primary", "outline", "ghost", "light", "dark"] as const;
+const ButtonVariant = [
+  "primary",
+  "outline",
+  "ghost",
+  "light",
+  "dark",
+  "simple-underline",
+  "underline",
+] as const;
 const ButtonSize = ["sm", "base"] as const;
 
 type ButtonProps = {
@@ -88,6 +96,15 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               "border border-gray-600",
               "hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700",
             ],
+            variant === "simple-underline" && [
+              "shadow-none rounded-none p-0",
+              "hover:underline decoration-2",
+            ],
+            variant === "underline" && [
+              "shadow-none rounded-none p-0",
+              "animated-underline",
+              "border-b border-dotted border-dark hover:border-black/0",
+            ],
           ],
           //#endregion  //*======== Variants ===========
           "disabled:cursor-not-allowed",
@@ -103,7 +120,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
               {
                 "text-white": ["primary", "dark"].includes(variant),
-                "text-black": ["light"].includes(variant),
+                "text-black": ["light", "underline"].includes(variant),
                 "text-primary-500": ["outline", "ghost"].includes(variant),
               }
             )}
