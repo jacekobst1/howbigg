@@ -9,9 +9,11 @@ function setDisplaysDimensions(displays: Display[]) {
 
 function setWidthAndHeightStandard(displays: Display[]) {
   displays.forEach((display) => {
-    const aspectRatioDecimalValue = display.isVertical
-      ? 1 / display.getAspectRatioDecimalValue()
-      : display.getAspectRatioDecimalValue();
+    let aspectRatioDecimalValue = display.getAspectRatioDecimalValue();
+
+    if (display.isVertical && aspectRatioDecimalValue !== 0) {
+      aspectRatioDecimalValue = 1 / aspectRatioDecimalValue;
+    }
 
     const { widthCm, heightCm, widthIn, heightIn } = calculateSize(
       aspectRatioDecimalValue,
@@ -32,6 +34,7 @@ function calculateSize(
   isInches: boolean = true
 ) {
   const diagonalSizeCm = isInches ? inToCm(diagonalSize) : diagonalSize;
+
   const heightCm = Math.sqrt(
     (diagonalSizeCm * diagonalSizeCm) / (1 + aspectRatio * aspectRatio)
   );

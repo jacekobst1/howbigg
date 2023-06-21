@@ -22,6 +22,9 @@ class Display {
 
   public getAspectRatioDecimalValue(): number {
     if (this.aspectRatio.value === "custom") {
+      if (!this.customAspectRatio.width || !this.customAspectRatio.height) {
+        return 0;
+      }
       return this.customAspectRatio.width / this.customAspectRatio.height;
     }
 
