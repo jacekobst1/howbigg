@@ -13,6 +13,7 @@ import Label from "@/components/form/labels/Label";
 import Switch from "@/components/form/checkboxes/Switch";
 import Button from "@/components/buttons/Button";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
+import clsxm from "@/lib/clsxm";
 
 interface DisplayProps {
   display: Display;
@@ -102,7 +103,11 @@ export default function DisplayConf({
       <div className="w-36">
         <div className="flex pt-2">
           <div
-            className="flex justify-between items-stretch flex-1 rounded font-semibold select-none px-2 focus:outline focus:outline-1 focus:outline-primary-400"
+            className={clsxm(
+              "flex justify-between items-stretch",
+              "flex-1 rounded font-semibold select-none px-2",
+              "focus-within:outline focus-within:outline-2 focus-within:outline-primary-400"
+            )}
             style={{
               backgroundColor: display.color.background,
               color: display.color.text,
@@ -112,7 +117,7 @@ export default function DisplayConf({
               defaultValue={display.name}
               mOnChange={setDisplayName}
               mSize="sm"
-              className="rounded-none outline-none focus:outline-none p-0 h-[28px]"
+              className="rounded-none outline-none focus:outline-none p-0"
               style={{ backgroundColor: display.color.background }}
             />
           </div>
