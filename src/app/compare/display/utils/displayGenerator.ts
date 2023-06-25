@@ -1,6 +1,7 @@
 import { defaultAspectRatio } from "@/app/compare/display/types/AspectRatio";
 import Display from "@/app/compare/display/types/Display";
 import { defaultResolution } from "@/app/compare/display/types/Resolution";
+import { clone } from "lodash";
 
 function generateDisplays(numberOfDisplays: number) {
   const displays: Display[] = [];
@@ -46,10 +47,10 @@ function initDisplay(id: number) {
   return new Display(
     id,
     `Display ${id}`,
-    defaultAspectRatio,
+    clone(defaultAspectRatio),
     { width: 0, height: 0 },
     { length: 0, unit: "in" },
-    defaultResolution,
+    clone(defaultResolution),
     false,
     { in: 0, cm: 0, percentage: 0 },
     { in: 0, cm: 0, percentage: 0 },

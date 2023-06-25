@@ -1,9 +1,6 @@
 import { encodeDisplays } from "@/app/compare/display/utils/urlEncoder";
 import { generateDisplays } from "@/app/compare/display/utils/displayGenerator";
-import {
-  aspectRatios,
-  customAspectRatio,
-} from "@/app/compare/display/types/AspectRatio";
+import { customAspectRatio } from "@/app/compare/display/types/AspectRatio";
 import { toNumber } from "lodash";
 import {
   monitorComparisons,
@@ -20,16 +17,9 @@ export default function QuickComparisons() {
   };
 
   const setAspectRatio = (display: Display, aspectRatio: string) => {
-    const foundAspectRatio = aspectRatios.find(
-      (ratio) => ratio.value === aspectRatio
-    );
-    if (foundAspectRatio) {
-      display.aspectRatio = foundAspectRatio;
-    } else {
-      display.aspectRatio = customAspectRatio;
-      display.customAspectRatio.width = toNumber(aspectRatio.split("x")[0]);
-      display.customAspectRatio.height = toNumber(aspectRatio.split("x")[1]);
-    }
+    display.aspectRatio = customAspectRatio;
+    display.customAspectRatio.width = toNumber(aspectRatio.split("x")[0]);
+    display.customAspectRatio.height = toNumber(aspectRatio.split("x")[1]);
   };
 
   const setIsVertical = (display: Display, isVertical: boolean) => {
@@ -38,6 +28,11 @@ export default function QuickComparisons() {
 
   const setName = (display: Display, name: string) => {
     display.name = name;
+  };
+
+  const setResolution = (display: Display, resolution: string) => {
+    display.resolution.width = toNumber(resolution.split("x")[0]);
+    display.resolution.height = toNumber(resolution.split("x")[1]);
   };
 
   function generateHref(comparison: QuickComparison) {
@@ -65,6 +60,13 @@ export default function QuickComparisons() {
     }
     if (comparison.display2.name) {
       setName(displays[1], comparison.display2.name);
+    }
+
+    if (comparison.display1.resolution) {
+      setResolution(displays[0], comparison.display1.resolution);
+    }
+    if (comparison.display2.resolution) {
+      setResolution(displays[1], comparison.display2.resolution);
     }
 
     return (
