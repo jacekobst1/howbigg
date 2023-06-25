@@ -144,7 +144,7 @@ export default function DisplayConf({
           />
         </div>
         {display.aspectRatio.value === "custom" && (
-          <div className="form-control mt-2 flex flex-row">
+          <div className="form-control flex flex-row items-center mt-2">
             <Input
               value={round(display.customAspectRatio.width) || ""}
               mOnChange={setCustomAspectRatioWidth}
@@ -152,7 +152,7 @@ export default function DisplayConf({
               mSize="sm"
               noSpin
             />
-            <span className="mx-2">x</span>
+            <span className="mx-1.5">x</span>
             <Input
               value={round(display.customAspectRatio.height) || ""}
               mOnChange={setCustomAspectRatioHeight}
@@ -187,7 +187,7 @@ export default function DisplayConf({
                 mSize="sm"
               />
             ) : (
-              <div className="flex flex-row mt-1">
+              <div className="flex flex-row items-center mt-1">
                 <Input
                   value={round(display.resolution.width) || ""}
                   mOnChange={setCustomResolutionWidth}
@@ -195,7 +195,7 @@ export default function DisplayConf({
                   mSize="sm"
                   noSpin
                 />
-                <span className="mx-2">x</span>
+                <span className="mx-1.5">x</span>
                 <Input
                   value={round(display.resolution.height) || ""}
                   mOnChange={setCustomResolutionHeight}
