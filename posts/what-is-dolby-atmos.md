@@ -1,5 +1,6 @@
 ---
 createdAt: "2023-06-09"
+updatedAt: "2023-06-27"
 title: "What is Dolby Atmos? How it will change your TV experience?"
 subtitle: "Discover what Dolby Atmos is and how to get it with our expert guide. Learn about immersive audio technology and the right speakers needed."
 readingTime: 8
@@ -31,7 +32,7 @@ Dolby Atmos works by assigning audio elements to specific speakers in real time,
 
 For example, if you're watching an action movie with explosions happening on-screen, the Dolby Atmos system will assign those explosive sounds to specific speakers around you, creating a realistic and immersive experience.
 
-### Do I need it?
+### Is Dolby Atmos worth it?
 If you are an audiophile or someone who enjoys high-quality entertainment, Dolby Atmos is definitely worth considering. However, keep in mind that this system was created mainly for movies. If you only want to listen to high-quality music, you can do without it, as most likely **99% of the songs** you will listen to are not recorded with Dolby Atmos.
 
 ### How can I get Dolby Atmos?
