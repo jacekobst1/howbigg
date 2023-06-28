@@ -12,7 +12,7 @@ const title = {
   template: "%s | Howbigg",
 };
 const description =
-  "Are you looking for a new monitor? Or perhaps a television set? Compare their sizes first to see which one will suit you better!";
+  "A tool to compare TVs and monitors of different sizes and aspect ratios! Calculate dimensions, PPI, optimal distance and see the differences live.";
 
 export const metadata: Metadata = {
   title: title,
