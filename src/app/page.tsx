@@ -1,6 +1,7 @@
 import CompareDisplayPage from "@/app/compare/display/page";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Display size comparison | Howbigg",
 };
 
