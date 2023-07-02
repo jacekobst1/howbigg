@@ -201,26 +201,20 @@ Sony's OLED TVs are often considered some of the **best on the market**. Their m
 However, these sets can be **more expensive than comparable QLED** models from Samsung or LG. If you're looking for a top-of-the-line TV and don't mind paying a premium price, Sony's OLEDs are definitely worth considering.
 
 ## FAQ
-#### Is OLED better than QLED?
-
+### Is OLED better than QLED?
 It depends on your needs. If you prioritize deep blacks and high contrast ratios for movie-watching or gaming, then OLED is likely the better choice for you. However, if you want brighter images with more accurate colors for sports or other vibrant content, then QLED might be a better fit.
 
-#### Are there any alternatives to consider besides OLED and QLED?
-
+### Are there any alternatives to consider besides OLED and QLED?
 Yes! There are several other display technologies available on the market today. These include LCD (liquid crystal display), LED (light-emitting diode), and micro-LEDs.
 
-#### Which is better for gaming - OLED or QLED?
-
+### Which is better for gaming - OLED or QLED?
 OLED displays generally offer faster pixel response times, which can be beneficial for gaming. However, QLEDs typically have lower input lag and higher refresh rates, which are also important factors to consider when choosing a TV for gaming.
 
-#### Can OLED or QLED TVs cause eye strain?
-
+### Can OLED or QLED TVs cause eye strain?
 All types of displays emit blue light, which can contribute to eye strain over time. However, many newer models of both OLED and QLED TVs include features like blue light filters or automatic brightness adjustments that can help reduce eye strain.
 
-#### Are OLED or QLED TVs more expensive?
-
+### Are OLED or QLED TVs more expensive?
 Generally speaking, OLEDs tend to be more expensive than QLEDs due to the manufacturing process involved in creating organic LEDs. However, prices vary depending on the specific model and manufacturer.
 
-#### How long do OLED and QLED TVs typically last?
-
+### How long do OLED and QLED TVs typically last?
 Both technologies are designed to last several years with normal use. However, as with any electronic device, there is always a chance of malfunction or failure over time. It's important to choose a reputable brand and model with good reviews from other users to maximize your TV's lifespan.
