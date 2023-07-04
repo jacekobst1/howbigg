@@ -64,16 +64,17 @@ that the TV should occupy **28-40** of your field of view.
 that the TV should occupy **30** degrees of your field of view.
 </div>
 
+![TODO](/images/posts/tv-size-guide/THX_SMPTE_40_30_degrees_example.jpg)
+_Howbigg_
 
-\[GRAFIKI\]
-
-In addition to this, [THX also has recommendations](https://www.thx.com/questions/where-and-how-should-i-position-my-tv-in-my-living-room/) for the height at
-which the TV should be placed. Ideally, the center of the screen should
+In addition to this, THX also has [recommendations for the height](https://www.thx.com/questions/where-and-how-should-i-position-my-tv-in-my-living-room/)
+at which the TV should be placed. Ideally, the center of the screen should
 be **exactly at our eye level**. But if it already has to be higher or
 lower, it should be no more than 15 degrees from the horizontal sight
 line.
 
-\[GRAGIKA\]
+![TODO](/images/posts/tv-size-guide/THX_15_degrees_example.jpg)
+_Howbigg_
 
 ## 2. TV Size Calculator: Finding the Perfect Fit
 Don't rely solely on personal judgment and theoretical calculations -
