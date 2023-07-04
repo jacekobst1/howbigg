@@ -1,5 +1,5 @@
 ---
-createdAt: "2023-07-03"
+createdAt: "2023-07-04"
 title: "TV Size Guide: How to Choose the Perfect Screen Size"
 subtitle: "Find the perfect TV screen size for your needs with our TV Size Guide. Get expert advice and use our TV Size to Distance Calculator today! #what size tv"
 readingTime: 8
