@@ -114,7 +114,7 @@ Additional information includes:
 ![Details of compared displays](/images/posts/tv-size-guide/display_comparator_details_table.png)
 _Howbigg_
 
-## 3. Optimal Display Size for Different Room Sizes
+## 3. Optimal Display Size for Different Rooms
 Choosing the ideal screen size for your TV depends on various factors,
 including the size of the room and its intended usage. Here are some key
 considerations to help you determine the perfect fit:
@@ -179,7 +179,7 @@ Below is a table with the minimum distances from the TV, for Full HD
 | 85      | 10.76' (3.28m)           | 4.94' (1.51m)           |
 | 90      | 11.4' (3.47m)            | 5.23' (1.59m)           |
 
-## 5. Common Mistakes to Avoid When Selecting a TV Size
+## 5. Common Mistakes to Avoid When Selecting new TV
 ### Overlooking the importance of viewing distance in relation to screen size
 When choosing the perfect TV size, many people make the mistake of
 overlooking the importance of viewing distance. It's crucial to
