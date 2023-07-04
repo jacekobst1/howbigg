@@ -142,6 +142,9 @@ space-saving purposes or improved viewing angles, consider factors like
 height and distance from seating areas when selecting an appropriate
 screen size.
 
+![TODO](/images/posts/tv-size-guide/room_size.jpg)
+_Dan Gold | Unsplash_
+
 ## 4. The Relationship between Screen Resolution and Size:
 Image resolution **plays a key role** in how close you can sit to the
 screen.
@@ -201,6 +204,9 @@ ahead ensures that you won't find yourself wanting an upgrade sooner
 than anticipated.
 
 ## 6. Conclusion: No One Ever Cries With the Right Size
+![TODO](/images/posts/tv-size-guide/no_one_crie.jpg)
+_Mollie Sivaram | Unsplash_
+
 In conclusion, choosing the right size TV is **crucial for an optimal
 viewing experience**. Understanding the science behind TV size and viewing
 distance is essential to avoid eye strain and discomfort. By considering
