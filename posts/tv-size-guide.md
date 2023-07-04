@@ -165,10 +165,19 @@ picture.
 Below is a table with the minimum distances from the TV, for Full HD
 (1920x1080) and 4K UHD (3840x2160) resolutions:
 
-\[TABLE\].
-
-\[ŹRÓDŁO:
-https://www.inchcalculator.com/tv-size-viewing-distance-calculator/\]
+| TV Size | Full HD Minimum Distance | 4K UHD Minimum Distance |
+|---------|--------------------------|-------------------------|
+| 40      | 5.07' (1.54m)            | 2.32' (0.71m)           |
+| 43      | 5.45' (1.66m)            | 2.5' (0.76m)            |
+| 50      | 6.33' (1.93m)            | 2.91' (0.89m)           |
+| 55      | 6.97' (2.12m)            | 3.2' (0.97m)            |
+| 60      | 7.6' (2.32m)             | 3.49' (1.06m)           |
+| 65      | 8.23' (2.51m)            | 3.78' (1.15m)           |
+| 70      | 8.87' (2.7m)             | 4.07' (1.24m)           |
+| 75      | 9.5' (2.9m)              | 4.36' (1.33m)           |
+| 80      | 10.13' (3.09m)           | 4.65' (1.42m)           |
+| 85      | 10.76' (3.28m)           | 4.94' (1.51m)           |
+| 90      | 11.4' (3.47m)            | 5.23' (1.59m)           |
 
 ## 5. Common Mistakes to Avoid When Selecting a TV Size:
 ### Overlooking the importance of viewing distance in relation to screen size
