@@ -64,7 +64,7 @@ that the TV should occupy **28-40** of your field of view.
 that the TV should occupy **30** degrees of your field of view.
 </div>
 
-![TODO](/images/posts/tv-size-guide/THX_SMPTE_40_30_degrees_example.jpg)
+![Difference between TVs occupying 30 and 40 degrees of field view](/images/posts/tv-size-guide/THX_SMPTE_40_30_degrees_example.jpg)
 _Howbigg_
 
 In addition to this, THX also has [recommendations for the height](https://www.thx.com/questions/where-and-how-should-i-position-my-tv-in-my-living-room/)
@@ -73,7 +73,7 @@ be **exactly at our eye level**. But if it already has to be higher or
 lower, it should be no more than 15 degrees from the horizontal sight
 line.
 
-![TODO](/images/posts/tv-size-guide/THX_15_degrees_example.jpg)
+![Correct vertical viewing angles, for the TV, according to THX recommendations](/images/posts/tv-size-guide/THX_15_degrees_example.jpg)
 _Howbigg_
 
 ## 2. TV Size Calculator: Finding the Perfect Fit
@@ -96,7 +96,7 @@ Once you've entered all the information you need, take a look at the
 bottom - there you'll find a visualization of the compared screens and
 a table with additional information.
 
-![TODO](/images/posts/tv-size-guide/howbigg_displayconf_ss.png)
+![Configuration of compared displays](/images/posts/tv-size-guide/display_comparator_configuration.png)
 _Howbigg_
 
 Additional information includes:
@@ -111,7 +111,7 @@ Additional information includes:
 - **Minimal Distance** - The distance below which image quality decreases,
     as your eyes begin to see individual pixels.
 
-![TODO](/images/posts/tv-size-guide/howbigg_details_ss.png)
+![Details of compared displays](/images/posts/tv-size-guide/display_comparator_details_table.png)
 _Howbigg_
 
 ## 3. Optimal Display Size for Different Room Sizes:
@@ -142,7 +142,7 @@ space-saving purposes or improved viewing angles, consider factors like
 height and distance from seating areas when selecting an appropriate
 screen size.
 
-![TODO](/images/posts/tv-size-guide/room_size.jpg)
+![TV hanging on the wall of a spacious room](/images/posts/tv-size-guide/tv_in_spacious_room.jpg)
 _Dan Gold | Unsplash_
 
 ## 4. The Relationship between Screen Resolution and Size:
@@ -204,7 +204,7 @@ ahead ensures that you won't find yourself wanting an upgrade sooner
 than anticipated.
 
 ## 6. Conclusion: No One Ever Cries With the Right Size
-![TODO](/images/posts/tv-size-guide/no_one_crie.jpg)
+![TV with Netflix logo](/images/posts/tv-size-guide/tv_with_netflix_logo.jpg)
 _Mollie Sivaram | Unsplash_
 
 In conclusion, choosing the right size TV is **crucial for an optimal
