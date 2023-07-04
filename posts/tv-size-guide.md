@@ -96,6 +96,9 @@ Once you've entered all the information you need, take a look at the
 bottom - there you'll find a visualization of the compared screens and
 a table with additional information.
 
+![TODO](/images/posts/tv-size-guide/howbigg_displayconf_ss.png)
+_Howbigg_
+
 Additional information includes:
 
 - **PPI (Pixels Per Inch)** - an indicator telling us about the density of
@@ -108,7 +111,8 @@ Additional information includes:
 - **Minimal Distance** - The distance below which image quality decreases,
     as your eyes begin to see individual pixels.
 
-\[SCREENY EKRANU\]
+![TODO](/images/posts/tv-size-guide/howbigg_details_ss.png)
+_Howbigg_
 
 ## 3. Optimal Display Size for Different Room Sizes:
 Choosing the ideal screen size for your TV depends on various factors,
