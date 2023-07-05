@@ -59,7 +59,6 @@ async function getImageSizes(post: Post) {
     const [, src] = match.value;
 
     try {
-      // Images are stored in `public`
       const { width, height } = sizeOf(join("public", src));
       imageSizes[src] = {
         width: width as number,
@@ -79,14 +78,16 @@ export default async function PostPage({ params: { slug } }: PostProps) {
 
   return (
     <>
-      <ArrowLink href="/blog" direction="left">
-        Back to blog
-      </ArrowLink>
-
       <div className="layout__container layout-xl">
         <section className="layout__left-section" />
 
-        <section className="layout__center-section">
+        <section
+          className="layout__center-section"
+          style={{ borderLeft: "none" }}
+        >
+          <ArrowLink href="/blog" direction="left">
+            Back to blog
+          </ArrowLink>
           <div className="mx-auto md:w-3/4 mt-5 md:mt-0">
             <PostHeader post={post} />
             <div className="lg:px-10">
