@@ -1,5 +1,6 @@
 ---
 createdAt: "2023-07-04"
+updatedAt: "2023-07-05"
 title: "TV Size Guide: How to Choose the Perfect Screen Size"
 subtitle: "Find the perfect TV screen size for your needs with our TV Size Guide. Get expert advice and use our TV Size to Distance Calculator today! #what size tv"
 readingTime: 8
@@ -66,6 +67,22 @@ that the TV should occupy **30** degrees of your field of view.
 
 ![Difference between TVs occupying 30 and 40 degrees of field view](/images/posts/tv-size-guide/THX_SMPTE_40_30_degrees_example.jpg)
 _Howbigg_
+
+Here's a table with optimal distances from a 4K UHD TV:
+
+| 4K TV Size | Optimal distance by SMPTE (30°) | Optimal Distance by THX (40°) |
+|------------|---------------------------------|-------------------------------|
+| **40**         | 5.42' (1.65m)                   | 3.99' (1.22m)                 |
+| **43**         | 5.83' (1.78m)                   | 4.29' (1.31m)                 |
+| **50**         | 6.78' (2.07m)                   | 4.99' (1.52m)                 |
+| **55**         | 7.45' (2.27m)                   | 5.49' (1.67m)                 |
+| **60**         | 8.13' (2.48m)                   | 5.99' (1.82m)                 |
+| **65**         | 8.81' (2.69m)                   | 6.49' (1.98m)                 |
+| **70**         | 9.49' (2.89m)                   | 6.98' (2.13m)                 |
+| **75**         | 10.17' (3.1m)                   | 7.48' (2.28m)                 |
+| **80**         | 10.84' (3.31m)                  | 7.98' (2.43m)                 |
+| **85**         | 11.52' (3.51m)                  | 8.48' (2.58m)                 |
+| **90**         | 12.2' (3.72m)                   | 8.98' (2.74m)                 |
 
 In addition to this, THX also has [recommendations for the height](https://www.thx.com/questions/where-and-how-should-i-position-my-tv-in-my-living-room/)
 at which the TV should be placed. Ideally, the center of the screen should
@@ -170,22 +187,22 @@ It is this feature that makes it possible for you to sit much closer in
 front of a 4K TV than in front of a Full HD one and still enjoy a great
 picture.
 
-Below is a table with the minimum distances from the TV, for Full HD
-(1920x1080) and 4K UHD (3840x2160) resolutions:
+Below is a table with the minimum distances from the TV
+for Full HD (1920x1080) and 4K UHD (3840x2160) resolutions:
 
 | TV Size | Full HD Minimum Distance | 4K UHD Minimum Distance |
 |---------|--------------------------|-------------------------|
-| 40      | 5.07' (1.54m)            | 2.32' (0.71m)           |
-| 43      | 5.45' (1.66m)            | 2.5' (0.76m)            |
-| 50      | 6.33' (1.93m)            | 2.91' (0.89m)           |
-| 55      | 6.97' (2.12m)            | 3.2' (0.97m)            |
-| 60      | 7.6' (2.32m)             | 3.49' (1.06m)           |
-| 65      | 8.23' (2.51m)            | 3.78' (1.15m)           |
-| 70      | 8.87' (2.7m)             | 4.07' (1.24m)           |
-| 75      | 9.5' (2.9m)              | 4.36' (1.33m)           |
-| 80      | 10.13' (3.09m)           | 4.65' (1.42m)           |
-| 85      | 10.76' (3.28m)           | 4.94' (1.51m)           |
-| 90      | 11.4' (3.47m)            | 5.23' (1.59m)           |
+| **40**      | 5.07' (1.54m)            | 2.32' (0.71m)           |
+| **43**      | 5.45' (1.66m)            | 2.5' (0.76m)            |
+| **50**      | 6.33' (1.93m)            | 2.91' (0.89m)           |
+| **55**      | 6.97' (2.12m)            | 3.2' (0.97m)            |
+| **60**      | 7.6' (2.32m)             | 3.49' (1.06m)           |
+| **65**      | 8.23' (2.51m)            | 3.78' (1.15m)           |
+| **70**      | 8.87' (2.7m)             | 4.07' (1.24m)           |
+| **75**      | 9.5' (2.9m)              | 4.36' (1.33m)           |
+| **80**      | 10.13' (3.09m)           | 4.65' (1.42m)           |
+| **85**      | 10.76' (3.28m)           | 4.94' (1.51m)           |
+| **90**      | 11.4' (3.47m)            | 5.23' (1.59m)           |
 
 ## 5. Common Mistakes to Avoid When Selecting new TV
 ### Overlooking the importance of viewing distance in relation to screen size
