@@ -83,6 +83,14 @@ finding the ideal screen size **has never been easier**. By comparing
 different TVs, you can ensure an optimal viewing experience without any
 guesswork.
 
+<div style="text-align: center; font-weight: bold">
+
+Try it yourself:
+<br/>
+[TV Size Calculator](https://howbigg.com)
+
+</div>
+
 Let's start by entering all the necessary information - **diagonal length
 and resolution**. Initially, you have the option to complete the data for
 only two TVs, but pay attention to the "**Add**" button - by clicking it,
