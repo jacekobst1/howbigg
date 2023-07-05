@@ -70,7 +70,7 @@ There are already **hundreds of 4K series and movies** on streaming services lik
 <div class="md-border-title">Important</div>
 However, it's worth noting that not all content is available in 4K. Even when it is, you may need a higher-end subscription to access it.
 
-To watch **Netflix in 4K**, you must get <b>the most pricey</b> subscription plan!
+To watch **Netflix in 4K**, you must get **the most pricey** subscription plan!
 </div>
 
 It's worth mentioning that YouTube is increasingly becoming a source for high-quality 4K videos from independent creators.
