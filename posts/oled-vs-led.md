@@ -13,16 +13,14 @@ image: {
     ]
 }
 ---
-TODO dodaj pogrubienia i obrazki
-
 Are you ready to upgrade your TV but confused by the options? OLED and
 LED are two display technologies that you'll encounter in your search
 for a new TV. OLED (Organic Light Emitting Diode), and LED (Light
 Emitting Diode), offers different features and benefits. Understanding
 these differences is crucial when making a decision.
 
-Traditional LED TVs use LEDs as backlighting for LCD panels, while OLEDs
-emit light directly from each pixel. This fundamental distinction leads
+Traditional LED TVs use **LEDs as backlighting** for LCD panels, while OLEDs
+emit light **directly from each pixel**. This fundamental distinction leads
 to variations in picture quality, contrast ratio, and color accuracy.
 Advancements like mini-LED and HDR content have further expanded the
 capabilities of LED sets.
@@ -31,8 +29,7 @@ LG has been at the forefront of OLED technology with its range of OLED
 TVs. These cutting-edge displays deliver stunning visuals with deep
 blacks and vibrant colors. So whether you're looking for a 55-inch LED
 TV for your living room or 85-inch OLED TV for an immersive cinematic
-experience, weighing the pros and cons will help you make an informed
-choice.
+experience, weighing the pros and cons will help you decide.
 
 Let's dive in!
 
@@ -76,16 +73,16 @@ the key benefits of each technology:
     contrast as OLEDs, they still deliver impressive picture quality at
     a lower price point.
 
--   It's important to note that the **lifespan of an OLED display is
-    typically shorter than that of an LED display**. Over time, organic
-    materials used in OLED screens can degrade, leading to potential
-    issues like image retention or burn-in. In comparison, LED displays
-    have longer lifespans and are less prone to such problems.
+It's important to note that the **lifespan of an OLED display is
+typically shorter than that of an LED display**. Over time, organic
+materials used in OLED screens can degrade, leading to potential
+issues like image retention or burn-in. In comparison, LED displays
+have longer lifespans and are less prone to such problems.
 
 ## 3. Exploring Fast Refresh Rates and Response Times in OLED vs LED for Gaming
 Refresh rate and response time are two very important criteria for
 gamers, looking for the smoothest possible screen experience. It’s not
-only a matter of aesthetics, but it can be a win-or-lose factor in many
+only a matter of aesthetics, but it can be a **win-or-lose factor** in many
 games.
 
 Fortunately, you don’t have to worry about what display technology to
@@ -95,7 +92,7 @@ low response times.
 Both can offer very good performance - it all comes down to which
 the specific model you choose.
 
-But keep in mind that OLED TVs can suffer from burn-in issues if static
+But keep in mind that **OLED TVs can suffer from burn-in issues** if static
 images (like game HUDs) are displayed for extended periods of time.
 
 ## 4. Comparing LED Backlight Types and Monitor Panel Types
@@ -104,29 +101,27 @@ Understanding the different types of LED backlighting and monitor panel
 options is essential. Let's dive into the details.
 
 ### Two Main Types of LED Backlighting
-1.  Edge-lit: This type of LED backlighting involves placing LEDs along
+1.  **Edge-lit**: This type of LED backlighting involves placing LEDs along
     the edges of the display panel. It provides uniform lighting across
     the screen but may result in less accurate color reproduction and
     contrast compared to direct-lit backlights.
 
-2.  Direct-lit: In direct-lit LED backlights, an array of LEDs is
+2.  **Direct-lit**: In direct-lit LED backlights, an array of LEDs is
     positioned behind the LCD panel, offering more precise control over
     brightness levels and lighting zones. This technology allows for
     better contrast ratios and deeper blacks, enhancing the overall image
     quality.
 
 ### Different Monitor Panel Types
-1.  IPS (In-Plane Switching): IPS panels offer excellent color accuracy,
+1.  **IPS (In-Plane Switching)**: IPS panels offer excellent color accuracy,
     wide viewing angles, and good response times. They are ideal for
     tasks that require accurate color representation such as graphic
     design or photo editing.
 
-2.  TN (Twisted Nematic): TN panels are known for their fast response
+2.  **TN (Twisted Nematic)**: TN panels are known for their fast response
     times, making them suitable for gaming or fast-paced action videos.
     However, they typically have narrower viewing angles and less
     accurate color reproduction compared to IPS panels.
-
-The Choice Depends on Specific Needs
 
 Selecting between LED backlight types and monitor panel types depends on
 your specific needs and preferences:
@@ -140,8 +135,8 @@ your specific needs and preferences:
     panel with either type of LED backlight can be a suitable choice.
 
 ## 5. The Significance of Reduced Power Consumption in OLED vs LED
-Compared to LEDs, individual pixels on an OLED display consume less
-power when displaying black content. This light control capability
+Compared to LEDs, individual pixels on an **OLED display consume less
+power** when displaying black content. This light control capability
 allows OLEDs to achieve deeper blacks and more vibrant colors while
 using less energy.
 
@@ -154,7 +149,7 @@ ability to turn off individual pixels can be significant.
 With increasing awareness about environmental impact and the need for
 sustainable technology, power consumption has become a crucial factor
 for many consumers. By opting for OLED displays, you can contribute to
-reducing your carbon footprint by utilizing a display technology that
+**reducing your carbon footprint** by utilizing a display technology that
 consumes less power overall.
 
 ## 6. Analyzing Picture Quality: OLED vs LED
@@ -180,11 +175,11 @@ displays offer a wider range of sizes, providing more options for users
 depending on their specific needs.
 
 The slim design of OLED displays makes them ideal for applications where
-weight and thickness matter. Whether it's a sleek smartphone or a
+**weight and thickness matter**. Whether it's a sleek smartphone or a
 lightweight laptop, OLED technology allows manufacturers to create
 devices that are both aesthetically pleasing and easy to carry around.
 
-LED displays, however, come in various sizes, catering to different
+LED displays, however, come in **various sizes**, catering to different
 requirements. From compact monitors to large-scale commercial screens,
 LED technology offers an extensive amount of choices for consumers. This
 flexibility is especially beneficial.
@@ -235,7 +230,7 @@ alongside technical specifications when choosing between OLED and LED
 displays. Whether you prioritize stunning visuals or practicality,
 decide based on what matters most to you.
 
-## FAQs
+## FAQ
 ### Are OLED displays more expensive than LED displays?
 Yes, OLED displays tend to be more expensive than their LED counterparts
 due to the advanced technology involved in producing organic
