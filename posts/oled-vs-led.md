@@ -80,6 +80,8 @@ issues like image retention or burn-in. In comparison, LED displays
 have longer lifespans and are less prone to such problems.
 
 ## 3. Exploring Fast Refresh Rates and Response Times in OLED vs LED for Gaming
+![A man playing a PS5 racing game on a TV](/images/posts/oled-vs-led/man_playing_racing_game.jpg)
+_Samuel Regan-Asante | Unsplash_
 Refresh rate and response time are two very important criteria for
 gamers, looking for the smoothest possible screen experience. It’s not
 only a matter of aesthetics, but it can be a **win-or-lose factor** in many
@@ -135,6 +137,8 @@ your specific needs and preferences:
     panel with either type of LED backlight can be a suitable choice.
 
 ## 5. The Significance of Reduced Power Consumption in OLED vs LED
+![Electricity poles](/images/posts/oled-vs-led/electricity_poles.jpg)
+_Fré Sonneveld | Unsplash_
 Compared to LEDs, individual pixels on an **OLED display consume less
 power** when displaying black content. This light control capability
 allows OLEDs to achieve deeper blacks and more vibrant colors while
@@ -169,6 +173,8 @@ consumes less power overall.
     This helps improve the contrast ratio and overall image quality.
 
 ## 7. Considering Size and Weight: OLED vs LED Displays
+![Outdoor cinema with huge screen](/images/posts/oled-vs-led/outdoor_cinema.jpg)
+_CrowN | Unsplash_
 OLED displays are thinner and lighter than LED displays, making them
 popular for those who prioritize portability. On the other hand, LED
 displays offer a wider range of sizes, providing more options for users
