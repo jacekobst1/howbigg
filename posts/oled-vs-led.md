@@ -4,12 +4,12 @@ title: "OLED vs LED: Which TV Display Is Better?"
 subtitle: "Discover the key differences between OLED and LED TV displays. Find out which is better for your viewing experience in our comprehensive guide."
 readingTime: 8
 image: {
-    alt: '',
-    author: "",
+    alt: 'Dark room, with text "OLED vs LED"',
+    author: "Lynn Vdbr | Unsplash and Howbigg",
     sources: [
-        "/images/posts/qled-vs-oled/qled_vs_oled_16x9.jpg",
-        "/images/posts/qled-vs-oled/qled_vs_oled_4x3.jpg",
-        "/images/posts/qled-vs-oled/qled_vs_oled_1x1.jpg",
+        "/images/posts/oled-vs-led/oled_vs_led_16x9.jpg",
+        "/images/posts/oled-vs-led/oled_vs_led_4x3.jpg",
+        "/images/posts/oled-vs-led/oled_vs_led_1x1.jpg",
     ]
 }
 ---
