@@ -1,8 +1,8 @@
 ---
 createdAt: "2023-07-07"
 title: "OLED vs LED: Which TV Display Is Better?"
-subtitle: ""
-readingTime: 0
+subtitle: "Discover the key differences between OLED and LED TV displays. Find out which is better for your viewing experience in our comprehensive guide."
+readingTime: 8
 image: {
     alt: '',
     author: "",
