@@ -1,15 +1,15 @@
 ---
-createdAt: "2023-07-18"
+createdAt: "2023-07-17"
 title: "Dolby Vision vs HDR10: Which is Better?"
 subtitle: "Discover the key differences between Dolby Vision and HDR10. Find out which HDR format is better for your viewing experience."
 readingTime: 6
 image: {
-    alt: 'TODO',
-    author: "TODO",
+    alt: 'Store with old TVs. Big white text says "Dolby Vision vs HDR10"',
+    author: "Peter Geo | Unsplash and Howbigg",
     sources: [
-        "/images/posts/oled-vs-led/oled_vs_led_16x9.jpg",
-        "/images/posts/oled-vs-led/oled_vs_led_4x3.jpg",
-        "/images/posts/oled-vs-led/oled_vs_led_1x1.jpg",
+        "/images/posts/dolby-vision-vs-hdr10/dolby_vision_vs_hdr10_16x9.jpg",
+        "/images/posts/dolby-vision-vs-hdr10/dolby_vision_vs_hdr10_4x3.jpg",
+        "/images/posts/dolby-vision-vs-hdr10/dolby_vision_vs_hdr10_1x1.jpg",
     ]
 }
 ---
@@ -57,6 +57,9 @@ improved viewing experience compared to traditional SDR (Standard
 Dynamic Range) content.
 
 ## 2. Technicalities: Dynamic Metadata vs Static Metadata
+![A film strip](/images/posts/dolby-vision-vs-hdr10/film_strip.jpg)
+_Denise Jans | Unsplash_
+
 Dynamic metadata and static metadata are two different approaches to
 adjusting picture settings in the context of Dolby Vision and HDR10,
 respectively.
@@ -134,7 +137,7 @@ However, it's worth noting that **not all content is
 available** in Dolby Vision or HDR10 format. Live broadcasts, for example,
 may not be broadcasted in either format.
 
-## 6. Dolby Vision vs HDR10: Final Verdict
+## 5. Dolby Vision vs HDR10: Final Verdict
 In the battle of Dolby Vision vs HDR10, both formats have their
 strengths and weaknesses.
 
