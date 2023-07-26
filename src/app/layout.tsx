@@ -2,10 +2,11 @@ import "@/styles/globals.css";
 import React from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import AnalyticsWrapper from "@/components/AnalyticsWrapper";
+import VercelAnalytics from "@/components/VercelAnalytics";
 import ToastContainerWrapper from "@/components/ToastContainerWrapper";
 import { Metadata } from "next";
 import config from "@/config";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const title = {
   default: "Howbigg",
@@ -92,7 +93,8 @@ export default function RootLayout({
         <Header />
         <main className="w-11/12 mx-auto grow">{children}</main>
         <Footer />
-        <AnalyticsWrapper />
+        <GoogleAnalytics />
+        <VercelAnalytics />
         <ToastContainerWrapper />
       </body>
     </html>
