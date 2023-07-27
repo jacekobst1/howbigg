@@ -51,18 +51,52 @@ export default function Details({ displays }: DetailsProps) {
               <HeadTh>Area</HeadTh>
               <HeadTh>Resolution</HeadTh>
               <HeadTh>
-                <InfoTooltip text="Pixels Per Inch. Calculated only when resolution in selected.">
-                  PPI
+                <InfoTooltip
+                  text="PPI"
+                  anchorClassName="py-4"
+                  positionStrategy="fixed"
+                >
+                  <span>Pixels Per Inch</span>
+                  <br />
+                  <span>Calculated only when resolution in selected.</span>
                 </InfoTooltip>
               </HeadTh>
               <HeadTh>
-                <InfoTooltip text="Distance at which the display will fill 28 to 40 degrees of your field of view. In lower resolutions you should consider the minimal distance. Calculated only for 16x9 TV screens, when resolution is selected.">
-                  Optimal distance
+                <InfoTooltip
+                  text="Optimal distance"
+                  anchorClassName="py-4"
+                  positionStrategy="fixed"
+                >
+                  <span>
+                    Distance at which the display will fill 28 to 40 degrees of
+                    your field of view.{" "}
+                  </span>
+                  <span>
+                    In lower resolutions you should consider the minimal
+                    distance.
+                  </span>
+                  <br />
+                  <span>
+                    Calculated only for 16x9 TV screens, when resolution is
+                    selected.
+                  </span>
                 </InfoTooltip>
               </HeadTh>
               <HeadTh>
-                <InfoTooltip text="The distance below which image quality decreases, as your eyes begin to see individual pixels. Calculated only for 16x9 TV screens, when resolution is selected.">
-                  Minimal distance
+                <InfoTooltip
+                  text="Minimal distance"
+                  anchorClassName="py-4"
+                  positionStrategy="fixed"
+                >
+                  <span>
+                    The distance below which image quality decreases, as your
+                    eyes begin to see individual pixels.{" "}
+                  </span>
+                  <br />
+                  <span>
+                    Calculated only for 16x9 TV screens, when resolution is
+                    selected.
+                  </span>
                 </InfoTooltip>
               </HeadTh>
             </tr>
@@ -124,7 +158,7 @@ interface ChildrenProp {
 }
 
 const HeadTh = ({ children }: ChildrenProp) => {
-  return <th className="bg-black text-base-100">{children}</th>;
+  return <th className="bg-black text-base-100 pt-0 pb-0">{children}</th>;
 };
 
 const BodyTd = ({ children }: ChildrenProp) => {

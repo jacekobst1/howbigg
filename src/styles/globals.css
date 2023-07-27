@@ -2,7 +2,6 @@
 @import "tailwind/base.css";
 @import "tailwind/utilities.css";
 @import 'react-toastify/dist/ReactToastify.min.css';
-@import "rc-tooltip/assets/bootstrap.css";
 @import "custom/custom.css";
 @import "custom/layout.css";
 
