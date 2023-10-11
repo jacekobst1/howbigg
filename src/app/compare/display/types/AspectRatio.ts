@@ -11,6 +11,122 @@ interface AspectRatio {
 
 const aspectRatios: AspectRatio[] = [
   {
+    label: "3 x 2",
+    value: "3x2",
+    optGroup: "Standard",
+    possibleResolutions: [
+      defaultResolution,
+      {
+        width: 240,
+        height: 160,
+        value: "240x160",
+        label: "240 x 160 | HQVGA",
+      },
+      {
+        width: 360,
+        height: 240,
+        value: "360x240",
+        label: "360 x 240",
+      },
+      {
+        width: 480,
+        height: 320,
+        value: "480x320",
+        label: "480 x 320 | HVGA",
+      },
+      {
+        width: 720,
+        height: 480,
+        value: "720x480",
+        label: "720 x 480 | NTSC (480i)",
+      },
+      {
+        width: 960,
+        height: 640,
+        value: "960x640",
+        label: "960 x 640",
+      },
+      {
+        width: 1152,
+        height: 768,
+        value: "1152x768",
+        label: "1152 x 768",
+      },
+      {
+        width: 1200,
+        height: 800,
+        value: "1200x800",
+        label: "1200 x 800",
+      },
+      {
+        width: 1296,
+        height: 864,
+        value: "1296x864",
+        label: "1296 x 864",
+      },
+      {
+        width: 1440,
+        height: 960,
+        value: "1440x960",
+        label: "1440 x 960",
+      },
+      {
+        width: 1536,
+        height: 1024,
+        value: "1536x1024",
+        label: "1536 x 1024",
+      },
+      {
+        width: 1800,
+        height: 1200,
+        value: "1800x1200",
+        label: "1800 x 1200",
+      },
+      {
+        width: 1920,
+        height: 1280,
+        value: "1920x1280",
+        label: "1920 x 1280",
+      },
+      {
+        width: 2160,
+        height: 1440,
+        value: "2160x1440",
+        label: "2160 x 1440",
+      },
+      {
+        width: 2256,
+        height: 1504,
+        value: "2256x1504",
+        label: "2256 x 1504",
+      },
+      {
+        width: 2400,
+        height: 1600,
+        value: "2400x1600",
+        label: "2400 x 1600",
+      },
+      {
+        width: 2880,
+        height: 1920,
+        value: "2880x1920",
+        label: "2880 x 1920",
+      },
+      {
+        width: 3240,
+        height: 2160,
+        value: "3240x2160",
+        label: "3240 x 2160",
+      },
+      {
+        width: 3840,
+        height: 2560,
+        value: "3840x2560",
+        label: "3840 x 2560",
+      },
+    ],
+  },
+  {
     label: "4 x 3",
     value: "4x3",
     optGroup: "Standard",
@@ -593,7 +709,7 @@ const aspectRatios: AspectRatio[] = [
   },
 ];
 
-const defaultAspectRatio: AspectRatio = aspectRatios[2];
+const defaultAspectRatio: AspectRatio = aspectRatios[3];
 const customAspectRatio: AspectRatio = aspectRatios[aspectRatios.length - 1];
 
 export default AspectRatio;
