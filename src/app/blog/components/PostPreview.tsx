@@ -23,8 +23,8 @@ const PostPreview = (post: PostMetadata) => {
         </p>
         <div className="grow" />
         <div className="text-xs">
-          <span>{formatPrettyTextDate(post.createdAt)}</span>
-          <span className="mx-1">&#x2022;</span>
+          {/*<span>{formatPrettyTextDate(post.createdAt)}</span>*/}
+          {/*<span className="mx-1">&#x2022;</span>*/}
           <span>{post.readingTime} min read</span>
         </div>
       </div>

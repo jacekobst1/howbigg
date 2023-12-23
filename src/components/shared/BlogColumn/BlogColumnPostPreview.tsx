@@ -22,8 +22,8 @@ export default function BlogColumnPostPreview(post: PostMetadata) {
         </h2>
         <div className="flex-grow" />
         <div className="hidden md:block text-xs text-right mt-2 mb-2">
-          <span>{formatPrettyTextDate(post.createdAt)}</span>
-          <span className="mx-1">&#x2022;</span>
+          {/*<span>{formatPrettyTextDate(post.createdAt)}</span>*/}
+          {/*<span className="mx-1">&#x2022;</span>*/}
           <span>{post.readingTime} min read</span>
         </div>
       </div>

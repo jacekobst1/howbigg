@@ -28,14 +28,14 @@ export default function PostHeader({ post }: PostTitleProps) {
           <p className="text-xs italic text-slate-500 mb-0.5">Written by</p>
           <p className="text-sm font-bold">Jacek Obst</p>
         </div>
-        <div className="ml-8">
-          <p className="text-xs italic text-slate-500 mb-0.5">
-            {post.updatedAt ? "Updated at" : "Published on"}
-          </p>
-          <p className="text-sm font-bold">
-            {formatPrettyTextDate(post.updatedAt || post.createdAt)}
-          </p>
-        </div>
+        {/*<div className="ml-8">*/}
+        {/*  <p className="text-xs italic text-slate-500 mb-0.5">*/}
+        {/*    {post.updatedAt ? "Updated at" : "Published on"}*/}
+        {/*  </p>*/}
+        {/*  <p className="text-sm font-bold">*/}
+        {/*    {formatPrettyTextDate(post.updatedAt || post.createdAt)}*/}
+        {/*  </p>*/}
+        {/*</div>*/}
         <div className="grow" />
         <div className="flex text-sm items-center font-semibold">
           <AiOutlineClockCircle className="mr-2" />
