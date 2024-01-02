@@ -1,6 +1,7 @@
 ---
 createdAt: "2023-06-04"
-title: "QLED vs. OLED: Which TV type is superior in 2023?"
+updatedAt: "2024-02-01"
+title: "QLED vs. OLED: Which TV type is superior in 2024?"
 subtitle: "Cheaper QLED with a brighter screen and more accurate colors vs more expensive OLED with perfect black levels and wider viewing angles? Choose wisely!"
 readingTime: 12
 image: {
