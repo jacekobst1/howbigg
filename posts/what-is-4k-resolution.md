@@ -1,6 +1,6 @@
 ---
 createdAt: "2023-05-09"
-updatedAt: "2023-05-30"
+updatedAt: "2024-01-02"
 title: "What is 4K resolution? What does 4k mean?"
 subtitle: "4K is a screen resolution of 3840x2160 pixels. I can be also called UHD or 4K UHD. It's the most popular TV resolution today with impressive image quality."
 readingTime: 3
@@ -109,7 +109,7 @@ To sum up, 4K resolution **significantly improves detail and sharpness** compare
 
 Even though there are still some hurdles with getting enough 4K content and getting people to use it, 4K screens will **undoubtedly be more and more popular** in the **next few years**.
 
-If you are looking for a new 📺 in 2023, there should be no other option than 4K.
+If you are looking for a new 📺 in 2024, there should be no other option than 4K.
 
 ## FAQ
 ### Is 2160p a 4K?
