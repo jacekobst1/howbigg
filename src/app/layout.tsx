@@ -6,7 +6,6 @@ import VercelAnalytics from "@/components/VercelAnalytics";
 import ToastContainerWrapper from "@/components/ToastContainerWrapper";
 import { Metadata } from "next";
 import config from "@/config";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const title = {
   default: "Howbigg",
@@ -93,7 +92,6 @@ export default function RootLayout({
         <Header />
         <main className="w-11/12 mx-auto grow">{children}</main>
         <Footer />
-        <GoogleAnalytics />
         <VercelAnalytics />
         <ToastContainerWrapper />
       </body>
