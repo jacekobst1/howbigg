@@ -1,11 +1,12 @@
 import "@/styles/globals.css";
-import React from "react";
+import React, { Suspense } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import VercelAnalytics from "@/components/VercelAnalytics";
 import ToastContainerWrapper from "@/components/ToastContainerWrapper";
 import { Metadata } from "next";
 import config from "@/config";
+import { HogProvider, HogPageView } from "@/components/PostHogProviders";
 
 const title = {
   default: "Howbigg",
@@ -90,9 +91,16 @@ export default function RootLayout({
     <html lang="en" data-theme="myTheme">
       <body data-theme="mytheme" className="flex flex-col min-h-screen">
         <Header />
-        <main className="w-11/12 mx-auto grow">{children}</main>
+        <HogProvider>
+          <main className="w-11/12 mx-auto grow">{children}</main>
+        </HogProvider>
         <Footer />
+
         <VercelAnalytics />
+        <Suspense>
+          <HogPageView />
+        </Suspense>
+
         <ToastContainerWrapper />
       </body>
     </html>
