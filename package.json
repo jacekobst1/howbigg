@@ -21,7 +21,7 @@
     "gray-matter": "^4.0.3",
     "image-size": "^1.0.2",
     "lodash": "^4.17.21",
-    "next": "^13",
+    "next": "^13.5",
     "posthog-js": "^1.96.1",
     "query-string": "^8.1.0",
     "react": "18.2.0",
