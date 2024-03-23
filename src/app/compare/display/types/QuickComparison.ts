@@ -44,6 +44,31 @@ const monitorComparisons: QuickComparison[] = [
   },
 ];
 
+// Iphones
+const iphone15ProMax: QuickComparisonDisplay = {
+  name: "Iphone 15 Pro Max",
+  diagonal: 6.7,
+  aspectRatio: "19.5x9",
+  isVertical: true,
+  resolution: "2796x1290",
+};
+
+const iphone15Pro: QuickComparisonDisplay = {
+  name: "Iphone 15 Pro",
+  diagonal: 6.1,
+  aspectRatio: "19.5x9",
+  isVertical: true,
+  resolution: "2556x1179",
+};
+
+const iphone15: QuickComparisonDisplay = {
+  name: "Iphone 15",
+  diagonal: 6.1,
+  aspectRatio: "19.5x9",
+  isVertical: true,
+  resolution: "2556x1179",
+};
+
 const iphone14ProMax: QuickComparisonDisplay = {
   name: "Iphone 14 Pro Max",
   diagonal: 6.69,
@@ -58,6 +83,14 @@ const iphone14Pro: QuickComparisonDisplay = {
   aspectRatio: "19.5x9 ",
   isVertical: true,
   resolution: "2556x1179",
+};
+
+const iphone14: QuickComparisonDisplay = {
+  name: "Iphone 14",
+  diagonal: 6.06,
+  aspectRatio: "19.5x9",
+  isVertical: true,
+  resolution: "2532x1170",
 };
 
 const iphone13: QuickComparisonDisplay = {
@@ -92,6 +125,23 @@ const iphone11: QuickComparisonDisplay = {
   resolution: "1792x828",
 };
 
+// Samsungs
+const samsungS24Ultra: QuickComparisonDisplay = {
+  name: "Samsung S24 Ultra",
+  diagonal: 6.8,
+  aspectRatio: "19.5x9",
+  isVertical: true,
+  resolution: "3120x1440",
+};
+
+const samsungS24: QuickComparisonDisplay = {
+  name: "Samsung S24",
+  diagonal: 6.1,
+  aspectRatio: "19.5x9",
+  isVertical: true,
+  resolution: "2340x1080",
+};
+
 const samsungS23Ultra: QuickComparisonDisplay = {
   name: "Samsung S23 Ultra",
   diagonal: 6.8,
@@ -106,6 +156,23 @@ const samsungS23: QuickComparisonDisplay = {
   aspectRatio: "19.5x9",
   isVertical: true,
   resolution: "2340x1080",
+};
+
+// Pixels
+const pixel8Pro: QuickComparisonDisplay = {
+  name: "Pixel 8 Pro",
+  diagonal: 6.7,
+  aspectRatio: "20x9",
+  isVertical: true,
+  resolution: "2992x1344",
+};
+
+const pixel8: QuickComparisonDisplay = {
+  name: "Pixel 8",
+  diagonal: 6.2,
+  aspectRatio: "20x9",
+  isVertical: true,
+  resolution: "2400x1080",
 };
 
 const pixel7Pro: QuickComparisonDisplay = {
@@ -126,7 +193,27 @@ const pixel7: QuickComparisonDisplay = {
 
 const smartphonesComparisons: QuickComparison[] = [
   {
-    display1: iphone14Pro,
+    display1: iphone15,
+    display2: iphone15Pro,
+  },
+  {
+    display1: iphone15,
+    display2: iphone15ProMax,
+  },
+  {
+    display1: iphone15Pro,
+    display2: iphone15ProMax,
+  },
+  {
+    display1: iphone15,
+    display2: iphone14,
+  },
+  {
+    display1: iphone15Pro,
+    display2: iphone14Pro,
+  },
+  {
+    display1: iphone15ProMax,
     display2: iphone14ProMax,
   },
   {
@@ -137,21 +224,38 @@ const smartphonesComparisons: QuickComparison[] = [
     display1: iphoneSE2ndGen,
     display2: iphone11,
   },
+
   {
-    display1: iphone14ProMax,
-    display2: samsungS23Ultra,
+    display1: samsungS24,
+    display2: samsungS24Ultra,
   },
   {
-    display1: pixel7Pro,
-    display2: samsungS23Ultra,
+    display1: samsungS24,
+    display2: iphone15,
   },
   {
-    display1: samsungS23,
-    display2: samsungS23Ultra,
+    display1: samsungS24,
+    display2: pixel8,
   },
   {
-    display1: pixel7,
-    display2: pixel7Pro,
+    display1: samsungS24Ultra,
+    display2: iphone15ProMax,
+  },
+  {
+    display1: samsungS24Ultra,
+    display2: pixel8Pro,
+  },
+  {
+    display1: pixel8,
+    display2: pixel8Pro,
+  },
+  {
+    display1: pixel8,
+    display2: iphone15
+  },
+  {
+    display1: pixel8Pro,
+    display2: iphone15ProMax
   },
 ];
 
