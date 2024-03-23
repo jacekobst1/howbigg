@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import React, { Suspense } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import VercelAnalytics from "@/components/VercelAnalytics";
 import ToastContainerWrapper from "@/components/ToastContainerWrapper";
 import { Metadata } from "next";
 import config from "@/config";
@@ -97,7 +96,6 @@ export default function RootLayout({
         </HogProvider>
         <Footer />
 
-        <VercelAnalytics />
         <GoogleAdsense />
         <Suspense>
           <HogPageView />
