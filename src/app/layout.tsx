@@ -7,6 +7,7 @@ import ToastContainerWrapper from "@/components/ToastContainerWrapper";
 import { Metadata } from "next";
 import config from "@/config";
 import { HogProvider, HogPageView } from "@/components/PostHogProviders";
+import GoogleAdsense from "@/components/GoogleAdsense";
 
 const title = {
   default: "Howbigg",
@@ -97,6 +98,7 @@ export default function RootLayout({
         <Footer />
 
         <VercelAnalytics />
+        <GoogleAdsense />
         <Suspense>
           <HogPageView />
         </Suspense>
