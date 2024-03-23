@@ -44,14 +44,6 @@ const monitorComparisons: QuickComparison[] = [
   },
 ];
 
-const iphone14Pro: QuickComparisonDisplay = {
-  name: "Iphone 14 Pro",
-  diagonal: 6.12,
-  aspectRatio: "19.5x9 ",
-  isVertical: true,
-  resolution: "2556x1179",
-};
-
 const iphone14ProMax: QuickComparisonDisplay = {
   name: "Iphone 14 Pro Max",
   diagonal: 6.69,
@@ -60,12 +52,12 @@ const iphone14ProMax: QuickComparisonDisplay = {
   resolution: "2796x1290",
 };
 
-const iphone13Mini: QuickComparisonDisplay = {
-  name: "Iphone 13 mini",
-  diagonal: 5.42,
-  aspectRatio: "19.5x9",
+const iphone14Pro: QuickComparisonDisplay = {
+  name: "Iphone 14 Pro",
+  diagonal: 6.12,
+  aspectRatio: "19.5x9 ",
   isVertical: true,
-  resolution: "2340x1080",
+  resolution: "2556x1179",
 };
 
 const iphone13: QuickComparisonDisplay = {
@@ -74,6 +66,14 @@ const iphone13: QuickComparisonDisplay = {
   aspectRatio: "19.5x9",
   isVertical: true,
   resolution: "2532x1170",
+};
+
+const iphone13Mini: QuickComparisonDisplay = {
+  name: "Iphone 13 mini",
+  diagonal: 5.42,
+  aspectRatio: "19.5x9",
+  isVertical: true,
+  resolution: "2340x1080",
 };
 
 const iphoneSE2ndGen: QuickComparisonDisplay = {
