@@ -14,6 +14,10 @@ export default function Footer() {
           <p>
             Contact: <a href="mailto:jacek@howbigg.com" className="text-primary-500">jacek@howbigg.com</a>
           </p>
+          <p className="px-1 hidden md:block">|</p>
+          <p>
+            <a href="/privacy-policy.html" target="_blank" className="text-primary-500">Privacy policy</a>
+          </p>
         </div>
       </div>
     </footer>
