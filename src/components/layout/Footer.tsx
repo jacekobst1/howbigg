@@ -18,6 +18,10 @@ export default function Footer() {
           <p>
             <a href="/privacy-policy.html" target="_blank" className="text-primary-500">Privacy policy</a>
           </p>
+          <p className="px-1 hidden md:block">|</p>
+          <p>
+            <a href="/cookie-policy.html" target="_blank" className="text-primary-500">Cookie policy</a>
+          </p>
         </div>
       </div>
     </footer>
