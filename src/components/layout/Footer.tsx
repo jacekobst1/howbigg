@@ -12,7 +12,7 @@ export default function Footer() {
           </p>
           <p className="px-1 hidden md:block">|</p>
           <p>
-            Contact: <a href="mailto:jacek@howbigg.com" className="text-primary-500">jacek@howbigg.com</a>
+            <a href="/contact" className="text-primary-500">Contact</a>
           </p>
           <p className="px-1 hidden md:block">|</p>
           <p>
