@@ -89,14 +89,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="myTheme">
-      <body data-theme="mytheme" className="flex flex-col min-h-screen">
-        <Header />
-        <HogProvider>
-          <main className="w-11/12 mx-auto grow">{children}</main>
+    <head>
+      {process.env.NODE_ENV === "production" && (
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9372955055190705"
+          crossOrigin="anonymous"
+        />
+      )}
+    </head>
+    <body data-theme="mytheme" className="flex flex-col min-h-screen">
+    <Header />
+    <HogProvider>
+      <main className="w-11/12 mx-auto grow">{children}</main>
         </HogProvider>
         <Footer />
 
-        <GoogleAdsense />
         <Suspense>
           <HogPageView />
         </Suspense>
