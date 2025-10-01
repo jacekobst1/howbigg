@@ -57,8 +57,13 @@ function findClosestSizeRange(
 /**
  * Filters and returns relevant product sections based on user's displays
  * Sorted by size (smallest to largest)
+ * @param displays - Array of Display objects to filter products for
+ * @param limit - Maximum number of sections to return (default: 4)
  */
-export function filterRelevantProducts(displays: Display[]): ProductSection[] {
+export function filterRelevantProducts(
+  displays: Display[],
+  limit: number = 4
+): ProductSection[] {
   const validDisplays = displays.filter((d) => d.diagonal.length > 0);
 
   if (validDisplays.length === 0) {
@@ -88,7 +93,8 @@ export function filterRelevantProducts(displays: Display[]): ProductSection[] {
     return aMidpoint - bMidpoint;
   });
 
-  return sections;
+  // Apply limit
+  return sections.slice(0, limit);
 }
 
 /**

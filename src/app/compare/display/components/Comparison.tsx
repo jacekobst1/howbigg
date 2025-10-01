@@ -17,9 +17,12 @@ import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsF
 import Setup from "@/app/compare/display/components/Setup";
 import Presentation from "@/app/compare/display/components/Presentation";
 import Details from "@/app/compare/display/components/Details";
-import ProductRecommendations from "@/app/compare/display/components/ProductRecommendations";
 
-export default function Comparison() {
+interface ComparisonProps {
+  onDisplaysChange?: (displays: Display[]) => void;
+}
+
+export default function Comparison({ onDisplaysChange }: ComparisonProps) {
   const [displays, setDisplays] = useState(generateDisplays(2));
   const [queryState, setQueryState, isQueryStateReady] =
     useQueryState<string[]>("displays");
@@ -46,6 +49,13 @@ export default function Comparison() {
     setDisplays(calculatedDisplays);
     setIsReady(true);
   }, [isQueryStateReady]);
+
+  // Notify parent when displays change
+  useEffect(() => {
+    if (onDisplaysChange) {
+      onDisplaysChange(displays);
+    }
+  }, [displays, onDisplaysChange]);
 
   function setData(displays: Display[]) {
     setDisplays(displays);
@@ -77,7 +87,6 @@ export default function Comparison() {
       <Presentation displays={displays} />
       <div className="mt-12" />
       <Details displays={displays} />
-      <ProductRecommendations displays={displays} />
     </div>
   ) : (
     <span>Loading...</span>
