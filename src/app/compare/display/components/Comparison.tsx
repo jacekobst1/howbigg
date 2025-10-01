@@ -17,6 +17,7 @@ import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsF
 import Setup from "@/app/compare/display/components/Setup";
 import Presentation from "@/app/compare/display/components/Presentation";
 import Details from "@/app/compare/display/components/Details";
+import ProductRecommendations from "@/app/compare/display/components/ProductRecommendations";
 
 export default function Comparison() {
   const [displays, setDisplays] = useState(generateDisplays(2));
@@ -76,6 +77,7 @@ export default function Comparison() {
       <Presentation displays={displays} />
       <div className="mt-12" />
       <Details displays={displays} />
+      <ProductRecommendations displays={displays} />
     </div>
   ) : (
     <span>Loading...</span>
