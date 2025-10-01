@@ -36,9 +36,14 @@ export default function ProductRecommendations({
   return (
     <div className={isCompact ? "space-y-4" : "mt-16 bg-gradient-to-br from-base-100 to-base-200 rounded-2xl p-6 md:p-8 shadow-lg"}>
       <div className={isCompact ? "mb-4" : "text-center mb-8"}>
-        <h2 className={isCompact ? "text-xl font-bold mb-2 text-gray-900" : "text-3xl md:text-4xl font-bold mb-2 text-gray-900"}>
+        <h2 className={isCompact ? "text-xl font-bold text-gray-900" : "text-3xl md:text-4xl font-bold mb-2 text-gray-900"}>
           Recommended Products
         </h2>
+        {isCompact && (
+          <p className="text-[10px] text-gray-500 mb-2">
+            Affiliate links — your support helps keep this site running
+          </p>
+        )}
         {!isCompact && (
           <>
             <p className="text-sm text-gray-700 font-medium">
