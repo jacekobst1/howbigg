@@ -33,10 +33,13 @@ export default function ProductRecommendations({
     <div className="mt-16 bg-gradient-to-br from-base-100 to-base-200 rounded-2xl p-6 md:p-8 shadow-lg">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">
-          💡 Recommended Products
+          Recommended Products
         </h2>
         <p className="text-sm text-gray-700 font-medium">
           Curated selections based on your display preferences
+        </p>
+        <p className="text-xs text-gray-400 italic font-light mt-2">
+          These are affiliate links — they help keep this site running
         </p>
         <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full" />
       </div>
