@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Comparison from "./Comparison";
 import RightSidebarContent from "./RightSidebarContent";
+import ProductRecommendations from "./ProductRecommendations";
 import Display from "../types/Display";
 import { PostMetadata } from "@/app/blog/types/Post";
 import BlogColumnPostPreview from "@/components/shared/BlogColumn/BlogColumnPostPreview";
@@ -36,13 +37,18 @@ export default function PageClient({ posts }: PageClientProps) {
         <div className="hidden xl:block">
           <RightSidebarContent displays={displays} posts={posts} />
         </div>
-        {/* On mobile/tablet: Always show blog at bottom */}
+        {/* On mobile/tablet: Show recommendations if display set, then blog posts below */}
         <div className="block xl:hidden">
-          <h2 className="text-2xl">Latest articles</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-1 gap-4 mt-4">
-            {posts.map((post) => (
-              <BlogColumnPostPreview key={post.slug} {...post} />
-            ))}
+          {hasValidDisplay(displays) && (
+            <ProductRecommendations displays={displays} variant="full" />
+          )}
+          <div className={hasValidDisplay(displays) ? "mt-16" : ""}>
+            <h2 className="text-2xl">Latest articles</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-1 gap-4 mt-4">
+              {posts.map((post) => (
+                <BlogColumnPostPreview key={post.slug} {...post} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
