@@ -8,6 +8,7 @@ import {
   groupSectionsByType,
 } from "@/app/compare/display/utils/productRecommendationHelper";
 import { ProductSection } from "@/data/productRecommendations";
+import StarRating from "./Recommendations/StarRating";
 
 interface ProductRecommendationsProps {
   displays: Display[];
@@ -67,7 +68,13 @@ function ProductSectionComponent({ section }: { section: ProductSection }) {
             className="card bg-base-200 hover:bg-base-300 transition-colors duration-200 p-4"
           >
             <div className="card-body p-0">
+              <div className="mb-2">
+                <StarRating rating={product.rating} />
+              </div>
               <h5 className="font-medium text-sm mb-2">{product.name}</h5>
+              <div className="text-lg font-bold text-primary mb-2">
+                {product.price}
+              </div>
               <div className="text-xs opacity-70">
                 <p>
                   {/* eslint-disable-next-line react/no-unescaped-entities */}

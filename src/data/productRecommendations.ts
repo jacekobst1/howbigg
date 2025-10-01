@@ -4,6 +4,8 @@ export interface ProductRecommendation {
   size: number; // in inches
   resolution: string;
   link: string;
+  price: string;
+  rating: number; // 1-5 scale
 }
 
 export interface ProductSection {
@@ -25,6 +27,8 @@ export const productSections: ProductSection[] = [
         size: 24,
         resolution: "2560x1440",
         link: "https://example.com/dell-p2423de",
+        price: "$349.99",
+        rating: 4.5,
       },
       {
         name: "BenQ GW2485TC 24\" Full HD Monitor",
@@ -32,6 +36,8 @@ export const productSections: ProductSection[] = [
         size: 24,
         resolution: "1920x1080",
         link: "https://example.com/benq-gw2485tc",
+        price: "$249.99",
+        rating: 4.3,
       },
       {
         name: "ASUS ProArt PA247CV 24\" Full HD Monitor",
@@ -39,6 +45,8 @@ export const productSections: ProductSection[] = [
         size: 24,
         resolution: "1920x1080",
         link: "https://example.com/asus-proart-pa247cv",
+        price: "$229.99",
+        rating: 4.4,
       },
     ],
   },
@@ -53,6 +61,8 @@ export const productSections: ProductSection[] = [
         size: 27,
         resolution: "3840x2160",
         link: "https://example.com/lg-27uk850",
+        price: "$499.99",
+        rating: 4.6,
       },
       {
         name: "Dell S2722DC 27\" QHD Monitor",
@@ -60,6 +70,8 @@ export const productSections: ProductSection[] = [
         size: 27,
         resolution: "2560x1440",
         link: "https://example.com/dell-s2722dc",
+        price: "$379.99",
+        rating: 4.5,
       },
       {
         name: "BenQ SW270C 27\" QHD Monitor",
@@ -67,6 +79,8 @@ export const productSections: ProductSection[] = [
         size: 27,
         resolution: "2560x1440",
         link: "https://example.com/benq-sw270c",
+        price: "$449.99",
+        rating: 4.7,
       },
     ],
   },
@@ -81,6 +95,8 @@ export const productSections: ProductSection[] = [
         size: 32,
         resolution: "3840x2160",
         link: "https://example.com/lg-32un880",
+        price: "$699.99",
+        rating: 4.6,
       },
       {
         name: "Dell U3223QE 32\" 4K UHD Monitor",
@@ -88,6 +104,8 @@ export const productSections: ProductSection[] = [
         size: 32,
         resolution: "3840x2160",
         link: "https://example.com/dell-u3223qe",
+        price: "$849.99",
+        rating: 4.7,
       },
       {
         name: "BenQ SW321C 32\" 4K UHD Monitor",
@@ -95,6 +113,8 @@ export const productSections: ProductSection[] = [
         size: 32,
         resolution: "3840x2160",
         link: "https://example.com/benq-sw321c",
+        price: "$1,299.99",
+        rating: 4.8,
       },
     ],
   },
@@ -109,6 +129,8 @@ export const productSections: ProductSection[] = [
         size: 34,
         resolution: "3440x1440",
         link: "https://example.com/lg-34wn80c",
+        price: "$599.99",
+        rating: 4.5,
       },
       {
         name: "Dell U3421WE 34\" Curved UltraWide Monitor",
@@ -116,6 +138,8 @@ export const productSections: ProductSection[] = [
         size: 34,
         resolution: "3440x1440",
         link: "https://example.com/dell-u3421we",
+        price: "$799.99",
+        rating: 4.6,
       },
       {
         name: "Samsung S34A650 34\" UltraWide Monitor",
@@ -123,6 +147,8 @@ export const productSections: ProductSection[] = [
         size: 34,
         resolution: "3440x1440",
         link: "https://example.com/samsung-s34a650",
+        price: "$549.99",
+        rating: 4.4,
       },
     ],
   },
@@ -137,6 +163,8 @@ export const productSections: ProductSection[] = [
         size: 38,
         resolution: "3840x1600",
         link: "https://example.com/lg-38wn95c",
+        price: "$1,499.99",
+        rating: 4.7,
       },
       {
         name: "Dell U3821DW 38\" Curved UltraWide Monitor",
@@ -144,6 +172,8 @@ export const productSections: ProductSection[] = [
         size: 38,
         resolution: "3840x1600",
         link: "https://example.com/dell-u3821dw",
+        price: "$1,399.99",
+        rating: 4.6,
       },
     ],
   },
@@ -158,6 +188,8 @@ export const productSections: ProductSection[] = [
         size: 42,
         resolution: "3840x2160",
         link: "https://example.com/lg-c3-42",
+        price: "$1,199.99",
+        rating: 4.8,
       },
       {
         name: "Samsung QN90C 43\" QLED 4K TV",
@@ -165,6 +197,8 @@ export const productSections: ProductSection[] = [
         size: 43,
         resolution: "3840x2160",
         link: "https://example.com/samsung-qn90c-43",
+        price: "$999.99",
+        rating: 4.6,
       },
     ],
   },
@@ -179,6 +213,8 @@ export const productSections: ProductSection[] = [
         size: 48,
         resolution: "3840x2160",
         link: "https://example.com/lg-c3-48",
+        price: "$1,299.99",
+        rating: 4.8,
       },
       {
         name: "Sony X90L 48\" 4K LED TV",
@@ -186,6 +222,8 @@ export const productSections: ProductSection[] = [
         size: 48,
         resolution: "3840x2160",
         link: "https://example.com/sony-x90l-48",
+        price: "$999.99",
+        rating: 4.5,
       },
     ],
   },
@@ -200,6 +238,8 @@ export const productSections: ProductSection[] = [
         size: 55,
         resolution: "3840x2160",
         link: "https://example.com/lg-c3-55",
+        price: "$1,499.99",
+        rating: 4.8,
       },
       {
         name: "Samsung QN90C 55\" QLED 4K TV",
@@ -207,6 +247,8 @@ export const productSections: ProductSection[] = [
         size: 55,
         resolution: "3840x2160",
         link: "https://example.com/samsung-qn90c-55",
+        price: "$1,299.99",
+        rating: 4.7,
       },
       {
         name: "Sony X90L 55\" 4K LED TV",
@@ -214,6 +256,8 @@ export const productSections: ProductSection[] = [
         size: 55,
         resolution: "3840x2160",
         link: "https://example.com/sony-x90l-55",
+        price: "$1,099.99",
+        rating: 4.5,
       },
     ],
   },
@@ -228,6 +272,8 @@ export const productSections: ProductSection[] = [
         size: 65,
         resolution: "3840x2160",
         link: "https://example.com/lg-c3-65",
+        price: "$1,999.99",
+        rating: 4.9,
       },
       {
         name: "Samsung QN90C 65\" QLED 4K TV",
@@ -235,6 +281,8 @@ export const productSections: ProductSection[] = [
         size: 65,
         resolution: "3840x2160",
         link: "https://example.com/samsung-qn90c-65",
+        price: "$1,799.99",
+        rating: 4.7,
       },
       {
         name: "Sony X90L 65\" 4K LED TV",
@@ -242,6 +290,8 @@ export const productSections: ProductSection[] = [
         size: 65,
         resolution: "3840x2160",
         link: "https://example.com/sony-x90l-65",
+        price: "$1,399.99",
+        rating: 4.6,
       },
     ],
   },
@@ -256,6 +306,8 @@ export const productSections: ProductSection[] = [
         size: 75,
         resolution: "3840x2160",
         link: "https://example.com/samsung-qn90c-75",
+        price: "$2,499.99",
+        rating: 4.8,
       },
       {
         name: "Sony X90L 75\" 4K LED TV",
@@ -263,6 +315,8 @@ export const productSections: ProductSection[] = [
         size: 75,
         resolution: "3840x2160",
         link: "https://example.com/sony-x90l-75",
+        price: "$1,899.99",
+        rating: 4.6,
       },
       {
         name: "LG UR8000 75\" 4K LED TV",
@@ -270,6 +324,8 @@ export const productSections: ProductSection[] = [
         size: 75,
         resolution: "3840x2160",
         link: "https://example.com/lg-ur8000-75",
+        price: "$1,499.99",
+        rating: 4.4,
       },
     ],
   },
@@ -284,6 +340,8 @@ export const productSections: ProductSection[] = [
         size: 85,
         resolution: "3840x2160",
         link: "https://example.com/samsung-qn90c-85",
+        price: "$3,499.99",
+        rating: 4.8,
       },
       {
         name: "Sony X90L 85\" 4K LED TV",
@@ -291,6 +349,8 @@ export const productSections: ProductSection[] = [
         size: 85,
         resolution: "3840x2160",
         link: "https://example.com/sony-x90l-85",
+        price: "$2,799.99",
+        rating: 4.7,
       },
     ],
   },
