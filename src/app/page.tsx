@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "Display size comparison | Howbigg",
 };
 
-export default function Home() {
-  return <CompareDisplayPage />;
+interface HomeProps {
+  searchParams: { displays?: string };
+}
+
+export default function Home({ searchParams }: HomeProps) {
+  return <CompareDisplayPage searchParams={searchParams} />;
 }

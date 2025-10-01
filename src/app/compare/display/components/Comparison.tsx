@@ -20,37 +20,14 @@ import Details from "@/app/compare/display/components/Details";
 
 interface ComparisonProps {
   onDisplaysChange?: (displays: Display[]) => void;
+  initialDisplays?: Display[];
 }
 
-export default function Comparison({ onDisplaysChange }: ComparisonProps) {
-  const [displays, setDisplays] = useState(generateDisplays(2));
+export default function Comparison({ onDisplaysChange, initialDisplays }: ComparisonProps) {
+  const [displays, setDisplays] = useState(initialDisplays || generateDisplays(2));
   const [queryState, setQueryState, isQueryStateReady] =
     useQueryState<string[]>("displays");
-  const [isReady, setIsReady] = useState(false);
 
-  useEffect(() => {
-    if (!isQueryStateReady) return;
-
-    if (!queryState || !Array.isArray(queryState)) {
-      setIsReady(true);
-      return;
-    }
-
-    const defaultDisplays = generateDisplaysWithoutPossibleResolutions(
-      queryState.length
-    );
-    const decodedDisplays = decodeDisplays(queryState);
-    const mergedDisplays = mapWithPrototype(
-      defaultDisplays,
-      (display, index) => mergeDeep(display, decodedDisplays[index]) as Display
-    );
-    const calculatedDisplays = getDetailedDisplays(mergedDisplays);
-
-    setDisplays(calculatedDisplays);
-    setIsReady(true);
-  }, [isQueryStateReady]);
-
-  // Notify parent when displays change
   useEffect(() => {
     if (onDisplaysChange) {
       onDisplaysChange(displays);
@@ -75,7 +52,7 @@ export default function Comparison({ onDisplaysChange }: ComparisonProps) {
     setData(calculatedDisplays);
   }
 
-  return isReady ? (
+  return (
     <div>
       <Setup
         displays={displays}
@@ -88,7 +65,5 @@ export default function Comparison({ onDisplaysChange }: ComparisonProps) {
       <div className="mt-12" />
       <Details displays={displays} />
     </div>
-  ) : (
-    <span>Loading...</span>
   );
 }

@@ -57,6 +57,120 @@ import { mapWithPrototype } from "@/utils/objects";
 const merged = mapWithPrototype(Display, partialDisplay, existingDisplay);
 ```
 
+## Server-Side Rendering (SSR) Pattern
+
+### Purpose
+- **SEO optimization**: Search engines index full comparison content
+- **Dynamic metadata**: Each comparison has unique title/description  
+- **Performance**: Faster initial render with server-calculated data
+
+### Architecture Flow
+
+```
+Server (page.tsx):
+  1. Read searchParams from URL
+  2. Decode & calculate Display instances
+  3. Serialize to plain objects
+  4. Generate dynamic metadata
+     ↓ (plain objects)
+Client (PageClient.tsx):
+  1. Deserialize to Display instances
+  2. Restore class methods
+  3. Store in state
+     ↓ (Display instances)
+Children (Comparison, ProductRecommendations):
+  1. Receive proper Display instances
+  2. Use methods (getAspectRatioDecimalValue)
+  3. Update via user interactions
+```
+
+### Key Components
+
+#### Server Component (src/app/compare/display/page.tsx)
+```typescript
+// 1. Accept searchParams
+interface PageProps {
+  searchParams: { displays?: string };
+}
+
+// 2. Decode displays server-side
+const initialDisplays = getDetailedDisplays(merged);
+
+// 3. Generate dynamic metadata
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
+  // Create comparison-specific SEO tags
+  const title = `${displayDescriptions} - Display Comparison | howbigg.com`;
+  return { title, description, openGraph, twitter };
+}
+
+// 4. Serialize before passing to client
+<PageClient initialDisplays={serializeDisplays(initialDisplays)} />
+```
+
+#### Serialization Layer (src/app/compare/display/utils/displaySerializer.ts)
+```typescript
+// Convert Display instances → plain objects
+export function serializeDisplays(displays: Display[]): any[]
+
+// Convert plain objects → Display instances
+export function deserializeDisplays(plainObjects: any[]): Display[]
+```
+
+#### Client Component (src/app/compare/display/components/PageClient.tsx)
+```typescript
+// 1. Receive plain objects from server
+interface PageClientProps {
+  initialDisplays: any[]; // Plain objects, not Display instances
+}
+
+// 2. Deserialize to Display instances
+const [displays, setDisplays] = useState(() => 
+  deserializeDisplays(initialDisplays)
+);
+
+// 3. Pass deserialized state to children (CRITICAL!)
+<Comparison initialDisplays={displays} /> // ✅ Correct
+<Comparison initialDisplays={initialDisplays} /> // ❌ Wrong - plain objects
+```
+
+### Common Pitfalls
+
+❌ **Don't**: Pass Display instances from server to client
+```typescript
+// page.tsx (Server)
+<PageClient initialDisplays={displayInstances} /> // React strips methods!
+```
+
+❌ **Don't**: Pass plain objects to components expecting Display instances
+```typescript
+// PageClient.tsx
+<Comparison initialDisplays={initialDisplays} /> // Methods undefined
+```
+
+❌ **Don't**: Re-decode from URL in client components
+```typescript
+// Comparison.tsx
+useEffect(() => {
+  const decoded = decodeDisplays(queryState); // Creates new instances without methods!
+}, [queryState]);
+```
+
+✅ **Do**: Serialize on server, deserialize on client, pass deserialized state
+```typescript
+// page.tsx (Server)
+<PageClient initialDisplays={serializeDisplays(displays)} />
+
+// PageClient.tsx (Client)
+const displays = deserializeDisplays(initialDisplays);
+<Comparison initialDisplays={displays} />
+```
+
+### Benefits
+1. **SEO**: Quick comparison links (e.g., "55 vs 65 inch") properly indexed
+2. **Performance**: No "Loading..." state for initial render
+3. **Social**: Dynamic Open Graph tags for link previews
+4. **Standards**: Follows Next.js 13 server/client best practices
+
 ## Blog System Architecture
 
 ### Content Pipeline
@@ -149,13 +263,14 @@ className={clsxm(
 
 ## Data Flow Patterns
 
-### Display Comparison Flow
-1. User modifies display input
-2. Component updates local state
-3. State encoded to URL via `useQueryState`
-4. Display object created via generator
-5. Calculations triggered via facade
-6. UI re-renders with new calculations
+### Display Comparison Flow (SSR-Enabled)
+1. **Server**: Decode URL params → Calculate displays → Serialize → Generate metadata
+2. **Client**: Deserialize → Store in state → Pass to children
+3. **User**: Modify display input → Component updates state
+4. **State**: Encode to URL via `useQueryState`
+5. **Display**: Object created via generator
+6. **Calculations**: Triggered via facade
+7. **UI**: Re-renders with new calculations
 
 ### Blog Content Flow
 1. Markdown files read from filesystem (server-side)

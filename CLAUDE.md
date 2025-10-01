@@ -79,6 +79,38 @@ User Input → DisplayUrlState → Display class → Calculations → Visual Pre
 - All display configurations are URL-encoded, making comparisons shareable via links
 - Component state updates trigger URL updates, which persist across page reloads
 
+**Server/Client Component Pattern (SEO-Optimized)**:
+
+The comparison page uses a server-side rendering pattern for optimal SEO:
+
+```
+Server (page.tsx):
+  1. Read searchParams from URL
+  2. Decode & calculate Display instances
+  3. Serialize to plain objects
+  4. Generate dynamic metadata for SEO
+     ↓
+Client (PageClient.tsx):
+  1. Deserialize to Display instances
+  2. Restore class methods
+  3. Pass to child components
+     ↓
+Children (Comparison, ProductRecommendations):
+  1. Receive proper Display instances
+  2. Use methods (getAspectRatioDecimalValue)
+  3. Maintain methods through updates
+```
+
+**Key Files**:
+- `page.tsx` - Server Component, decodes URL params, generates metadata
+- `displaySerializer.ts` - Converts Display ↔ plain objects
+- `PageClient.tsx` - Deserializes and manages client state
+
+**Why This Matters**:
+- **SEO**: Search engines see full content in initial HTML
+- **React**: Can't pass class instances across server/client boundary
+- **Methods**: Display.getAspectRatioDecimalValue() works throughout app
+
 ### Blog System Architecture
 
 **Content Pipeline**:
@@ -131,20 +163,44 @@ const decodedDisplays = decodeDisplays(queryState); // string[] → Partial<Disp
 
 Always wait for `isQueryStateReady` before rendering to avoid hydration mismatches.
 
-### Display Object Instantiation
+### Display Object Instantiation & Serialization
 
 The Display class uses constructor-based initialization, not plain objects:
 
 ```typescript
-// Wrong - loses class methods
+// ❌ Wrong - loses class methods
 const display = { id: 1, name: "Monitor", ... };
 
-// Correct - uses displayGenerator utilities
+// ✅ Correct - uses displayGenerator utilities
 const display = generateDisplays(1)[0];
 const newDisplay = generateDisplayByExistingOnes(existingDisplays);
 ```
 
 Use `mapWithPrototype()` from `src/utils/objects.ts` when merging Display instances.
+
+**Server/Client Serialization**:
+
+When passing Display instances from Server to Client Components, you must serialize/deserialize:
+
+```typescript
+// Server Component (page.tsx)
+import { serializeDisplays } from "@/app/compare/display/utils/displaySerializer";
+
+const displays = getDetailedDisplays(merged);
+<PageClient initialDisplays={serializeDisplays(displays)} />
+
+// Client Component (PageClient.tsx)
+import { deserializeDisplays } from "@/app/compare/display/utils/displaySerializer";
+
+const [displays, setDisplays] = useState(() =>
+  deserializeDisplays(initialDisplays)
+);
+
+// Now safe to use methods ✅
+displays[0].getAspectRatioDecimalValue();
+```
+
+**⚠️ Critical**: Never pass Display class instances directly from Server to Client Components - React will strip methods!
 
 ### Blog Post Retrieval
 

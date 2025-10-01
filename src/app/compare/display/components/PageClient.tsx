@@ -8,18 +8,22 @@ import Display from "../types/Display";
 import { PostMetadata } from "@/app/blog/types/Post";
 import BlogColumnPostPreview from "@/components/shared/BlogColumn/BlogColumnPostPreview";
 import { hasValidDisplay } from "../utils/productRecommendationHelper";
+import { deserializeDisplays } from "../utils/displaySerializer";
 
 interface PageClientProps {
   posts: PostMetadata[];
+  initialDisplays: any[];
 }
 
-export default function PageClient({ posts }: PageClientProps) {
-  const [displays, setDisplays] = useState<Display[]>([]);
+export default function PageClient({ posts, initialDisplays }: PageClientProps) {
+  const [displays, setDisplays] = useState<Display[]>(() =>
+    deserializeDisplays(initialDisplays)
+  );
 
   return (
     <>
       <section className="layout__center-section">
-        <Comparison onDisplaysChange={setDisplays} />
+        <Comparison onDisplaysChange={setDisplays} initialDisplays={displays} />
         {/* Blog posts at bottom on desktop - only when recommendations are shown in sidebar */}
         {hasValidDisplay(displays) && (
           <div className="hidden xl:block mt-16">
