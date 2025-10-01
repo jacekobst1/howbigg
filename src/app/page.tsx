@@ -1,4 +1,4 @@
-import CompareDisplayPage from "@/app/compare/display/page";
+import CompareDisplayPage from "@/app/compare/display/CompareDisplay";
 import { Metadata } from "next";
 import { generateComparisonMetadata } from "@/app/compare/display/utils/metadataGenerator";
 
