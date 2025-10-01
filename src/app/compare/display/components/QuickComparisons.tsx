@@ -95,7 +95,7 @@ export default function QuickComparisons() {
       <h2 className="text-2xl mb-4">Quick comparisons</h2>
 
       <h3 className="text-lg mb-1">TVs:</h3>
-      <ul className="text-sm">
+      <ul className="text-sm mb-10">
         {tvComparisons.map((comparison, key) => (
           <li key={key} className="mb-2 2xl:mb-1">
             <a
@@ -110,10 +110,8 @@ export default function QuickComparisons() {
         ))}
       </ul>
 
-      <div className="divider my-4" />
-
-      <h3 className="text-lg mt-4 mb-1">Monitors:</h3>
-      <ul className="text-sm">
+      <h3 className="text-lg mb-1">Monitors:</h3>
+      <ul className="text-sm mb-10">
         {monitorComparisons.map((comparison, key) => (
           <li key={key} className="mb-2 2xl:mb-1">
             <a
@@ -129,9 +127,7 @@ export default function QuickComparisons() {
         ))}
       </ul>
 
-      <div className="divider my-4" />
-
-      <h3 className="text-lg mt-4 mb-1">Smartphones:</h3>
+      <h3 className="text-lg mb-1">Smartphones:</h3>
       <ul className="text-sm">
         {smartphonesComparisons.map((comparison, key) => (
           <li key={key} className="mb-2 2xl:mb-1">

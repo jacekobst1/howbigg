@@ -91,7 +91,7 @@ function ProductSectionComponent({ section, isCompact = false }: { section: Enri
   const borderColor = primaryDisplay?.color.background || "#570df8"; // fallback to primary
 
   return (
-    <div className={isCompact ? "mb-6" : "mb-8"}>
+    <div className={isCompact ? "mb-10" : "mb-8"}>
       {/* Header with display associations */}
       <div className={isCompact ? "mb-3" : "mb-4"}>
         {/* Display indicators */}
