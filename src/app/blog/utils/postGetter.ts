@@ -55,6 +55,7 @@ function getCommonData(matterResult: matter.GrayMatterFile<string>) {
     subtitle: matterResult.data.subtitle,
     readingTime: matterResult.data.readingTime,
     image: matterResult.data.image,
+    author: matterResult.data.author,
   };
 }
 

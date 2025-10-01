@@ -14,5 +14,6 @@ export interface PostMetadata {
     author: string;
     sources: string[];
   };
+  author?: string;
   slug: string;
 }

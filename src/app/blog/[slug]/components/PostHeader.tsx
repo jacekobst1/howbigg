@@ -26,7 +26,7 @@ export default function PostHeader({ post }: PostTitleProps) {
       <div className="flex mt-2">
         <div>
           <p className="text-xs italic text-slate-500 mb-0.5">Written by</p>
-          <p className="text-sm font-bold">Jacek Obst</p>
+          <p className="text-sm font-bold">{post.author || "Jacek Obst"}</p>
         </div>
         {/*<div className="ml-8">*/}
         {/*  <p className="text-xs italic text-slate-500 mb-0.5">*/}

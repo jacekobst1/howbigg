@@ -12,6 +12,7 @@ image: {
         "/images/posts/best-size-for-coding/best_size_for_coding_1x1.png",
     ]
 }
+author: "Eira Wexford"
 ---
 <div class="md-border">
 <div class="md-border-title">Quick Summary</div>
