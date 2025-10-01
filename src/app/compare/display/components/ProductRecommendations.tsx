@@ -23,8 +23,7 @@ export default function ProductRecommendations({
     return null;
   }
 
-  const sectionLimit = variant === "compact" ? 3 : 4;
-  const relevantSections = filterRelevantProducts(displays, sectionLimit);
+  const relevantSections = filterRelevantProducts(displays);
 
   if (relevantSections.length === 0) {
     return null;
