@@ -42,7 +42,7 @@ export function generateComparisonMetadata(displaysParam?: string): Metadata {
 
       if (displayDescriptions) {
         const title = `${displayDescriptions} - Display Comparison | ${config.shortUrl}`;
-        const description = `Compare ${displayDescriptions}. See size differences, PPI calculations, optimal viewing distances, and physical dimensions side-by-side.`;
+        const description = `Compare ${displayDescriptions} displays. See size differences, PPI calculations, optimal viewing distances, and physical dimensions side-by-side.`;
 
         return {
           title,

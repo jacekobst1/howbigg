@@ -17,6 +17,7 @@ import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsF
 import Setup from "@/app/compare/display/components/Setup";
 import Presentation from "@/app/compare/display/components/Presentation";
 import Details from "@/app/compare/display/components/Details";
+import config from "@/config";
 
 interface ComparisonProps {
   onDisplaysChange?: (displays: Display[]) => void;
@@ -33,6 +34,28 @@ export default function Comparison({ onDisplaysChange, initialDisplays }: Compar
       onDisplaysChange(displays);
     }
   }, [displays, onDisplaysChange]);
+
+  useEffect(() => {
+    const displayDescriptions = displays
+      .filter(d => d.diagonal.length > 0)
+      .map(d => {
+        const size = d.diagonal.length;
+        let aspectRatio = d.aspectRatio.value;
+
+        if (aspectRatio === 'custom' && d.customAspectRatio.width && d.customAspectRatio.height) {
+          aspectRatio = `${d.customAspectRatio.width}x${d.customAspectRatio.height}`;
+        }
+
+        return `${size}in ${aspectRatio}`;
+      })
+      .join(" vs ");
+
+    if (displayDescriptions) {
+      document.title = `${displayDescriptions} - Display Comparison | ${config.shortUrl}`;
+    } else {
+      document.title = "Display Size Comparison Tool";
+    }
+  }, [displays]);
 
   function setData(displays: Display[]) {
     setDisplays(displays);
