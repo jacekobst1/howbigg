@@ -84,8 +84,7 @@ export default function ProductRecommendations({
 }
 
 function ProductSectionComponent({ section, isCompact = false }: { section: EnrichedProductSection; isCompact?: boolean }) {
-  // Limit products in compact mode
-  const productsToShow = isCompact ? section.products.slice(0, 2) : section.products;
+  const productsToShow = section.products;
 
   // Get primary display color for styling
   const primaryDisplay = section.matchingDisplays[0];
