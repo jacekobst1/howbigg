@@ -14,6 +14,7 @@ import {
 import { mapWithPrototype, mergeDeep } from "@/utils/objects";
 import Display from "@/app/compare/display/types/Display";
 import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsFacade";
+import { formatDisplayDescriptions } from "@/app/compare/display/utils/displayFormatter";
 import Setup from "@/app/compare/display/components/Setup";
 import Presentation from "@/app/compare/display/components/Presentation";
 import Details from "@/app/compare/display/components/Details";
@@ -36,24 +37,12 @@ export default function Comparison({ onDisplaysChange, initialDisplays }: Compar
   }, [displays, onDisplaysChange]);
 
   useEffect(() => {
-    const displayDescriptions = displays
-      .filter(d => d.diagonal.length > 0)
-      .map(d => {
-        const size = d.diagonal.length;
-        let aspectRatio = d.aspectRatio.value;
-
-        if (aspectRatio === 'custom' && d.customAspectRatio.width && d.customAspectRatio.height) {
-          aspectRatio = `${d.customAspectRatio.width}x${d.customAspectRatio.height}`;
-        }
-
-        return `${size}in ${aspectRatio}`;
-      })
-      .join(" vs ");
+    const displayDescriptions = formatDisplayDescriptions(displays);
 
     if (displayDescriptions) {
-      document.title = `${displayDescriptions} - Display Comparison | ${config.shortUrl}`;
+      document.title = `${displayDescriptions} - Display Comparison | Howbigg`;
     } else {
-      document.title = "Display Size Comparison Tool";
+      document.title = "Display Comparison | Howbigg";
     }
   }, [displays]);
 

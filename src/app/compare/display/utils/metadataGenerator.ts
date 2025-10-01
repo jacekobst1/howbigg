@@ -4,6 +4,7 @@ import { decodeDisplays } from "@/app/compare/display/utils/urlEncoder";
 import { mapWithPrototype, mergeDeep } from "@/utils/objects";
 import Display from "@/app/compare/display/types/Display";
 import { getDetailedDisplays } from "@/app/compare/display/utils/displayDetailsFacade";
+import { formatDisplayDescriptions } from "@/app/compare/display/utils/displayFormatter";
 import config from "@/config";
 
 /**
@@ -11,7 +12,7 @@ import config from "@/config";
  * Can be used in both root page and /compare/display page
  */
 export function generateComparisonMetadata(displaysParam?: string): Metadata {
-  const baseTitle = "Display Size Comparison Tool";
+  const baseTitle = "Display Comparison | Howbigg";
   const baseDescription = "Compare display sizes visually. See exact dimensions, PPI, and optimal viewing distances for monitors, TVs, and smartphones.";
 
   if (displaysParam) {
@@ -25,20 +26,7 @@ export function generateComparisonMetadata(displaysParam?: string): Metadata {
       );
       const displays = getDetailedDisplays(merged);
 
-      const displayDescriptions = displays
-        .filter(d => d.diagonal.length > 0)
-        .map(d => {
-          const size = d.diagonal.length;
-          let aspectRatio = d.aspectRatio.value;
-
-          // If custom aspect ratio, format it
-          if (aspectRatio === 'custom' && d.customAspectRatio.width && d.customAspectRatio.height) {
-            aspectRatio = `${d.customAspectRatio.width}x${d.customAspectRatio.height}`;
-          }
-
-          return `${size}in ${aspectRatio}`;
-        })
-        .join(" vs ");
+      const displayDescriptions = formatDisplayDescriptions(displays);
 
       if (displayDescriptions) {
         const title = `${displayDescriptions} - Display Comparison | ${config.shortUrl}`;
