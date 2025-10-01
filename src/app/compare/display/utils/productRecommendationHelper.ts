@@ -1,6 +1,17 @@
 import Display from "@/app/compare/display/types/Display";
 import { ProductSection, productSections } from "@/data/productRecommendations";
 
+export interface DisplayInfo {
+  id: number;
+  name: string;
+  color: { background: string; text: string };
+  size: number;
+}
+
+export interface EnrichedProductSection extends ProductSection {
+  matchingDisplays: DisplayInfo[];
+}
+
 /**
  * Determines if a display should be classified as a monitor or TV
  * Rules:
@@ -57,20 +68,22 @@ function findClosestSizeRange(
 /**
  * Filters and returns relevant product sections based on user's displays
  * Sorted by size (smallest to largest)
+ * Includes display associations for visual indicators
  * @param displays - Array of Display objects to filter products for
  * @param limit - Maximum number of sections to return (default: 4)
  */
 export function filterRelevantProducts(
   displays: Display[],
   limit: number = 4
-): ProductSection[] {
+): EnrichedProductSection[] {
   const validDisplays = displays.filter((d) => d.diagonal.length > 0);
 
   if (validDisplays.length === 0) {
     return [];
   }
 
-  const relevantSections = new Map<string, ProductSection>();
+  // Map to track sections and their matching displays
+  const relevantSectionsMap = new Map<string, EnrichedProductSection>();
 
   for (const display of validDisplays) {
     const type = determineProductType(display);
@@ -80,11 +93,28 @@ export function filterRelevantProducts(
     const closestSection = findClosestSizeRange(size, typeSections);
 
     if (closestSection) {
-      relevantSections.set(closestSection.title, closestSection);
+      const displayInfo: DisplayInfo = {
+        id: display.id,
+        name: display.name || `Display ${display.id}`,
+        color: display.color,
+        size: display.diagonal.length,
+      };
+
+      // If section already exists, add this display to its matching displays
+      if (relevantSectionsMap.has(closestSection.title)) {
+        const existingSection = relevantSectionsMap.get(closestSection.title)!;
+        existingSection.matchingDisplays.push(displayInfo);
+      } else {
+        // Create new enriched section
+        relevantSectionsMap.set(closestSection.title, {
+          ...closestSection,
+          matchingDisplays: [displayInfo],
+        });
+      }
     }
   }
 
-  const sections = Array.from(relevantSections.values());
+  const sections = Array.from(relevantSectionsMap.values());
 
   // Sort by size (smallest to largest)
   sections.sort((a, b) => {
@@ -100,9 +130,9 @@ export function filterRelevantProducts(
 /**
  * Groups sections by product type for organized display
  */
-export function groupSectionsByType(sections: ProductSection[]): {
-  monitors: ProductSection[];
-  tvs: ProductSection[];
+export function groupSectionsByType(sections: EnrichedProductSection[]): {
+  monitors: EnrichedProductSection[];
+  tvs: EnrichedProductSection[];
 } {
   return {
     monitors: sections.filter((s) => s.type === "monitor"),

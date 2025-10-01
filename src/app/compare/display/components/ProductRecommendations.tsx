@@ -6,8 +6,8 @@ import {
   hasValidDisplay,
   filterRelevantProducts,
   groupSectionsByType,
+  EnrichedProductSection,
 } from "@/app/compare/display/utils/productRecommendationHelper";
-import { ProductSection } from "@/data/productRecommendations";
 import StarRating from "./Recommendations/StarRating";
 
 interface ProductRecommendationsProps {
@@ -83,18 +83,50 @@ export default function ProductRecommendations({
   );
 }
 
-function ProductSectionComponent({ section, isCompact = false }: { section: ProductSection; isCompact?: boolean }) {
+function ProductSectionComponent({ section, isCompact = false }: { section: EnrichedProductSection; isCompact?: boolean }) {
   // Limit products in compact mode
   const productsToShow = isCompact ? section.products.slice(0, 2) : section.products;
 
+  // Get primary display color for styling
+  const primaryDisplay = section.matchingDisplays[0];
+  const borderColor = primaryDisplay?.color.background || "#570df8"; // fallback to primary
+
   return (
     <div className={isCompact ? "mb-6" : "mb-8"}>
-      <h4 className={isCompact
-        ? "text-sm font-semibold mb-3 capitalize text-gray-700"
-        : "text-lg font-semibold mb-4 capitalize text-gray-700 pl-2 border-l-4 border-primary"
-      }>
-        {section.title}
-      </h4>
+      {/* Header with display associations */}
+      <div className={isCompact ? "mb-3" : "mb-4"}>
+        {/* Display indicators */}
+        {section.matchingDisplays.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2 mb-2">
+            {section.matchingDisplays.map((display) => (
+              <div
+                key={display.id}
+                className={isCompact
+                  ? "px-3 py-1.5 rounded font-medium text-xs"
+                  : "px-3 py-1.5 rounded font-medium text-sm"
+                }
+                style={{
+                  backgroundColor: display.color.background,
+                  color: display.color.text
+                }}
+              >
+                {display.name}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Section title */}
+        <h4
+          className={isCompact
+            ? "text-base font-bold capitalize text-gray-900"
+            : "text-lg font-semibold capitalize text-gray-700 pl-2 border-l-4"
+          }
+          style={!isCompact ? { borderColor } : undefined}
+        >
+          {section.title}
+        </h4>
+      </div>
       <div className={isCompact ? "space-y-3" : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"}>
         {productsToShow.map((product, index) => (
           <a
