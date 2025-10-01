@@ -118,10 +118,10 @@ function ProductSectionComponent({ section, isCompact = false }: { section: Enri
         {/* Section title */}
         <h4
           className={isCompact
-            ? "text-base font-bold capitalize text-gray-900"
+            ? "text-base font-bold capitalize text-gray-900 pl-2 border-l-4"
             : "text-lg font-semibold capitalize text-gray-700 pl-2 border-l-4"
           }
-          style={!isCompact ? { borderColor } : undefined}
+          style={{ borderColor }}
         >
           {section.title}
         </h4>
@@ -134,7 +134,7 @@ function ProductSectionComponent({ section, isCompact = false }: { section: Enri
             target="_blank"
             rel="noopener noreferrer nofollow"
             className={isCompact
-              ? "block card bg-white hover:bg-base-50 transition-all duration-200 p-3 rounded-lg shadow-sm hover:shadow-md border border-gray-200"
+              ? "block card bg-white hover:bg-base-50 transition-all duration-300 p-3 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-1 border border-gray-200 hover:border-primary/50"
               : "group relative card bg-white hover:bg-base-50 transition-all duration-300 p-5 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 border border-gray-200 hover:border-primary/50"
             }
           >
