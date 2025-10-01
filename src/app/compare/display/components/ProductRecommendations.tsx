@@ -148,16 +148,16 @@ function ProductSectionComponent({ section, isCompact = false }: { section: Enri
               </div>
             )}
             <div className="card-body p-0">
-              <div className={isCompact ? "mb-2" : "mb-3 bg-yellow-50 rounded-lg p-2 inline-block w-fit"}>
+              <div className={isCompact ? "mb-1" : "mb-3 bg-yellow-50 rounded-lg p-2 inline-block w-fit"}>
                 <StarRating rating={product.rating} size={isCompact ? "sm" : "md"} />
               </div>
               <h5 className={isCompact
-                ? "font-semibold text-xs mb-2 text-gray-800 line-clamp-2"
+                ? "font-semibold text-xs mb-1 text-gray-800 line-clamp-2"
                 : "font-semibold text-base mb-3 text-gray-800 group-hover:text-primary transition-colors line-clamp-2"
               }>
                 {product.name}
               </h5>
-              <div className={isCompact ? "mb-2" : "mb-3"}>
+              <div className={isCompact ? "mb-1" : "mb-3"}>
                 <div className={isCompact ? "text-lg font-bold text-gray-900" : "text-2xl font-bold text-gray-900"}>
                   {product.price}
                 </div>
@@ -170,7 +170,7 @@ function ProductSectionComponent({ section, isCompact = false }: { section: Enri
                   </p>
                 </div>
               )}
-              <div className={isCompact ? "pt-2 border-t border-gray-200" : "mt-auto pt-2 border-t border-gray-200"}>
+              <div className={isCompact ? "pt-1 border-t border-gray-200" : "mt-auto pt-2 border-t border-gray-200"}>
                 <span className={isCompact
                   ? "inline-flex items-center gap-1 text-primary text-xs font-semibold"
                   : "inline-flex items-center gap-2 text-primary text-sm font-semibold group-hover:gap-3 transition-all"
