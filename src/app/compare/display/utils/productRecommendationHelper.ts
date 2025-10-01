@@ -67,7 +67,7 @@ function findClosestSizeRange(
 
 /**
  * Filters and returns relevant product sections based on user's displays
- * Sorted by size (smallest to largest)
+ * Sorted by display configuration order (left to right in setup = top to bottom in recommendations)
  * Includes display associations for visual indicators
  * @param displays - Array of Display objects to filter products for
  * @param limit - Maximum number of sections to return (default: 4)
@@ -76,14 +76,17 @@ export function filterRelevantProducts(
   displays: Display[],
   limit: number = 4
 ): EnrichedProductSection[] {
-  const validDisplays = displays.filter((d) => d.diagonal.length > 0);
+  const validDisplays = displays
+    .filter((d) => d.diagonal.length > 0)
+    .sort((a, b) => a.id - b.id); // Sort by ID to maintain left-to-right order
 
   if (validDisplays.length === 0) {
     return [];
   }
 
-  // Map to track sections and their matching displays
-  const relevantSectionsMap = new Map<string, EnrichedProductSection>();
+  // Map to track sections and their first appearance order
+  const relevantSectionsMap = new Map<string, { section: EnrichedProductSection; order: number }>();
+  let orderCounter = 0;
 
   for (const display of validDisplays) {
     const type = determineProductType(display);
@@ -102,26 +105,25 @@ export function filterRelevantProducts(
 
       // If section already exists, add this display to its matching displays
       if (relevantSectionsMap.has(closestSection.title)) {
-        const existingSection = relevantSectionsMap.get(closestSection.title)!;
-        existingSection.matchingDisplays.push(displayInfo);
+        const existing = relevantSectionsMap.get(closestSection.title)!;
+        existing.section.matchingDisplays.push(displayInfo);
       } else {
-        // Create new enriched section
+        // Create new enriched section with order tracking
         relevantSectionsMap.set(closestSection.title, {
-          ...closestSection,
-          matchingDisplays: [displayInfo],
+          section: {
+            ...closestSection,
+            matchingDisplays: [displayInfo],
+          },
+          order: orderCounter++,
         });
       }
     }
   }
 
-  const sections = Array.from(relevantSectionsMap.values());
-
-  // Sort by size (smallest to largest)
-  sections.sort((a, b) => {
-    const aMidpoint = (a.sizeRange[0] + a.sizeRange[1]) / 2;
-    const bMidpoint = (b.sizeRange[0] + b.sizeRange[1]) / 2;
-    return aMidpoint - bMidpoint;
-  });
+  // Extract sections and sort by the order they were first encountered
+  const sections = Array.from(relevantSectionsMap.values())
+    .sort((a, b) => a.order - b.order)
+    .map(item => item.section);
 
   // Apply limit
   return sections.slice(0, limit);
