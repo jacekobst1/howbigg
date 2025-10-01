@@ -157,30 +157,41 @@ function ProductSectionComponent({ section, isCompact = false }: { section: Enri
               }>
                 {product.name}
               </h5>
-              <div className={isCompact ? "mb-1" : "mb-3"}>
-                <div className={isCompact ? "text-lg font-bold text-gray-900" : "text-2xl font-bold text-gray-900"}>
-                  {product.price}
+              {isCompact ? (
+                <div className="flex items-center justify-between mb-1">
+                  <div className="text-lg font-bold text-gray-900">
+                    {product.price}
+                  </div>
+                  <span className="inline-flex items-center gap-1 text-gray-500 text-xs font-medium">
+                    View Product
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
                 </div>
-              </div>
-              {!isCompact && (
-                <div className="text-xs text-gray-600 bg-gray-50 rounded-lg p-2 mb-3">
-                  <p>
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    Size: {product.size}" | Resolution: {product.resolution}
-                  </p>
-                </div>
+              ) : (
+                <>
+                  <div className="mb-3">
+                    <div className="text-2xl font-bold text-gray-900">
+                      {product.price}
+                    </div>
+                  </div>
+                  <div className="text-xs text-gray-600 bg-gray-50 rounded-lg p-2 mb-3">
+                    <p>
+                      {/* eslint-disable-next-line react/no-unescaped-entities */}
+                      Size: {product.size}" | Resolution: {product.resolution}
+                    </p>
+                  </div>
+                  <div className="mt-auto pt-2 border-t border-gray-200">
+                    <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold group-hover:gap-3 transition-all">
+                      View Product
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </span>
+                  </div>
+                </>
               )}
-              <div className={isCompact ? "pt-1 border-t border-gray-200" : "mt-auto pt-2 border-t border-gray-200"}>
-                <span className={isCompact
-                  ? "inline-flex items-center gap-1 text-primary text-xs font-semibold"
-                  : "inline-flex items-center gap-2 text-primary text-sm font-semibold group-hover:gap-3 transition-all"
-                }>
-                  View Product
-                  <svg className={isCompact ? "w-3 h-3" : "w-4 h-4"} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </span>
-              </div>
             </div>
           </a>
         ))}
