@@ -3,7 +3,7 @@ import React, { Suspense } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ToastContainerWrapper from "@/components/ToastContainerWrapper";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import config from "@/config";
 import { HogProvider, HogPageView } from "@/components/PostHogProviders";
 import GoogleAdsense from "@/components/GoogleAdsense";
@@ -79,6 +79,9 @@ export const metadata: Metadata = {
       url: "/favicon/favicon.ico",
     },
   ],
+};
+
+export const viewport: Viewport = {
   themeColor: "#ffffff",
 };
 
