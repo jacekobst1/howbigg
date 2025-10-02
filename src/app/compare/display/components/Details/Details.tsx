@@ -24,14 +24,11 @@ export default function Details({ displays }: DetailsProps) {
   ).height.percentage;
 
   const marginTop = `-${100 - tallestDisplayHeight}%`;
-  const paddingBottom =
-    tallestDisplayHeight > 70 ? 0 : `${70 - tallestDisplayHeight}%`;
 
   return (
     <div
       style={{
         marginTop: marginTop,
-        paddingBottom: paddingBottom,
         transition: "margin 0.8s, padding 0.8s, opacity 0.8s linear",
         opacity: tallestDisplayHeight > 0 ? 1 : 0,
       }}
