@@ -1,5 +1,3 @@
-@tailwind base;
-
 @layer base {
     /* inter var - latin */
     @font-face {

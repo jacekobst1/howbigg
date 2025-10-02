@@ -117,7 +117,7 @@ export default function DisplayConf({
               defaultValue={display.name}
               mOnChange={setDisplayName}
               mSize="sm"
-              className="rounded-none outline-none focus:outline-none p-0"
+              className="rounded-none outline-none focus:outline-none p-0 border-none shadow-none focus:shadow-none"
               style={{ backgroundColor: display.color.background }}
             />
           </div>

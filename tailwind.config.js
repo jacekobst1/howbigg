@@ -7,20 +7,6 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  safelist: [
-    {
-      pattern: /input-(xs|sm|md|lg)/,
-    },
-    {
-      pattern: /select-(xs|sm|md|lg)/,
-    },
-    {
-      pattern: /input-group-(xs|sm|md|lg)/,
-    },
-    {
-      pattern: /toggle-(xs|sm|md|lg)/,
-    },
-  ],
   theme: {
     extend: {
       fontFamily: {
@@ -69,18 +55,5 @@ module.exports = {
       },
     },
   },
-  daisyui: {
-    themes: [
-      {
-        mytheme: {
-          primary: "#6366F1",
-          secondary: "#8587f3",
-          accent: "#e057ff",
-          neutral: "#efefff",
-          "base-100": "#fcfdfe",
-        },
-      },
-    ],
-  },
-  plugins: [require("daisyui"), require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography")],
 };
