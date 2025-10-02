@@ -41,8 +41,8 @@ export default function Details({ displays }: DetailsProps) {
           <Toggle size="md" checked={unitIsCm} onChange={toggleUnit} />
         </p>
       </label>
-      <div className="overflow-x-auto">
-        <table className="table w-full mt-4">
+      <div className="overflow-x-auto bg-white border-b border-x rounded-2xl border-gray-200 mt-4">
+        <table className="table w-full pt-4">
           <thead>
             <tr className="select-none">
               <HeadTh>Name</HeadTh>
@@ -104,10 +104,10 @@ export default function Details({ displays }: DetailsProps) {
           <tbody>
             {displays.map((display) => (
               <tr key={display.id} className="group">
-                <th className="p-0 bg-gray-100 group-hover:bg-gray-200 pr-2">
+                <th className="p-0 bg-white group-hover:bg-gray-100 pr-2">
                   <div className="flex items-center">
                     <div
-                      className="w-fit h-full rounded-3xl px-1 py-7 mr-1"
+                      className="w-fit h-full px-1 py-7 mr-1"
                       style={{ backgroundColor: display.color.background }}
                     />
                     {display.name}
@@ -162,5 +162,5 @@ const HeadTh = ({ children }: ChildrenProp) => {
 };
 
 const BodyTd = ({ children }: ChildrenProp) => {
-  return <td className="bg-gray-100 group-hover:bg-gray-200">{children}</td>;
+  return <td className="bg-white group-hover:bg-gray-100">{children}</td>;
 };
