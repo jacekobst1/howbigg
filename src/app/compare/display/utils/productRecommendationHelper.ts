@@ -74,7 +74,7 @@ function findClosestSizeRange(
  */
 export function filterRelevantProducts(
   displays: Display[],
-  limit: number = 4
+  limit: number = 6,
 ): EnrichedProductSection[] {
   const validDisplays = displays
     .filter((d) => d.diagonal.length > 0)
