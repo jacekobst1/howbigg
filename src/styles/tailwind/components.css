@@ -10,7 +10,7 @@
         @apply outline outline-1 outline-gray-300 focus:outline-primary-400;
     }
 
-    .input-group {
+    .join {
         @apply outline outline-1 outline-gray-300 focus-within:outline-2 focus-within:outline-primary-400 rounded-lg;
     }
 
@@ -18,13 +18,13 @@
         @apply border border-gray-300 focus-within:border-2 focus-within:border-primary-400;
     }
 
-    .input-group > *,
-    .input-group > .input,
-    .input-group > .select {
+    .join > *,
+    .join > .input,
+    .join > .select {
         @apply shadow-none;
     }
 
-    .input-group > :last-child {
+    .join > :last-child {
         border-radius: 0 0.25rem 0.25rem 0;
     }
 }

@@ -9,10 +9,21 @@ interface InputGroupProps {
 }
 
 const InputGroup = ({ children, label, size = "md" }: InputGroupProps) => {
-  const sizeClass = `input-group-${size}`;
+  const sizeClass = `join-${size}`;
+
+  // Add a join-item class to all children
+  const childrenWithJoinItem = React.Children.map(children, (child) => {
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, {
+        ...child.props,
+        className: clsxm(child.props.className, "join-item"),
+      } as any);
+    }
+    return child;
+  });
 
   const inputGroup = (
-    <div className={clsxm("input-group w-full", sizeClass)}>{children}</div>
+    <div className={clsxm("join w-full", sizeClass)}>{childrenWithJoinItem}</div>
   );
 
   if (label) {

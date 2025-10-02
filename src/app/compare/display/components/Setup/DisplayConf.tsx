@@ -172,7 +172,7 @@ export default function DisplayConf({
               mSize="sm"
               step="0.1"
             />
-            <span className="bg-slate-200 text-xs">
+            <span className="bg-slate-200 text-xs px-4 flex items-center">
               {display.diagonal.unit}
             </span>
           </InputGroup>
