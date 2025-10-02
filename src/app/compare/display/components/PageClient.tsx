@@ -44,7 +44,7 @@ export default function PageClient({ posts, initialDisplays }: PageClientProps) 
         {/* On mobile/tablet: Show recommendations if display set, then blog posts below */}
         <div className="block xl:hidden">
           {hasValidDisplay(displays) && (
-            <ProductRecommendations displays={displays} variant="full" />
+            <ProductRecommendations displays={displays} variant="compact" />
           )}
           <div className={hasValidDisplay(displays) ? "mt-16" : ""}>
             <h2 className="text-2xl">Latest articles</h2>
