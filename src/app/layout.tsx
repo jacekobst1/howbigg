@@ -101,7 +101,7 @@ export default function RootLayout({
     <body data-theme="mytheme" className="flex flex-col min-h-screen">
     <Header />
     <HogProvider>
-      <main className="w-11/12 mx-auto grow">{children}</main>
+      <main className="w-11/12 max-w-[1900px] mx-auto grow">{children}</main>
         </HogProvider>
         <Footer />
 

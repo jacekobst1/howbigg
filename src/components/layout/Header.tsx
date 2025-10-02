@@ -4,7 +4,7 @@ import Navigation from "@/components/layout/Navigation";
 export default function Header() {
   return (
     <header className="top-0 z-50 mb-5 pt-3 md:pt-0 border-b border-slate">
-      <div className="h-18 md:h-10 mx-4 flex items-center justify-between flex-wrap md:flex-nowrap">
+      <div className="h-18 md:h-10 w-11/12 max-w-[1900px] mx-auto flex items-center justify-between flex-wrap md:flex-nowrap">
         <a href="/" className="text-primary-500 font-bold flex items-center">
           <Image
             src="/favicon/android-chrome-192x192.png"
