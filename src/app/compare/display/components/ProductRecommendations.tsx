@@ -40,7 +40,7 @@ export default function ProductRecommendations({
         </h2>
         {isCompact && (
           <p className="text-[10px] text-gray-500 mb-2">
-            Affiliate links — your support helps keep this site running
+            Affiliate links — they helps keep this site running
           </p>
         )}
         {!isCompact && (
