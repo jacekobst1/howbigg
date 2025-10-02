@@ -7,7 +7,7 @@ const PostPreview = (post: PostMetadata) => {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="post-preview shadow bg-white flex h-[130px] lg:h-[200px] rounded"
+      className="post-preview bg-white hover:bg-base-50 transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1 border border-gray-200 hover:border-primary/50 flex h-[130px] lg:h-[200px] rounded"
     >
       <MyImage
         src={post.image.sources[2]}

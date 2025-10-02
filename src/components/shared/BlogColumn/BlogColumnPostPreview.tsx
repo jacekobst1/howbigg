@@ -7,7 +7,7 @@ export default function BlogColumnPostPreview(post: PostMetadata) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group shadow bg-white max-w-[300px] rounded-lg flex flex-col"
+      className="group bg-white hover:bg-base-50 transition-all duration-300 max-w-[300px] rounded-lg shadow-md hover:shadow-2xl hover:-translate-y-1 border border-gray-200 hover:border-primary/50 flex flex-col"
     >
       <MyImage
         src={post.image.sources[0]}
@@ -17,7 +17,7 @@ export default function BlogColumnPostPreview(post: PostMetadata) {
         className="rounded-t-lg"
       />
       <div className="flex flex-col h-full mt-2 px-2 mb-2 lg:mb-0">
-        <h2 className="text-sm lg:text-sm group-hover:underline decoration-2">
+        <h2 className="text-sm lg:text-sm">
           {post.title}
         </h2>
         <div className="flex-grow" />
