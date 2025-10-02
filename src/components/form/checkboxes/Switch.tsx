@@ -24,7 +24,7 @@ export default function Switch({
   }
 
   const staticClasses =
-    "bg-white shadow flex items-center justify-center w-1/2 rounded-lg h-[1.64rem] transition-all duration-150 ease-linear top-[4px] absolute";
+    "bg-white shadow flex items-center justify-center w-1/2 rounded-md h-[1.64rem] transition-all duration-150 ease-linear top-[4px] absolute";
 
   const mySwitch = (
     <div className="switch-wrapper relative w-full h-9 bg-base-100 text-xs rounded-lg cursor-pointer">

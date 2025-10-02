@@ -139,7 +139,7 @@ function ProductSectionComponent({ section, isCompact = false }: { section: Enri
             rel="noopener noreferrer nofollow"
             className={isCompact
               ? "block card bg-white hover:bg-base-50 transition-all duration-300 p-3 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-1 border border-gray-200 hover:border-primary/50"
-              : "group relative card bg-white hover:bg-base-50 transition-all duration-300 p-5 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 border border-gray-200 hover:border-primary/50"
+              : "group relative card bg-white hover:bg-base-50 transition-all duration-300 p-5 rounded-lg shadow-md hover:shadow-2xl hover:-translate-y-1 border border-gray-200 hover:border-primary/50"
             }
           >
             {!isCompact && product.rating >= 4.7 && (

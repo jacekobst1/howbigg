@@ -4,6 +4,7 @@ import Display from "@/app/compare/display/types/Display";
 import React, { ReactNode, useState } from "react";
 import Toggle from "@/components/form/checkboxes/Toggle";
 import InfoTooltip from "@/components/InfoTooltip";
+import clsxm from "@/lib/clsxm";
 
 interface DetailsProps {
   displays: Display[];
@@ -41,11 +42,11 @@ export default function Details({ displays }: DetailsProps) {
           <Toggle size="md" checked={unitIsCm} onChange={toggleUnit} />
         </p>
       </label>
-      <div className="overflow-x-auto bg-white border-b border-x rounded-2xl border-gray-200 mt-4">
-        <table className="table w-full pt-4">
+      <div className="overflow-x-auto bg-white border-b border-x rounded-lg border-gray-200 mt-4">
+        <table className="table w-full pt-4 rounded-t-lg">
           <thead>
             <tr className="select-none">
-              <HeadTh>Name</HeadTh>
+              <HeadTh className="rounded-tl-lg">Name</HeadTh>
               <HeadTh>Width</HeadTh>
               <HeadTh>Height</HeadTh>
               <HeadTh>Area</HeadTh>
@@ -82,7 +83,7 @@ export default function Details({ displays }: DetailsProps) {
                   </span>
                 </InfoTooltip>
               </HeadTh>
-              <HeadTh>
+              <HeadTh className="rounded-tr-lg">
                 <InfoTooltip
                   text="Minimal distance"
                   anchorClassName="py-4"
@@ -155,10 +156,11 @@ export default function Details({ displays }: DetailsProps) {
 
 interface ChildrenProp {
   children?: ReactNode;
+  className?: string;
 }
 
-const HeadTh = ({ children }: ChildrenProp) => {
-  return <th className="bg-black text-base-100 pt-0 pb-0">{children}</th>;
+const HeadTh = ({ children, className }: ChildrenProp) => {
+  return <th className={clsxm("bg-black text-base-100 pt-0 pb-0", className)}>{children}</th>;
 };
 
 const BodyTd = ({ children }: ChildrenProp) => {
