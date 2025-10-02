@@ -13,14 +13,16 @@ import { ImageSizes } from "@/app/blog/types/ImageSizes";
 import PostContent from "@/app/blog/[slug]/components/PostContent";
 import PostHeader from "@/app/blog/[slug]/components/PostHeader";
 import BlogColumn from "@/components/shared/BlogColumn/BlogColumn";
+import { Metadata } from "next";
 
 interface PostProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export async function generateMetadata({ params: { slug } }: PostProps) {
+export async function generateMetadata({ params }: PostProps): Promise<Metadata> {
+  const { slug } = await params;
   const post = getPostBySlug(slug);
 
   return {
@@ -72,7 +74,8 @@ async function getImageSizes(post: Post) {
   return imageSizes;
 }
 
-export default async function PostPage({ params: { slug } }: PostProps) {
+export default async function PostPage({ params }: PostProps) {
+  const { slug } = await params;
   const post = getPostBySlug(slug);
   const imageSizes = await getImageSizes(post);
 

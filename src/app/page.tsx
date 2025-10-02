@@ -3,13 +3,15 @@ import { Metadata } from "next";
 import { generateComparisonMetadata } from "@/app/compare/display/utils/metadataGenerator";
 
 interface HomeProps {
-  searchParams: { displays?: string };
+  searchParams: Promise<{ displays?: string }>;
 }
 
 export async function generateMetadata({ searchParams }: HomeProps): Promise<Metadata> {
-  return generateComparisonMetadata(searchParams.displays);
+  const params = await searchParams;
+  return generateComparisonMetadata(params.displays);
 }
 
-export default function Home({ searchParams }: HomeProps) {
-  return <CompareDisplayPage searchParams={searchParams} />;
+export default async function Home({ searchParams }: HomeProps) {
+  const params = await searchParams;
+  return <CompareDisplayPage searchParams={params} />;
 }
