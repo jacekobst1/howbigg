@@ -46,7 +46,7 @@ export default function RightSidebarContent({ displays, posts }: RightSidebarCon
           right: 0,
         }}
       >
-        <ProductRecommendations displays={displays} variant="compact" />
+        <ProductRecommendations displays={displays} />
       </div>
     </div>
   );
