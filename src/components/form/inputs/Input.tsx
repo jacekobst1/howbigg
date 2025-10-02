@@ -39,7 +39,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         onChange={onChangeHandler}
         type={type}
         className={clsxm(
-          "input w-full",
+          "input w-full bg-white",
           sizeClass,
           noSpin && "no-spin",
           className
