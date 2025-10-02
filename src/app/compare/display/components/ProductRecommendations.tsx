@@ -35,7 +35,7 @@ export default function ProductRecommendations({
   return (
     <div className={isCompact ? "space-y-4" : "mt-16 bg-gradient-to-br from-base-100 to-base-200 rounded-2xl p-6 md:p-8 shadow-lg"}>
       <div className={isCompact ? "mb-4" : "text-center mb-8"}>
-        <h2 className={isCompact ? "text-xl font-bold text-gray-900" : "text-3xl md:text-4xl font-bold mb-2 text-gray-900"}>
+        <h2 className={isCompact ? "text-2xl" : "text-3xl md:text-4xl font-bold mb-2 text-gray-900"}>
           Recommended Products
         </h2>
         {isCompact && (
