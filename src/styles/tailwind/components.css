@@ -14,6 +14,10 @@
     @apply bg-primary-400! text-white;
   }
 
+  .select option:checked:active {
+    @apply shadow-none! text-white!;
+  }
+
   .select option:active:not(:checked) {
     @apply bg-primary-100! text-black! shadow-none!;
   }
