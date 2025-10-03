@@ -13,5 +13,6 @@
     justify-content: flex-end;
     font-size: .5em;
     color: gray;
-    margin-top: -4px;
+    margin-top: 2px;
+    font-style: italic;
 }
