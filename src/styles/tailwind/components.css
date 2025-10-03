@@ -9,6 +9,19 @@
         outline-offset: 0 !important;
     }
 
+    .select option:checked {
+        @apply bg-primary-400! text-white;
+    }
+
+    .select option:active {
+        @apply bg-primary-100! text-black!;
+    }
+
+    .input-sm,
+    .select-sm {
+        font-size: 0.85rem !important;
+    }
+
     .join {
         @apply rounded-lg border border-gray-300 focus-within:border-white! focus-within:outline-2 focus-within:outline-primary-400 ;
     }
@@ -29,10 +42,5 @@
 
     .join > :last-child {
         border-radius: 0 0.25rem 0.25rem 0;
-    }
-
-    .input-sm,
-    .select-sm {
-        font-size: 0.85rem !important;
     }
 }
