@@ -8,7 +8,7 @@ interface BlogColumnProps {
 
 export default function BlogColumn({ limit, ignoredSlug }: BlogColumnProps) {
   const posts = getAllPostsMetadata(limit).filter(
-    (post) => post.slug !== ignoredSlug
+    (post) => post.slug !== ignoredSlug,
   );
 
   const postPreviews = posts.map((post) => (

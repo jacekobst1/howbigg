@@ -6,7 +6,9 @@ interface HomeProps {
   searchParams: Promise<{ displays?: string }>;
 }
 
-export async function generateMetadata({ searchParams }: HomeProps): Promise<Metadata> {
+export async function generateMetadata({
+  searchParams,
+}: HomeProps): Promise<Metadata> {
   const params = await searchParams;
   return generateComparisonMetadata(params.displays);
 }

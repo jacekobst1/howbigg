@@ -3,11 +3,13 @@
 ## Display Comparison Architecture
 
 ### Display Object Flow
+
 ```
 User Input → DisplayUrlState → Display class → Calculations → Visual Presentation
 ```
 
 ### Core Components
+
 1. **Display Class** (`types/Display.ts`)
    - Constructor-based initialization with 20+ properties
    - Methods like `getAspectRatioDecimalValue()`
@@ -32,6 +34,7 @@ User Input → DisplayUrlState → Display class → Calculations → Visual Pre
 ### Critical Patterns
 
 #### URL State Synchronization
+
 ```typescript
 const [queryState, setQueryState, isQueryStateReady] = useQueryState<string[]>("displays");
 
@@ -44,6 +47,7 @@ const decodedDisplays = decodeDisplays(queryState); // string[] → Partial<Disp
 ```
 
 #### Display Object Instantiation
+
 ```typescript
 // ❌ WRONG - loses class methods
 const display = { id: 1, name: "Monitor", diagonal: { value: 27, unit: "in" } };
@@ -60,8 +64,9 @@ const merged = mapWithPrototype(Display, partialDisplay, existingDisplay);
 ## Server-Side Rendering (SSR) Pattern
 
 ### Purpose
+
 - **SEO optimization**: Search engines index full comparison content
-- **Dynamic metadata**: Each comparison has unique title/description  
+- **Dynamic metadata**: Each comparison has unique title/description
 - **Performance**: Faster initial render with server-calculated data
 
 ### Architecture Flow
@@ -87,6 +92,7 @@ Children (Comparison, ProductRecommendations):
 ### Key Components
 
 #### Server Component (src/app/compare/display/page.tsx)
+
 ```typescript
 // 1. Accept searchParams
 interface PageProps {
@@ -108,15 +114,17 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
 ```
 
 #### Serialization Layer (src/app/compare/display/utils/displaySerializer.ts)
+
 ```typescript
 // Convert Display instances → plain objects
-export function serializeDisplays(displays: Display[]): any[]
+export function serializeDisplays(displays: Display[]): any[];
 
 // Convert plain objects → Display instances
-export function deserializeDisplays(plainObjects: any[]): Display[]
+export function deserializeDisplays(plainObjects: any[]): Display[];
 ```
 
 #### Client Component (src/app/compare/display/components/PageClient.tsx)
+
 ```typescript
 // 1. Receive plain objects from server
 interface PageClientProps {
@@ -124,7 +132,7 @@ interface PageClientProps {
 }
 
 // 2. Deserialize to Display instances
-const [displays, setDisplays] = useState(() => 
+const [displays, setDisplays] = useState(() =>
   deserializeDisplays(initialDisplays)
 );
 
@@ -136,18 +144,21 @@ const [displays, setDisplays] = useState(() =>
 ### Common Pitfalls
 
 ❌ **Don't**: Pass Display instances from server to client
+
 ```typescript
 // page.tsx (Server)
 <PageClient initialDisplays={displayInstances} /> // React strips methods!
 ```
 
 ❌ **Don't**: Pass plain objects to components expecting Display instances
+
 ```typescript
 // PageClient.tsx
 <Comparison initialDisplays={initialDisplays} /> // Methods undefined
 ```
 
 ❌ **Don't**: Re-decode from URL in client components
+
 ```typescript
 // Comparison.tsx
 useEffect(() => {
@@ -156,6 +167,7 @@ useEffect(() => {
 ```
 
 ✅ **Do**: Serialize on server, deserialize on client, pass deserialized state
+
 ```typescript
 // page.tsx (Server)
 <PageClient initialDisplays={serializeDisplays(displays)} />
@@ -166,6 +178,7 @@ const displays = deserializeDisplays(initialDisplays);
 ```
 
 ### Benefits
+
 1. **SEO**: Quick comparison links (e.g., "55 vs 65 inch") properly indexed
 2. **Performance**: No "Loading..." state for initial render
 3. **Social**: Dynamic Open Graph tags for link previews
@@ -174,11 +187,13 @@ const displays = deserializeDisplays(initialDisplays);
 ## Blog System Architecture
 
 ### Content Pipeline
+
 ```
 Markdown files (posts/) → gray-matter parsing → Post objects → React components
 ```
 
 ### Key Components
+
 1. **Post Files** (`posts/*.md`)
    - YAML frontmatter metadata
    - Markdown content body
@@ -195,39 +210,44 @@ Markdown files (posts/) → gray-matter parsing → Post objects → React compo
    - Custom React Markdown renderer
 
 4. **Frontmatter Schema**
+
 ```yaml
 createdAt: "YYYY-MM-DD"
 title: "Post Title"
 subtitle: "Post Subtitle"
-readingTime: 8  # minutes
+readingTime: 8 # minutes
 image:
   alt: "Image description"
   author: "Photographer | Source"
-  sources: ["/images/posts/slug/image_16x9.png", "/images/posts/slug/image_4x3.png"]
+  sources:
+    ["/images/posts/slug/image_16x9.png", "/images/posts/slug/image_4x3.png"]
 author: "Author Name"
 ```
 
 ### Critical Patterns
 
 #### Server vs Client
+
 ```typescript
 // ✅ Server Component - OK
 import { getAllPostsMetadata } from "@/app/blog/utils/postGetter";
 
 // ❌ Client Component - FAILS
-"use client";
+("use client");
 import { getAllPostsMetadata } from "@/app/blog/utils/postGetter"; // Error: fs module
 ```
 
 ## State Management Patterns
 
 ### URL as Single Source of Truth
+
 - All display comparison state stored in URL query parameters
 - Enables sharing configurations via links
 - Persists across page reloads
 - Use `useQueryState` hook for synchronization
 
 ### Component State
+
 - Local state with `useState` for UI-only concerns
 - URL state via `useQueryState` for shareable data
 - No global state management library (Redux, Zustand, etc.)
@@ -235,6 +255,7 @@ import { getAllPostsMetadata } from "@/app/blog/utils/postGetter"; // Error: fs 
 ## Styling Architecture
 
 ### Three-Column Layout
+
 ```
 .layout__left-section   (sidebar)
 .layout__center-section (main content)
@@ -242,12 +263,14 @@ import { getAllPostsMetadata } from "@/app/blog/utils/postGetter"; // Error: fs 
 ```
 
 ### Styling Hierarchy
+
 1. **DaisyUI Components** - Use first for common UI elements (btn, input, select)
 2. **Tailwind Utilities** - For layout, spacing, colors
 3. **Custom CSS** - Only for complex animations or unique requirements
 4. **CSS Variables** - Theme colors in global CSS
 
 ### Conditional Classes
+
 ```typescript
 import clsxm from "@/lib/clsxm";
 
@@ -264,6 +287,7 @@ className={clsxm(
 ## Data Flow Patterns
 
 ### Display Comparison Flow (SSR-Enabled)
+
 1. **Server**: Decode URL params → Calculate displays → Serialize → Generate metadata
 2. **Client**: Deserialize → Store in state → Pass to children
 3. **User**: Modify display input → Component updates state
@@ -273,6 +297,7 @@ className={clsxm(
 7. **UI**: Re-renders with new calculations
 
 ### Blog Content Flow
+
 1. Markdown files read from filesystem (server-side)
 2. Frontmatter parsed with gray-matter
 3. Post metadata/content passed to components

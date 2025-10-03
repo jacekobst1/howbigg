@@ -12,7 +12,7 @@ export function middleware(req: NextRequest) {
     const newHost = host?.replace(wwwRegex, "");
     return NextResponse.redirect(
       `https://${newHost}${req.nextUrl.pathname}`,
-      301
+      301,
     );
   }
 

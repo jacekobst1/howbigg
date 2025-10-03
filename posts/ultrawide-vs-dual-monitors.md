@@ -4,16 +4,15 @@ updatedAt: "2023-05-29"
 title: "Ultrawide vs. dual monitors: What's best for you?"
 subtitle: "Learn all about ultrawide and dual monitors from our easy-to-understand guide. It will help you make the best choice for your needs and preferences."
 readingTime: 6
-image: {
-    alt: "Man holding super ultrawide monitor",
-    author: "Alexandru Acea | Unsplash",
-    sources: [
-      "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_16x9.jpg",
-      "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_4x3.jpg",
-      "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_1x1.jpg",
-    ]   
-}
+image:
+  alt: "Man holding super ultrawide monitor"
+  author: "Alexandru Acea | Unsplash"
+  sources:
+    - "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_16x9.jpg"
+    - "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_4x3.jpg"
+    - "/images/posts/ultrawide-vs-dual-monitors/man_holding_super_ultrawide_monitor_1x1.jpg"
 ---
+
 <div class="md-border">
 <div class="md-border-title">Quick answer</div>
 
@@ -25,6 +24,7 @@ When choosing between an ultrawide and dual monitors setup, you should consider 
 This article tells you **everything you need to know** to help you choose your next screen.
 
 ## 1. How wide is ultrawide?
+
 ![Comparison of 32:9, 21:9 and 16:9 images](/images/posts/ultrawide-vs-dual-monitors/ultrawidewide_aspect_ratios_comparison.jpg)
 _Josh Sorenson | Pexels and Howbigg_
 
@@ -40,6 +40,7 @@ This behemoth of a display offers an unrivaled field of view, making it the ulti
 **You can see and test the difference between various aspect ratios [here](https://howbigg.com?displays=%5B"Wide_16x9_0_0_27_in_2560x1440_0"%2C"Ultrawide_21x9_0_0_34_in_3440x1440_0"%2C"Super+Ultrawide_32x9_0_0_49_in_5120x1440_0"%5D).**
 
 ## 2. Good and bad things about ultrawide monitors
+
 ![Clean desk setup with ultrawide monitor](/images/posts/ultrawide-vs-dual-monitors/pretty_desk_setup.jpg)
 _Luke Peters | Unsplash_
 
@@ -58,6 +59,7 @@ Every coin has two sides, and ultrawide monitors are no exception. Here are some
 - **Less flexibility**: Most ultrawide monitors have fewer adjustment options than a dual monitor setup, which might be a problem if you need a particular one.
 
 ## 3. Why pixel density matters
+
 ![Close view of the screen, showing pixels](/images/posts/ultrawide-vs-dual-monitors/pixels.jpg)
 _Amal S | Unsplash_
 
@@ -69,27 +71,29 @@ If it's too low, the image will look pixelated.
 If it's too high, the image will be too small to see, and you'll have to scale it up via computer settings, making it look a bit blurry.
 
 Here's the **list of optimal resolutions** for different screen sizes:
-| Type                   | Size  | Optimal resolutions            |
+| Type | Size | Optimal resolutions |
 |------------------------|-------|--------------------------------|
-| Wide (16x9)            | 23-25 | 1920×1080, 2560×1440           |
-| Wide (16x9)            | 27    | 2560x1440, 3840x2160           |
-| Wide (16x9)            | 32-43 | 3840×2160                      |
-| Ultrawide (21x9)       | 25-29 | 2560×1080                      |
-| Ultrawide (21x9)       | 34    | 3440×1440, 5120×2160           |
-| Ultrawide (21x9)       | 38    | 3840×1600                      |
-| Ultrawide (21x9)       | 40    | 5120×2160                      |
-| Super ultrawide (32x9) | 44-49 | 5120×1440                      |
-| Super ultrawide (32x9) | 57    | 7680×2160                      |
+| Wide (16x9) | 23-25 | 1920×1080, 2560×1440 |
+| Wide (16x9) | 27 | 2560x1440, 3840x2160 |
+| Wide (16x9) | 32-43 | 3840×2160 |
+| Ultrawide (21x9) | 25-29 | 2560×1080 |
+| Ultrawide (21x9) | 34 | 3440×1440, 5120×2160 |
+| Ultrawide (21x9) | 38 | 3840×1600 |
+| Ultrawide (21x9) | 40 | 5120×2160 |
+| Super ultrawide (32x9) | 44-49 | 5120×1440 |
+| Super ultrawide (32x9) | 57 | 7680×2160 |
 
 **You can also check available resolutions for every aspect ratio, compare pixel density, and play around [with this free tool](https://howbigg.com).**
 
 ## 4. Using ultrawide and dual monitors every day
+
 For daily use, both ultrawide and dual monitors have their benefits.
 Ultrawide monitors give you a big, clean workspace on one screen.
 Dual monitors let you customize and adjust your screens more.
 The choice between the two depends on what you like and how you plan to use your screen.
 
 ### Ultrawide vs. Dual Monitors: For work
+
 ![The interior of the office, with employees staring at monitors](/images/posts/ultrawide-vs-dual-monitors/office_with_people_working.jpg)
 _Sigmund | Unsplash_
 
@@ -105,6 +109,7 @@ Also, **dual monitors let you adjust and move your screens more**, which can be 
 This configuration can also be helpful when sharing a screen during a video conference - we can share the first screen and its contents with the participants in the call but still have the second for our own use.
 
 ### Ultrawide vs. Dual Monitors: For gaming
+
 ![Teenagers sitting in front of laptops doing e-sport](/images/posts/ultrawide-vs-dual-monitors/teenagers_doing_e_sport.jpg)
 _Fredrick Tendong | Unsplash_
 
@@ -119,8 +124,6 @@ There are also some competitive games (like StarCraft II or Valorant) that could
 You are then forced to play with black bars on the sides.
 
 Here's a **list of all games that supports ultrawide** resolutions: [wsgf.org](http://www.wsgf.org/mgl/uws)
-
-
 
 It's important to remember that **none of the gaming consoles works well with ultrawide screens** and will stretch the image to fit the screen.
 This applies to older and newer consoles like PS5 and Xbox Series X.
@@ -139,6 +142,7 @@ When deciding between ultrawide and dual monitors for gaming, think about the ga
 It is also possible to use two monitors - one wide and the other ultrawide - for some it might be **the choice that makes the most sense**.
 
 ## 5. Curved screens vs. flat screens
+
 ![Curved and flat monitors seen from above](/images/posts/ultrawide-vs-dual-monitors/curved_vs_flat_comparison.jpg)
 _Howbigg_
 
@@ -165,6 +169,7 @@ Flat screens are also **more versatile when it comes to screen sharing** and col
 In addition, flat screens are generally **easier to adjust in a dual monitor setup**, providing more flexibility for customized ergonomic configurations.
 
 ## 6. Conclusion
+
 Ultrawide monitors give you a **great, fun experience**, which is great for **creative people and gamers** who want a big screen.
 
 Dual monitors let you customize and adjust your screens more, which is suitable for **people who do more than one thing at a time** or need a special setup.
@@ -174,26 +179,32 @@ No matter what you choose, remember to **pick the proper resolution!**
 Both choices will help you be more productive, have more fun gaming, and enjoy your screen time more 👾
 
 ## FAQ
+
 ### Does an ultrawide monitor require a better CPU or graphics card than a normal wide monitor?
+
 Yes, if the vertical resolution is the same for both monitors.
 In terms of CPU and GPU usage, the primary factor is the total number of pixels that need to be rendered.
 So ultrawide monitor with a 3440x1440 resolution **would have more pixels to render** compared to a standard wide monitor with a 2560x1440 resolution.
 In such cases, the ultrawide monitor would **require slightly more power** to handle the additional pixels.
 
 ### What is the ultrawide equivalent in 2 monitors?
+
 The **21:9 ultrawide** monitor (34-inch) is equivalent to **one and a third of a 16:9** monitor (27-inch). The **32:9 super ultrawide** monitor (49-inch) is equivalent to **two 16:9** monitors (27-inch).
 
 ### Is a 49-inch monitor too big?
+
 It's not too big in terms of usability - it's just a matter of getting used to it, and later you probably **won't want to go back to a smaller screen**.
 But it can be an issue if your desk is too fragile or small to fit it.
 That monster can weigh up to **35 lbs (16kg)** and be wide as **47-inch (120cm)**!
 
 ### What is the best size for dual monitors?
+
 I recommend you **stay between 24-27 inches** of screen size for dual monitors setup.
 If you want bigger ones, make sure that you have a **desk with proper depth**, to place them far enough, so you won't tire your eyes.
 The important thing in dual monitors setup is to **avoid too much neck movement** (left-right) - if monitors are 24-27 inches, the movement will be acceptable.
 
 ### Can you multitask on an ultrawide monitor? Can you split the ultrawide monitor into two?
+
 Yes, you can multitask on an ultrawide monitor simply by **dragging windows to the sides** of the screen.
 There is also an option to **split the ultrawide monitor into multiple** virtual monitors with tools like [Microsoft PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/fancyzones), [DisplayFusion](https://www.displayfusion.com), [AquaSnap](https://www.nurgo-software.com/products/aquasnap) or [Magnet (for macOS)](https://magnet.crowdcafe.com).
 If you want to display video from **different devices simultaneously** on the ultrawide monitor it's also possible - you can achieve this by using a Picture-by-Picture mode (PBP) that is available on most brands.

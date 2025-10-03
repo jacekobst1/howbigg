@@ -25,7 +25,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       className,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const sizeClass = `input-${mSize}`;
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -42,7 +42,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           "input w-full bg-white",
           sizeClass,
           noSpin && "no-spin",
-          className
+          className,
         )}
         {...rest}
       />
@@ -53,7 +53,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     }
 
     return input;
-  }
+  },
 );
 
 Input.displayName = "Input";

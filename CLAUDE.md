@@ -61,11 +61,13 @@ The app is divided into three main features:
 The display comparison feature uses a sophisticated calculation pipeline:
 
 **Display Object Flow**:
+
 ```
 User Input → DisplayUrlState → Display class → Calculations → Visual Presentation
 ```
 
 **Key Files**:
+
 - `types/Display.ts` - Core Display class with 20+ properties (diagonal, resolution, aspect ratio, PPI, viewing distances)
 - `utils/displayGenerator.ts` - Creates Display instances with sensible defaults
 - `utils/displayDetailsFacade.ts` - Orchestrates all calculations (size, PPI, viewing distance)
@@ -75,6 +77,7 @@ User Input → DisplayUrlState → Display class → Calculations → Visual Pre
 - `utils/viewDistanceCalculator.ts` - Computes optimal viewing distances
 
 **State Management**:
+
 - Custom `useQueryState` hook synchronizes React state with URL query parameters
 - All display configurations are URL-encoded, making comparisons shareable via links
 - Component state updates trigger URL updates, which persist across page reloads
@@ -102,11 +105,13 @@ Children (Comparison, ProductRecommendations):
 ```
 
 **Key Files**:
+
 - `page.tsx` - Server Component, decodes URL params, generates metadata
 - `displaySerializer.ts` - Converts Display ↔ plain objects
 - `PageClient.tsx` - Deserializes and manages client state
 
 **Why This Matters**:
+
 - **SEO**: Search engines see full content in initial HTML
 - **React**: Can't pass class instances across server/client boundary
 - **Methods**: Display.getAspectRatioDecimalValue() works throughout app
@@ -114,11 +119,13 @@ Children (Comparison, ProductRecommendations):
 ### Blog System Architecture
 
 **Content Pipeline**:
+
 ```
 Markdown files (posts/) → gray-matter parsing → Post objects → React components
 ```
 
 **Key Files**:
+
 - `posts/*.md` - Blog content with YAML frontmatter (title, subtitle, image, author, createdAt, readingTime)
 - `src/app/blog/utils/postGetter.ts` - Server-side file system operations to read/parse posts
 - `src/app/blog/[slug]/page.tsx` - Dynamic route for individual blog posts
@@ -126,11 +133,12 @@ Markdown files (posts/) → gray-matter parsing → Post objects → React compo
 - `src/app/blog/[slug]/components/TableOfContents.tsx` - Auto-generated from H2 headings
 
 **Blog Post Frontmatter Schema**:
+
 ```yaml
 createdAt: "YYYY-MM-DD"
 title: "Post Title"
 subtitle: "Post Subtitle"
-readingTime: 8  # in minutes
+readingTime: 8 # in minutes
 image:
   alt: "Image description"
   author: "Photographer | Source"
@@ -154,7 +162,8 @@ The app heavily relies on URL query parameters for state persistence:
 
 ```typescript
 // Custom hook used throughout comparison feature
-const [queryState, setQueryState, isQueryStateReady] = useQueryState<string[]>("displays");
+const [queryState, setQueryState, isQueryStateReady] =
+  useQueryState<string[]>("displays");
 
 // Displays are encoded/decoded to/from URL
 const encodedDisplays = encodeDisplays(displays); // Display[] → string[]
@@ -208,7 +217,10 @@ All blog operations are server-side only (fs operations):
 
 ```typescript
 // Server components only
-import { getAllPostsMetadata, getPostBySlug } from "@/app/blog/utils/postGetter";
+import {
+  getAllPostsMetadata,
+  getPostBySlug,
+} from "@/app/blog/utils/postGetter";
 
 // Never use in client components - will fail
 ```
@@ -226,6 +238,7 @@ import { getAllPostsMetadata, getPostBySlug } from "@/app/blog/utils/postGetter"
 ## Testing Approach
 
 Currently no test suite exists. When adding tests:
+
 - Use Jest + React Testing Library
 - Test calculation utilities first (PPI, size, viewing distance)
 - Test Display object methods and serialization
@@ -236,6 +249,7 @@ Currently no test suite exists. When adding tests:
 ### Environment Variables
 
 See `src/config.ts`:
+
 - `FULL_URL` - Full site URL (default: https://howbigg.com)
 - `SHORT_URL` - Short URL for display (default: howbigg.com)
 - `NEXT_PUBLIC_POSTHOG_KEY` - PostHog analytics key

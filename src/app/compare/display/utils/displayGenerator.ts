@@ -32,8 +32,8 @@ function generateDisplayByExistingOnes(existingDisplays: Display[]) {
   const nonUsedColors = colors.filter(
     (color) =>
       !existingDisplays.some(
-        (display) => display.color.background === color.background
-      )
+        (display) => display.color.background === color.background,
+      ),
   );
   const maxId = Math.max(...existingDisplays.map((display) => display.id));
 
@@ -59,7 +59,7 @@ function initDisplay(id: number) {
     { ft: 0, m: 0 },
     { ft: 0, m: 0 },
     0,
-    { background: dark, text: light }
+    { background: dark, text: light },
   );
 }
 

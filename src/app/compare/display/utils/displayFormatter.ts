@@ -8,12 +8,16 @@ import Display from "@/app/compare/display/types/Display";
  */
 export function formatDisplayDescriptions(displays: Display[]): string {
   return displays
-    .filter(d => d.diagonal.length > 0)
-    .map(d => {
+    .filter((d) => d.diagonal.length > 0)
+    .map((d) => {
       const size = d.diagonal.length;
       let aspectRatio = d.aspectRatio.value;
 
-      if (aspectRatio === 'custom' && d.customAspectRatio.width && d.customAspectRatio.height) {
+      if (
+        aspectRatio === "custom" &&
+        d.customAspectRatio.width &&
+        d.customAspectRatio.height
+      ) {
         aspectRatio = `${d.customAspectRatio.width}x${d.customAspectRatio.height}`;
       }
 

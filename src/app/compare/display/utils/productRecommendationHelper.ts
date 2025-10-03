@@ -42,7 +42,7 @@ export function hasValidDisplay(displays: Display[]): boolean {
  */
 function findClosestSizeRange(
   size: number,
-  sections: ProductSection[]
+  sections: ProductSection[],
 ): ProductSection | null {
   let closest: ProductSection | null = null;
   let minDistance = Infinity;
@@ -85,7 +85,10 @@ export function filterRelevantProducts(
   }
 
   // Map to track sections and their first appearance order
-  const relevantSectionsMap = new Map<string, { section: EnrichedProductSection; order: number }>();
+  const relevantSectionsMap = new Map<
+    string,
+    { section: EnrichedProductSection; order: number }
+  >();
   let orderCounter = 0;
 
   for (const display of validDisplays) {
@@ -123,7 +126,7 @@ export function filterRelevantProducts(
   // Extract sections and sort by the order they were first encountered
   const sections = Array.from(relevantSectionsMap.values())
     .sort((a, b) => a.order - b.order)
-    .map(item => item.section);
+    .map((item) => item.section);
 
   // Apply limit
   return sections.slice(0, limit);

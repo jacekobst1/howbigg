@@ -2,7 +2,10 @@ import React from "react";
 import PageClient from "./components/PageClient";
 import QuickComparisons from "@/app/compare/display/components/QuickComparisons";
 import { getAllPostsMetadata } from "@/app/blog/utils/postGetter";
-import { generateDisplays, generateDisplaysWithoutPossibleResolutions } from "@/app/compare/display/utils/displayGenerator";
+import {
+  generateDisplays,
+  generateDisplaysWithoutPossibleResolutions,
+} from "@/app/compare/display/utils/displayGenerator";
 import { decodeDisplays } from "@/app/compare/display/utils/urlEncoder";
 import { mapWithPrototype, mergeDeep } from "@/utils/objects";
 import Display from "@/app/compare/display/types/Display";
@@ -24,10 +27,12 @@ export default function CompareDisplayPage({ searchParams }: PageProps) {
     try {
       const encoded = JSON.parse(decodeURIComponent(searchParams.displays));
       const decoded = decodeDisplays(encoded);
-      const defaults = generateDisplaysWithoutPossibleResolutions(decoded.length);
+      const defaults = generateDisplaysWithoutPossibleResolutions(
+        decoded.length,
+      );
       const merged = mapWithPrototype(
         defaults,
-        (display, index) => mergeDeep(display, decoded[index]) as Display
+        (display, index) => mergeDeep(display, decoded[index]) as Display,
       );
       initialDisplays = getDetailedDisplays(merged);
     } catch (e) {
@@ -41,7 +46,10 @@ export default function CompareDisplayPage({ searchParams }: PageProps) {
       <section className="layout__left-section">
         <QuickComparisons />
       </section>
-      <PageClient posts={posts} initialDisplays={serializeDisplays(initialDisplays)} />
+      <PageClient
+        posts={posts}
+        initialDisplays={serializeDisplays(initialDisplays)}
+      />
     </div>
   );
 }

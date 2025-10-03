@@ -4,16 +4,15 @@ updatedAt: "2023-07-05"
 title: "TV Size Guide: How to Choose the Perfect Screen Size"
 subtitle: "Find the perfect TV screen size for your needs with our TV Size Guide. Get expert advice and use our TV Size to Distance Calculator today! #what size tv"
 readingTime: 8
-image: {
-    alt: 'Dark room, with text "TV Size Guide"',
-    author: "Grant | Unsplash and Howbigg",
-    sources: [
-        "/images/posts/tv-size-guide/tv_size_guide_16x9.jpg",
-        "/images/posts/tv-size-guide/tv_size_guide_4x3.jpg",
-        "/images/posts/tv-size-guide/tv_size_guide_1x1.jpg",
-    ]
-}
+image:
+  alt: 'Dark room, with text "TV Size Guide"'
+  author: "Grant | Unsplash and Howbigg"
+  sources:
+    - "/images/posts/tv-size-guide/tv_size_guide_16x9.jpg"
+    - "/images/posts/tv-size-guide/tv_size_guide_4x3.jpg"
+    - "/images/posts/tv-size-guide/tv_size_guide_1x1.jpg"
 ---
+
 Are you ready to upgrade your entertainment system, but unsure of what
 size TV to get? Finding the **right size TV is crucial for an immersive
 viewing experience**. With so many options out there, it can be
@@ -34,6 +33,7 @@ to find the ideal TV size that will bring your favorite shows and movies
 to inch life!
 
 ## 1. Understanding the Science Behind TV Size and Viewing Distance
+
 Probably most people, when choosing a new TV, measure the width of the
 TV cabinet, check the thickness of the wallet, and then go to the store
 to choose the largest one that will fit in
@@ -58,11 +58,12 @@ small entertainment center as high as possible:
 <div class="md-border">
 <div class="md-border-title">Recommendations</div>
 
-[THX suggests](https://web.archive.org/web/20080724172039/http://www.thx.com/home/setup/display.html) 
+[THX suggests](https://web.archive.org/web/20080724172039/http://www.thx.com/home/setup/display.html)
 that the TV should occupy **28-40** of your field of view.
 
 [SMPTE suggests](https://en.wikipedia.org/wiki/Optimum_HDTV_viewing_distance#Diagonal_measurement_.C3.97_1.6_.28corresponding_to_30-degree_viewing_angle.29)
 that the TV should occupy **30** degrees of your field of view.
+
 </div>
 
 ![Difference between TVs occupying 30 and 40 degrees of field view](/images/posts/tv-size-guide/THX_SMPTE_40_30_degrees_example.jpg)
@@ -71,18 +72,18 @@ _Howbigg_
 Here's a table with optimal distances from a 4K UHD TV:
 
 | 4K TV Size | Optimal distance by SMPTE (30°) | Optimal Distance by THX (40°) |
-|------------|---------------------------------|-------------------------------|
-| **40**         | 5.42' (1.65m)                   | 3.99' (1.22m)                 |
-| **43**         | 5.83' (1.78m)                   | 4.29' (1.31m)                 |
-| **50**         | 6.78' (2.07m)                   | 4.99' (1.52m)                 |
-| **55**         | 7.45' (2.27m)                   | 5.49' (1.67m)                 |
-| **60**         | 8.13' (2.48m)                   | 5.99' (1.82m)                 |
-| **65**         | 8.81' (2.69m)                   | 6.49' (1.98m)                 |
-| **70**         | 9.49' (2.89m)                   | 6.98' (2.13m)                 |
-| **75**         | 10.17' (3.1m)                   | 7.48' (2.28m)                 |
-| **80**         | 10.84' (3.31m)                  | 7.98' (2.43m)                 |
-| **85**         | 11.52' (3.51m)                  | 8.48' (2.58m)                 |
-| **90**         | 12.2' (3.72m)                   | 8.98' (2.74m)                 |
+| ---------- | ------------------------------- | ----------------------------- |
+| **40**     | 5.42' (1.65m)                   | 3.99' (1.22m)                 |
+| **43**     | 5.83' (1.78m)                   | 4.29' (1.31m)                 |
+| **50**     | 6.78' (2.07m)                   | 4.99' (1.52m)                 |
+| **55**     | 7.45' (2.27m)                   | 5.49' (1.67m)                 |
+| **60**     | 8.13' (2.48m)                   | 5.99' (1.82m)                 |
+| **65**     | 8.81' (2.69m)                   | 6.49' (1.98m)                 |
+| **70**     | 9.49' (2.89m)                   | 6.98' (2.13m)                 |
+| **75**     | 10.17' (3.1m)                   | 7.48' (2.28m)                 |
+| **80**     | 10.84' (3.31m)                  | 7.98' (2.43m)                 |
+| **85**     | 11.52' (3.51m)                  | 8.48' (2.58m)                 |
+| **90**     | 12.2' (3.72m)                   | 8.98' (2.74m)                 |
 
 In addition to this, THX also has [recommendations for the height](https://www.thx.com/questions/where-and-how-should-i-position-my-tv-in-my-living-room/)
 at which the TV should be placed. Ideally, the center of the screen should
@@ -94,6 +95,7 @@ line.
 _Howbigg_
 
 ## 2. TV Size Calculator: Finding the Perfect Fit
+
 Don't rely solely on personal judgment and theoretical calculations -
 let the TV size calculator do the work for you. With our online tool,
 finding the ideal screen size **has never been easier**. By comparing
@@ -127,50 +129,52 @@ _Howbigg_
 Additional information includes:
 
 - **PPI (Pixels Per Inch)** - an indicator telling us about the density of
-    pixels on the screen. Note how different the PPI of FullHD and 4K
-    screens are - the difference is as much as twice!
+  pixels on the screen. Note how different the PPI of FullHD and 4K
+  screens are - the difference is as much as twice!
 
 - **Optimal Distance** - Distance at which the display will fill 28 to 40
-    degrees of your field of view (based on THX recommendation).
+  degrees of your field of view (based on THX recommendation).
 
 - **Minimal Distance** - The distance below which image quality decreases,
-    as your eyes begin to see individual pixels.
+  as your eyes begin to see individual pixels.
 
 ![Details of compared displays](/images/posts/tv-size-guide/display_comparator_details_table.png)
 _Howbigg_
 
 ## 3. Optimal Display Size for Different Rooms
+
 Choosing the ideal screen size for your TV depends on various factors,
 including the size of the room and its intended usage. Here are some key
 considerations to help you determine the perfect fit:
 
 - **Recommended screen sizes for small, medium, and large rooms**:
-The size of your room plays a crucial role in determining the optimal
-TV screen size. For smaller rooms, such as bedrooms or home offices,
-a 32 to 43-inch TV may suffice. In medium-sized living rooms or dens,
-consider a 50 to 65-inch screen. For larger spaces like dedicated home
-theaters, go for a screen size ranging from 70 inches or more.
+  The size of your room plays a crucial role in determining the optimal
+  TV screen size. For smaller rooms, such as bedrooms or home offices,
+  a 32 to 43-inch TV may suffice. In medium-sized living rooms or dens,
+  consider a 50 to 65-inch screen. For larger spaces like dedicated home
+  theaters, go for a screen size ranging from 70 inches or more.
 
 - **Adjusting screen sizes based on room usage**:
-The purpose of the room also influences the ideal screen size. If it's
-primarily a living room where you entertain guests and watch movies with
-friends and family, opt for larger screens that provide an immersive
-experience. On the other hand, if it's a bedroom where you mainly watch
-content from the bed, a slightly smaller screen might be suitable.
+  The purpose of the room also influences the ideal screen size. If it's
+  primarily a living room where you entertain guests and watch movies with
+  friends and family, opt for larger screens that provide an immersive
+  experience. On the other hand, if it's a bedroom where you mainly watch
+  content from the bed, a slightly smaller screen might be suitable.
 
 - **Considering furniture placement and wall-mounting options**:
-Take into account how you plan to position your TV within the room. If
-you're placing it on a stand or entertainment center, ensure that there
-is enough space available to accommodate both the TV and any additional
-devices. Alternatively, if you prefer wall-mounting your TV for
-space-saving purposes or improved viewing angles, consider factors like
-height and distance from seating areas when selecting an appropriate
-screen size.
+  Take into account how you plan to position your TV within the room. If
+  you're placing it on a stand or entertainment center, ensure that there
+  is enough space available to accommodate both the TV and any additional
+  devices. Alternatively, if you prefer wall-mounting your TV for
+  space-saving purposes or improved viewing angles, consider factors like
+  height and distance from seating areas when selecting an appropriate
+  screen size.
 
 ![TV hanging on the wall of a spacious room](/images/posts/tv-size-guide/tv_in_spacious_room.jpg)
 _Dan Gold | Unsplash_
 
 ## 4. The Relationship between Screen Resolution and Size
+
 Image resolution **plays a key role** in how close you can sit to the
 screen.
 
@@ -191,21 +195,23 @@ Below is a table with the minimum distances from the TV
 for Full HD (1920x1080) and 4K UHD (3840x2160) resolutions:
 
 | TV Size | Full HD Minimum Distance | 4K UHD Minimum Distance |
-|---------|--------------------------|-------------------------|
-| **40**      | 5.07' (1.54m)            | 2.32' (0.71m)           |
-| **43**      | 5.45' (1.66m)            | 2.5' (0.76m)            |
-| **50**      | 6.33' (1.93m)            | 2.91' (0.89m)           |
-| **55**      | 6.97' (2.12m)            | 3.2' (0.97m)            |
-| **60**      | 7.6' (2.32m)             | 3.49' (1.06m)           |
-| **65**      | 8.23' (2.51m)            | 3.78' (1.15m)           |
-| **70**      | 8.87' (2.7m)             | 4.07' (1.24m)           |
-| **75**      | 9.5' (2.9m)              | 4.36' (1.33m)           |
-| **80**      | 10.13' (3.09m)           | 4.65' (1.42m)           |
-| **85**      | 10.76' (3.28m)           | 4.94' (1.51m)           |
-| **90**      | 11.4' (3.47m)            | 5.23' (1.59m)           |
+| ------- | ------------------------ | ----------------------- |
+| **40**  | 5.07' (1.54m)            | 2.32' (0.71m)           |
+| **43**  | 5.45' (1.66m)            | 2.5' (0.76m)            |
+| **50**  | 6.33' (1.93m)            | 2.91' (0.89m)           |
+| **55**  | 6.97' (2.12m)            | 3.2' (0.97m)            |
+| **60**  | 7.6' (2.32m)             | 3.49' (1.06m)           |
+| **65**  | 8.23' (2.51m)            | 3.78' (1.15m)           |
+| **70**  | 8.87' (2.7m)             | 4.07' (1.24m)           |
+| **75**  | 9.5' (2.9m)              | 4.36' (1.33m)           |
+| **80**  | 10.13' (3.09m)           | 4.65' (1.42m)           |
+| **85**  | 10.76' (3.28m)           | 4.94' (1.51m)           |
+| **90**  | 11.4' (3.47m)            | 5.23' (1.59m)           |
 
 ## 5. Common Mistakes to Avoid When Selecting new TV
+
 ### Overlooking the importance of viewing distance in relation to screen size
+
 When choosing the perfect TV size, many people make the mistake of
 overlooking the importance of viewing distance. It's crucial to
 consider how far you'll be sitting from the screen, as this directly
@@ -214,6 +220,7 @@ discomfort and strain on your eyes while sitting too far away might
 make it difficult to fully feel the depth of the content.
 
 ### Relying solely on personal preferences without considering room dimensions
+
 While personal preferences play a role in selecting a TV size, it's
 essential not to disregard room dimensions. A large TV may seem
 appealing, but if your space is limited, it could overwhelm the room and
@@ -222,6 +229,7 @@ opting for a smaller TV in a spacious room might result in
 disappointment due to its lack of impact.
 
 ### Ignoring the impact of room lighting conditions on perceived screen size
+
 Room lighting conditions can significantly influence how you perceive
 the size of your TV screen. Bright lighting can diminish the visual
 impact of a large television, making it appear smaller than it actually
@@ -229,6 +237,7 @@ is. Conversely, dim or controlled lighting can enhance the immersive
 feel and make even a moderately sized TV seem larger.
 
 ### Failing to account for future technological advancements when selecting a TV
+
 Technology is constantly evolving, and TVs are no exception. When
 choosing a TV size, it's important to consider future advancements that
 may affect your viewing experience. While today's 55-inch TV might seem
@@ -238,6 +247,7 @@ ahead ensures that you won't find yourself wanting an upgrade sooner
 than anticipated.
 
 ## 6. Conclusion: No One Ever Cries With the Right Size
+
 ![TV with Netflix logo](/images/posts/tv-size-guide/tv_with_netflix_logo.jpg)
 _Mollie Sivaram | Unsplash_
 
@@ -277,27 +287,32 @@ by choosing the right-sized TV for you today!
 ## FAQ
 
 ### Can I mount my large-screen TV in a small living room?
+
 Yes, you can mount a large-screen TV in a small living room as long
 as it doesn't overwhelm the space or obstruct other furniture
 placements. Ensure proper viewing distance for comfortable watching.
 
 ### What happens if I choose a smaller-sized TV than recommended?
+
 Opting for a smaller-sized TV than recommended might result in
 strained viewing experiences due to inadequate immersion or difficulty
 in reading small text or details.
 
 ### Is there a minimum viewing distance for TVs?
+
 Yes, it depends on the resolution you choose.
 For **8K UHD** the minimal distance is about 0.4x screen width.
 For **4K UHD**: 0.8x screen width.
 For **Full HD**: 1.75x screen width.
 
 ### Can I use a larger TV as a computer monitor?
+
 Yes, there is nothing to stop you from doing it. However, consider
 the resolution, pixel density, and viewing distance to ensure
 comfortable usage without straining your eyes.
 
 ### Are curved TVs better than flat-screen ones?
+
 The choice between curved and flat-screen TVs is subjective. Curved
 screens offer slightly improved immersion, while flat screens provide
 more uniform picture quality from different angles. It would be best for

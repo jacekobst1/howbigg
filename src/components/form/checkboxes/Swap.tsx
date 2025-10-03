@@ -23,8 +23,10 @@ const Swap = ({
 
   const offProps = offChildren.props as Record<string, unknown>;
   const onProps = onChildren.props as Record<string, unknown>;
-  const offClassName = typeof offProps?.className === 'string' ? offProps.className : '';
-  const onClassName = typeof onProps?.className === 'string' ? onProps.className : '';
+  const offClassName =
+    typeof offProps?.className === "string" ? offProps.className : "";
+  const onClassName =
+    typeof onProps?.className === "string" ? onProps.className : "";
 
   const swap = (
     <label className="swap swap-rotate" style={style}>

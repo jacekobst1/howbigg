@@ -23,9 +23,11 @@ export default function MyReactMarkdown({
       rehypePlugins={[rehypeRaw, rehypeHighlight]}
       components={{
         h2: (props) => {
-          const childrenArray = Array.isArray(props.children) ? props.children : [props.children];
+          const childrenArray = Array.isArray(props.children)
+            ? props.children
+            : [props.children];
           const firstChild = childrenArray[0];
-          const text = typeof firstChild === 'string' ? firstChild : '';
+          const text = typeof firstChild === "string" ? firstChild : "";
           const isFaq = text === "FAQ";
 
           return (

@@ -12,15 +12,29 @@ export default function Footer() {
           </p>
           <p className="px-1 hidden md:block">|</p>
           <p>
-            <a href="/contact" className="text-primary-500">Contact</a>
+            <a href="/contact" className="text-primary-500">
+              Contact
+            </a>
           </p>
           <p className="px-1 hidden md:block">|</p>
           <p>
-            <a href="/privacy-policy.html" target="_blank" className="text-primary-500">Privacy policy</a>
+            <a
+              href="/privacy-policy.html"
+              target="_blank"
+              className="text-primary-500"
+            >
+              Privacy policy
+            </a>
           </p>
           <p className="px-1 hidden md:block">|</p>
           <p>
-            <a href="/cookie-policy.html" target="_blank" className="text-primary-500">Cookie policy</a>
+            <a
+              href="/cookie-policy.html"
+              target="_blank"
+              className="text-primary-500"
+            >
+              Cookie policy
+            </a>
           </p>
         </div>
       </div>

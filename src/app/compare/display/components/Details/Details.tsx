@@ -20,7 +20,7 @@ export default function Details({ displays }: DetailsProps) {
   }
 
   const tallestDisplayHeight = displays.reduce((prev, current) =>
-    current.height.cm > prev.height.cm ? current : prev
+    current.height.cm > prev.height.cm ? current : prev,
   ).height.percentage;
 
   const marginTop = `-${100 - tallestDisplayHeight}%`;
@@ -157,7 +157,11 @@ interface ChildrenProp {
 }
 
 const HeadTh = ({ children, className }: ChildrenProp) => {
-  return <th className={clsxm("bg-black text-base-100 pt-0 pb-0", className)}>{children}</th>;
+  return (
+    <th className={clsxm("bg-black text-base-100 pt-0 pb-0", className)}>
+      {children}
+    </th>
+  );
 };
 
 const BodyTd = ({ children }: ChildrenProp) => {

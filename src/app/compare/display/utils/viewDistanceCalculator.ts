@@ -18,25 +18,25 @@ export function setViewDistance(displays: Display[]) {
 
     display.minViewDistance = calculateMinViewDistance(
       display.width.in,
-      display.resolution.width
+      display.resolution.width,
     );
     display.minOptimalViewDistance = calculateOptimalViewDistance(
       display.width.in,
-      minThxViewAngle
+      minThxViewAngle,
     );
     display.maxOptimalViewDistance = calculateOptimalViewDistance(
       display.width.in,
-      maxThxViewAngle
+      maxThxViewAngle,
     );
   });
 }
 
 function calculateOptimalViewDistance(
   displayWidthIn: number,
-  viewAngle: number
+  viewAngle: number,
 ) {
   const distance = round(
-    (0.5 * displayWidthIn) / calculateTangensOfViewAngle(viewAngle)
+    (0.5 * displayWidthIn) / calculateTangensOfViewAngle(viewAngle),
   );
 
   return {
@@ -47,7 +47,7 @@ function calculateOptimalViewDistance(
 
 function calculateMinViewDistance(
   displayWidthInt: number,
-  resolutionWidthIn: number
+  resolutionWidthIn: number,
 ) {
   const minimalViewAngle = resolutionWidthIn / 60;
   const tanValue = calculateTangensOfViewAngle(minimalViewAngle);

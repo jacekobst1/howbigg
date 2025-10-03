@@ -56,3 +56,4 @@ howbigg/
 - Feature-specific utilities in feature directories
 - Global utilities in `src/utils/` and `src/lib/`
 - Calculation utilities separate by concern (PPI, size, viewing distance)
+```

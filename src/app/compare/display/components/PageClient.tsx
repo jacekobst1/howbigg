@@ -15,9 +15,12 @@ interface PageClientProps {
   initialDisplays: any[];
 }
 
-export default function PageClient({ posts, initialDisplays }: PageClientProps) {
+export default function PageClient({
+  posts,
+  initialDisplays,
+}: PageClientProps) {
   const [displays, setDisplays] = useState<Display[]>(() =>
-    deserializeDisplays(initialDisplays)
+    deserializeDisplays(initialDisplays),
   );
 
   return (

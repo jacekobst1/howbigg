@@ -1,47 +1,47 @@
 @layer components {
-    .input {
-        @apply rounded-lg! focus-within:border-white! focus-within:outline-2! focus-within:outline-primary-400!;
-        outline-offset: 0 !important;
-    }
+  .input {
+    @apply rounded-lg! focus-within:border-white! focus-within:outline-2! focus-within:outline-primary-400!;
+    outline-offset: 0 !important;
+  }
 
-    .select {
-        @apply rounded-lg! focus-within:border-white! focus-within:outline-2! focus-within:outline-primary-400!;
-        @apply overflow-hidden text-ellipsis whitespace-nowrap;
-        outline-offset: 0 !important;
-    }
+  .select {
+    @apply rounded-lg! focus-within:border-white! focus-within:outline-2! focus-within:outline-primary-400!;
+    @apply overflow-hidden text-ellipsis whitespace-nowrap;
+    outline-offset: 0 !important;
+  }
 
-    .select option:checked {
-        @apply bg-primary-400! text-white;
-    }
+  .select option:checked {
+    @apply bg-primary-400! text-white;
+  }
 
-    .select option:active {
-        @apply bg-primary-100! text-black!;
-    }
+  .select option:active {
+    @apply bg-primary-100! text-black!;
+  }
 
-    .input-sm,
-    .select-sm {
-        font-size: 0.85rem !important;
-    }
+  .input-sm,
+  .select-sm {
+    font-size: 0.85rem !important;
+  }
 
-    .join {
-        @apply rounded-lg border border-gray-300 focus-within:border-white! focus-within:outline-2 focus-within:outline-primary-400 ;
-    }
+  .join {
+    @apply rounded-lg border border-gray-300 focus-within:border-white! focus-within:outline-2 focus-within:outline-primary-400;
+  }
 
-    .switch-wrapper {
-        @apply border border-gray-300 focus-within:border-2 focus-within:border-primary-400;
-    }
+  .switch-wrapper {
+    @apply border border-gray-300 focus-within:border-2 focus-within:border-primary-400;
+  }
 
-    .join > *,
-    .join > .input,
-    .join > .select {
-        @apply shadow-none rounded-r-none! outline-0! border-0! focus-within:outline-0! focus-within:border-0! focus-within:shadow-none!;
-    }
+  .join > *,
+  .join > .input,
+  .join > .select {
+    @apply shadow-none rounded-r-none! outline-0! border-0! focus-within:outline-0! focus-within:border-0! focus-within:shadow-none!;
+  }
 
-    .join > span {
-        @apply rounded-r-lg!;
-    }
+  .join > span {
+    @apply rounded-r-lg!;
+  }
 
-    .join > :last-child {
-        border-radius: 0 0.25rem 0.25rem 0;
-    }
+  .join > :last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+  }
 }

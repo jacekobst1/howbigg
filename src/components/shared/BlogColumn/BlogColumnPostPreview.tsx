@@ -17,9 +17,7 @@ export default function BlogColumnPostPreview(post: PostMetadata) {
         className="rounded-t-lg"
       />
       <div className="flex flex-col h-full mt-2 px-2 mb-2 lg:mb-0">
-        <h2 className="text-sm lg:text-sm">
-          {post.title}
-        </h2>
+        <h2 className="text-sm lg:text-sm">{post.title}</h2>
         <div className="flex-grow" />
         <div className="hidden md:block text-xs text-right mt-2 mb-2">
           {/*<span>{formatPrettyTextDate(post.createdAt)}</span>*/}

@@ -17,7 +17,7 @@ class Display {
     public maxOptimalViewDistance: ViewDistance,
     public minViewDistance: ViewDistance,
     public zIndex: number,
-    public color: Color
+    public color: Color,
   ) {}
 
   public getAspectRatioDecimalValue(): number {

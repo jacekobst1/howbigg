@@ -32,9 +32,7 @@ export default function ProductRecommendations({
   return (
     <div className="space-y-4">
       <div className="mb-4">
-        <h2 className="text-2xl">
-          Recommended Products
-        </h2>
+        <h2 className="text-2xl">Recommended Products</h2>
         <p className="text-[10px] text-gray-500 mb-2">
           Affiliate links — they helps keep this site running
         </p>
@@ -59,7 +57,11 @@ export default function ProductRecommendations({
   );
 }
 
-function ProductSectionComponent({ section }: { section: EnrichedProductSection }) {
+function ProductSectionComponent({
+  section,
+}: {
+  section: EnrichedProductSection;
+}) {
   const productsToShow = section.products;
 
   // Get primary display color for styling
@@ -79,7 +81,7 @@ function ProductSectionComponent({ section }: { section: EnrichedProductSection 
                 className="px-3 py-1.5 rounded font-medium text-xs"
                 style={{
                   backgroundColor: display.color.background,
-                  color: display.color.text
+                  color: display.color.text,
                 }}
               >
                 {display.name}
@@ -118,8 +120,18 @@ function ProductSectionComponent({ section }: { section: EnrichedProductSection 
                 </div>
                 <span className="inline-flex items-center gap-1 text-gray-500 text-xs font-medium">
                   View Product
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <svg
+                    className="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
                   </svg>
                 </span>
               </div>

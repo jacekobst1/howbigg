@@ -13,16 +13,19 @@ import config from "@/config";
  */
 export function generateComparisonMetadata(displaysParam?: string): Metadata {
   const baseTitle = "Display Comparison | Howbigg";
-  const baseDescription = "Compare display sizes visually. See exact dimensions, PPI, and optimal viewing distances for monitors, TVs, and smartphones.";
+  const baseDescription =
+    "Compare display sizes visually. See exact dimensions, PPI, and optimal viewing distances for monitors, TVs, and smartphones.";
 
   if (displaysParam) {
     try {
       const encoded = JSON.parse(decodeURIComponent(displaysParam));
       const decoded = decodeDisplays(encoded);
-      const defaults = generateDisplaysWithoutPossibleResolutions(decoded.length);
+      const defaults = generateDisplaysWithoutPossibleResolutions(
+        decoded.length,
+      );
       const merged = mapWithPrototype(
         defaults,
-        (display, index) => mergeDeep(display, decoded[index]) as Display
+        (display, index) => mergeDeep(display, decoded[index]) as Display,
       );
       const displays = getDetailedDisplays(merged);
 

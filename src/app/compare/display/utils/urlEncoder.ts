@@ -56,7 +56,7 @@ function decodeDisplays(encodedDisplays: string[]) {
 function getResolution(data: string[], aspectRatio: AspectRatio): Resolution {
   return (
     aspectRatio.possibleResolutions.find(
-      (res: { value: string }) => res.value === data[6]
+      (res: { value: string }) => res.value === data[6],
     ) || defaultResolution
   );
 }

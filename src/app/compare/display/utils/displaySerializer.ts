@@ -6,7 +6,7 @@ import Display from "../types/Display";
  * @returns Plain object representation (automatically serialized by React)
  */
 export function serializeDisplays(displays: Display[]): any[] {
-  return displays.map(display => ({
+  return displays.map((display) => ({
     id: display.id,
     name: display.name,
     aspectRatio: display.aspectRatio,
@@ -31,7 +31,7 @@ export function serializeDisplays(displays: Display[]): any[] {
  * @returns Array of Display instances with methods restored
  */
 export function deserializeDisplays(plainObjects: any[]): Display[] {
-  return plainObjects.map(obj => {
+  return plainObjects.map((obj) => {
     const display = new Display(
       obj.id,
       obj.name,
@@ -47,7 +47,7 @@ export function deserializeDisplays(plainObjects: any[]): Display[] {
       obj.maxOptimalViewDistance,
       obj.minViewDistance,
       obj.zIndex,
-      obj.color
+      obj.color,
     );
     return display;
   });

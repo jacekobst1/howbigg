@@ -40,7 +40,7 @@ const MyImage = ({ src, alt, width, height, className = "" }: MyImageProps) => {
       height={height}
       placeholder={"blur"}
       blurDataURL={`data:image/svg+xml;base64,${toBase64(
-        shimmer(width, height)
+        shimmer(width, height),
       )}`}
       className={className}
     />

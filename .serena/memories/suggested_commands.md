@@ -3,30 +3,39 @@
 ## Development Commands
 
 ### Start Development Server
+
 ```bash
 npm run dev
 ```
+
 Opens development server on http://localhost:3000 with hot reload
 
 ### Build for Production
+
 ```bash
 npm run build
 ```
+
 Creates optimized production build in `.next/` directory
 
 ### Start Production Server
+
 ```bash
 npm start
 ```
+
 Runs production server (requires `npm run build` first)
 
 ### Lint Code
+
 ```bash
 npm run lint
 ```
+
 Runs ESLint with Next.js configuration
 
 ## Common Git Commands (macOS/Darwin)
+
 ```bash
 # Check status and current branch
 git status && git branch
@@ -45,6 +54,7 @@ git push origin feature/your-feature-name
 ```
 
 ## File Operations (macOS/Darwin)
+
 ```bash
 # List files
 ls -la
@@ -60,6 +70,7 @@ cat filename.ts
 ```
 
 ## Package Management
+
 ```bash
 # Install dependencies
 npm install
@@ -75,6 +86,7 @@ npm update
 ```
 
 ## Vercel Deployment (if configured)
+
 ```bash
 # Deploy to preview
 vercel
@@ -84,6 +96,7 @@ vercel --prod
 ```
 
 ## Debugging Tips
+
 ```bash
 # Clear Next.js cache
 rm -rf .next

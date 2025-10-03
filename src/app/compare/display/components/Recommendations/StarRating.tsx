@@ -26,10 +26,7 @@ export default function StarRating({ rating, size = "md" }: StarRatingProps) {
         </svg>
       ))}
       {hasHalfStar && (
-        <svg
-          className={`${starSize} text-yellow-500`}
-          viewBox="0 0 20 20"
-        >
+        <svg className={`${starSize} text-yellow-500`} viewBox="0 0 20 20">
           <defs>
             <linearGradient id={gradientId}>
               <stop offset="50%" stopColor="currentColor" />
@@ -51,7 +48,9 @@ export default function StarRating({ rating, size = "md" }: StarRatingProps) {
           <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
         </svg>
       ))}
-      <span className={`ml-1 ${textSize} font-medium`}>{rating.toFixed(1)}</span>
+      <span className={`ml-1 ${textSize} font-medium`}>
+        {rating.toFixed(1)}
+      </span>
     </div>
   );
 }

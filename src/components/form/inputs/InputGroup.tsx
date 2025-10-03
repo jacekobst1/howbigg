@@ -24,7 +24,9 @@ const InputGroup = ({ children, label, size = "md" }: InputGroupProps) => {
   });
 
   const inputGroup = (
-    <div className={clsxm("join w-full", sizeClass)}>{childrenWithJoinItem}</div>
+    <div className={clsxm("join w-full", sizeClass)}>
+      {childrenWithJoinItem}
+    </div>
   );
 
   if (label) {

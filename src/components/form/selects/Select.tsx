@@ -29,7 +29,7 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
       className,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const sizeClass = `select-${mSize}`;
 
@@ -76,7 +76,7 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
     }
 
     return select;
-  }
+  },
 );
 
 Select.displayName = "Select";

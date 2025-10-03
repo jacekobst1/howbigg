@@ -18,7 +18,7 @@ function setWidthAndHeightStandard(displays: Display[]) {
     const { widthCm, heightCm, widthIn, heightIn } = calculateSize(
       aspectRatioDecimalValue,
       display.diagonal.length,
-      display.diagonal.unit === "in"
+      display.diagonal.unit === "in",
     );
 
     display.width.cm = widthCm;
@@ -31,12 +31,12 @@ function setWidthAndHeightStandard(displays: Display[]) {
 function calculateSize(
   aspectRatio: number,
   diagonalSize: number,
-  isInches: boolean = true
+  isInches: boolean = true,
 ) {
   const diagonalSizeCm = isInches ? inToCm(diagonalSize) : diagonalSize;
 
   const heightCm = Math.sqrt(
-    (diagonalSizeCm * diagonalSizeCm) / (1 + aspectRatio * aspectRatio)
+    (diagonalSizeCm * diagonalSizeCm) / (1 + aspectRatio * aspectRatio),
   );
   const widthCm = heightCm * aspectRatio;
 
@@ -51,7 +51,7 @@ function setWidthAndHeightPercentage(displays: Display[]) {
     Math.max(current.width.cm, current.height.cm) >
     Math.max(prev.width.cm, prev.height.cm)
       ? current
-      : prev
+      : prev,
   );
   const divider = Math.max(biggestDisplay.width.cm, biggestDisplay.height.cm);
 
@@ -63,7 +63,7 @@ function setWidthAndHeightPercentage(displays: Display[]) {
 
 function setZIndexFromBiggestToSmallest(displays: Display[]) {
   const sortedDisplays = [...displays].sort(
-    (a, b) => b.width.cm * b.height.cm - a.width.cm * a.height.cm
+    (a, b) => b.width.cm * b.height.cm - a.width.cm * a.height.cm,
   );
 
   displays.forEach((display) => {

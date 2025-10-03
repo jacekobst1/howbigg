@@ -21,7 +21,7 @@ function mergeDeep(...objects: any[]) {
 
 function mapWithPrototype<T, U>(
   array: T[],
-  callback: (value: T, index: number, array: T[]) => U
+  callback: (value: T, index: number, array: T[]) => U,
 ): U[] {
   const result: U[] = [];
 

@@ -22,7 +22,9 @@ interface PostProps {
   }>;
 }
 
-export async function generateMetadata({ params }: PostProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PostProps): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
 

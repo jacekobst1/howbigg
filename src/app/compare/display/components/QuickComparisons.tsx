@@ -78,7 +78,7 @@ export default function QuickComparisons() {
 
   function boldFirstLetters(
     text: string | number | undefined,
-    length: number = 1
+    length: number = 1,
   ) {
     return (
       <>

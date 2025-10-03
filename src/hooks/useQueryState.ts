@@ -3,7 +3,7 @@ import { useSearchParams } from "next/navigation";
 
 export default function useQueryState<T>(
   name: string,
-  defaultValue: T | null = null
+  defaultValue: T | null = null,
 ) {
   const [isReady, setIsReady] = useState(false);
   const [queryState, setQueryState] = useState<T | null>(defaultValue);

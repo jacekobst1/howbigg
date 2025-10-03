@@ -23,7 +23,7 @@ export default function Setup({
 }: SetupProps) {
   function setDisplay(display: Display) {
     const newDisplays = displays.map((d) =>
-      d.id === display.id ? display : d
+      d.id === display.id ? display : d,
     );
     const calculatedDisplays = getDetailedDisplays(newDisplays);
     setDisplays(calculatedDisplays);

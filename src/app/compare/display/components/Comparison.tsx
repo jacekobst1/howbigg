@@ -25,8 +25,13 @@ interface ComparisonProps {
   initialDisplays?: Display[];
 }
 
-export default function Comparison({ onDisplaysChange, initialDisplays }: ComparisonProps) {
-  const [displays, setDisplays] = useState(initialDisplays || generateDisplays(2));
+export default function Comparison({
+  onDisplaysChange,
+  initialDisplays,
+}: ComparisonProps) {
+  const [displays, setDisplays] = useState(
+    initialDisplays || generateDisplays(2),
+  );
   const [queryState, setQueryState, isQueryStateReady] =
     useQueryState<string[]>("displays");
 

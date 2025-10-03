@@ -78,13 +78,13 @@ interface PageProps {
 export default function CompareDisplayPage({ searchParams }: PageProps) {
   // 1. Decode URL parameters server-side
   let initialDisplays: Display[] = generateDisplays(2);
-  
+
   if (searchParams.displays) {
     try {
       const encoded = JSON.parse(decodeURIComponent(searchParams.displays));
       const decoded = decodeDisplays(encoded);
       const defaults = generateDisplaysWithoutPossibleResolutions(decoded.length);
-      const merged = mapWithPrototype(defaults, (display, index) => 
+      const merged = mapWithPrototype(defaults, (display, index) =>
         mergeDeep(display, decoded[index]) as Display
       );
       // 2. Calculate all display properties (PPI, dimensions, etc.)
@@ -107,6 +107,7 @@ export default function CompareDisplayPage({ searchParams }: PageProps) {
 ```
 
 **Key Points**:
+
 - Server reads `searchParams.displays` from URL
 - Decodes and calculates Display instances
 - **Must serialize before passing to PageClient**
@@ -125,7 +126,7 @@ import Display from "../types/Display";
  * React can serialize these across server/client boundary
  */
 export function serializeDisplays(displays: Display[]): any[] {
-  return displays.map(display => ({
+  return displays.map((display) => ({
     id: display.id,
     name: display.name,
     aspectRatio: display.aspectRatio,
@@ -149,7 +150,7 @@ export function serializeDisplays(displays: Display[]): any[] {
  * Restores all class methods
  */
 export function deserializeDisplays(plainObjects: any[]): Display[] {
-  return plainObjects.map(obj => {
+  return plainObjects.map((obj) => {
     // Create new Display instance with constructor
     const display = new Display(
       obj.id,
@@ -166,7 +167,7 @@ export function deserializeDisplays(plainObjects: any[]): Display[] {
       obj.maxOptimalViewDistance,
       obj.minViewDistance,
       obj.zIndex,
-      obj.color
+      obj.color,
     );
     return display; // Now has all methods!
   });
@@ -174,6 +175,7 @@ export function deserializeDisplays(plainObjects: any[]): Display[] {
 ```
 
 **Why This Works**:
+
 - `serializeDisplays()` creates plain objects that React can serialize
 - `deserializeDisplays()` calls `new Display()` to restore methods
 - All Display methods like `getAspectRatioDecimalValue()` work after deserialization
@@ -216,6 +218,7 @@ export default function PageClient({ posts, initialDisplays }: PageClientProps) 
 ```
 
 **Key Points**:
+
 - Receives `initialDisplays` as plain objects (type: `any[]`)
 - **Immediately deserializes** in useState initializer
 - **Passes deserialized `displays` state** to children, not raw `initialDisplays`
@@ -237,7 +240,7 @@ export default function Comparison({ onDisplaysChange, initialDisplays }: Compar
 
   // Methods work! ✅
   const aspectRatio = displays[0].getAspectRatioDecimalValue();
-  
+
   return <div>{ /* render */ }</div>;
 }
 ```
@@ -248,9 +251,9 @@ export default function Comparison({ onDisplaysChange, initialDisplays }: Compar
 export function determineProductType(display: Display): "monitor" | "tv" {
   // Methods work! ✅
   const aspectRatioValue = display.getAspectRatioDecimalValue();
-  
+
   const is16x9 = Math.abs(aspectRatioValue - 16 / 9) < 0.01;
-  
+
   if (sizeInInches <= 32 || !is16x9) {
     return "monitor";
   }
@@ -265,22 +268,28 @@ export function determineProductType(display: Display): "monitor" | "tv" {
 ### ✅ Do This
 
 1. **Serialize on server before passing to client**
+
 ```typescript
 <PageClient initialDisplays={serializeDisplays(displays)} />
 ```
 
 2. **Deserialize immediately in first client component**
+
 ```typescript
-const [displays, setDisplays] = useState(() => deserializeDisplays(initialDisplays));
+const [displays, setDisplays] = useState(() =>
+  deserializeDisplays(initialDisplays),
+);
 ```
 
 3. **Pass deserialized state to children, not raw props**
+
 ```typescript
 <Comparison initialDisplays={displays} /> // ✅ State
 <Comparison initialDisplays={initialDisplays} /> // ❌ Props
 ```
 
 4. **Trust server-provided state, don't re-decode from URL**
+
 ```typescript
 // ❌ Don't do this in client components
 useEffect(() => {
@@ -291,18 +300,21 @@ useEffect(() => {
 ### ❌ Don't Do This
 
 1. **Pass class instances from server to client**
+
 ```typescript
 // page.tsx (Server)
 <PageClient initialDisplays={displayInstances} /> // ❌ React strips methods
 ```
 
 2. **Pass plain objects to components expecting Display instances**
+
 ```typescript
 // PageClient.tsx
 <Comparison initialDisplays={initialDisplays} /> // ❌ No methods
 ```
 
 3. **Create Display instances without using constructor**
+
 ```typescript
 const display = { id: 1, name: "Monitor", ... }; // ❌ Not a Display instance
 ```
@@ -312,9 +324,11 @@ const display = { id: 1, name: "Monitor", ... }; // ❌ Not a Display instance
 ## Files Modified
 
 ### Created
+
 - `src/app/compare/display/utils/displaySerializer.ts` - Serialization utilities
 
 ### Modified
+
 - `src/app/compare/display/page.tsx` - Server decode + serialize
 - `src/app/compare/display/components/PageClient.tsx` - Client deserialize
 - `src/app/compare/display/components/Comparison.tsx` - Remove redundant URL decode
@@ -339,6 +353,7 @@ const display = { id: 1, name: "Monitor", ... }; // ❌ Not a Display instance
 **Cause**: Display instance lost methods during serialization
 
 **Check**:
+
 1. Is `serializeDisplays()` called in page.tsx before passing to PageClient?
 2. Is `deserializeDisplays()` called in PageClient to restore instances?
 3. Are you passing deserialized `displays` state to children, not raw `initialDisplays` props?

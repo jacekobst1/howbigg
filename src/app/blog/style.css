@@ -1,18 +1,18 @@
 /*TODO move all to tailwind*/
 .post-preview {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .post-preview__subtitle {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    white-space: pre-wrap;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: pre-wrap;
 }
 
 @media only screen and (min-width: 768px) {
-    .post-preview__subtitle {
-        -webkit-line-clamp: 3;
-    }
+  .post-preview__subtitle {
+    -webkit-line-clamp: 3;
+  }
 }

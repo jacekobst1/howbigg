@@ -1,16 +1,16 @@
 // app/providers.tsx
-'use client'
-import posthog from 'posthog-js'
-import { PostHogProvider } from 'posthog-js/react'
+"use client";
+import posthog from "posthog-js";
+import { PostHogProvider } from "posthog-js/react";
 import { usePathname, useSearchParams } from "next/navigation";
 import React, { useEffect } from "react";
 import Config from "@/config";
 
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   posthog.init(Config.nextPublicPosthogKey, {
     api_host: Config.nextPublicPosthogHost,
-    capture_pageview: false // Disable automatic pageview capture, as we capture manually
-  })
+    capture_pageview: false, // Disable automatic pageview capture, as we capture manually
+  });
 }
 
 export function HogPageView(): React.ReactElement {
@@ -32,8 +32,6 @@ export function HogPageView(): React.ReactElement {
   return <></>;
 }
 
-export function HogProvider({children}: {
-  children: React.ReactNode
-}) {
-  return <PostHogProvider client={posthog}>{children}</PostHogProvider>
+export function HogProvider({ children }: { children: React.ReactNode }) {
+  return <PostHogProvider client={posthog}>{children}</PostHogProvider>;
 }

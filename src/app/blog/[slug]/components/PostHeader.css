@@ -1,18 +1,18 @@
 .header-image {
-    border-radius: 60px 0 0 0;
+  border-radius: 60px 0 0 0;
 }
 
 @media only screen and (min-width: 768px) {
-    .header-image {
-        border-radius: 110px 0 0 0;
-    }
+  .header-image {
+    border-radius: 110px 0 0 0;
+  }
 }
 
 .header-image-caption {
-    display: flex;
-    justify-content: flex-end;
-    font-size: .5em;
-    color: gray;
-    margin-top: 2px;
-    font-style: italic;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.5em;
+  color: gray;
+  margin-top: 2px;
+  font-style: italic;
 }

@@ -27,7 +27,7 @@ export default function Navigation() {
               href={href}
               className={clsxm(
                 "hover:underline decoration-2",
-                pathNameMatches(href) ? "text-primary-500" : ""
+                pathNameMatches(href) ? "text-primary-500" : "",
               )}
             >
               {label}

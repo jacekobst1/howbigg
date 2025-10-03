@@ -12,7 +12,10 @@ interface RightSidebarContentProps {
   posts: PostMetadata[];
 }
 
-export default function RightSidebarContent({ displays, posts }: RightSidebarContentProps) {
+export default function RightSidebarContent({
+  displays,
+  posts,
+}: RightSidebarContentProps) {
   const showRecommendations = hasValidDisplay(displays);
 
   return (
@@ -21,7 +24,9 @@ export default function RightSidebarContent({ displays, posts }: RightSidebarCon
         style={{
           transition: "opacity 0.8s ease-in-out, transform 0.8s ease-in-out",
           opacity: showRecommendations ? 0 : 1,
-          transform: showRecommendations ? "translateY(-20px)" : "translateY(0)",
+          transform: showRecommendations
+            ? "translateY(-20px)"
+            : "translateY(0)",
           pointerEvents: showRecommendations ? "none" : "auto",
           position: showRecommendations ? "absolute" : "relative",
         }}
@@ -38,7 +43,9 @@ export default function RightSidebarContent({ displays, posts }: RightSidebarCon
         style={{
           transition: "opacity 0.8s ease-in-out, transform 0.8s ease-in-out",
           opacity: showRecommendations ? 1 : 0,
-          transform: showRecommendations ? "translateY(0)" : "translateY(-20px)",
+          transform: showRecommendations
+            ? "translateY(0)"
+            : "translateY(-20px)",
           pointerEvents: showRecommendations ? "auto" : "none",
           position: showRecommendations ? "relative" : "absolute",
           top: 0,

@@ -60,7 +60,7 @@ export default function DisplayConf({
 
   const setResolution = (value: string) => {
     const selectedResolution = display.aspectRatio.possibleResolutions.find(
-      (ar: { value: string }) => ar.value === value
+      (ar: { value: string }) => ar.value === value,
     );
 
     if (selectedResolution) {
@@ -106,7 +106,7 @@ export default function DisplayConf({
             className={clsxm(
               "flex justify-between items-stretch",
               "flex-1 rounded font-semibold select-none px-2",
-              "focus-within:outline focus-within:outline-2 focus-within:outline-primary-400"
+              "focus-within:outline focus-within:outline-2 focus-within:outline-primary-400",
             )}
             style={{
               backgroundColor: display.color.background,
