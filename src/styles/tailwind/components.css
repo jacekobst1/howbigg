@@ -14,7 +14,7 @@
     @apply bg-primary-400! text-white;
   }
 
-  .select option:active {
+  .select option:active:not(:checked) {
     @apply bg-primary-100! text-black! shadow-none!;
   }
 
