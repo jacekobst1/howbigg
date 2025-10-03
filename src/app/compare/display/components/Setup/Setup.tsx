@@ -40,7 +40,7 @@ export default function Setup({
               deleteDisplay={deleteDisplay}
             />
             {display.id !== displays[displays.length - 1].id && (
-              <div className="divider divider-horizontal" />
+              <div className="border-l border-gray-200 mx-4 self-stretch" />
             )}
           </Fragment>
         ))}
