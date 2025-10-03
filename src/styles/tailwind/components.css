@@ -6,6 +6,7 @@
 
     .select {
         @apply rounded-lg! focus-within:border-white! focus-within:outline-2! focus-within:outline-primary-400!;
+        @apply overflow-hidden text-ellipsis whitespace-nowrap;
         outline-offset: 0 !important;
     }
 
