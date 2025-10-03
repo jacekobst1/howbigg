@@ -3,7 +3,7 @@
 import posthog from 'posthog-js'
 import { PostHogProvider } from 'posthog-js/react'
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Config from "@/config";
 
 if (typeof window !== 'undefined') {
@@ -13,7 +13,7 @@ if (typeof window !== 'undefined') {
   })
 }
 
-export function HogPageView(): JSX.Element {
+export function HogPageView(): React.ReactElement {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 

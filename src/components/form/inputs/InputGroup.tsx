@@ -14,9 +14,10 @@ const InputGroup = ({ children, label, size = "md" }: InputGroupProps) => {
   // Add a join-item class to all children
   const childrenWithJoinItem = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
+      const props = child.props as Record<string, unknown>;
       return React.cloneElement(child, {
-        ...child.props,
-        className: clsxm(child.props.className, "join-item"),
+        ...(child.props as object),
+        className: clsxm(props.className as string | undefined, "join-item"),
       } as any);
     }
     return child;
