@@ -9,6 +9,7 @@ import JsonLdScript from "@/app/blog/[slug]/components/JsonLdScript";
 import { Post } from "@/app/blog/types/Post";
 import sizeOf from "image-size";
 import { join } from "path";
+import { readFileSync } from "fs";
 import { ImageSizes } from "@/app/blog/types/ImageSizes";
 import PostContent from "@/app/blog/[slug]/components/PostContent";
 import PostHeader from "@/app/blog/[slug]/components/PostHeader";
@@ -61,13 +62,15 @@ async function getImageSizes(post: Post) {
     const [, src] = match.value;
 
     try {
-      const { width, height } = sizeOf(join("public", src));
+      const imagePath = join("public", src);
+      const imageBuffer = readFileSync(imagePath);
+      const { width, height } = sizeOf(imageBuffer);
       imageSizes[src] = {
         width: width as number,
         height: height as number,
       };
     } catch (err) {
-      console.error(`Can’t get dimensions for ${src}:`, err);
+      console.error(`Can't get dimensions for ${src}:`, err);
     }
   }
 
