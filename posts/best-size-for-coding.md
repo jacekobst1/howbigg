@@ -121,7 +121,7 @@ Distributed IT in a small scale. Tailing microservices log files across several 
 
 ### For Full-Stack Developers & App Agencies
 
-Full-stack is where the decision becomes the hardest to make; full-stack work involves managing the front-end UI, back-end logic, database queries, and API calls. All this lower level can be helped by a 32-inch monitor in keeping all these layers in view and reduces the mental cost of switching context. It's a good size for complex jobs such as [Mobile app development](https://indiit.com/mobile-app-development), which have so many moving parts.
+Full-stack is where the decision becomes the hardest to make; full-stack work involves managing the front-end UI, back-end logic, database queries, and API calls. All this lower level can be helped by a 32-inch monitor in keeping all these layers in view and reduces the mental cost of switching context. It's a good size for complex jobs such as Mobile app development, which have so many moving parts.
 
 ## 8. Popular Models for Developers
 
