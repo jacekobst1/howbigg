@@ -3,6 +3,17 @@ import matter from "gray-matter";
 import { Post, PostMetadata } from "@/app/blog/types/Post";
 import { notFound } from "next/navigation";
 
+const POPULARITY_ORDER: Record<string, number> = {
+  "tv-size-guide": 1,
+  "ultrawide-vs-dual-monitors": 2,
+  "dolby-vision-vs-hdr10": 3,
+  "qled-vs-oled": 4,
+  "oled-vs-led": 5,
+  "what-is-4k-resolution": 6,
+  "what-is-dolby-atmos": 7,
+  "what-is-hdr": 8,
+};
+
 function getAllPostsMetadata(limit?: number): PostMetadata[] {
   const files = fs.readdirSync("posts/");
 
@@ -17,7 +28,16 @@ function getAllPostsMetadata(limit?: number): PostMetadata[] {
         slug: filename.replace(".md", ""),
       };
     })
-    .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
+    .map((post) => ({
+      ...post,
+      popularity: POPULARITY_ORDER[post.slug] || 9999,
+    }))
+    .sort((a, b) => {
+      if (a.popularity !== b.popularity) {
+        return a.popularity - b.popularity;
+      }
+      return a.createdAt < b.createdAt ? 1 : -1;
+    })
     .splice(0, limit || files.length);
 }
 
